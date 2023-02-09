@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace checkATTdesktop
 {
-    public partial class Form1 : Form
+    public partial class PantallaPrincipal : Form
     {
-        public Form1()
+        public PantallaPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PantallaPrincipal mainMenu = new PantallaPrincipal();
-            mainMenu.ShowDialog();
-
-            this.Close();
         }
     }
 }
