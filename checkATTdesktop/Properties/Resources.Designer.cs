@@ -63,6 +63,16 @@ namespace checkATTdesktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _593244_2 {
+            get {
+                object obj = ResourceManager.GetObject("593244-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gorra_de_estudiantes {
             get {
                 object obj = ResourceManager.GetObject("gorra-de-estudiantes", resourceCulture);
