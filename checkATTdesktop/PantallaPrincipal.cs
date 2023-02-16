@@ -33,5 +33,61 @@ namespace checkATTdesktop
             labelMuestraFecha.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy");
             labelMuestraHora.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            //Color panel izquierda
+            panelColorAlumnos.BackColor = this.BackColor;
+            panelColorClases.BackColor = this.BackColor;
+            panelColorHome.BackColor = Color.Lime;
+            panelColorModulos.BackColor = this.BackColor;
+            panelColorProfes.BackColor = this.BackColor;
+
+            
+        }
+
+        private void buttonGestionAlumnos_Click(object sender, EventArgs e)
+        {
+            //Color panel izquierda
+            panelColorAlumnos.BackColor = Color.Lime;
+            panelColorClases.BackColor = this.BackColor;
+            panelColorHome.BackColor = this.BackColor;
+            panelColorModulos.BackColor = this.BackColor;
+            panelColorProfes.BackColor = this.BackColor;
+
+        }
+
+        private void buttonGestionProfes_Click(object sender, EventArgs e)
+        {
+            //Color panel izquierda
+            panelColorAlumnos.BackColor = this.BackColor;
+            panelColorClases.BackColor = this.BackColor;
+            panelColorHome.BackColor = this.BackColor;
+            panelColorModulos.BackColor = this.BackColor;
+            panelColorProfes.BackColor = Color.Lime;
+
+        }
+
+        private void buttonGestionClases_Click(object sender, EventArgs e)
+        {
+            //Color panel izquierda
+            panelColorAlumnos.BackColor = this.BackColor;
+            panelColorClases.BackColor = Color.Lime;
+            panelColorHome.BackColor = this.BackColor;
+            panelColorModulos.BackColor = this.BackColor;
+            panelColorProfes.BackColor = this.BackColor;
+
+        }
+
+        private void buttonGestionModulos_Click(object sender, EventArgs e)
+        {
+            //Color panel izquierda
+            panelColorAlumnos.BackColor = this.BackColor;
+            panelColorClases.BackColor = this.BackColor;
+            panelColorHome.BackColor = this.BackColor;
+            panelColorModulos.BackColor = Color.Lime;
+            panelColorProfes.BackColor = this.BackColor;          
+
+        }
     }
 }

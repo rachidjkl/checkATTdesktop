@@ -19,8 +19,8 @@ namespace checkATTdesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PantallaPrincipal mainMenu = new PantallaPrincipal();
-            mainMenu.ShowDialog();
+            Login login = new Login();
+            login.ShowDialog();
 
             this.Close();
         }
