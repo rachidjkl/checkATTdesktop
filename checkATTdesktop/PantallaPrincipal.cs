@@ -89,5 +89,10 @@ namespace checkATTdesktop
             panelColorProfes.BackColor = this.BackColor;          
 
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -148,7 +148,10 @@
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panelSuperiorMainScreen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WelcomeForm";
+            this.Opacity = 0D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.panelSuperiorMainScreen.ResumeLayout(false);

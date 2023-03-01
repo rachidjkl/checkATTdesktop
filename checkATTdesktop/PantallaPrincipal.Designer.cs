@@ -64,6 +64,8 @@ namespace checkATTdesktop
             this.labelMuestraHora = new System.Windows.Forms.Label();
             this.labelMuestraFecha = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             this.panelConTodoMenusIzquierda.SuspendLayout();
             this.panelOpcionMenuGestionModulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -80,11 +82,13 @@ namespace checkATTdesktop
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConTodoMenusIzquierda
             // 
             this.panelConTodoMenusIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelConTodoMenusIzquierda.Controls.Add(this.panel1);
             this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionModulos);
             this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionClases);
             this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionProfe);
@@ -439,6 +443,29 @@ namespace checkATTdesktop
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonLogOut);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 560);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(212, 63);
+            this.panel1.TabIndex = 6;
+            // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.FlatAppearance.BorderSize = 2;
+            this.buttonLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+            this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogOut.ForeColor = System.Drawing.Color.White;
+            this.buttonLogOut.Location = new System.Drawing.Point(39, 15);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(128, 36);
+            this.buttonLogOut.TabIndex = 0;
+            this.buttonLogOut.Text = "LogOut";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,8 +478,10 @@ namespace checkATTdesktop
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelConTodoMenusIzquierda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(6, 59);
             this.Name = "PantallaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.panelConTodoMenusIzquierda.ResumeLayout(false);
@@ -472,6 +501,7 @@ namespace checkATTdesktop
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +541,7 @@ namespace checkATTdesktop
         private Button buttonGestionClases;
         private Button buttonGestionProfes;
         private Button buttonGestionAlumnos;
+        private Panel panel1;
+        private Button buttonLogOut;
     }
 }

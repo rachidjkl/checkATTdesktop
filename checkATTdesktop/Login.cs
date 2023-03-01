@@ -20,9 +20,12 @@ namespace checkATTdesktop
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             WelcomeForm mainMenu = new WelcomeForm();
-            mainMenu.ShowDialog();
+            mainMenu.Show();
+           
+            this.Hide();
+            
+            
 
-            this.Close();
         }
 
         private void textBoxUser_Click(object sender, EventArgs e)

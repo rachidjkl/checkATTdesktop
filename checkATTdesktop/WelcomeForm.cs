@@ -47,10 +47,11 @@ namespace checkATTdesktop
             if (this.Opacity==0)
             {
                 FadeOut.Stop();
-                PantallaPrincipal main = new PantallaPrincipal();
-                main.ShowDialog();
 
-                this.Close();
+                PantallaPrincipal main = new PantallaPrincipal();
+                main.Show();
+
+                this.Hide();
             }
         }
 
