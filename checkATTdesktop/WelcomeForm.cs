@@ -31,9 +31,9 @@ namespace checkATTdesktop
             {
                 this.Opacity += 0.05;
             }
-            progressBar1.Value += 1;
-
-            if (progressBar1.Value == 100)
+            circularProgressBar1.Value += 1;
+            circularProgressBar1.Text = circularProgressBar1.Value.ToString();
+            if (circularProgressBar1.Value == 100)
             {
                 timerFadeIn.Stop();
                 FadeOut.Start(); 
@@ -47,6 +47,9 @@ namespace checkATTdesktop
             if (this.Opacity==0)
             {
                 FadeOut.Stop();
+                PantallaPrincipal main = new PantallaPrincipal();
+                main.ShowDialog();
+
                 this.Close();
             }
         }
@@ -54,6 +57,9 @@ namespace checkATTdesktop
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.0;
+            circularProgressBar1.Value = 0;
+            circularProgressBar1.Minimum = 0;
+            circularProgressBar1.Maximum = 100;
             timerFadeIn.Start();
 
         }
