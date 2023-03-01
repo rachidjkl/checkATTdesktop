@@ -33,26 +33,13 @@ namespace checkATTdesktop
         {
             this.components = new System.ComponentModel.Container();
             this.panelConTodoMenusIzquierda = new System.Windows.Forms.Panel();
-            this.panelOpcionMenuGestionModulos = new System.Windows.Forms.Panel();
-            this.buttonGestionModulos = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.panelColorModulos = new System.Windows.Forms.Panel();
-            this.panelOpcionMenuGestionClases = new System.Windows.Forms.Panel();
-            this.buttonGestionClases = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.panelColorClases = new System.Windows.Forms.Panel();
-            this.panelOpcionMenuGestionProfe = new System.Windows.Forms.Panel();
-            this.buttonGestionProfes = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panelColorProfes = new System.Windows.Forms.Panel();
-            this.panelOpcionMenuGestionAlumno = new System.Windows.Forms.Panel();
-            this.buttonGestionAlumnos = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panelColorAlumnos = new System.Windows.Forms.Panel();
-            this.panelOpcionMenuHome = new System.Windows.Forms.Panel();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panelColorHome = new System.Windows.Forms.Panel();
+            this.iconButtonManageHorario = new FontAwesome.Sharp.IconButton();
+            this.iconButtonManageModuls = new FontAwesome.Sharp.IconButton();
+            this.iconButtonManageClass = new FontAwesome.Sharp.IconButton();
+            this.iconButtonManageTeacher = new FontAwesome.Sharp.IconButton();
+            this.iconButtonManageStudent = new FontAwesome.Sharp.IconButton();
+            this.iconButtonHome = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelIzquierdaSuperiorLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
@@ -64,36 +51,26 @@ namespace checkATTdesktop
             this.labelMuestraHora = new System.Windows.Forms.Label();
             this.labelMuestraFecha = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonLogOut = new System.Windows.Forms.Button();
+            this.iconButtonLogOut = new FontAwesome.Sharp.IconButton();
             this.panelConTodoMenusIzquierda.SuspendLayout();
-            this.panelOpcionMenuGestionModulos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panelOpcionMenuGestionClases.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panelOpcionMenuGestionProfe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panelOpcionMenuGestionAlumno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panelOpcionMenuHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panelIzquierdaSuperiorLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConTodoMenusIzquierda
             // 
-            this.panelConTodoMenusIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelConTodoMenusIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonManageHorario);
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonManageModuls);
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonManageClass);
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonManageTeacher);
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonManageStudent);
+            this.panelConTodoMenusIzquierda.Controls.Add(this.iconButtonHome);
             this.panelConTodoMenusIzquierda.Controls.Add(this.panel1);
-            this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionModulos);
-            this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionClases);
-            this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionProfe);
-            this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuGestionAlumno);
-            this.panelConTodoMenusIzquierda.Controls.Add(this.panelOpcionMenuHome);
             this.panelConTodoMenusIzquierda.Controls.Add(this.panelIzquierdaSuperiorLogo);
             this.panelConTodoMenusIzquierda.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelConTodoMenusIzquierda.Location = new System.Drawing.Point(0, 0);
@@ -101,235 +78,152 @@ namespace checkATTdesktop
             this.panelConTodoMenusIzquierda.Size = new System.Drawing.Size(212, 623);
             this.panelConTodoMenusIzquierda.TabIndex = 0;
             // 
-            // panelOpcionMenuGestionModulos
+            // iconButtonManageHorario
             // 
-            this.panelOpcionMenuGestionModulos.Controls.Add(this.buttonGestionModulos);
-            this.panelOpcionMenuGestionModulos.Controls.Add(this.pictureBox8);
-            this.panelOpcionMenuGestionModulos.Controls.Add(this.panelColorModulos);
-            this.panelOpcionMenuGestionModulos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcionMenuGestionModulos.Location = new System.Drawing.Point(0, 298);
-            this.panelOpcionMenuGestionModulos.Name = "panelOpcionMenuGestionModulos";
-            this.panelOpcionMenuGestionModulos.Size = new System.Drawing.Size(212, 40);
-            this.panelOpcionMenuGestionModulos.TabIndex = 5;
+            this.iconButtonManageHorario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonManageHorario.FlatAppearance.BorderSize = 0;
+            this.iconButtonManageHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonManageHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageHorario.ForeColor = System.Drawing.Color.White;
+            this.iconButtonManageHorario.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.iconButtonManageHorario.IconColor = System.Drawing.Color.White;
+            this.iconButtonManageHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonManageHorario.IconSize = 30;
+            this.iconButtonManageHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageHorario.Location = new System.Drawing.Point(0, 415);
+            this.iconButtonManageHorario.Name = "iconButtonManageHorario";
+            this.iconButtonManageHorario.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonManageHorario.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonManageHorario.TabIndex = 12;
+            this.iconButtonManageHorario.Text = "Gestionar horarios";
+            this.iconButtonManageHorario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageHorario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonManageHorario.UseVisualStyleBackColor = true;
+            this.iconButtonManageHorario.Click += new System.EventHandler(this.iconButtonManageHorario_Click);
             // 
-            // buttonGestionModulos
+            // iconButtonManageModuls
             // 
-            this.buttonGestionModulos.FlatAppearance.BorderSize = 0;
-            this.buttonGestionModulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.buttonGestionModulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGestionModulos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGestionModulos.ForeColor = System.Drawing.Color.White;
-            this.buttonGestionModulos.Location = new System.Drawing.Point(57, 4);
-            this.buttonGestionModulos.Name = "buttonGestionModulos";
-            this.buttonGestionModulos.Size = new System.Drawing.Size(152, 33);
-            this.buttonGestionModulos.TabIndex = 12;
-            this.buttonGestionModulos.Text = "Gestionar modulos";
-            this.buttonGestionModulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGestionModulos.UseVisualStyleBackColor = true;
-            this.buttonGestionModulos.Click += new System.EventHandler(this.buttonGestionModulos_Click);
+            this.iconButtonManageModuls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonManageModuls.FlatAppearance.BorderSize = 0;
+            this.iconButtonManageModuls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonManageModuls.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageModuls.ForeColor = System.Drawing.Color.White;
+            this.iconButtonManageModuls.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.iconButtonManageModuls.IconColor = System.Drawing.Color.White;
+            this.iconButtonManageModuls.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonManageModuls.IconSize = 30;
+            this.iconButtonManageModuls.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageModuls.Location = new System.Drawing.Point(0, 365);
+            this.iconButtonManageModuls.Name = "iconButtonManageModuls";
+            this.iconButtonManageModuls.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonManageModuls.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonManageModuls.TabIndex = 11;
+            this.iconButtonManageModuls.Text = "Gestionar modulos";
+            this.iconButtonManageModuls.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageModuls.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonManageModuls.UseVisualStyleBackColor = true;
+            this.iconButtonManageModuls.Click += new System.EventHandler(this.iconButtonManageModuls_Click);
             // 
-            // pictureBox8
+            // iconButtonManageClass
             // 
-            this.pictureBox8.Image = global::checkATTdesktop.Properties.Resources.bookshelf;
-            this.pictureBox8.Location = new System.Drawing.Point(22, 4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
+            this.iconButtonManageClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonManageClass.FlatAppearance.BorderSize = 0;
+            this.iconButtonManageClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonManageClass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageClass.ForeColor = System.Drawing.Color.White;
+            this.iconButtonManageClass.IconChar = FontAwesome.Sharp.IconChar.School;
+            this.iconButtonManageClass.IconColor = System.Drawing.Color.White;
+            this.iconButtonManageClass.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonManageClass.IconSize = 33;
+            this.iconButtonManageClass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageClass.Location = new System.Drawing.Point(0, 315);
+            this.iconButtonManageClass.Name = "iconButtonManageClass";
+            this.iconButtonManageClass.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonManageClass.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonManageClass.TabIndex = 10;
+            this.iconButtonManageClass.Text = "Gestionar clases";
+            this.iconButtonManageClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageClass.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonManageClass.UseVisualStyleBackColor = true;
+            this.iconButtonManageClass.Click += new System.EventHandler(this.iconButtonManageClass_Click);
             // 
-            // panelColorModulos
+            // iconButtonManageTeacher
             // 
-            this.panelColorModulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelColorModulos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelColorModulos.Location = new System.Drawing.Point(0, 0);
-            this.panelColorModulos.Name = "panelColorModulos";
-            this.panelColorModulos.Size = new System.Drawing.Size(6, 40);
-            this.panelColorModulos.TabIndex = 10;
+            this.iconButtonManageTeacher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonManageTeacher.FlatAppearance.BorderSize = 0;
+            this.iconButtonManageTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonManageTeacher.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageTeacher.ForeColor = System.Drawing.Color.White;
+            this.iconButtonManageTeacher.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.iconButtonManageTeacher.IconColor = System.Drawing.Color.White;
+            this.iconButtonManageTeacher.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonManageTeacher.IconSize = 35;
+            this.iconButtonManageTeacher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageTeacher.Location = new System.Drawing.Point(0, 265);
+            this.iconButtonManageTeacher.Name = "iconButtonManageTeacher";
+            this.iconButtonManageTeacher.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonManageTeacher.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonManageTeacher.TabIndex = 9;
+            this.iconButtonManageTeacher.Text = "Gestionar profesores";
+            this.iconButtonManageTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonManageTeacher.UseVisualStyleBackColor = true;
+            this.iconButtonManageTeacher.Click += new System.EventHandler(this.iconButtonManageTeacher_Click);
             // 
-            // panelOpcionMenuGestionClases
+            // iconButtonManageStudent
             // 
-            this.panelOpcionMenuGestionClases.Controls.Add(this.buttonGestionClases);
-            this.panelOpcionMenuGestionClases.Controls.Add(this.pictureBox7);
-            this.panelOpcionMenuGestionClases.Controls.Add(this.panelColorClases);
-            this.panelOpcionMenuGestionClases.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcionMenuGestionClases.Location = new System.Drawing.Point(0, 258);
-            this.panelOpcionMenuGestionClases.Name = "panelOpcionMenuGestionClases";
-            this.panelOpcionMenuGestionClases.Size = new System.Drawing.Size(212, 40);
-            this.panelOpcionMenuGestionClases.TabIndex = 4;
+            this.iconButtonManageStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonManageStudent.FlatAppearance.BorderSize = 0;
+            this.iconButtonManageStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonManageStudent.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageStudent.ForeColor = System.Drawing.Color.White;
+            this.iconButtonManageStudent.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
+            this.iconButtonManageStudent.IconColor = System.Drawing.Color.White;
+            this.iconButtonManageStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonManageStudent.IconSize = 35;
+            this.iconButtonManageStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageStudent.Location = new System.Drawing.Point(0, 215);
+            this.iconButtonManageStudent.Name = "iconButtonManageStudent";
+            this.iconButtonManageStudent.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonManageStudent.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonManageStudent.TabIndex = 8;
+            this.iconButtonManageStudent.Text = "Gestionar alumnos";
+            this.iconButtonManageStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonManageStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonManageStudent.UseVisualStyleBackColor = true;
+            this.iconButtonManageStudent.Click += new System.EventHandler(this.iconButtonManageStudent_Click);
             // 
-            // buttonGestionClases
+            // iconButtonHome
             // 
-            this.buttonGestionClases.FlatAppearance.BorderSize = 0;
-            this.buttonGestionClases.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.buttonGestionClases.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGestionClases.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGestionClases.ForeColor = System.Drawing.Color.White;
-            this.buttonGestionClases.Location = new System.Drawing.Point(57, 4);
-            this.buttonGestionClases.Name = "buttonGestionClases";
-            this.buttonGestionClases.Size = new System.Drawing.Size(152, 33);
-            this.buttonGestionClases.TabIndex = 11;
-            this.buttonGestionClases.Text = "Gestionar clases";
-            this.buttonGestionClases.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGestionClases.UseVisualStyleBackColor = true;
-            this.buttonGestionClases.Click += new System.EventHandler(this.buttonGestionClases_Click);
+            this.iconButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButtonHome.FlatAppearance.BorderSize = 0;
+            this.iconButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonHome.ForeColor = System.Drawing.Color.White;
+            this.iconButtonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButtonHome.IconColor = System.Drawing.Color.White;
+            this.iconButtonHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonHome.IconSize = 35;
+            this.iconButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonHome.Location = new System.Drawing.Point(0, 165);
+            this.iconButtonHome.Name = "iconButtonHome";
+            this.iconButtonHome.Padding = new System.Windows.Forms.Padding(4, 0, 20, 0);
+            this.iconButtonHome.Size = new System.Drawing.Size(212, 50);
+            this.iconButtonHome.TabIndex = 7;
+            this.iconButtonHome.Text = "Home";
+            this.iconButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonHome.UseVisualStyleBackColor = true;
+            this.iconButtonHome.Click += new System.EventHandler(this.iconButtonHome_Click);
             // 
-            // pictureBox7
+            // panel1
             // 
-            this.pictureBox7.Image = global::checkATTdesktop.Properties.Resources.classroom;
-            this.pictureBox7.Location = new System.Drawing.Point(22, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            // 
-            // panelColorClases
-            // 
-            this.panelColorClases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelColorClases.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelColorClases.Location = new System.Drawing.Point(0, 0);
-            this.panelColorClases.Name = "panelColorClases";
-            this.panelColorClases.Size = new System.Drawing.Size(6, 40);
-            this.panelColorClases.TabIndex = 9;
-            // 
-            // panelOpcionMenuGestionProfe
-            // 
-            this.panelOpcionMenuGestionProfe.Controls.Add(this.buttonGestionProfes);
-            this.panelOpcionMenuGestionProfe.Controls.Add(this.pictureBox6);
-            this.panelOpcionMenuGestionProfe.Controls.Add(this.panelColorProfes);
-            this.panelOpcionMenuGestionProfe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcionMenuGestionProfe.Location = new System.Drawing.Point(0, 218);
-            this.panelOpcionMenuGestionProfe.Name = "panelOpcionMenuGestionProfe";
-            this.panelOpcionMenuGestionProfe.Size = new System.Drawing.Size(212, 40);
-            this.panelOpcionMenuGestionProfe.TabIndex = 3;
-            // 
-            // buttonGestionProfes
-            // 
-            this.buttonGestionProfes.FlatAppearance.BorderSize = 0;
-            this.buttonGestionProfes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.buttonGestionProfes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGestionProfes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGestionProfes.ForeColor = System.Drawing.Color.White;
-            this.buttonGestionProfes.Location = new System.Drawing.Point(57, 4);
-            this.buttonGestionProfes.Name = "buttonGestionProfes";
-            this.buttonGestionProfes.Size = new System.Drawing.Size(152, 33);
-            this.buttonGestionProfes.TabIndex = 10;
-            this.buttonGestionProfes.Text = "Gestionar profesores";
-            this.buttonGestionProfes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGestionProfes.UseVisualStyleBackColor = true;
-            this.buttonGestionProfes.Click += new System.EventHandler(this.buttonGestionProfes_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::checkATTdesktop.Properties.Resources.manager;
-            this.pictureBox6.Location = new System.Drawing.Point(22, 4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // panelColorProfes
-            // 
-            this.panelColorProfes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelColorProfes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelColorProfes.Location = new System.Drawing.Point(0, 0);
-            this.panelColorProfes.Name = "panelColorProfes";
-            this.panelColorProfes.Size = new System.Drawing.Size(6, 40);
-            this.panelColorProfes.TabIndex = 8;
-            // 
-            // panelOpcionMenuGestionAlumno
-            // 
-            this.panelOpcionMenuGestionAlumno.Controls.Add(this.buttonGestionAlumnos);
-            this.panelOpcionMenuGestionAlumno.Controls.Add(this.pictureBox5);
-            this.panelOpcionMenuGestionAlumno.Controls.Add(this.panelColorAlumnos);
-            this.panelOpcionMenuGestionAlumno.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcionMenuGestionAlumno.Location = new System.Drawing.Point(0, 178);
-            this.panelOpcionMenuGestionAlumno.Name = "panelOpcionMenuGestionAlumno";
-            this.panelOpcionMenuGestionAlumno.Size = new System.Drawing.Size(212, 40);
-            this.panelOpcionMenuGestionAlumno.TabIndex = 2;
-            // 
-            // buttonGestionAlumnos
-            // 
-            this.buttonGestionAlumnos.FlatAppearance.BorderSize = 0;
-            this.buttonGestionAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.buttonGestionAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGestionAlumnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGestionAlumnos.ForeColor = System.Drawing.Color.White;
-            this.buttonGestionAlumnos.Location = new System.Drawing.Point(57, 4);
-            this.buttonGestionAlumnos.Name = "buttonGestionAlumnos";
-            this.buttonGestionAlumnos.Size = new System.Drawing.Size(152, 33);
-            this.buttonGestionAlumnos.TabIndex = 9;
-            this.buttonGestionAlumnos.Text = "Gestionar alumnos";
-            this.buttonGestionAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGestionAlumnos.UseVisualStyleBackColor = true;
-            this.buttonGestionAlumnos.Click += new System.EventHandler(this.buttonGestionAlumnos_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::checkATTdesktop.Properties.Resources.apprentice__2_;
-            this.pictureBox5.Location = new System.Drawing.Point(22, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panelColorAlumnos
-            // 
-            this.panelColorAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelColorAlumnos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelColorAlumnos.Location = new System.Drawing.Point(0, 0);
-            this.panelColorAlumnos.Name = "panelColorAlumnos";
-            this.panelColorAlumnos.Size = new System.Drawing.Size(6, 40);
-            this.panelColorAlumnos.TabIndex = 7;
-            // 
-            // panelOpcionMenuHome
-            // 
-            this.panelOpcionMenuHome.Controls.Add(this.buttonHome);
-            this.panelOpcionMenuHome.Controls.Add(this.pictureBox4);
-            this.panelOpcionMenuHome.Controls.Add(this.panelColorHome);
-            this.panelOpcionMenuHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpcionMenuHome.Location = new System.Drawing.Point(0, 138);
-            this.panelOpcionMenuHome.Name = "panelOpcionMenuHome";
-            this.panelOpcionMenuHome.Size = new System.Drawing.Size(212, 40);
-            this.panelOpcionMenuHome.TabIndex = 1;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.ForeColor = System.Drawing.Color.White;
-            this.buttonHome.Location = new System.Drawing.Point(57, 4);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(152, 33);
-            this.buttonHome.TabIndex = 8;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.UseVisualStyleBackColor = true;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::checkATTdesktop.Properties.Resources.home__1_1;
-            this.pictureBox4.Location = new System.Drawing.Point(22, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panelColorHome
-            // 
-            this.panelColorHome.BackColor = System.Drawing.Color.Lime;
-            this.panelColorHome.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelColorHome.Location = new System.Drawing.Point(0, 0);
-            this.panelColorHome.Name = "panelColorHome";
-            this.panelColorHome.Size = new System.Drawing.Size(6, 40);
-            this.panelColorHome.TabIndex = 6;
+            this.panel1.Controls.Add(this.iconButtonLogOut);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 536);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(212, 87);
+            this.panel1.TabIndex = 6;
             // 
             // panelIzquierdaSuperiorLogo
             // 
@@ -337,29 +231,30 @@ namespace checkATTdesktop
             this.panelIzquierdaSuperiorLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelIzquierdaSuperiorLogo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdaSuperiorLogo.Name = "panelIzquierdaSuperiorLogo";
-            this.panelIzquierdaSuperiorLogo.Size = new System.Drawing.Size(212, 138);
+            this.panelIzquierdaSuperiorLogo.Size = new System.Drawing.Size(212, 165);
             this.panelIzquierdaSuperiorLogo.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::checkATTdesktop.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(10, 29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(182, 104);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelSuperior
             // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.panelSuperior.Controls.Add(this.labelPantallaSeleccionada);
             this.panelSuperior.Controls.Add(this.labelNombreUsuario);
             this.panelSuperior.Controls.Add(this.pictureBox1);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(212, 0);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(948, 69);
+            this.panelSuperior.Size = new System.Drawing.Size(948, 86);
             this.panelSuperior.TabIndex = 1;
             // 
             // labelPantallaSeleccionada
@@ -368,7 +263,7 @@ namespace checkATTdesktop
             this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPantallaSeleccionada.ForeColor = System.Drawing.Color.White;
             this.labelPantallaSeleccionada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(24, 19);
+            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(24, 28);
             this.labelPantallaSeleccionada.Name = "labelPantallaSeleccionada";
             this.labelPantallaSeleccionada.Size = new System.Drawing.Size(95, 33);
             this.labelPantallaSeleccionada.TabIndex = 4;
@@ -380,7 +275,7 @@ namespace checkATTdesktop
             this.labelNombreUsuario.AutoSize = true;
             this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelNombreUsuario.Location = new System.Drawing.Point(794, 19);
+            this.labelNombreUsuario.Location = new System.Drawing.Point(797, 29);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
             this.labelNombreUsuario.Size = new System.Drawing.Size(139, 33);
             this.labelNombreUsuario.TabIndex = 3;
@@ -389,7 +284,7 @@ namespace checkATTdesktop
             // pictureBox1
             // 
             this.pictureBox1.Image = global::checkATTdesktop.Properties.Resources.man;
-            this.pictureBox1.Location = new System.Drawing.Point(708, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(708, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -400,8 +295,8 @@ namespace checkATTdesktop
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(561, 224);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.label1.Location = new System.Drawing.Point(560, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(470, 44);
             this.label1.TabIndex = 3;
@@ -415,8 +310,8 @@ namespace checkATTdesktop
             // 
             this.labelMuestraHora.AutoSize = true;
             this.labelMuestraHora.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMuestraHora.ForeColor = System.Drawing.Color.White;
-            this.labelMuestraHora.Location = new System.Drawing.Point(699, 291);
+            this.labelMuestraHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
+            this.labelMuestraHora.Location = new System.Drawing.Point(698, 309);
             this.labelMuestraHora.Name = "labelMuestraHora";
             this.labelMuestraHora.Size = new System.Drawing.Size(130, 44);
             this.labelMuestraHora.TabIndex = 4;
@@ -426,8 +321,8 @@ namespace checkATTdesktop
             // 
             this.labelMuestraFecha.AutoSize = true;
             this.labelMuestraFecha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMuestraFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(82)))), ((int)(((byte)(142)))));
-            this.labelMuestraFecha.Location = new System.Drawing.Point(575, 349);
+            this.labelMuestraFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
+            this.labelMuestraFecha.Location = new System.Drawing.Point(574, 367);
             this.labelMuestraFecha.Name = "labelMuestraFecha";
             this.labelMuestraFecha.Size = new System.Drawing.Size(96, 33);
             this.labelMuestraFecha.TabIndex = 5;
@@ -436,41 +331,37 @@ namespace checkATTdesktop
             // pictureBox3
             // 
             this.pictureBox3.Image = global::checkATTdesktop.Properties.Resources.logo;
-            this.pictureBox3.Location = new System.Drawing.Point(332, 222);
+            this.pictureBox3.Location = new System.Drawing.Point(331, 240);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(223, 160);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
-            // panel1
+            // iconButtonLogOut
             // 
-            this.panel1.Controls.Add(this.buttonLogOut);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 560);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 63);
-            this.panel1.TabIndex = 6;
-            // 
-            // buttonLogOut
-            // 
-            this.buttonLogOut.FlatAppearance.BorderSize = 2;
-            this.buttonLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
-            this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogOut.ForeColor = System.Drawing.Color.White;
-            this.buttonLogOut.Location = new System.Drawing.Point(39, 15);
-            this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(128, 36);
-            this.buttonLogOut.TabIndex = 0;
-            this.buttonLogOut.Text = "LogOut";
-            this.buttonLogOut.UseVisualStyleBackColor = true;
-            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            this.iconButtonLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconButtonLogOut.FlatAppearance.BorderSize = 0;
+            this.iconButtonLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.iconButtonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonLogOut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonLogOut.ForeColor = System.Drawing.Color.Red;
+            this.iconButtonLogOut.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButtonLogOut.IconColor = System.Drawing.Color.Black;
+            this.iconButtonLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonLogOut.Location = new System.Drawing.Point(36, 27);
+            this.iconButtonLogOut.Name = "iconButtonLogOut";
+            this.iconButtonLogOut.Size = new System.Drawing.Size(125, 38);
+            this.iconButtonLogOut.TabIndex = 0;
+            this.iconButtonLogOut.Text = "LogOut";
+            this.iconButtonLogOut.UseVisualStyleBackColor = false;
+            this.iconButtonLogOut.Click += new System.EventHandler(this.iconButtonLogOut_Click);
             // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1160, 623);
             this.Controls.Add(this.labelMuestraFecha);
             this.Controls.Add(this.labelMuestraHora);
@@ -485,23 +376,13 @@ namespace checkATTdesktop
             this.Text = "PantallaPrincipal";
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.panelConTodoMenusIzquierda.ResumeLayout(false);
-            this.panelOpcionMenuGestionModulos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panelOpcionMenuGestionClases.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panelOpcionMenuGestionProfe.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panelOpcionMenuGestionAlumno.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panelOpcionMenuHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.panelIzquierdaSuperiorLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,27 +402,13 @@ namespace checkATTdesktop
         private Timer timer1;
         private Label labelMuestraHora;
         private Label labelMuestraFecha;
-        private Panel panelOpcionMenuGestionModulos;
-        private PictureBox pictureBox8;
-        private Panel panelColorModulos;
-        private Panel panelOpcionMenuGestionClases;
-        private PictureBox pictureBox7;
-        private Panel panelColorClases;
-        private Panel panelOpcionMenuGestionProfe;
-        private PictureBox pictureBox6;
-        private Panel panelColorProfes;
-        private Panel panelOpcionMenuGestionAlumno;
-        private PictureBox pictureBox5;
-        private Panel panelColorAlumnos;
-        private Panel panelOpcionMenuHome;
-        private PictureBox pictureBox4;
-        private Panel panelColorHome;
-        private Button buttonHome;
-        private Button buttonGestionModulos;
-        private Button buttonGestionClases;
-        private Button buttonGestionProfes;
-        private Button buttonGestionAlumnos;
         private Panel panel1;
-        private Button buttonLogOut;
+        private FontAwesome.Sharp.IconButton iconButtonHome;
+        private FontAwesome.Sharp.IconButton iconButtonManageHorario;
+        private FontAwesome.Sharp.IconButton iconButtonManageModuls;
+        private FontAwesome.Sharp.IconButton iconButtonManageClass;
+        private FontAwesome.Sharp.IconButton iconButtonManageTeacher;
+        private FontAwesome.Sharp.IconButton iconButtonManageStudent;
+        private FontAwesome.Sharp.IconButton iconButtonLogOut;
     }
 }
