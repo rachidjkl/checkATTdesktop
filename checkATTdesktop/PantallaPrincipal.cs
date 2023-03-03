@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace checkATTdesktop
 
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
         
         public PantallaPrincipal()
         {
@@ -49,11 +51,14 @@ namespace checkATTdesktop
         private void iconButtonHome_Click(object sender, EventArgs e)
         {
             optionSelected(sender, Color.White);
+            currentChildForm.Close();
+            Reset();
         }
 
         private void iconButtonManageStudent_Click(object sender, EventArgs e)
         {
             optionSelected(sender, Color.White);
+            abrirFormularioHijo(new GestionarAlumnos());
         }
 
         private void iconButtonManageTeacher_Click(object sender, EventArgs e)
@@ -78,8 +83,28 @@ namespace checkATTdesktop
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close(); 
             Reset();
         }
+
+
+        private void abrirFormularioHijo(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
+
 
 
 
@@ -87,7 +112,10 @@ namespace checkATTdesktop
         private void Reset()
         {          
             optionUnselected();
-            leftBorderBtn.Visible = false;  
+            leftBorderBtn.Visible = false;
+            iconPictureBoxOpcionSeleccionada.IconChar = IconChar.Home;
+            iconPictureBoxOpcionSeleccionada.IconColor = Color.White;
+            labelPantallaSeleccionada.Text = "Home"; 
         }
 
         //Metodo para resaltar opción seleccionada
@@ -99,7 +127,6 @@ namespace checkATTdesktop
                 currentBtn = (IconButton)senderBtn;
                 //CON ESTO SE CAMBIA EL COLOR DE FONDO DEL BOTON SELECCIONADO
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-
                 //CON ESTO SE CAMBIA EL COLOR DEL TEXTO DEL BOTON SELECCIONADO
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
@@ -112,6 +139,12 @@ namespace checkATTdesktop
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
+
+                //Icono de la pantalla seleccionada
+                iconPictureBoxOpcionSeleccionada.IconChar = currentBtn.IconChar;
+                iconPictureBoxOpcionSeleccionada.IconColor = color;
+
+                labelPantallaSeleccionada.Text = currentBtn.Text;   
 
             }
         }
@@ -129,6 +162,16 @@ namespace checkATTdesktop
             }
         }
 
-        
+        //Mover el panel por el panel superior
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }
