@@ -102,7 +102,6 @@ namespace checkATTdesktop
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
 

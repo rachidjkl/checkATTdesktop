@@ -30,59 +30,69 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
-            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
+            this.panelCrearAlumno = new System.Windows.Forms.Panel();
+            this.buttonModiAlumno = new System.Windows.Forms.Button();
+            this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.buttonCrearAlumno = new System.Windows.Forms.Button();
-            this.buttonModiAlumno = new System.Windows.Forms.Button();
             this.Direction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelCrearAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panelCrearAlumno
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Clase";
+            this.panelCrearAlumno.Controls.Add(this.buttonModiAlumno);
+            this.panelCrearAlumno.Controls.Add(this.buttonCrearAlumno);
+            this.panelCrearAlumno.Controls.Add(this.dataGridView1);
+            this.panelCrearAlumno.Controls.Add(this.textBoxBuscarAlumno);
+            this.panelCrearAlumno.Controls.Add(this.iconPictureBox1);
+            this.panelCrearAlumno.Controls.Add(this.comboBoxSeleccionarClase);
+            this.panelCrearAlumno.Controls.Add(this.label1);
+            this.panelCrearAlumno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCrearAlumno.Location = new System.Drawing.Point(0, 0);
+            this.panelCrearAlumno.Name = "panelCrearAlumno";
+            this.panelCrearAlumno.Size = new System.Drawing.Size(948, 537);
+            this.panelCrearAlumno.TabIndex = 0;
             // 
-            // comboBoxSeleccionarClase
+            // buttonModiAlumno
             // 
-            this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSeleccionarClase.FormattingEnabled = true;
-            this.comboBoxSeleccionarClase.Items.AddRange(new object[] {
-            "DAM1",
-            "DAW1",
-            "SMIX",
-            "ASIX",
-            "LOL"});
-            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(51, 86);
-            this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
-            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSeleccionarClase.TabIndex = 1;
+            this.buttonModiAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonModiAlumno.FlatAppearance.BorderSize = 2;
+            this.buttonModiAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModiAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonModiAlumno.Location = new System.Drawing.Point(763, 462);
+            this.buttonModiAlumno.Name = "buttonModiAlumno";
+            this.buttonModiAlumno.Size = new System.Drawing.Size(138, 34);
+            this.buttonModiAlumno.TabIndex = 20;
+            this.buttonModiAlumno.Text = "Modificar Alumno";
+            this.buttonModiAlumno.UseVisualStyleBackColor = true;
+            this.buttonModiAlumno.Click += new System.EventHandler(this.buttonModiAlumno_Click);
             // 
-            // textBoxBuscarAlumno
+            // buttonCrearAlumno
             // 
-            this.textBoxBuscarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarAlumno.Location = new System.Drawing.Point(89, 154);
-            this.textBoxBuscarAlumno.Name = "textBoxBuscarAlumno";
-            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 20);
-            this.textBoxBuscarAlumno.TabIndex = 3;
-            this.textBoxBuscarAlumno.Text = "Buscar...";
-            this.textBoxBuscarAlumno.Enter += new System.EventHandler(this.textBoxBuscarAlumno_Enter);
-            this.textBoxBuscarAlumno.Leave += new System.EventHandler(this.textBoxBuscarAlumno_Leave);
+            this.buttonCrearAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearAlumno.FlatAppearance.BorderSize = 2;
+            this.buttonCrearAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearAlumno.Location = new System.Drawing.Point(763, 64);
+            this.buttonCrearAlumno.Name = "buttonCrearAlumno";
+            this.buttonCrearAlumno.Size = new System.Drawing.Size(138, 34);
+            this.buttonCrearAlumno.TabIndex = 19;
+            this.buttonCrearAlumno.Text = "Crear Alumno";
+            this.buttonCrearAlumno.UseVisualStyleBackColor = true;
+            this.buttonCrearAlumno.Click += new System.EventHandler(this.buttonCrearAlumno_Click_1);
             // 
             // dataGridView1
             // 
@@ -114,11 +124,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 196);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 187);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(644, 309);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.TabIndex = 18;
             // 
             // Nombre
             // 
@@ -150,6 +160,22 @@
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
             // 
+            // Direction
+            // 
+            this.Direction.HeaderText = "Dirección";
+            this.Direction.Name = "Direction";
+            this.Direction.ReadOnly = true;
+            // 
+            // textBoxBuscarAlumno
+            // 
+            this.textBoxBuscarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarAlumno.Location = new System.Drawing.Point(90, 145);
+            this.textBoxBuscarAlumno.Name = "textBoxBuscarAlumno";
+            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 20);
+            this.textBoxBuscarAlumno.TabIndex = 17;
+            this.textBoxBuscarAlumno.Text = "Buscar...";
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
@@ -157,46 +183,36 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(51, 145);
+            this.iconPictureBox1.Location = new System.Drawing.Point(52, 136);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabIndex = 16;
             this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
-            // buttonCrearAlumno
+            // comboBoxSeleccionarClase
             // 
-            this.buttonCrearAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearAlumno.FlatAppearance.BorderSize = 2;
-            this.buttonCrearAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCrearAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearAlumno.Location = new System.Drawing.Point(762, 73);
-            this.buttonCrearAlumno.Name = "buttonCrearAlumno";
-            this.buttonCrearAlumno.Size = new System.Drawing.Size(138, 34);
-            this.buttonCrearAlumno.TabIndex = 5;
-            this.buttonCrearAlumno.Text = "Crear Alumno";
-            this.buttonCrearAlumno.UseVisualStyleBackColor = true;
+            this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSeleccionarClase.FormattingEnabled = true;
+            this.comboBoxSeleccionarClase.Items.AddRange(new object[] {
+            "DAM1",
+            "DAW1",
+            "SMIX",
+            "ASIX",
+            "LOL"});
+            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(52, 77);
+            this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
+            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSeleccionarClase.TabIndex = 15;
             // 
-            // buttonModiAlumno
+            // label1
             // 
-            this.buttonModiAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonModiAlumno.FlatAppearance.BorderSize = 2;
-            this.buttonModiAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModiAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonModiAlumno.Location = new System.Drawing.Point(762, 471);
-            this.buttonModiAlumno.Name = "buttonModiAlumno";
-            this.buttonModiAlumno.Size = new System.Drawing.Size(138, 34);
-            this.buttonModiAlumno.TabIndex = 6;
-            this.buttonModiAlumno.Text = "Modificar Alumno";
-            this.buttonModiAlumno.UseVisualStyleBackColor = true;
-            // 
-            // Direction
-            // 
-            this.Direction.HeaderText = "Dirección";
-            this.Direction.Name = "Direction";
-            this.Direction.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Clase";
             // 
             // GestionarAlumnos
             // 
@@ -204,37 +220,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(948, 537);
-            this.Controls.Add(this.buttonModiAlumno);
-            this.Controls.Add(this.buttonCrearAlumno);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBoxBuscarAlumno);
-            this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.comboBoxSeleccionarClase);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelCrearAlumno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionarAlumnos";
             this.Text = "GestionarAlumnos";
+            this.panelCrearAlumno.ResumeLayout(false);
+            this.panelCrearAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxSeleccionarClase;
-        private System.Windows.Forms.TextBox textBoxBuscarAlumno;
+        private System.Windows.Forms.Panel panelCrearAlumno;
+        private System.Windows.Forms.Button buttonModiAlumno;
+        private System.Windows.Forms.Button buttonCrearAlumno;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Button buttonCrearAlumno;
-        private System.Windows.Forms.Button buttonModiAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
+        private System.Windows.Forms.TextBox textBoxBuscarAlumno;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxSeleccionarClase;
+        private System.Windows.Forms.Label label1;
     }
 }

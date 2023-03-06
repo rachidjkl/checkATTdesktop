@@ -33,22 +33,22 @@ namespace checkATTdesktop
         {
             this.components = new System.ComponentModel.Container();
             this.panelConTodoMenusIzquierda = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelIzquierdaSuperiorLogo = new System.Windows.Forms.Panel();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.labelPantallaSeleccionada = new System.Windows.Forms.Label();
-            this.labelNombreUsuario = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.iconPictureBoxOpcionSeleccionada = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButtonManageHorario = new FontAwesome.Sharp.IconButton();
             this.iconButtonManageModuls = new FontAwesome.Sharp.IconButton();
             this.iconButtonManageClass = new FontAwesome.Sharp.IconButton();
             this.iconButtonManageTeacher = new FontAwesome.Sharp.IconButton();
             this.iconButtonManageStudent = new FontAwesome.Sharp.IconButton();
             this.iconButtonHome = new FontAwesome.Sharp.IconButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.iconButtonLogOut = new FontAwesome.Sharp.IconButton();
+            this.panelIzquierdaSuperiorLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.iconPictureBoxOpcionSeleccionada = new FontAwesome.Sharp.IconPictureBox();
+            this.labelPantallaSeleccionada = new System.Windows.Forms.Label();
+            this.labelNombreUsuario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelMuestraFecha = new System.Windows.Forms.Label();
@@ -57,10 +57,10 @@ namespace checkATTdesktop
             this.panelConTodoMenusIzquierda.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelIzquierdaSuperiorLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxOpcionSeleccionada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -81,89 +81,6 @@ namespace checkATTdesktop
             this.panelConTodoMenusIzquierda.Name = "panelConTodoMenusIzquierda";
             this.panelConTodoMenusIzquierda.Size = new System.Drawing.Size(212, 623);
             this.panelConTodoMenusIzquierda.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.iconButtonLogOut);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 536);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(212, 87);
-            this.panel1.TabIndex = 6;
-            // 
-            // panelIzquierdaSuperiorLogo
-            // 
-            this.panelIzquierdaSuperiorLogo.Controls.Add(this.pictureBox2);
-            this.panelIzquierdaSuperiorLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelIzquierdaSuperiorLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdaSuperiorLogo.Name = "panelIzquierdaSuperiorLogo";
-            this.panelIzquierdaSuperiorLogo.Size = new System.Drawing.Size(212, 165);
-            this.panelIzquierdaSuperiorLogo.TabIndex = 0;
-            // 
-            // panelSuperior
-            // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.panelSuperior.Controls.Add(this.iconPictureBoxOpcionSeleccionada);
-            this.panelSuperior.Controls.Add(this.labelPantallaSeleccionada);
-            this.panelSuperior.Controls.Add(this.labelNombreUsuario);
-            this.panelSuperior.Controls.Add(this.pictureBox1);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(212, 0);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(948, 86);
-            this.panelSuperior.TabIndex = 1;
-            this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
-            // 
-            // labelPantallaSeleccionada
-            // 
-            this.labelPantallaSeleccionada.AutoSize = true;
-            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPantallaSeleccionada.ForeColor = System.Drawing.Color.White;
-            this.labelPantallaSeleccionada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(69, 29);
-            this.labelPantallaSeleccionada.Name = "labelPantallaSeleccionada";
-            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(95, 33);
-            this.labelPantallaSeleccionada.TabIndex = 4;
-            this.labelPantallaSeleccionada.Text = "Home";
-            this.labelPantallaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelNombreUsuario
-            // 
-            this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelNombreUsuario.Location = new System.Drawing.Point(797, 29);
-            this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(139, 33);
-            this.labelNombreUsuario.TabIndex = 3;
-            this.labelNombreUsuario.Text = "Jose Luis";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // iconPictureBoxOpcionSeleccionada
-            // 
-            this.iconPictureBoxOpcionSeleccionada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.iconPictureBoxOpcionSeleccionada.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconPictureBoxOpcionSeleccionada.IconColor = System.Drawing.Color.White;
-            this.iconPictureBoxOpcionSeleccionada.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBoxOpcionSeleccionada.IconSize = 38;
-            this.iconPictureBoxOpcionSeleccionada.Location = new System.Drawing.Point(19, 29);
-            this.iconPictureBoxOpcionSeleccionada.Name = "iconPictureBoxOpcionSeleccionada";
-            this.iconPictureBoxOpcionSeleccionada.Size = new System.Drawing.Size(44, 38);
-            this.iconPictureBoxOpcionSeleccionada.TabIndex = 5;
-            this.iconPictureBoxOpcionSeleccionada.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::checkATTdesktop.Properties.Resources.man;
-            this.pictureBox1.Location = new System.Drawing.Point(708, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // iconButtonManageHorario
             // 
@@ -303,6 +220,15 @@ namespace checkATTdesktop
             this.iconButtonHome.UseVisualStyleBackColor = true;
             this.iconButtonHome.Click += new System.EventHandler(this.iconButtonHome_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.iconButtonLogOut);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 536);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(212, 87);
+            this.panel1.TabIndex = 6;
+            // 
             // iconButtonLogOut
             // 
             this.iconButtonLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
@@ -322,6 +248,15 @@ namespace checkATTdesktop
             this.iconButtonLogOut.UseVisualStyleBackColor = false;
             this.iconButtonLogOut.Click += new System.EventHandler(this.iconButtonLogOut_Click);
             // 
+            // panelIzquierdaSuperiorLogo
+            // 
+            this.panelIzquierdaSuperiorLogo.Controls.Add(this.pictureBox2);
+            this.panelIzquierdaSuperiorLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelIzquierdaSuperiorLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelIzquierdaSuperiorLogo.Name = "panelIzquierdaSuperiorLogo";
+            this.panelIzquierdaSuperiorLogo.Size = new System.Drawing.Size(212, 165);
+            this.panelIzquierdaSuperiorLogo.TabIndex = 0;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::checkATTdesktop.Properties.Resources.logo;
@@ -332,6 +267,71 @@ namespace checkATTdesktop
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.panelSuperior.Controls.Add(this.iconPictureBoxOpcionSeleccionada);
+            this.panelSuperior.Controls.Add(this.labelPantallaSeleccionada);
+            this.panelSuperior.Controls.Add(this.labelNombreUsuario);
+            this.panelSuperior.Controls.Add(this.pictureBox1);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(212, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(948, 86);
+            this.panelSuperior.TabIndex = 1;
+            this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
+            // 
+            // iconPictureBoxOpcionSeleccionada
+            // 
+            this.iconPictureBoxOpcionSeleccionada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.iconPictureBoxOpcionSeleccionada.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPictureBoxOpcionSeleccionada.IconColor = System.Drawing.Color.White;
+            this.iconPictureBoxOpcionSeleccionada.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBoxOpcionSeleccionada.IconSize = 38;
+            this.iconPictureBoxOpcionSeleccionada.Location = new System.Drawing.Point(19, 29);
+            this.iconPictureBoxOpcionSeleccionada.Name = "iconPictureBoxOpcionSeleccionada";
+            this.iconPictureBoxOpcionSeleccionada.Size = new System.Drawing.Size(44, 38);
+            this.iconPictureBoxOpcionSeleccionada.TabIndex = 5;
+            this.iconPictureBoxOpcionSeleccionada.TabStop = false;
+            // 
+            // labelPantallaSeleccionada
+            // 
+            this.labelPantallaSeleccionada.AutoSize = true;
+            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPantallaSeleccionada.ForeColor = System.Drawing.Color.White;
+            this.labelPantallaSeleccionada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(69, 29);
+            this.labelPantallaSeleccionada.Name = "labelPantallaSeleccionada";
+            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(95, 33);
+            this.labelPantallaSeleccionada.TabIndex = 4;
+            this.labelPantallaSeleccionada.Text = "Home";
+            this.labelPantallaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelNombreUsuario
+            // 
+            this.labelNombreUsuario.AutoSize = true;
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.labelNombreUsuario.Location = new System.Drawing.Point(797, 29);
+            this.labelNombreUsuario.Name = "labelNombreUsuario";
+            this.labelNombreUsuario.Size = new System.Drawing.Size(139, 33);
+            this.labelNombreUsuario.TabIndex = 3;
+            this.labelNombreUsuario.Text = "Jose Luis";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::checkATTdesktop.Properties.Resources.man;
+            this.pictureBox1.Location = new System.Drawing.Point(708, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panelDesktop
             // 
@@ -406,11 +406,11 @@ namespace checkATTdesktop
             this.panelConTodoMenusIzquierda.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelIzquierdaSuperiorLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxOpcionSeleccionada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

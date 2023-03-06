@@ -12,6 +12,7 @@ namespace checkATTdesktop
 {
     public partial class GestionarAlumnos : Form
     {
+        private Form currentChildForm;
         public GestionarAlumnos()
         {
             InitializeComponent();
@@ -62,6 +63,38 @@ namespace checkATTdesktop
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             textBoxBuscarAlumno.Text = "Buscar...";
+        }
+
+        private void buttonCrearAlumno_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void abrirFormularioHijo(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelCrearAlumno.Controls.Add(childForm);
+            panelCrearAlumno.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
+
+        private void buttonCrearAlumno_Click_1(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new AddStudent());
+        }
+
+        private void buttonModiAlumno_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new AddStudent());
         }
     }
 }
