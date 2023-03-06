@@ -50,7 +50,7 @@ namespace checkATTdesktop
      
         private void iconButtonHome_Click(object sender, EventArgs e)
         {
-            optionSelected(sender, Color.White);
+            optionSelected(sender, Color.White);           
             currentChildForm.Close();
             Reset();
         }
@@ -64,6 +64,7 @@ namespace checkATTdesktop
         private void iconButtonManageTeacher_Click(object sender, EventArgs e)
         {
             optionSelected(sender, Color.White);
+            abrirFormularioHijo(new GestionarProfesores());
         }
 
         private void iconButtonManageClass_Click(object sender, EventArgs e)

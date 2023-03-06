@@ -10,38 +10,38 @@ using System.Windows.Forms;
 
 namespace checkATTdesktop
 {
-    public partial class AddStudent : Form
+    public partial class ModiAddStudent : Form
     {
 
         private Form currentChildForm;
-        public AddStudent()
+        public ModiAddStudent()
         {
-            InitializeComponent();
-            
-        }
-
-        private void iconButton1Aceptar_Click(object sender, EventArgs e)
-        {
-            
+            InitializeComponent();            
         }
 
 
-        private bool todoRelleno()
+        private void iconButtonAceptar_Click(object sender, EventArgs e)
+        {
+            todoRelleno();
+        }
+
+        private void todoRelleno()
         {
             bool relleno = true;
 
             if (textBoxCorreo.Text == "" || textBoxCorreoCentro.Text == "" || textBoxDireccion.Text == "" || textBoxDNI.Text == "" || 
                 textBoxIncorporacion.Text == "" || textBoxNombre.Text == "" || textBoxPrimerApellido.Text == "" || textBoxSegundoApellido.Text == "" ||
-                textBoxTelefono.Text == "" || comboBoxClase.SelectedIndex == -1 || dateTimePickerNacimiento.Value == null)
+                textBoxTelefono.Text == "" || comboBoxClase.SelectedIndex == -1 || comboBoxCurso.SelectedIndex == -1)
             {
                 relleno = false;
+                MessageBox.Show("Alguno de los campos estan vacios...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 relleno = true;
             }
-            return relleno;
         }
 
+       
     }
 }

@@ -223,17 +223,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudent.cs">
+    <Compile Include="GestionarProfesores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudent.Designer.cs">
-      <DependentUpon>AddStudent.cs</DependentUpon>
+    <Compile Include="GestionarProfesores.Designer.cs">
+      <DependentUpon>GestionarProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModiAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModiAddStudent.Designer.cs">
+      <DependentUpon>ModiAddStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionarAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionarAlumnos.Designer.cs">
       <DependentUpon>GestionarAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModiAddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModiAddTeacher.Designer.cs">
+      <DependentUpon>ModiAddTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="oneMoment.cs">
       <SubType>Form</SubType>
@@ -262,11 +274,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddStudent.resx">
-      <DependentUpon>AddStudent.cs</DependentUpon>
+    <EmbeddedResource Include="GestionarProfesores.resx">
+      <DependentUpon>GestionarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModiAddStudent.resx">
+      <DependentUpon>ModiAddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarAlumnos.resx">
       <DependentUpon>GestionarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModiAddTeacher.resx">
+      <DependentUpon>ModiAddTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oneMoment.resx">
       <DependentUpon>oneMoment.cs</DependentUpon>

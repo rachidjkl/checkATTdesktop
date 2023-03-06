@@ -70,6 +70,16 @@ namespace checkATTdesktop
             
         }
 
+        private void buttonCrearAlumno_Click_1(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new ModiAddStudent());
+        }
+
+        private void buttonModiAlumno_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new ModiAddStudent());
+        }
+
         private void abrirFormularioHijo(Form childForm)
         {
             if (currentChildForm != null)
@@ -80,21 +90,17 @@ namespace checkATTdesktop
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panelCrearAlumno.Controls.Add(childForm);
-            panelCrearAlumno.Tag = childForm;
+            panelCrearModificarAlumno.Controls.Add(childForm);
+            panelCrearModificarAlumno.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
         }
 
-        private void buttonCrearAlumno_Click_1(object sender, EventArgs e)
+        private void iconPictureBox1_Click_1(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new AddStudent());
+
         }
 
-        private void buttonModiAlumno_Click(object sender, EventArgs e)
-        {
-            abrirFormularioHijo(new AddStudent());
-        }
     }
 }

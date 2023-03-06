@@ -1,6 +1,6 @@
 ﻿namespace checkATTdesktop
 {
-    partial class AddStudent
+    partial class ModiAddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -124,14 +124,14 @@
             this.panelCrearAlumnoPorfa.Location = new System.Drawing.Point(0, 0);
             this.panelCrearAlumnoPorfa.Name = "panelCrearAlumnoPorfa";
             this.panelCrearAlumnoPorfa.Size = new System.Drawing.Size(948, 537);
-            this.panelCrearAlumnoPorfa.TabIndex = 0;           
+            this.panelCrearAlumnoPorfa.TabIndex = 0;
             // 
             // iconButtonAceptar
             // 
             this.iconButtonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.iconButtonAceptar.FlatAppearance.BorderSize = 0;
             this.iconButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonAceptar.ForeColor = System.Drawing.Color.White;
             this.iconButtonAceptar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.iconButtonAceptar.IconColor = System.Drawing.Color.White;
@@ -145,6 +145,7 @@
             this.iconButtonAceptar.Text = "Aceptar";
             this.iconButtonAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonAceptar.UseVisualStyleBackColor = false;
+            this.iconButtonAceptar.Click += new System.EventHandler(this.iconButtonAceptar_Click);
             // 
             // comboBoxClase
             // 
@@ -523,7 +524,7 @@
             this.iconPictureBoxNombre.IconSize = 14;
             this.iconPictureBoxNombre.Location = new System.Drawing.Point(118, 30);
             this.iconPictureBoxNombre.Name = "iconPictureBoxNombre";
-            this.iconPictureBoxNombre.Size = new System.Drawing.Size(15, 14);
+            this.iconPictureBoxNombre.Size = new System.Drawing.Size(14, 14);
             this.iconPictureBoxNombre.TabIndex = 78;
             this.iconPictureBoxNombre.TabStop = false;
             // 

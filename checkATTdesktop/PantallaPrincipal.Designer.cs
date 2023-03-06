@@ -87,7 +87,7 @@ namespace checkATTdesktop
             this.iconButtonManageHorario.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageHorario.FlatAppearance.BorderSize = 0;
             this.iconButtonManageHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageHorario.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageHorario.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.iconButtonManageHorario.IconColor = System.Drawing.Color.White;
@@ -110,7 +110,7 @@ namespace checkATTdesktop
             this.iconButtonManageModuls.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageModuls.FlatAppearance.BorderSize = 0;
             this.iconButtonManageModuls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageModuls.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageModuls.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageModuls.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageModuls.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.iconButtonManageModuls.IconColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@ namespace checkATTdesktop
             this.iconButtonManageClass.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageClass.FlatAppearance.BorderSize = 0;
             this.iconButtonManageClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageClass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageClass.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageClass.IconChar = FontAwesome.Sharp.IconChar.School;
             this.iconButtonManageClass.IconColor = System.Drawing.Color.White;
@@ -156,7 +156,7 @@ namespace checkATTdesktop
             this.iconButtonManageTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageTeacher.FlatAppearance.BorderSize = 0;
             this.iconButtonManageTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageTeacher.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageTeacher.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageTeacher.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
             this.iconButtonManageTeacher.IconColor = System.Drawing.Color.White;
@@ -179,7 +179,7 @@ namespace checkATTdesktop
             this.iconButtonManageStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageStudent.FlatAppearance.BorderSize = 0;
             this.iconButtonManageStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageStudent.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageStudent.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageStudent.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
             this.iconButtonManageStudent.IconColor = System.Drawing.Color.White;
@@ -202,7 +202,7 @@ namespace checkATTdesktop
             this.iconButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonHome.FlatAppearance.BorderSize = 0;
             this.iconButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonHome.ForeColor = System.Drawing.Color.White;
             this.iconButtonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButtonHome.IconColor = System.Drawing.Color.White;
@@ -235,7 +235,7 @@ namespace checkATTdesktop
             this.iconButtonLogOut.FlatAppearance.BorderSize = 0;
             this.iconButtonLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.iconButtonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonLogOut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonLogOut.ForeColor = System.Drawing.Color.Red;
             this.iconButtonLogOut.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButtonLogOut.IconColor = System.Drawing.Color.Black;
@@ -298,12 +298,12 @@ namespace checkATTdesktop
             // labelPantallaSeleccionada
             // 
             this.labelPantallaSeleccionada.AutoSize = true;
-            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPantallaSeleccionada.ForeColor = System.Drawing.Color.White;
             this.labelPantallaSeleccionada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(69, 29);
+            this.labelPantallaSeleccionada.Location = new System.Drawing.Point(69, 32);
             this.labelPantallaSeleccionada.Name = "labelPantallaSeleccionada";
-            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(95, 33);
+            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(86, 31);
             this.labelPantallaSeleccionada.TabIndex = 4;
             this.labelPantallaSeleccionada.Text = "Home";
             this.labelPantallaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -358,33 +358,33 @@ namespace checkATTdesktop
             // labelMuestraFecha
             // 
             this.labelMuestraFecha.AutoSize = true;
-            this.labelMuestraFecha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMuestraFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMuestraFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
             this.labelMuestraFecha.Location = new System.Drawing.Point(361, 313);
             this.labelMuestraFecha.Name = "labelMuestraFecha";
-            this.labelMuestraFecha.Size = new System.Drawing.Size(96, 33);
+            this.labelMuestraFecha.Size = new System.Drawing.Size(86, 31);
             this.labelMuestraFecha.TabIndex = 12;
             this.labelMuestraFecha.Text = "label2";
             // 
             // labelMuestraHora
             // 
             this.labelMuestraHora.AutoSize = true;
-            this.labelMuestraHora.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMuestraHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMuestraHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
             this.labelMuestraHora.Location = new System.Drawing.Point(485, 255);
             this.labelMuestraHora.Name = "labelMuestraHora";
-            this.labelMuestraHora.Size = new System.Drawing.Size(130, 44);
+            this.labelMuestraHora.Size = new System.Drawing.Size(118, 42);
             this.labelMuestraHora.TabIndex = 11;
             this.labelMuestraHora.Text = "label2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.label1.Location = new System.Drawing.Point(347, 188);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(470, 44);
+            this.label1.Size = new System.Drawing.Size(418, 42);
             this.label1.TabIndex = 10;
             this.label1.Text = "Nombre de la aplicación";
             // 
