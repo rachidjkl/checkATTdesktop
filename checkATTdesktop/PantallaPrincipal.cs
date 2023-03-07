@@ -70,11 +70,13 @@ namespace checkATTdesktop
         private void iconButtonManageClass_Click(object sender, EventArgs e)
         {
             optionSelected(sender, Color.White);
+            abrirFormularioHijo(new GestionarClases());
         }
 
         private void iconButtonManageModuls_Click(object sender, EventArgs e)
         {
             optionSelected(sender, Color.White);
+            abrirFormularioHijo(new GestionarModulos());
         }
 
         private void iconButtonManageHorario_Click(object sender, EventArgs e)

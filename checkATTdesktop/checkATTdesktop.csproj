@@ -223,11 +223,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionarClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarClases.Designer.cs">
+      <DependentUpon>GestionarClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarModulos.Designer.cs">
+      <DependentUpon>GestionarModulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarProfesores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionarProfesores.Designer.cs">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModiAddClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModiAddClase.Designer.cs">
+      <DependentUpon>ModiAddClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModiAddModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModiAddModulos.Designer.cs">
+      <DependentUpon>ModiAddModulos.cs</DependentUpon>
     </Compile>
     <Compile Include="ModiAddStudent.cs">
       <SubType>Form</SubType>
@@ -274,8 +298,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestionarClases.resx">
+      <DependentUpon>GestionarClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarModulos.resx">
+      <DependentUpon>GestionarModulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarProfesores.resx">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModiAddClase.resx">
+      <DependentUpon>ModiAddClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModiAddModulos.resx">
+      <DependentUpon>ModiAddModulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModiAddStudent.resx">
       <DependentUpon>ModiAddStudent.cs</DependentUpon>

@@ -87,9 +87,9 @@
             this.buttonModiAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModiAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModiAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonModiAlumno.Location = new System.Drawing.Point(763, 462);
+            this.buttonModiAlumno.Location = new System.Drawing.Point(748, 462);
             this.buttonModiAlumno.Name = "buttonModiAlumno";
-            this.buttonModiAlumno.Size = new System.Drawing.Size(138, 34);
+            this.buttonModiAlumno.Size = new System.Drawing.Size(153, 34);
             this.buttonModiAlumno.TabIndex = 20;
             this.buttonModiAlumno.Text = "Modificar Alumno";
             this.buttonModiAlumno.UseVisualStyleBackColor = true;
