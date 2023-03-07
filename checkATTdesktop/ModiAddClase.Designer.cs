@@ -33,7 +33,7 @@
             this.textBoxNombreClase = new System.Windows.Forms.TextBox();
             this.comboBoxTutor = new System.Windows.Forms.ComboBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCrearModiAddClase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,28 +102,28 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
-            // button1
+            // buttonCrearModiAddClase
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(108, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 32);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonCrearModiAddClase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearModiAddClase.FlatAppearance.BorderSize = 0;
+            this.buttonCrearModiAddClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearModiAddClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearModiAddClase.ForeColor = System.Drawing.Color.White;
+            this.buttonCrearModiAddClase.Location = new System.Drawing.Point(108, 246);
+            this.buttonCrearModiAddClase.Name = "buttonCrearModiAddClase";
+            this.buttonCrearModiAddClase.Size = new System.Drawing.Size(114, 32);
+            this.buttonCrearModiAddClase.TabIndex = 5;
+            this.buttonCrearModiAddClase.Text = "Crear";
+            this.buttonCrearModiAddClase.UseVisualStyleBackColor = false;
             // 
             // ModiAddClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(336, 302);
+            this.ClientSize = new System.Drawing.Size(332, 298);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCrearModiAddClase);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.comboBoxTutor);
             this.Controls.Add(this.textBoxNombreClase);
@@ -149,6 +149,6 @@
         private System.Windows.Forms.TextBox textBoxNombreClase;
         private System.Windows.Forms.ComboBox comboBoxTutor;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCrearModiAddClase;
     }
 }

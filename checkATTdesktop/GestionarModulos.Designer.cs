@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModulo = new System.Windows.Forms.Panel();
-            this.buttonEliminarProfesor = new System.Windows.Forms.Button();
+            this.buttonEliminarModulo = new System.Windows.Forms.Button();
             this.buttonModiModulo = new System.Windows.Forms.Button();
             this.buttonCrearModulo = new System.Windows.Forms.Button();
-            this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
+            this.dataGridViewModulos = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.textBoxBuscarModulo = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelCrearModulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearModulo
             // 
-            this.panelCrearModulo.Controls.Add(this.buttonEliminarProfesor);
+            this.panelCrearModulo.Controls.Add(this.buttonEliminarModulo);
             this.panelCrearModulo.Controls.Add(this.buttonModiModulo);
             this.panelCrearModulo.Controls.Add(this.buttonCrearModulo);
-            this.panelCrearModulo.Controls.Add(this.dataGridViewProfesor);
-            this.panelCrearModulo.Controls.Add(this.textBoxBuscarProfesor);
+            this.panelCrearModulo.Controls.Add(this.dataGridViewModulos);
+            this.panelCrearModulo.Controls.Add(this.textBoxBuscarModulo);
             this.panelCrearModulo.Controls.Add(this.iconPictureBox1);
             this.panelCrearModulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCrearModulo.Location = new System.Drawing.Point(0, 0);
@@ -62,19 +62,19 @@
             this.panelCrearModulo.Size = new System.Drawing.Size(948, 537);
             this.panelCrearModulo.TabIndex = 0;
             // 
-            // buttonEliminarProfesor
+            // buttonEliminarModulo
             // 
-            this.buttonEliminarProfesor.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttonEliminarProfesor.FlatAppearance.BorderSize = 2;
-            this.buttonEliminarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarProfesor.ForeColor = System.Drawing.Color.Red;
-            this.buttonEliminarProfesor.Location = new System.Drawing.Point(595, 448);
-            this.buttonEliminarProfesor.Name = "buttonEliminarProfesor";
-            this.buttonEliminarProfesor.Size = new System.Drawing.Size(138, 34);
-            this.buttonEliminarProfesor.TabIndex = 30;
-            this.buttonEliminarProfesor.Text = "Eliminar";
-            this.buttonEliminarProfesor.UseVisualStyleBackColor = true;
+            this.buttonEliminarModulo.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonEliminarModulo.FlatAppearance.BorderSize = 2;
+            this.buttonEliminarModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarModulo.ForeColor = System.Drawing.Color.Red;
+            this.buttonEliminarModulo.Location = new System.Drawing.Point(595, 448);
+            this.buttonEliminarModulo.Name = "buttonEliminarModulo";
+            this.buttonEliminarModulo.Size = new System.Drawing.Size(138, 34);
+            this.buttonEliminarModulo.TabIndex = 30;
+            this.buttonEliminarModulo.Text = "Eliminar";
+            this.buttonEliminarModulo.UseVisualStyleBackColor = true;
             // 
             // buttonModiModulo
             // 
@@ -106,41 +106,41 @@
             this.buttonCrearModulo.UseVisualStyleBackColor = true;
             this.buttonCrearModulo.Click += new System.EventHandler(this.buttonCrearModulo_Click);
             // 
-            // dataGridViewProfesor
+            // dataGridViewModulos
             // 
-            this.dataGridViewProfesor.AllowUserToAddRows = false;
-            this.dataGridViewProfesor.AllowUserToDeleteRows = false;
-            this.dataGridViewProfesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProfesor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProfesor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewModulos.AllowUserToAddRows = false;
+            this.dataGridViewModulos.AllowUserToDeleteRows = false;
+            this.dataGridViewModulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Apellido,
             this.DNI,
             this.TELEFONO,
             this.Correo,
             this.Direction});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
-            this.dataGridViewProfesor.Location = new System.Drawing.Point(41, 100);
-            this.dataGridViewProfesor.Name = "dataGridViewProfesor";
-            this.dataGridViewProfesor.ReadOnly = true;
-            this.dataGridViewProfesor.Size = new System.Drawing.Size(644, 307);
-            this.dataGridViewProfesor.TabIndex = 27;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewModulos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewModulos.EnableHeadersVisualStyles = false;
+            this.dataGridViewModulos.Location = new System.Drawing.Point(41, 100);
+            this.dataGridViewModulos.Name = "dataGridViewModulos";
+            this.dataGridViewModulos.ReadOnly = true;
+            this.dataGridViewModulos.Size = new System.Drawing.Size(644, 307);
+            this.dataGridViewModulos.TabIndex = 27;
             // 
             // Nombre
             // 
@@ -178,15 +178,15 @@
             this.Direction.Name = "Direction";
             this.Direction.ReadOnly = true;
             // 
-            // textBoxBuscarProfesor
+            // textBoxBuscarModulo
             // 
-            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(80, 63);
-            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
-            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 19);
-            this.textBoxBuscarProfesor.TabIndex = 26;
-            this.textBoxBuscarProfesor.Text = "Buscar...";
+            this.textBoxBuscarModulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarModulo.Location = new System.Drawing.Point(80, 63);
+            this.textBoxBuscarModulo.Name = "textBoxBuscarModulo";
+            this.textBoxBuscarModulo.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarModulo.TabIndex = 26;
+            this.textBoxBuscarModulo.Text = "Buscar...";
             // 
             // iconPictureBox1
             // 
@@ -213,7 +213,7 @@
             this.Text = "GestionarModulos";
             this.panelCrearModulo.ResumeLayout(false);
             this.panelCrearModulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -222,17 +222,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panelCrearModulo;
-        private System.Windows.Forms.Button buttonEliminarProfesor;
+        private System.Windows.Forms.Button buttonEliminarModulo;
         private System.Windows.Forms.Button buttonModiModulo;
         private System.Windows.Forms.Button buttonCrearModulo;
-        private System.Windows.Forms.DataGridView dataGridViewProfesor;
+        private System.Windows.Forms.DataGridView dataGridViewModulos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
-        private System.Windows.Forms.TextBox textBoxBuscarProfesor;
+        private System.Windows.Forms.TextBox textBoxBuscarModulo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

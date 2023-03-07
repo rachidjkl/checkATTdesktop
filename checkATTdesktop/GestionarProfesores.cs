@@ -41,12 +41,12 @@ namespace checkATTdesktop
             textBoxBuscarProfesor.Text = "Buscar...";
         }
 
-        private void buttonCrearAlumno_Click(object sender, EventArgs e)
+        private void buttonCrearProfesor_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new ModiAddTeacher());
         }
 
-        private void buttonModiAlumno_Click(object sender, EventArgs e)
+        private void buttonModiProfesor_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new ModiAddTeacher());
         }

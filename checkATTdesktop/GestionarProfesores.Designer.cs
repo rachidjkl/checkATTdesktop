@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarProfesores = new System.Windows.Forms.Panel();
             this.buttonEliminarProfesor = new System.Windows.Forms.Button();
-            this.buttonModiAlumno = new System.Windows.Forms.Button();
-            this.buttonCrearAlumno = new System.Windows.Forms.Button();
+            this.buttonModiProfesor = new System.Windows.Forms.Button();
+            this.buttonCrearProfesor = new System.Windows.Forms.Button();
             this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +51,8 @@
             // panelCrearModificarProfesores
             // 
             this.panelCrearModificarProfesores.Controls.Add(this.buttonEliminarProfesor);
-            this.panelCrearModificarProfesores.Controls.Add(this.buttonModiAlumno);
-            this.panelCrearModificarProfesores.Controls.Add(this.buttonCrearAlumno);
+            this.panelCrearModificarProfesores.Controls.Add(this.buttonModiProfesor);
+            this.panelCrearModificarProfesores.Controls.Add(this.buttonCrearProfesor);
             this.panelCrearModificarProfesores.Controls.Add(this.dataGridViewProfesor);
             this.panelCrearModificarProfesores.Controls.Add(this.textBoxBuscarProfesor);
             this.panelCrearModificarProfesores.Controls.Add(this.iconPictureBox1);
@@ -76,35 +76,35 @@
             this.buttonEliminarProfesor.Text = "Eliminar";
             this.buttonEliminarProfesor.UseVisualStyleBackColor = true;
             // 
-            // buttonModiAlumno
+            // buttonModiProfesor
             // 
-            this.buttonModiAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonModiAlumno.FlatAppearance.BorderSize = 2;
-            this.buttonModiAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModiAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonModiAlumno.Location = new System.Drawing.Point(739, 469);
-            this.buttonModiAlumno.Name = "buttonModiAlumno";
-            this.buttonModiAlumno.Size = new System.Drawing.Size(168, 34);
-            this.buttonModiAlumno.TabIndex = 23;
-            this.buttonModiAlumno.Text = "Modificar Profesor";
-            this.buttonModiAlumno.UseVisualStyleBackColor = true;
-            this.buttonModiAlumno.Click += new System.EventHandler(this.buttonModiAlumno_Click);
+            this.buttonModiProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonModiProfesor.FlatAppearance.BorderSize = 2;
+            this.buttonModiProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModiProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiProfesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonModiProfesor.Location = new System.Drawing.Point(739, 469);
+            this.buttonModiProfesor.Name = "buttonModiProfesor";
+            this.buttonModiProfesor.Size = new System.Drawing.Size(168, 34);
+            this.buttonModiProfesor.TabIndex = 23;
+            this.buttonModiProfesor.Text = "Modificar Profesor";
+            this.buttonModiProfesor.UseVisualStyleBackColor = true;
+            this.buttonModiProfesor.Click += new System.EventHandler(this.buttonModiProfesor_Click);
             // 
-            // buttonCrearAlumno
+            // buttonCrearProfesor
             // 
-            this.buttonCrearAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearAlumno.FlatAppearance.BorderSize = 2;
-            this.buttonCrearAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCrearAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearAlumno.Location = new System.Drawing.Point(769, 75);
-            this.buttonCrearAlumno.Name = "buttonCrearAlumno";
-            this.buttonCrearAlumno.Size = new System.Drawing.Size(138, 34);
-            this.buttonCrearAlumno.TabIndex = 22;
-            this.buttonCrearAlumno.Text = "Crear Profesor";
-            this.buttonCrearAlumno.UseVisualStyleBackColor = true;
-            this.buttonCrearAlumno.Click += new System.EventHandler(this.buttonCrearAlumno_Click);
+            this.buttonCrearProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearProfesor.FlatAppearance.BorderSize = 2;
+            this.buttonCrearProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearProfesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearProfesor.Location = new System.Drawing.Point(769, 75);
+            this.buttonCrearProfesor.Name = "buttonCrearProfesor";
+            this.buttonCrearProfesor.Size = new System.Drawing.Size(138, 34);
+            this.buttonCrearProfesor.TabIndex = 22;
+            this.buttonCrearProfesor.Text = "Crear Profesor";
+            this.buttonCrearProfesor.UseVisualStyleBackColor = true;
+            this.buttonCrearProfesor.Click += new System.EventHandler(this.buttonCrearProfesor_Click);
             // 
             // dataGridViewProfesor
             // 
@@ -232,8 +232,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
         private System.Windows.Forms.TextBox textBoxBuscarProfesor;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Button buttonCrearAlumno;
+        private System.Windows.Forms.Button buttonCrearProfesor;
         private System.Windows.Forms.Button buttonEliminarProfesor;
-        private System.Windows.Forms.Button buttonModiAlumno;
+        private System.Windows.Forms.Button buttonModiProfesor;
     }
 }

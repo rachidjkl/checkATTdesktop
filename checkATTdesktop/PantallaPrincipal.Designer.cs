@@ -53,7 +53,7 @@ namespace checkATTdesktop
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelMuestraFecha = new System.Windows.Forms.Label();
             this.labelMuestraHora = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNombreApp = new System.Windows.Forms.Label();
             this.panelConTodoMenusIzquierda.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelIzquierdaSuperiorLogo.SuspendLayout();
@@ -338,7 +338,7 @@ namespace checkATTdesktop
             this.panelDesktop.Controls.Add(this.pictureBox3);
             this.panelDesktop.Controls.Add(this.labelMuestraFecha);
             this.panelDesktop.Controls.Add(this.labelMuestraHora);
-            this.panelDesktop.Controls.Add(this.label1);
+            this.panelDesktop.Controls.Add(this.labelNombreApp);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(212, 86);
             this.panelDesktop.Name = "panelDesktop";
@@ -377,16 +377,16 @@ namespace checkATTdesktop
             this.labelMuestraHora.TabIndex = 11;
             this.labelMuestraHora.Text = "label2";
             // 
-            // label1
+            // labelNombreApp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.label1.Location = new System.Drawing.Point(347, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(418, 42);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Nombre de la aplicación";
+            this.labelNombreApp.AutoSize = true;
+            this.labelNombreApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.labelNombreApp.Location = new System.Drawing.Point(347, 188);
+            this.labelNombreApp.Name = "labelNombreApp";
+            this.labelNombreApp.Size = new System.Drawing.Size(418, 42);
+            this.labelNombreApp.TabIndex = 10;
+            this.labelNombreApp.Text = "Nombre de la aplicación";
             // 
             // PantallaPrincipal
             // 
@@ -441,6 +441,6 @@ namespace checkATTdesktop
         private PictureBox pictureBox3;
         private Label labelMuestraFecha;
         private Label labelMuestraHora;
-        private Label label1;
+        private Label labelNombreApp;
     }
 }

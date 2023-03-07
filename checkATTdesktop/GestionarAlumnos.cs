@@ -30,8 +30,8 @@ namespace checkATTdesktop
 
             foreach (User u in usuarios)
             {
-                int rowIndex = dataGridView1.Rows.Add();
-                DataGridViewRow row = dataGridView1.Rows[rowIndex];
+                int rowIndex = dataGridViewAlumnos.Rows.Add();
+                DataGridViewRow row = dataGridViewAlumnos.Rows[rowIndex];
                 row.Cells[0].Value = u.Nombre;
                 row.Cells[1].Value = u.Apellido;
                 row.Cells[2].Value = u.DNI;
