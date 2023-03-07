@@ -25,8 +25,8 @@ namespace checkATTdesktop
 
         private void buttonModiClase_Click(object sender, EventArgs e)
         {
-            ModiAddClase addClass = new ModiAddClase();
-            addClass.ShowDialog();
+            ModiAddClase modiClass = new ModiAddClase();
+            modiClass.ShowDialog();
         }
     }
 }

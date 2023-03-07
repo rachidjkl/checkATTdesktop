@@ -16,5 +16,17 @@ namespace checkATTdesktop
         {
             InitializeComponent();
         }
+
+        private void buttonEditarUF_Click(object sender, EventArgs e)
+        {
+            ModiAddUF editUF = new ModiAddUF();
+            editUF.ShowDialog();
+        }
+
+        private void buttonCrearUF_Click(object sender, EventArgs e)
+        {
+            ModiAddUF addUF = new ModiAddUF();
+            addUF.ShowDialog();
+        }
     }
 }

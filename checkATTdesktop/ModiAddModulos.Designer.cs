@@ -109,6 +109,7 @@
             this.buttonEditarUF.TabIndex = 83;
             this.buttonEditarUF.Text = "Editar Uf";
             this.buttonEditarUF.UseVisualStyleBackColor = true;
+            this.buttonEditarUF.Click += new System.EventHandler(this.buttonEditarUF_Click);
             // 
             // buttonCrearUF
             // 
@@ -122,6 +123,7 @@
             this.buttonCrearUF.TabIndex = 84;
             this.buttonCrearUF.Text = "Crear UF";
             this.buttonCrearUF.UseVisualStyleBackColor = true;
+            this.buttonCrearUF.Click += new System.EventHandler(this.buttonCrearUF_Click);
             // 
             // label3
             // 
@@ -176,7 +178,7 @@
             // 
             // iconPictureBoxBorrar
             // 
-            this.iconPictureBoxBorrar.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBoxBorrar.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBoxBorrar.ForeColor = System.Drawing.Color.Red;
             this.iconPictureBoxBorrar.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.iconPictureBoxBorrar.IconColor = System.Drawing.Color.Red;
