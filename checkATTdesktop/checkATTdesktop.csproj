@@ -223,58 +223,70 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GestionarClases.cs">
+    <Compile Include="Gestion\GestionarClases.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarClases.Designer.cs">
+    <Compile Include="Gestion\GestionarClases.Designer.cs">
       <DependentUpon>GestionarClases.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarModulos.cs">
+    <Compile Include="Gestion\GestionarHorarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarModulos.Designer.cs">
+    <Compile Include="Gestion\GestionarHorarios.Designer.cs">
+      <DependentUpon>GestionarHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion\GestionarModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion\GestionarModulos.Designer.cs">
       <DependentUpon>GestionarModulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarProfesores.cs">
+    <Compile Include="Gestion\GestionarProfesores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarProfesores.Designer.cs">
+    <Compile Include="Gestion\GestionarProfesores.Designer.cs">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAddClase.cs">
+    <Compile Include="ModiAdd\ModiAddClase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModiAddClase.Designer.cs">
+    <Compile Include="ModiAdd\ModiAddClase.Designer.cs">
       <DependentUpon>ModiAddClase.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAddModulos.cs">
+    <Compile Include="ModiAdd\ModiAddHorario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModiAddModulos.Designer.cs">
+    <Compile Include="ModiAdd\ModiAddHorario.Designer.cs">
+      <DependentUpon>ModiAddHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModiAdd\ModiAddModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModiAdd\ModiAddModulos.Designer.cs">
       <DependentUpon>ModiAddModulos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAddStudent.cs">
+    <Compile Include="ModiAdd\ModiAddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModiAddStudent.Designer.cs">
+    <Compile Include="ModiAdd\ModiAddStudent.Designer.cs">
       <DependentUpon>ModiAddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarAlumnos.cs">
+    <Compile Include="Gestion\GestionarAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarAlumnos.Designer.cs">
+    <Compile Include="Gestion\GestionarAlumnos.Designer.cs">
       <DependentUpon>GestionarAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAddTeacher.cs">
+    <Compile Include="ModiAdd\ModiAddTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModiAddTeacher.Designer.cs">
+    <Compile Include="ModiAdd\ModiAddTeacher.Designer.cs">
       <DependentUpon>ModiAddTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAddUF.cs">
+    <Compile Include="ModiAdd\ModiAddUF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModiAddUF.Designer.cs">
+    <Compile Include="ModiAdd\ModiAddUF.Designer.cs">
       <DependentUpon>ModiAddUF.cs</DependentUpon>
     </Compile>
     <Compile Include="oneMoment.cs">
@@ -284,63 +296,69 @@
       <DependentUpon>oneMoment.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="WelcomeForm.cs">
+    <Compile Include="Main\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
+    <Compile Include="Main\WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="LoginFolder\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="LoginFolder\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaPrincipal.cs">
+    <Compile Include="Main\PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaPrincipal.Designer.cs">
+    <Compile Include="Main\PantallaPrincipal.Designer.cs">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GestionarClases.resx">
+    <EmbeddedResource Include="Gestion\GestionarClases.resx">
       <DependentUpon>GestionarClases.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarModulos.resx">
+    <EmbeddedResource Include="Gestion\GestionarHorarios.resx">
+      <DependentUpon>GestionarHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\GestionarModulos.resx">
       <DependentUpon>GestionarModulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarProfesores.resx">
+    <EmbeddedResource Include="Gestion\GestionarProfesores.resx">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModiAddClase.resx">
+    <EmbeddedResource Include="ModiAdd\ModiAddClase.resx">
       <DependentUpon>ModiAddClase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModiAddModulos.resx">
+    <EmbeddedResource Include="ModiAdd\ModiAddHorario.resx">
+      <DependentUpon>ModiAddHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModiAdd\ModiAddModulos.resx">
       <DependentUpon>ModiAddModulos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModiAddStudent.resx">
+    <EmbeddedResource Include="ModiAdd\ModiAddStudent.resx">
       <DependentUpon>ModiAddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarAlumnos.resx">
+    <EmbeddedResource Include="Gestion\GestionarAlumnos.resx">
       <DependentUpon>GestionarAlumnos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModiAddTeacher.resx">
+    <EmbeddedResource Include="ModiAdd\ModiAddTeacher.resx">
       <DependentUpon>ModiAddTeacher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModiAddUF.resx">
+    <EmbeddedResource Include="ModiAdd\ModiAddUF.resx">
       <DependentUpon>ModiAddUF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oneMoment.resx">
       <DependentUpon>oneMoment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
+    <EmbeddedResource Include="Main\WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="LoginFolder\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaPrincipal.resx">
+    <EmbeddedResource Include="Main\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
