@@ -47,7 +47,7 @@
             this.buttonEliminarClase.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonEliminarClase.FlatAppearance.BorderSize = 2;
             this.buttonEliminarClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarClase.ForeColor = System.Drawing.Color.Red;
             this.buttonEliminarClase.Location = new System.Drawing.Point(595, 469);
             this.buttonEliminarClase.Name = "buttonEliminarClase";
@@ -61,7 +61,7 @@
             this.buttonModiClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiClase.FlatAppearance.BorderSize = 2;
             this.buttonModiClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModiClase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiClase.Location = new System.Drawing.Point(739, 469);
             this.buttonModiClase.Name = "buttonModiClase";
@@ -76,7 +76,7 @@
             this.buttonCrearClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearClase.FlatAppearance.BorderSize = 2;
             this.buttonCrearClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearClase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearClase.Location = new System.Drawing.Point(769, 45);
             this.buttonCrearClase.Name = "buttonCrearClase";
@@ -93,7 +93,7 @@
             this.dataGridViewClase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -135,10 +135,10 @@
             // textBoxBuscarClase
             // 
             this.textBoxBuscarClase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarClase.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscarClase.Location = new System.Drawing.Point(79, 60);
             this.textBoxBuscarClase.Name = "textBoxBuscarClase";
-            this.textBoxBuscarClase.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarClase.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarClase.TabIndex = 26;
             this.textBoxBuscarClase.Text = "Buscar...";
             // 

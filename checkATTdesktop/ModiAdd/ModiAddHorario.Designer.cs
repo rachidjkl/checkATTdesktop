@@ -75,26 +75,29 @@
             // dateTimePickerHoraInicio
             // 
             this.dateTimePickerHoraInicio.CustomFormat = "HH:mm";
+            this.dateTimePickerHoraInicio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerHoraInicio.Location = new System.Drawing.Point(52, 58);
             this.dateTimePickerHoraInicio.Name = "dateTimePickerHoraInicio";
             this.dateTimePickerHoraInicio.ShowUpDown = true;
-            this.dateTimePickerHoraInicio.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePickerHoraInicio.Size = new System.Drawing.Size(97, 21);
             this.dateTimePickerHoraInicio.TabIndex = 6;
             // 
             // dateTimePickerHoraFin
             // 
             this.dateTimePickerHoraFin.CustomFormat = "HH:mm";
+            this.dateTimePickerHoraFin.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerHoraFin.Location = new System.Drawing.Point(52, 145);
             this.dateTimePickerHoraFin.Name = "dateTimePickerHoraFin";
             this.dateTimePickerHoraFin.ShowUpDown = true;
-            this.dateTimePickerHoraFin.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePickerHoraFin.Size = new System.Drawing.Size(97, 21);
             this.dateTimePickerHoraFin.TabIndex = 7;
             // 
             // comboBoxDiaSemana
             // 
             this.comboBoxDiaSemana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDiaSemana.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDiaSemana.FormattingEnabled = true;
             this.comboBoxDiaSemana.Items.AddRange(new object[] {
             "Lunes",
@@ -106,7 +109,7 @@
             "Domingo"});
             this.comboBoxDiaSemana.Location = new System.Drawing.Point(52, 237);
             this.comboBoxDiaSemana.Name = "comboBoxDiaSemana";
-            this.comboBoxDiaSemana.Size = new System.Drawing.Size(183, 21);
+            this.comboBoxDiaSemana.Size = new System.Drawing.Size(183, 24);
             this.comboBoxDiaSemana.TabIndex = 8;
             // 
             // label4
@@ -122,10 +125,11 @@
             // comboBoxClase
             // 
             this.comboBoxClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClase.FormattingEnabled = true;
             this.comboBoxClase.Location = new System.Drawing.Point(368, 61);
             this.comboBoxClase.Name = "comboBoxClase";
-            this.comboBoxClase.Size = new System.Drawing.Size(183, 21);
+            this.comboBoxClase.Size = new System.Drawing.Size(183, 24);
             this.comboBoxClase.TabIndex = 10;
             // 
             // label5
@@ -141,10 +145,11 @@
             // comboBoxModulo
             // 
             this.comboBoxModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxModulo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModulo.FormattingEnabled = true;
             this.comboBoxModulo.Location = new System.Drawing.Point(368, 145);
             this.comboBoxModulo.Name = "comboBoxModulo";
-            this.comboBoxModulo.Size = new System.Drawing.Size(183, 21);
+            this.comboBoxModulo.Size = new System.Drawing.Size(183, 24);
             this.comboBoxModulo.TabIndex = 12;
             // 
             // iconPictureBox1

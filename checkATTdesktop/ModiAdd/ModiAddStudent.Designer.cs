@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelCrearAlumnoPorfa = new System.Windows.Forms.Panel();
+            this.dateTimePickerIncorporacion = new System.Windows.Forms.DateTimePicker();
             this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             this.comboBoxClase = new System.Windows.Forms.ComboBox();
             this.comboBoxCurso = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.iconPictureBoxCursoMatriculación = new FontAwesome.Sharp.IconPictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxIncorporacion = new System.Windows.Forms.TextBox();
             this.iconPictureBoxIncorporación = new FontAwesome.Sharp.IconPictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
@@ -83,6 +83,7 @@
             // 
             // panelCrearAlumnoPorfa
             // 
+            this.panelCrearAlumnoPorfa.Controls.Add(this.dateTimePickerIncorporacion);
             this.panelCrearAlumnoPorfa.Controls.Add(this.iconButtonAceptar);
             this.panelCrearAlumnoPorfa.Controls.Add(this.comboBoxClase);
             this.panelCrearAlumnoPorfa.Controls.Add(this.comboBoxCurso);
@@ -105,7 +106,6 @@
             this.panelCrearAlumnoPorfa.Controls.Add(this.label7);
             this.panelCrearAlumnoPorfa.Controls.Add(this.iconPictureBoxCursoMatriculación);
             this.panelCrearAlumnoPorfa.Controls.Add(this.label6);
-            this.panelCrearAlumnoPorfa.Controls.Add(this.textBoxIncorporacion);
             this.panelCrearAlumnoPorfa.Controls.Add(this.iconPictureBoxIncorporación);
             this.panelCrearAlumnoPorfa.Controls.Add(this.label5);
             this.panelCrearAlumnoPorfa.Controls.Add(this.textBoxDireccion);
@@ -125,13 +125,22 @@
             this.panelCrearAlumnoPorfa.Name = "panelCrearAlumnoPorfa";
             this.panelCrearAlumnoPorfa.Size = new System.Drawing.Size(948, 537);
             this.panelCrearAlumnoPorfa.TabIndex = 0;
+            this.panelCrearAlumnoPorfa.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCrearAlumnoPorfa_Paint);
+            // 
+            // dateTimePickerIncorporacion
+            // 
+            this.dateTimePickerIncorporacion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerIncorporacion.Location = new System.Drawing.Point(46, 351);
+            this.dateTimePickerIncorporacion.Name = "dateTimePickerIncorporacion";
+            this.dateTimePickerIncorporacion.Size = new System.Drawing.Size(256, 21);
+            this.dateTimePickerIncorporacion.TabIndex = 114;
             // 
             // iconButtonAceptar
             // 
             this.iconButtonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.iconButtonAceptar.FlatAppearance.BorderSize = 0;
             this.iconButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAceptar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonAceptar.ForeColor = System.Drawing.Color.White;
             this.iconButtonAceptar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.iconButtonAceptar.IconColor = System.Drawing.Color.White;
@@ -150,32 +159,35 @@
             // comboBoxClase
             // 
             this.comboBoxClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClase.FormattingEnabled = true;
             this.comboBoxClase.Items.AddRange(new object[] {
             "1rA",
             "2nA"});
             this.comboBoxClase.Location = new System.Drawing.Point(534, 423);
             this.comboBoxClase.Name = "comboBoxClase";
-            this.comboBoxClase.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxClase.Size = new System.Drawing.Size(121, 24);
             this.comboBoxClase.TabIndex = 112;
             // 
             // comboBoxCurso
             // 
             this.comboBoxCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCurso.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCurso.FormattingEnabled = true;
             this.comboBoxCurso.Items.AddRange(new object[] {
             "DAM1",
             "DAM2"});
             this.comboBoxCurso.Location = new System.Drawing.Point(46, 423);
             this.comboBoxCurso.Name = "comboBoxCurso";
-            this.comboBoxCurso.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCurso.Size = new System.Drawing.Size(121, 24);
             this.comboBoxCurso.TabIndex = 111;
             // 
             // dateTimePickerNacimiento
             // 
+            this.dateTimePickerNacimiento.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNacimiento.Location = new System.Drawing.Point(534, 58);
             this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
-            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(256, 20);
+            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(256, 21);
             this.dateTimePickerNacimiento.TabIndex = 110;
             // 
             // iconPictureBoxClase
@@ -186,7 +198,7 @@
             this.iconPictureBoxClase.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxClase.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxClase.IconSize = 14;
-            this.iconPictureBoxClase.Location = new System.Drawing.Point(580, 396);
+            this.iconPictureBoxClase.Location = new System.Drawing.Point(584, 396);
             this.iconPictureBoxClase.Name = "iconPictureBoxClase";
             this.iconPictureBoxClase.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxClase.TabIndex = 109;
@@ -195,19 +207,20 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(530, 396);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 24);
+            this.label12.Size = new System.Drawing.Size(60, 22);
             this.label12.TabIndex = 108;
             this.label12.Text = "Clase";
             // 
             // textBoxDNI
             // 
             this.textBoxDNI.BackColor = System.Drawing.Color.White;
+            this.textBoxDNI.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDNI.Location = new System.Drawing.Point(534, 351);
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(256, 20);
+            this.textBoxDNI.Size = new System.Drawing.Size(256, 21);
             this.textBoxDNI.TabIndex = 107;
             // 
             // iconPictureBoxDNI
@@ -218,7 +231,7 @@
             this.iconPictureBoxDNI.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxDNI.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxDNI.IconSize = 14;
-            this.iconPictureBoxDNI.Location = new System.Drawing.Point(566, 323);
+            this.iconPictureBoxDNI.Location = new System.Drawing.Point(568, 321);
             this.iconPictureBoxDNI.Name = "iconPictureBoxDNI";
             this.iconPictureBoxDNI.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxDNI.TabIndex = 106;
@@ -227,19 +240,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(530, 324);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 24);
+            this.label11.Size = new System.Drawing.Size(43, 22);
             this.label11.TabIndex = 105;
             this.label11.Text = "DNI";
             // 
             // textBoxTelefono
             // 
             this.textBoxTelefono.BackColor = System.Drawing.Color.White;
+            this.textBoxTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.Location = new System.Drawing.Point(534, 276);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(256, 20);
+            this.textBoxTelefono.Size = new System.Drawing.Size(256, 21);
             this.textBoxTelefono.TabIndex = 104;
             // 
             // iconPictureBoxTelefono
@@ -250,7 +264,7 @@
             this.iconPictureBoxTelefono.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxTelefono.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxTelefono.IconSize = 14;
-            this.iconPictureBoxTelefono.Location = new System.Drawing.Point(608, 248);
+            this.iconPictureBoxTelefono.Location = new System.Drawing.Point(610, 248);
             this.iconPictureBoxTelefono.Name = "iconPictureBoxTelefono";
             this.iconPictureBoxTelefono.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxTelefono.TabIndex = 103;
@@ -259,19 +273,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(530, 249);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 24);
+            this.label10.Size = new System.Drawing.Size(87, 22);
             this.label10.TabIndex = 102;
             this.label10.Text = "Teléfono";
             // 
             // textBoxCorreoCentro
             // 
             this.textBoxCorreoCentro.BackColor = System.Drawing.Color.White;
+            this.textBoxCorreoCentro.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoCentro.Location = new System.Drawing.Point(534, 202);
             this.textBoxCorreoCentro.Name = "textBoxCorreoCentro";
-            this.textBoxCorreoCentro.Size = new System.Drawing.Size(256, 20);
+            this.textBoxCorreoCentro.Size = new System.Drawing.Size(256, 21);
             this.textBoxCorreoCentro.TabIndex = 101;
             // 
             // iconPictureBoxCorreoCentro
@@ -282,7 +297,7 @@
             this.iconPictureBoxCorreoCentro.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxCorreoCentro.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxCorreoCentro.IconSize = 14;
-            this.iconPictureBoxCorreoCentro.Location = new System.Drawing.Point(682, 174);
+            this.iconPictureBoxCorreoCentro.Location = new System.Drawing.Point(696, 174);
             this.iconPictureBoxCorreoCentro.Name = "iconPictureBoxCorreoCentro";
             this.iconPictureBoxCorreoCentro.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxCorreoCentro.TabIndex = 100;
@@ -291,19 +306,20 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(530, 175);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(157, 24);
+            this.label9.Size = new System.Drawing.Size(172, 22);
             this.label9.TabIndex = 99;
             this.label9.Text = "Correo del centro";
             // 
             // textBoxSegundoApellido
             // 
             this.textBoxSegundoApellido.BackColor = System.Drawing.Color.White;
+            this.textBoxSegundoApellido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSegundoApellido.Location = new System.Drawing.Point(534, 132);
             this.textBoxSegundoApellido.Name = "textBoxSegundoApellido";
-            this.textBoxSegundoApellido.Size = new System.Drawing.Size(256, 20);
+            this.textBoxSegundoApellido.Size = new System.Drawing.Size(256, 21);
             this.textBoxSegundoApellido.TabIndex = 98;
             // 
             // iconPictureBoxSegundoApellido
@@ -314,7 +330,7 @@
             this.iconPictureBoxSegundoApellido.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxSegundoApellido.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxSegundoApellido.IconSize = 14;
-            this.iconPictureBoxSegundoApellido.Location = new System.Drawing.Point(683, 104);
+            this.iconPictureBoxSegundoApellido.Location = new System.Drawing.Point(694, 104);
             this.iconPictureBoxSegundoApellido.Name = "iconPictureBoxSegundoApellido";
             this.iconPictureBoxSegundoApellido.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxSegundoApellido.TabIndex = 97;
@@ -323,10 +339,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(530, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 24);
+            this.label8.Size = new System.Drawing.Size(170, 22);
             this.label8.TabIndex = 96;
             this.label8.Text = "Segundo apellido";
             // 
@@ -338,7 +354,7 @@
             this.iconPictureBoxFechaNacimiento.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxFechaNacimiento.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxFechaNacimiento.IconSize = 14;
-            this.iconPictureBoxFechaNacimiento.Location = new System.Drawing.Point(712, 29);
+            this.iconPictureBoxFechaNacimiento.Location = new System.Drawing.Point(730, 29);
             this.iconPictureBoxFechaNacimiento.Name = "iconPictureBoxFechaNacimiento";
             this.iconPictureBoxFechaNacimiento.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxFechaNacimiento.TabIndex = 95;
@@ -347,10 +363,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(530, 30);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 24);
+            this.label7.Size = new System.Drawing.Size(206, 22);
             this.label7.TabIndex = 94;
             this.label7.Text = "Fecha de nacimiento";
             // 
@@ -362,7 +378,7 @@
             this.iconPictureBoxCursoMatriculación.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxCursoMatriculación.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxCursoMatriculación.IconSize = 14;
-            this.iconPictureBoxCursoMatriculación.Location = new System.Drawing.Point(213, 395);
+            this.iconPictureBoxCursoMatriculación.Location = new System.Drawing.Point(228, 395);
             this.iconPictureBoxCursoMatriculación.Name = "iconPictureBoxCursoMatriculación";
             this.iconPictureBoxCursoMatriculación.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxCursoMatriculación.TabIndex = 93;
@@ -371,20 +387,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(42, 396);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 24);
+            this.label6.Size = new System.Drawing.Size(192, 22);
             this.label6.TabIndex = 92;
             this.label6.Text = "Curso matriculación";
-            // 
-            // textBoxIncorporacion
-            // 
-            this.textBoxIncorporacion.BackColor = System.Drawing.Color.White;
-            this.textBoxIncorporacion.Location = new System.Drawing.Point(46, 351);
-            this.textBoxIncorporacion.Name = "textBoxIncorporacion";
-            this.textBoxIncorporacion.Size = new System.Drawing.Size(256, 20);
-            this.textBoxIncorporacion.TabIndex = 91;
             // 
             // iconPictureBoxIncorporación
             // 
@@ -394,7 +402,7 @@
             this.iconPictureBoxIncorporación.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxIncorporación.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxIncorporación.IconSize = 14;
-            this.iconPictureBoxIncorporación.Location = new System.Drawing.Point(163, 323);
+            this.iconPictureBoxIncorporación.Location = new System.Drawing.Point(176, 323);
             this.iconPictureBoxIncorporación.Name = "iconPictureBoxIncorporación";
             this.iconPictureBoxIncorporación.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxIncorporación.TabIndex = 90;
@@ -403,19 +411,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(42, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 24);
+            this.label5.Size = new System.Drawing.Size(140, 22);
             this.label5.TabIndex = 89;
             this.label5.Text = "Incorporación";
             // 
             // textBoxDireccion
             // 
             this.textBoxDireccion.BackColor = System.Drawing.Color.White;
+            this.textBoxDireccion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.Location = new System.Drawing.Point(46, 276);
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(256, 20);
+            this.textBoxDireccion.Size = new System.Drawing.Size(256, 21);
             this.textBoxDireccion.TabIndex = 88;
             // 
             // iconPictureBoxDireccion
@@ -426,7 +435,7 @@
             this.iconPictureBoxDireccion.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxDireccion.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxDireccion.IconSize = 14;
-            this.iconPictureBoxDireccion.Location = new System.Drawing.Point(129, 248);
+            this.iconPictureBoxDireccion.Location = new System.Drawing.Point(131, 248);
             this.iconPictureBoxDireccion.Name = "iconPictureBoxDireccion";
             this.iconPictureBoxDireccion.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxDireccion.TabIndex = 87;
@@ -435,19 +444,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(42, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 24);
+            this.label4.Size = new System.Drawing.Size(96, 22);
             this.label4.TabIndex = 86;
             this.label4.Text = "Dirección";
             // 
             // textBoxCorreo
             // 
             this.textBoxCorreo.BackColor = System.Drawing.Color.White;
+            this.textBoxCorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreo.Location = new System.Drawing.Point(46, 203);
             this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(256, 20);
+            this.textBoxCorreo.Size = new System.Drawing.Size(256, 21);
             this.textBoxCorreo.TabIndex = 85;
             // 
             // iconPictureBoxCorreo
@@ -458,7 +468,7 @@
             this.iconPictureBoxCorreo.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxCorreo.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxCorreo.IconSize = 14;
-            this.iconPictureBoxCorreo.Location = new System.Drawing.Point(203, 175);
+            this.iconPictureBoxCorreo.Location = new System.Drawing.Point(217, 175);
             this.iconPictureBoxCorreo.Name = "iconPictureBoxCorreo";
             this.iconPictureBoxCorreo.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxCorreo.TabIndex = 84;
@@ -467,19 +477,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(42, 176);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 24);
+            this.label3.Size = new System.Drawing.Size(181, 22);
             this.label3.TabIndex = 83;
             this.label3.Text = "Correo electronico";
             // 
             // textBoxPrimerApellido
             // 
             this.textBoxPrimerApellido.BackColor = System.Drawing.Color.White;
+            this.textBoxPrimerApellido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrimerApellido.Location = new System.Drawing.Point(46, 133);
             this.textBoxPrimerApellido.Name = "textBoxPrimerApellido";
-            this.textBoxPrimerApellido.Size = new System.Drawing.Size(256, 20);
+            this.textBoxPrimerApellido.Size = new System.Drawing.Size(256, 21);
             this.textBoxPrimerApellido.TabIndex = 82;
             // 
             // iconPictureBoxPrimerApellido
@@ -490,7 +501,7 @@
             this.iconPictureBoxPrimerApellido.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxPrimerApellido.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxPrimerApellido.IconSize = 14;
-            this.iconPictureBoxPrimerApellido.Location = new System.Drawing.Point(175, 105);
+            this.iconPictureBoxPrimerApellido.Location = new System.Drawing.Point(177, 105);
             this.iconPictureBoxPrimerApellido.Name = "iconPictureBoxPrimerApellido";
             this.iconPictureBoxPrimerApellido.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxPrimerApellido.TabIndex = 81;
@@ -499,19 +510,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 24);
+            this.label2.Size = new System.Drawing.Size(142, 22);
             this.label2.TabIndex = 80;
             this.label2.Text = "Primer apellido";
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
+            this.textBoxNombre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(46, 58);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(256, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(256, 21);
             this.textBoxNombre.TabIndex = 79;
             // 
             // iconPictureBoxNombre
@@ -522,7 +534,7 @@
             this.iconPictureBoxNombre.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxNombre.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxNombre.IconSize = 14;
-            this.iconPictureBoxNombre.Location = new System.Drawing.Point(118, 30);
+            this.iconPictureBoxNombre.Location = new System.Drawing.Point(120, 30);
             this.iconPictureBoxNombre.Name = "iconPictureBoxNombre";
             this.iconPictureBoxNombre.Size = new System.Drawing.Size(14, 14);
             this.iconPictureBoxNombre.TabIndex = 78;
@@ -531,14 +543,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(42, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 24);
+            this.label1.Size = new System.Drawing.Size(84, 22);
             this.label1.TabIndex = 77;
             this.label1.Text = "Nombre";
             // 
-            // AddStudent
+            // ModiAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -546,7 +558,7 @@
             this.ClientSize = new System.Drawing.Size(948, 537);
             this.Controls.Add(this.panelCrearAlumnoPorfa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddStudent";
+            this.Name = "ModiAddStudent";
             this.Text = "AddStudent";
             this.panelCrearAlumnoPorfa.ResumeLayout(false);
             this.panelCrearAlumnoPorfa.PerformLayout();
@@ -591,7 +603,6 @@
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxCursoMatriculación;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxIncorporacion;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxIncorporación;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxDireccion;
@@ -606,5 +617,6 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerIncorporacion;
     }
 }

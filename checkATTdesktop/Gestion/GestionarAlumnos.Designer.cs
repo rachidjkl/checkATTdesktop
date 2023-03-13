@@ -77,7 +77,7 @@
             this.buttonEliminarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonEliminarAlumno.FlatAppearance.BorderSize = 2;
             this.buttonEliminarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarAlumno.ForeColor = System.Drawing.Color.Red;
             this.buttonEliminarAlumno.Location = new System.Drawing.Point(604, 462);
             this.buttonEliminarAlumno.Name = "buttonEliminarAlumno";
@@ -91,7 +91,7 @@
             this.buttonModiAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiAlumno.FlatAppearance.BorderSize = 2;
             this.buttonModiAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModiAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiAlumno.Location = new System.Drawing.Point(748, 462);
             this.buttonModiAlumno.Name = "buttonModiAlumno";
@@ -106,7 +106,7 @@
             this.buttonCrearAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearAlumno.FlatAppearance.BorderSize = 2;
             this.buttonCrearAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearAlumno.Location = new System.Drawing.Point(763, 57);
             this.buttonCrearAlumno.Name = "buttonCrearAlumno";
@@ -123,7 +123,7 @@
             this.dataGridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -145,7 +145,7 @@
             this.año});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -267,10 +267,10 @@
             // textBoxBuscarAlumno
             // 
             this.textBoxBuscarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBuscarAlumno.Location = new System.Drawing.Point(50, 108);
             this.textBoxBuscarAlumno.Name = "textBoxBuscarAlumno";
-            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarAlumno.TabIndex = 17;
             this.textBoxBuscarAlumno.Text = "Buscar...";
             // 
@@ -291,6 +291,7 @@
             // comboBoxSeleccionarClase
             // 
             this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSeleccionarClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSeleccionarClase.FormattingEnabled = true;
             this.comboBoxSeleccionarClase.Items.AddRange(new object[] {
             "DAM1",
@@ -300,16 +301,16 @@
             "LOL"});
             this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(17, 57);
             this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
-            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSeleccionarClase.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "Clase";
             // 

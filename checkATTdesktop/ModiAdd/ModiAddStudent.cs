@@ -30,7 +30,7 @@ namespace checkATTdesktop.ModiAdd
             bool relleno = true;
 
             if (textBoxCorreo.Text == "" || textBoxCorreoCentro.Text == "" || textBoxDireccion.Text == "" || textBoxDNI.Text == "" || 
-                textBoxIncorporacion.Text == "" || textBoxNombre.Text == "" || textBoxPrimerApellido.Text == "" || textBoxSegundoApellido.Text == "" ||
+                textBoxNombre.Text == "" || textBoxPrimerApellido.Text == "" || textBoxSegundoApellido.Text == "" ||
                 textBoxTelefono.Text == "" || comboBoxClase.SelectedIndex == -1 || comboBoxCurso.SelectedIndex == -1)
             {
                 relleno = false;
@@ -42,6 +42,9 @@ namespace checkATTdesktop.ModiAdd
             }
         }
 
-       
+        private void panelCrearAlumnoPorfa_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

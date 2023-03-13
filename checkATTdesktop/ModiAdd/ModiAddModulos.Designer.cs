@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBoxNombre = new FontAwesome.Sharp.IconPictureBox();
             this.textBoxBuscarNombreModulo = new System.Windows.Forms.TextBox();
@@ -91,7 +93,23 @@
             // 
             // dataGridViewUFModulo
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUFModulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUFModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUFModulo.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUFModulo.Location = new System.Drawing.Point(40, 166);
             this.dataGridViewUFModulo.Name = "dataGridViewUFModulo";
             this.dataGridViewUFModulo.Size = new System.Drawing.Size(481, 260);
@@ -138,10 +156,10 @@
             // labelHorasTotalesModulos
             // 
             this.labelHorasTotalesModulos.AutoSize = true;
-            this.labelHorasTotalesModulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHorasTotalesModulos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorasTotalesModulos.Location = new System.Drawing.Point(582, 54);
             this.labelHorasTotalesModulos.Name = "labelHorasTotalesModulos";
-            this.labelHorasTotalesModulos.Size = new System.Drawing.Size(36, 20);
+            this.labelHorasTotalesModulos.Size = new System.Drawing.Size(37, 21);
             this.labelHorasTotalesModulos.TabIndex = 86;
             this.labelHorasTotalesModulos.Text = "184";
             // 
@@ -157,10 +175,12 @@
             // 
             // listBoxClases
             // 
+            this.listBoxClases.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxClases.FormattingEnabled = true;
+            this.listBoxClases.ItemHeight = 16;
             this.listBoxClases.Location = new System.Drawing.Point(572, 166);
             this.listBoxClases.Name = "listBoxClases";
-            this.listBoxClases.Size = new System.Drawing.Size(261, 264);
+            this.listBoxClases.Size = new System.Drawing.Size(261, 260);
             this.listBoxClases.TabIndex = 88;
             // 
             // iconPictureBoxAñadir

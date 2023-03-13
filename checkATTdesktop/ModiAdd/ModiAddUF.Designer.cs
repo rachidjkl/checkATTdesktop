@@ -71,23 +71,26 @@
             // 
             // textBox1NombreUF
             // 
+            this.textBox1NombreUF.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1NombreUF.Location = new System.Drawing.Point(48, 66);
             this.textBox1NombreUF.Name = "textBox1NombreUF";
-            this.textBox1NombreUF.Size = new System.Drawing.Size(289, 20);
+            this.textBox1NombreUF.Size = new System.Drawing.Size(289, 21);
             this.textBox1NombreUF.TabIndex = 3;
             // 
             // textBoxNumeroUF
             // 
+            this.textBoxNumeroUF.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumeroUF.Location = new System.Drawing.Point(48, 144);
             this.textBoxNumeroUF.Name = "textBoxNumeroUF";
-            this.textBoxNumeroUF.Size = new System.Drawing.Size(289, 20);
+            this.textBoxNumeroUF.Size = new System.Drawing.Size(289, 21);
             this.textBoxNumeroUF.TabIndex = 4;
             // 
             // textBoxHorasTotales
             // 
+            this.textBoxHorasTotales.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHorasTotales.Location = new System.Drawing.Point(48, 221);
             this.textBoxHorasTotales.Name = "textBoxHorasTotales";
-            this.textBoxHorasTotales.Size = new System.Drawing.Size(289, 20);
+            this.textBoxHorasTotales.Size = new System.Drawing.Size(289, 21);
             this.textBoxHorasTotales.TabIndex = 5;
             // 
             // iconPictureBox1

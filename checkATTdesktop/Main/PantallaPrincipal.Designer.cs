@@ -87,7 +87,7 @@ namespace checkATTdesktop.Main
             this.iconButtonManageHorario.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageHorario.FlatAppearance.BorderSize = 0;
             this.iconButtonManageHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageHorario.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageHorario.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.iconButtonManageHorario.IconColor = System.Drawing.Color.White;
@@ -110,7 +110,7 @@ namespace checkATTdesktop.Main
             this.iconButtonManageModuls.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageModuls.FlatAppearance.BorderSize = 0;
             this.iconButtonManageModuls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageModuls.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageModuls.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageModuls.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageModuls.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.iconButtonManageModuls.IconColor = System.Drawing.Color.White;
@@ -133,7 +133,7 @@ namespace checkATTdesktop.Main
             this.iconButtonManageClass.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageClass.FlatAppearance.BorderSize = 0;
             this.iconButtonManageClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageClass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageClass.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageClass.IconChar = FontAwesome.Sharp.IconChar.School;
             this.iconButtonManageClass.IconColor = System.Drawing.Color.White;
@@ -156,7 +156,7 @@ namespace checkATTdesktop.Main
             this.iconButtonManageTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageTeacher.FlatAppearance.BorderSize = 0;
             this.iconButtonManageTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageTeacher.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageTeacher.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageTeacher.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
             this.iconButtonManageTeacher.IconColor = System.Drawing.Color.White;
@@ -179,7 +179,7 @@ namespace checkATTdesktop.Main
             this.iconButtonManageStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonManageStudent.FlatAppearance.BorderSize = 0;
             this.iconButtonManageStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonManageStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonManageStudent.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonManageStudent.ForeColor = System.Drawing.Color.White;
             this.iconButtonManageStudent.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
             this.iconButtonManageStudent.IconColor = System.Drawing.Color.White;
@@ -202,7 +202,7 @@ namespace checkATTdesktop.Main
             this.iconButtonHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButtonHome.FlatAppearance.BorderSize = 0;
             this.iconButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonHome.ForeColor = System.Drawing.Color.White;
             this.iconButtonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButtonHome.IconColor = System.Drawing.Color.White;
@@ -298,12 +298,12 @@ namespace checkATTdesktop.Main
             // labelPantallaSeleccionada
             // 
             this.labelPantallaSeleccionada.AutoSize = true;
-            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPantallaSeleccionada.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPantallaSeleccionada.ForeColor = System.Drawing.Color.White;
             this.labelPantallaSeleccionada.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelPantallaSeleccionada.Location = new System.Drawing.Point(69, 32);
             this.labelPantallaSeleccionada.Name = "labelPantallaSeleccionada";
-            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(86, 31);
+            this.labelPantallaSeleccionada.Size = new System.Drawing.Size(95, 33);
             this.labelPantallaSeleccionada.TabIndex = 4;
             this.labelPantallaSeleccionada.Text = "Home";
             this.labelPantallaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,11 +311,11 @@ namespace checkATTdesktop.Main
             // labelNombreUsuario
             // 
             this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUsuario.ForeColor = System.Drawing.Color.White;
             this.labelNombreUsuario.Location = new System.Drawing.Point(797, 29);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(139, 33);
+            this.labelNombreUsuario.Size = new System.Drawing.Size(135, 36);
             this.labelNombreUsuario.TabIndex = 3;
             this.labelNombreUsuario.Text = "Jose Luis";
             // 
@@ -358,35 +358,35 @@ namespace checkATTdesktop.Main
             // labelMuestraFecha
             // 
             this.labelMuestraFecha.AutoSize = true;
-            this.labelMuestraFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMuestraFecha.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMuestraFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
             this.labelMuestraFecha.Location = new System.Drawing.Point(361, 313);
             this.labelMuestraFecha.Name = "labelMuestraFecha";
-            this.labelMuestraFecha.Size = new System.Drawing.Size(86, 31);
+            this.labelMuestraFecha.Size = new System.Drawing.Size(96, 33);
             this.labelMuestraFecha.TabIndex = 12;
             this.labelMuestraFecha.Text = "label2";
             // 
             // labelMuestraHora
             // 
             this.labelMuestraHora.AutoSize = true;
-            this.labelMuestraHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMuestraHora.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMuestraHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(164)))), ((int)(((byte)(241)))));
             this.labelMuestraHora.Location = new System.Drawing.Point(485, 255);
             this.labelMuestraHora.Name = "labelMuestraHora";
-            this.labelMuestraHora.Size = new System.Drawing.Size(118, 42);
+            this.labelMuestraHora.Size = new System.Drawing.Size(130, 44);
             this.labelMuestraHora.TabIndex = 11;
             this.labelMuestraHora.Text = "label2";
             // 
             // labelNombreApp
             // 
             this.labelNombreApp.AutoSize = true;
-            this.labelNombreApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreApp.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.labelNombreApp.Location = new System.Drawing.Point(347, 188);
+            this.labelNombreApp.Location = new System.Drawing.Point(392, 188);
             this.labelNombreApp.Name = "labelNombreApp";
-            this.labelNombreApp.Size = new System.Drawing.Size(418, 42);
+            this.labelNombreApp.Size = new System.Drawing.Size(434, 44);
             this.labelNombreApp.TabIndex = 10;
-            this.labelNombreApp.Text = "Nombre de la aplicación";
+            this.labelNombreApp.Text = "CHECKATT Managment";
             // 
             // PantallaPrincipal
             // 

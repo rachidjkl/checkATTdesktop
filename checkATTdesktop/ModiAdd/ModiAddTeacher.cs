@@ -27,7 +27,7 @@ namespace checkATTdesktop.ModiAdd
             bool relleno = true;
 
             if (textBoxCorreo.Text == "" || textBoxCorreoCentro.Text == "" || textBoxDireccion.Text == "" || textBoxDNI.Text == "" ||
-                textBoxIncorporacion.Text == "" || textBoxNombre.Text == "" || textBoxPrimerApellido.Text == "" ||
+                textBoxNombre.Text == "" || textBoxPrimerApellido.Text == "" ||
                 textBoxSegundoApellido.Text == "" || textBoxTelefono.Text == "")
             {
                 relleno = false;

@@ -59,9 +59,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(156, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 33);
+            this.label1.Size = new System.Drawing.Size(320, 33);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre de la aplicación";
+            this.label1.Text = "CHECKATT Managment";
             // 
             // pictureBox1
             // 
@@ -80,18 +80,18 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(591, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 44);
+            this.label2.Size = new System.Drawing.Size(219, 44);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Welcome";
+            this.label2.Text = "Bienvenido";
             // 
             // labelNombreUsuario
             // 
             this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreUsuario.ForeColor = System.Drawing.Color.Black;
             this.labelNombreUsuario.Location = new System.Drawing.Point(614, 206);
             this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(139, 33);
+            this.labelNombreUsuario.Size = new System.Drawing.Size(135, 36);
             this.labelNombreUsuario.TabIndex = 5;
             this.labelNombreUsuario.Text = "Jose Luis";
             // 
@@ -110,7 +110,7 @@
             this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBar1.AnimationSpeed = 500;
             this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularProgressBar1.ForeColor = System.Drawing.Color.Black;
             this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBar1.InnerMargin = 2;
