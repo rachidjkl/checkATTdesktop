@@ -94,7 +94,7 @@
             this.buttonCrearModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearModulo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearModulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearModulo.Location = new System.Drawing.Point(769, 75);
+            this.buttonCrearModulo.Location = new System.Drawing.Point(769, 27);
             this.buttonCrearModulo.Name = "buttonCrearModulo";
             this.buttonCrearModulo.Size = new System.Drawing.Size(138, 34);
             this.buttonCrearModulo.TabIndex = 28;
@@ -128,10 +128,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewModulos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewModulos.EnableHeadersVisualStyles = false;
-            this.dataGridViewModulos.Location = new System.Drawing.Point(41, 128);
+            this.dataGridViewModulos.Location = new System.Drawing.Point(12, 77);
             this.dataGridViewModulos.Name = "dataGridViewModulos";
             this.dataGridViewModulos.ReadOnly = true;
-            this.dataGridViewModulos.Size = new System.Drawing.Size(692, 279);
+            this.dataGridViewModulos.Size = new System.Drawing.Size(895, 354);
             this.dataGridViewModulos.TabIndex = 27;
             // 
             // Nombre
@@ -152,7 +152,7 @@
             // 
             this.textBoxBuscarModulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBuscarModulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarModulo.Location = new System.Drawing.Point(80, 84);
+            this.textBoxBuscarModulo.Location = new System.Drawing.Point(50, 41);
             this.textBoxBuscarModulo.Name = "textBoxBuscarModulo";
             this.textBoxBuscarModulo.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarModulo.TabIndex = 26;
@@ -165,7 +165,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(42, 71);
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 25;

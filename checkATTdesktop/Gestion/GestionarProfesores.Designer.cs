@@ -102,7 +102,7 @@
             this.buttonCrearProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearProfesor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearProfesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearProfesor.Location = new System.Drawing.Point(769, 75);
+            this.buttonCrearProfesor.Location = new System.Drawing.Point(769, 27);
             this.buttonCrearProfesor.Name = "buttonCrearProfesor";
             this.buttonCrearProfesor.Size = new System.Drawing.Size(138, 34);
             this.buttonCrearProfesor.TabIndex = 22;
@@ -144,10 +144,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
-            this.dataGridViewProfesor.Location = new System.Drawing.Point(41, 121);
+            this.dataGridViewProfesor.Location = new System.Drawing.Point(12, 77);
             this.dataGridViewProfesor.Name = "dataGridViewProfesor";
             this.dataGridViewProfesor.ReadOnly = true;
-            this.dataGridViewProfesor.Size = new System.Drawing.Size(866, 307);
+            this.dataGridViewProfesor.Size = new System.Drawing.Size(895, 361);
             this.dataGridViewProfesor.TabIndex = 21;
             // 
             // Nombre
@@ -224,7 +224,7 @@
             // 
             this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(80, 84);
+            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
             this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
             this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarProfesor.TabIndex = 20;
@@ -237,7 +237,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(42, 71);
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 19;

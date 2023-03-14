@@ -247,6 +247,12 @@
     <Compile Include="Gestion\GestionarProfesores.Designer.cs">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginFolder\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFolder\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModiAdd\ModiAddClase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion\GestionarProfesores.resx">
       <DependentUpon>GestionarProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFolder\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModiAdd\ModiAddClase.resx">
       <DependentUpon>ModiAddClase.cs</DependentUpon>

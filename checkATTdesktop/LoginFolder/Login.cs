@@ -1,4 +1,5 @@
 ﻿using checkATTdesktop.Main;
+using checkATTdesktop.ModiAdd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,12 @@ namespace checkATTdesktop.LoginFolder
             panelUsername.BackColor = this.BackColor;
             textBoxContra.BackColor = Color.White;
             panelContra.BackColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ForgotPassword addClass = new ForgotPassword();
+            addClass.ShowDialog();
         }
     }
 }

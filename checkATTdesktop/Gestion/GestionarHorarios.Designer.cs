@@ -84,7 +84,7 @@
             this.buttonCrearHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearHorario.Location = new System.Drawing.Point(769, 75);
+            this.buttonCrearHorario.Location = new System.Drawing.Point(769, 43);
             this.buttonCrearHorario.Name = "buttonCrearHorario";
             this.buttonCrearHorario.Size = new System.Drawing.Size(138, 34);
             this.buttonCrearHorario.TabIndex = 34;
@@ -120,10 +120,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewHorarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewHorarios.EnableHeadersVisualStyles = false;
-            this.dataGridViewHorarios.Location = new System.Drawing.Point(29, 166);
+            this.dataGridViewHorarios.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewHorarios.Name = "dataGridViewHorarios";
             this.dataGridViewHorarios.ReadOnly = true;
-            this.dataGridViewHorarios.Size = new System.Drawing.Size(704, 241);
+            this.dataGridViewHorarios.Size = new System.Drawing.Size(895, 299);
             this.dataGridViewHorarios.TabIndex = 33;
             // 
             // hora_inicio
@@ -158,7 +158,7 @@
             // 
             this.textBoxBuscarHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBuscarHorario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarHorario.Location = new System.Drawing.Point(68, 133);
+            this.textBoxBuscarHorario.Location = new System.Drawing.Point(50, 107);
             this.textBoxBuscarHorario.Name = "textBoxBuscarHorario";
             this.textBoxBuscarHorario.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarHorario.TabIndex = 32;
@@ -171,7 +171,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(30, 120);
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 95);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 31;
@@ -187,7 +187,7 @@
             "SMIX",
             "ASIX",
             "LOL"});
-            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(29, 71);
+            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(12, 56);
             this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
             this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSeleccionarClase.TabIndex = 38;
@@ -196,7 +196,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 35);
+            this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 37;
@@ -206,7 +206,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(243, 35);
+            this.label2.Location = new System.Drawing.Point(243, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 24);
             this.label2.TabIndex = 39;
@@ -216,7 +216,7 @@
             // 
             this.comboBoxDiaSemana.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDiaSemana.FormattingEnabled = true;
-            this.comboBoxDiaSemana.Location = new System.Drawing.Point(247, 71);
+            this.comboBoxDiaSemana.Location = new System.Drawing.Point(247, 56);
             this.comboBoxDiaSemana.Name = "comboBoxDiaSemana";
             this.comboBoxDiaSemana.Size = new System.Drawing.Size(203, 21);
             this.comboBoxDiaSemana.TabIndex = 40;

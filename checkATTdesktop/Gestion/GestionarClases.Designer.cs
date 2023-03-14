@@ -78,7 +78,7 @@
             this.buttonCrearClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearClase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonCrearClase.Location = new System.Drawing.Point(769, 45);
+            this.buttonCrearClase.Location = new System.Drawing.Point(769, 27);
             this.buttonCrearClase.Name = "buttonCrearClase";
             this.buttonCrearClase.Size = new System.Drawing.Size(138, 34);
             this.buttonCrearClase.TabIndex = 28;
@@ -112,10 +112,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewClase.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewClase.EnableHeadersVisualStyles = false;
-            this.dataGridViewClase.Location = new System.Drawing.Point(41, 103);
+            this.dataGridViewClase.Location = new System.Drawing.Point(12, 77);
             this.dataGridViewClase.Name = "dataGridViewClase";
             this.dataGridViewClase.ReadOnly = true;
-            this.dataGridViewClase.Size = new System.Drawing.Size(692, 344);
+            this.dataGridViewClase.Size = new System.Drawing.Size(895, 363);
             this.dataGridViewClase.TabIndex = 27;
             // 
             // Correo
@@ -136,7 +136,7 @@
             // 
             this.textBoxBuscarClase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBuscarClase.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarClase.Location = new System.Drawing.Point(79, 60);
+            this.textBoxBuscarClase.Location = new System.Drawing.Point(50, 41);
             this.textBoxBuscarClase.Name = "textBoxBuscarClase";
             this.textBoxBuscarClase.Size = new System.Drawing.Size(300, 20);
             this.textBoxBuscarClase.TabIndex = 26;
@@ -149,7 +149,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(41, 47);
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 25;

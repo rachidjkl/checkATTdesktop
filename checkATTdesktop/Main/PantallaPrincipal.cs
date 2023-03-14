@@ -46,14 +46,23 @@ namespace checkATTdesktop.Main
 
         private void iconButtonLogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            LoginFolder.Login mainMenu = new LoginFolder.Login();
+            mainMenu.Show();
+
+            
+            this.Close();
+
         }
      
         private void iconButtonHome_Click(object sender, EventArgs e)
         {
-            optionSelected(sender, Color.White);           
-            currentChildForm.Close();
-            Reset();
+            if (currentChildForm != null)
+            {
+                optionSelected(sender, Color.White);
+                currentChildForm.Close();
+                Reset();
+            }           
         }
 
         private void iconButtonManageStudent_Click(object sender, EventArgs e)

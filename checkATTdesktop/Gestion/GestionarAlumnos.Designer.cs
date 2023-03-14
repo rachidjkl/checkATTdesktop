@@ -35,22 +35,22 @@
             this.buttonModiAlumno = new System.Windows.Forms.Button();
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.dataGridViewAlumnos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.corre_centro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.incorporacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horas_cursadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_centro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_incorporacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horas_cursadas_totales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.año_cursando = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCrearModificarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -120,6 +120,7 @@
             // 
             this.dataGridViewAlumnos.AllowUserToAddRows = false;
             this.dataGridViewAlumnos.AllowUserToDeleteRows = false;
+            this.dataGridViewAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
@@ -131,138 +132,32 @@
             this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Apellido1,
-            this.Apellido2,
-            this.DNI,
-            this.Correo,
-            this.corre_centro,
-            this.TELEFONO,
-            this.nacimiento,
-            this.incorporacion,
-            this.Direction,
-            this.horas_cursadas,
-            this.año});
+            this.dni,
+            this.nombre,
+            this.apellido1,
+            this.apellido2,
+            this.email,
+            this.email_centro,
+            this.telefono,
+            this.fecha_nacimiento,
+            this.fecha_incorporacion,
+            this.direccion,
+            this.horas_cursadas_totales,
+            this.año_cursando});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAlumnos.EnableHeadersVisualStyles = false;
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
             this.dataGridViewAlumnos.ReadOnly = true;
-            this.dataGridViewAlumnos.Size = new System.Drawing.Size(889, 294);
+            this.dataGridViewAlumnos.Size = new System.Drawing.Size(889, 309);
             this.dataGridViewAlumnos.TabIndex = 18;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 60;
-            // 
-            // Apellido1
-            // 
-            this.Apellido1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Apellido1.FillWeight = 69.85402F;
-            this.Apellido1.HeaderText = "Apellido1";
-            this.Apellido1.Name = "Apellido1";
-            this.Apellido1.ReadOnly = true;
-            this.Apellido1.Width = 74;
-            // 
-            // Apellido2
-            // 
-            this.Apellido2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Apellido2.FillWeight = 69.85402F;
-            this.Apellido2.HeaderText = "Apellido2";
-            this.Apellido2.Name = "Apellido2";
-            this.Apellido2.ReadOnly = true;
-            this.Apellido2.Width = 73;
-            // 
-            // DNI
-            // 
-            this.DNI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DNI.FillWeight = 401.4598F;
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            this.DNI.Width = 45;
-            // 
-            // Correo
-            // 
-            this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Correo.FillWeight = 69.85402F;
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            this.Correo.Width = 50;
-            // 
-            // corre_centro
-            // 
-            this.corre_centro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.corre_centro.FillWeight = 69.85402F;
-            this.corre_centro.HeaderText = "Correo_CEP";
-            this.corre_centro.Name = "corre_centro";
-            this.corre_centro.ReadOnly = true;
-            this.corre_centro.Width = 85;
-            // 
-            // TELEFONO
-            // 
-            this.TELEFONO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.TELEFONO.FillWeight = 69.85402F;
-            this.TELEFONO.HeaderText = "Telf";
-            this.TELEFONO.Name = "TELEFONO";
-            this.TELEFONO.ReadOnly = true;
-            this.TELEFONO.Width = 40;
-            // 
-            // nacimiento
-            // 
-            this.nacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.nacimiento.FillWeight = 69.85402F;
-            this.nacimiento.HeaderText = "Nacimiento";
-            this.nacimiento.Name = "nacimiento";
-            this.nacimiento.ReadOnly = true;
-            this.nacimiento.Width = 80;
-            // 
-            // incorporacion
-            // 
-            this.incorporacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.incorporacion.FillWeight = 69.85402F;
-            this.incorporacion.HeaderText = "Incorporación";
-            this.incorporacion.Name = "incorporacion";
-            this.incorporacion.ReadOnly = true;
-            // 
-            // Direction
-            // 
-            this.Direction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Direction.FillWeight = 69.85402F;
-            this.Direction.HeaderText = "Direc";
-            this.Direction.Name = "Direction";
-            this.Direction.ReadOnly = true;
-            this.Direction.Width = 50;
-            // 
-            // horas_cursadas
-            // 
-            this.horas_cursadas.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.horas_cursadas.FillWeight = 69.85402F;
-            this.horas_cursadas.HeaderText = "Horas cursadas";
-            this.horas_cursadas.Name = "horas_cursadas";
-            this.horas_cursadas.ReadOnly = true;
-            this.horas_cursadas.Width = 94;
-            // 
-            // año
-            // 
-            this.año.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.año.FillWeight = 69.85402F;
-            this.año.HeaderText = "Año cursando";
-            this.año.Name = "año";
-            this.año.ReadOnly = true;
-            this.año.Width = 95;
             // 
             // textBoxBuscarAlumno
             // 
@@ -314,6 +209,90 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Clase";
             // 
+            // dni
+            // 
+            this.dni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido1
+            // 
+            this.apellido1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellido1.HeaderText = "Apellido1";
+            this.apellido1.Name = "apellido1";
+            this.apellido1.ReadOnly = true;
+            // 
+            // apellido2
+            // 
+            this.apellido2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellido2.HeaderText = "Apellido2";
+            this.apellido2.Name = "apellido2";
+            this.apellido2.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.email.HeaderText = "Correo";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // email_centro
+            // 
+            this.email_centro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.email_centro.HeaderText = "Correo_centro";
+            this.email_centro.Name = "email_centro";
+            this.email_centro.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefono.HeaderText = "Tel";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // fecha_nacimiento
+            // 
+            this.fecha_nacimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_nacimiento.HeaderText = "Nacimiento";
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.ReadOnly = true;
+            // 
+            // fecha_incorporacion
+            // 
+            this.fecha_incorporacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fecha_incorporacion.HeaderText = "Incorporación";
+            this.fecha_incorporacion.Name = "fecha_incorporacion";
+            this.fecha_incorporacion.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // horas_cursadas_totales
+            // 
+            this.horas_cursadas_totales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horas_cursadas_totales.HeaderText = "Horas cursadas";
+            this.horas_cursadas_totales.Name = "horas_cursadas_totales";
+            this.horas_cursadas_totales.ReadOnly = true;
+            // 
+            // año_cursando
+            // 
+            this.año_cursando.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.año_cursando.HeaderText = "Año cursando";
+            this.año_cursando.Name = "año_cursando";
+            this.año_cursando.ReadOnly = true;
+            // 
             // GestionarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,17 +322,17 @@
         private System.Windows.Forms.ComboBox comboBoxSeleccionarClase;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonEliminarAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn corre_centro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nacimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn incorporacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horas_cursadas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn año;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email_centro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_incorporacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horas_cursadas_totales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn año_cursando;
     }
 }

@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.panelSuperiorMainScreen = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.timerFadeIn = new System.Windows.Forms.Timer(this.components);
             this.FadeOut = new System.Windows.Forms.Timer(this.components);
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelSuperiorMainScreen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperiorMainScreen
             // 
             this.panelSuperiorMainScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.panelSuperiorMainScreen.Controls.Add(this.iconPictureBox1);
             this.panelSuperiorMainScreen.Controls.Add(this.label1);
-            this.panelSuperiorMainScreen.Controls.Add(this.pictureBox1);
             this.panelSuperiorMainScreen.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperiorMainScreen.Location = new System.Drawing.Point(0, 0);
             this.panelSuperiorMainScreen.Name = "panelSuperiorMainScreen";
@@ -62,16 +62,6 @@
             this.label1.Size = new System.Drawing.Size(320, 33);
             this.label1.TabIndex = 4;
             this.label1.Text = "CHECKATT Managment";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::checkATTdesktop.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -138,6 +128,20 @@
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 100;
+            this.iconPictureBox1.Location = new System.Drawing.Point(28, 15);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(94, 72);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconPictureBox1.TabIndex = 5;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,7 +160,7 @@
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.panelSuperiorMainScreen.ResumeLayout(false);
             this.panelSuperiorMainScreen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,13 +168,13 @@
 
         #endregion
         private System.Windows.Forms.Panel panelSuperiorMainScreen;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.Timer timerFadeIn;
         private System.Windows.Forms.Timer FadeOut;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
 
