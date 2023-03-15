@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBoxNombre = new FontAwesome.Sharp.IconPictureBox();
-            this.textBoxBuscarNombreModulo = new System.Windows.Forms.TextBox();
+            this.textBoxNombreModulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewUFModulo = new System.Windows.Forms.DataGridView();
             this.buttonEditarUF = new System.Windows.Forms.Button();
@@ -74,12 +74,12 @@
             this.iconPictureBoxNombre.TabIndex = 79;
             this.iconPictureBoxNombre.TabStop = false;
             // 
-            // textBoxBuscarNombreModulo
+            // textBoxNombreModulo
             // 
-            this.textBoxBuscarNombreModulo.Location = new System.Drawing.Point(40, 69);
-            this.textBoxBuscarNombreModulo.Name = "textBoxBuscarNombreModulo";
-            this.textBoxBuscarNombreModulo.Size = new System.Drawing.Size(260, 20);
-            this.textBoxBuscarNombreModulo.TabIndex = 80;
+            this.textBoxNombreModulo.Location = new System.Drawing.Point(40, 69);
+            this.textBoxNombreModulo.Name = "textBoxNombreModulo";
+            this.textBoxNombreModulo.Size = new System.Drawing.Size(260, 20);
+            this.textBoxNombreModulo.TabIndex = 80;
             // 
             // label2
             // 
@@ -222,6 +222,7 @@
             this.buttonCrearModulo.TabIndex = 91;
             this.buttonCrearModulo.Text = "Crear módulo";
             this.buttonCrearModulo.UseVisualStyleBackColor = false;
+            this.buttonCrearModulo.Click += new System.EventHandler(this.buttonCrearModulo_Click);
             // 
             // ModiAddModulos
             // 
@@ -239,7 +240,7 @@
             this.Controls.Add(this.buttonEditarUF);
             this.Controls.Add(this.dataGridViewUFModulo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxBuscarNombreModulo);
+            this.Controls.Add(this.textBoxNombreModulo);
             this.Controls.Add(this.iconPictureBoxNombre);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -258,7 +259,7 @@
 
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxNombre;
-        private System.Windows.Forms.TextBox textBoxBuscarNombreModulo;
+        private System.Windows.Forms.TextBox textBoxNombreModulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewUFModulo;
         private System.Windows.Forms.Button buttonEditarUF;

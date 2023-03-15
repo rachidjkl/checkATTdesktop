@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxModulo = new System.Windows.Forms.ComboBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.buttonCrearModiAddHorario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +167,21 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
+            // buttonCrearModiAddHorario
+            // 
+            this.buttonCrearModiAddHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonCrearModiAddHorario.FlatAppearance.BorderSize = 0;
+            this.buttonCrearModiAddHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCrearModiAddHorario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearModiAddHorario.ForeColor = System.Drawing.Color.White;
+            this.buttonCrearModiAddHorario.Location = new System.Drawing.Point(437, 229);
+            this.buttonCrearModiAddHorario.Name = "buttonCrearModiAddHorario";
+            this.buttonCrearModiAddHorario.Size = new System.Drawing.Size(114, 32);
+            this.buttonCrearModiAddHorario.TabIndex = 14;
+            this.buttonCrearModiAddHorario.Text = "Crear";
+            this.buttonCrearModiAddHorario.UseVisualStyleBackColor = false;
+            this.buttonCrearModiAddHorario.Click += new System.EventHandler(this.buttonCrearModiAddHorario_Click);
+            // 
             // ModiAddHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +189,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(586, 311);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonCrearModiAddHorario);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.comboBoxModulo);
             this.Controls.Add(this.label5);
@@ -206,5 +223,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxModulo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Button buttonCrearModiAddHorario;
     }
 }

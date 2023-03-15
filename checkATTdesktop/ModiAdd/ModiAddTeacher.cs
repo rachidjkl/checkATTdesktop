@@ -31,7 +31,7 @@ namespace checkATTdesktop.ModiAdd
                 textBoxSegundoApellido.Text == "" || textBoxTelefono.Text == "")
             {
                 relleno = false;
-                MessageBox.Show("Alguno de los campos estan vacios...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

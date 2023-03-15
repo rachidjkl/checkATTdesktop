@@ -21,5 +21,14 @@ namespace checkATTdesktop.ModiAdd
         {
            this.Close();
         }
+
+        private void buttonCrearModiAddUF_Click(object sender, EventArgs e)
+        {
+            if (textBox1NombreUF.Text == "" || textBoxHorasTotales.Text == "" || textBoxNumeroUF.Text == "")
+            {
+                MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+

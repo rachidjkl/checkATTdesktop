@@ -110,19 +110,20 @@
             this.buttonCrearModiAddClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCrearModiAddClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearModiAddClase.ForeColor = System.Drawing.Color.White;
-            this.buttonCrearModiAddClase.Location = new System.Drawing.Point(108, 246);
+            this.buttonCrearModiAddClase.Location = new System.Drawing.Point(94, 229);
             this.buttonCrearModiAddClase.Name = "buttonCrearModiAddClase";
             this.buttonCrearModiAddClase.Size = new System.Drawing.Size(114, 32);
             this.buttonCrearModiAddClase.TabIndex = 5;
             this.buttonCrearModiAddClase.Text = "Crear";
             this.buttonCrearModiAddClase.UseVisualStyleBackColor = false;
+            this.buttonCrearModiAddClase.Click += new System.EventHandler(this.buttonCrearModiAddClase_Click);
             // 
             // ModiAddClase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(320, 286);
+            this.ClientSize = new System.Drawing.Size(316, 282);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCrearModiAddClase);
             this.Controls.Add(this.iconPictureBox1);

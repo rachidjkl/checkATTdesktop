@@ -21,5 +21,20 @@ namespace checkATTdesktop.ModiAdd
         {
             this.Close();
         }
+
+        private void buttonCrearModiAddClase_Click(object sender, EventArgs e)
+        {
+            if (textBoxNombreClase.Text == "" || comboBoxTutor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // MessageBoxIcon.Warning // for Warning  
+                            //MessageBoxIcon.Error // for Error 
+                            //MessageBoxIcon.Information  // for Information
+                            //MessageBoxIcon.Question // for Question
+            } else
+            {
+
+            }
+        }
     }
 }

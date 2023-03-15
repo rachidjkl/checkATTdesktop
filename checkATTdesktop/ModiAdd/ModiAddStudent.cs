@@ -34,7 +34,7 @@ namespace checkATTdesktop.ModiAdd
                 textBoxTelefono.Text == "" || comboBoxClase.SelectedIndex == -1 || comboBoxCurso.SelectedIndex == -1)
             {
                 relleno = false;
-                MessageBox.Show("Alguno de los campos estan vacios...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alguno de los campos estan vacios", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

@@ -28,5 +28,20 @@ namespace checkATTdesktop.ModiAdd
             ModiAddUF addUF = new ModiAddUF();
             addUF.ShowDialog();
         }
+
+        private void buttonCrearModulo_Click(object sender, EventArgs e)
+        {
+            if (textBoxNombreModulo.Text == "")
+            {
+                MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
+/**
+ * MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // MessageBoxIcon.Warning // for Warning  
+                            //MessageBoxIcon.Error // for Error 
+                            //MessageBoxIcon.Information  // for Information
+                            //MessageBoxIcon.Question // for Question
+**/

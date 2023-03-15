@@ -120,6 +120,7 @@
             this.buttonCrearModiAddUF.TabIndex = 7;
             this.buttonCrearModiAddUF.Text = "Crear";
             this.buttonCrearModiAddUF.UseVisualStyleBackColor = false;
+            this.buttonCrearModiAddUF.Click += new System.EventHandler(this.buttonCrearModiAddUF_Click);
             // 
             // ModiAddUF
             // 

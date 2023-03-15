@@ -21,5 +21,18 @@ namespace checkATTdesktop.ModiAdd
         {
             this.Close();
         }
+
+        private void buttonCrearModiAddHorario_Click(object sender, EventArgs e)
+        {
+            if (comboBoxClase.SelectedIndex == -1 || comboBoxDiaSemana.SelectedIndex == -1 || comboBoxModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+
+            }
+        }
     }
 }
+
+
