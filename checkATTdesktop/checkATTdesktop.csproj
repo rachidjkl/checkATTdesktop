@@ -42,6 +42,12 @@
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.2.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -72,6 +78,7 @@
       <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
@@ -137,6 +144,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -254,6 +262,54 @@
     </Compile>
     <Compile Include="LoginFolder\ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alumno.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AlumnosOrm.cs" />
+    <Compile Include="Models\Clase.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClaseOrm.cs" />
+    <Compile Include="Models\Clase_Modulo.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Falta.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Horario.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Matricula.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAtt.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAtt.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAtt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAtt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelAtt.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modulo.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orm.cs" />
+    <Compile Include="Models\Pasar_Lista.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Profesor.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UF.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
     <Compile Include="ModiAdd\ModiAddClase.cs">
       <SubType>Form</SubType>
@@ -377,7 +433,24 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\ModelAtt.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelAtt.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ModelAtt.edmx.diagram">
+      <DependentUpon>ModelAtt.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Alumno.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Clase.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Clase_Modulo.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Falta.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Horario.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Matricula.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Modulo.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Pasar_Lista.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.Profesor.datasource" />
+    <None Include="Properties\DataSources\checkATTdesktop.Models.UF.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -452,6 +525,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bdd.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\ModelAtt.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelAtt.Context.cs</LastGenOutput>
+      <DependentUpon>ModelAtt.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModelAtt.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelAtt.edmx</DependentUpon>
+      <LastGenOutput>ModelAtt.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

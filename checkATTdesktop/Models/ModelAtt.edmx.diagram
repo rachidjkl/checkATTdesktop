@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81c709d6d9ba4aae9015c63d0ad66226" Name="Diagram1">
+        <EntityTypeShape EntityType="CheckAttModel.Alumno" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Clase" Width="1.5" PointX="1.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Clase_Modulo" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Falta" Width="1.5" PointX="10.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Horario" Width="1.5" PointX="6" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Matricula" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Modulo" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Pasar_Lista" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.Profesor" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CheckAttModel.UF" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <AssociationConnector Association="CheckAttModel.FK__Alumno__id_clase__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_al__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_al__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase__id_tutor___1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_cl__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Horario__id_clas__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_mo__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Falta__id_pasar___3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Horario__id_modu__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_ho__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_mo__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__UF__id_modulo_uf__31B762FC" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_pr__37703C52" ManuallyRouted="false" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_uf__367C1819" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

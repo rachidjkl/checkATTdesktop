@@ -1,4 +1,5 @@
-﻿using checkATTdesktop.ModiAdd;
+﻿using checkATTdesktop.Models;
+using checkATTdesktop.ModiAdd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace checkATTdesktop.Gestion
 {
     public partial class GestionarAlumnos : Form
@@ -17,31 +19,8 @@ namespace checkATTdesktop.Gestion
         public GestionarAlumnos()
         {
             InitializeComponent();
-            rellenarGrid();
         }
   
-
-        private void rellenarGrid()
-        {
-            List<User> usuarios = new List<User>();
-            usuarios.Add(new User("Joel", "Marcos", "123456789", "645213798", "j@gmail.com", "calle"));
-            usuarios.Add(new User("Jacinta", "Marcos", "123456789", "645213798", "j@gmail.com", "calle"));
-            usuarios.Add(new User("Vcitor", "Foqueta", "123456789", "645213798", "j@gmail.com", "calle"));
-            usuarios.Add(new User("Herrero", "En plan", "123456789", "645213798", "j@gmail.com", "calle"));
-
-            foreach (User u in usuarios)
-            {
-                int rowIndex = dataGridViewAlumnos.Rows.Add();
-                DataGridViewRow row = dataGridViewAlumnos.Rows[rowIndex];
-                row.Cells[0].Value = u.Nombre;
-                row.Cells[1].Value = u.Apellido;
-                row.Cells[2].Value = u.DNI;
-                row.Cells[3].Value = u.Telefono;
-                row.Cells[4].Value = u.Correo;  
-                row.Cells[5].Value = u.Direccion;
-            }
-
-        }
 
         private void textBoxBuscarAlumno_Enter(object sender, EventArgs e)
         {
@@ -103,5 +82,21 @@ namespace checkATTdesktop.Gestion
 
         }
 
+        private void GestionarAlumnos_Load(object sender, EventArgs e)
+        {
+            bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
+            cargarAlumnos();   
+        }
+
+        private void comboBoxSeleccionarClase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarAlumnos();
+        }
+
+        private void cargarAlumnos()
+        {
+            Clase _clase = (Clase)comboBoxSeleccionarClase.SelectedItem;
+            bindingSourceDataGridAlumnos.DataSource = _clase.Alumno.ToList();
+        }
     }
 }
