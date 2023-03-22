@@ -17,8 +17,8 @@ namespace checkATTdesktop.Models
 
 
         public static void Insert(Alumno alumno) { 
-        Orm.bd.Alumno.Add(alumno);
-        Orm.bd.SaveChanges();
+            Orm.bd.Alumno.Add(alumno);
+            Orm.bd.SaveChanges();
         }
 
 
