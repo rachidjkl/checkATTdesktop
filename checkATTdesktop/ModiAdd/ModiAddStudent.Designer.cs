@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelCrearAlumnoPorfa = new System.Windows.Forms.Panel();
             this.dateTimePickerIncorporacion = new System.Windows.Forms.DateTimePicker();
             this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
@@ -66,6 +67,7 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.iconPictureBoxNombre = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSourceComboxCrearAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.panelCrearAlumnoPorfa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDNI)).BeginInit();
@@ -79,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxPrimerApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearAlumnoPorfa
@@ -158,16 +161,16 @@
             // 
             // comboBoxClase
             // 
+            this.comboBoxClase.DataSource = this.bindingSourceComboxCrearAlumno;
+            this.comboBoxClase.DisplayMember = "id_clase";
             this.comboBoxClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClase.FormattingEnabled = true;
-            this.comboBoxClase.Items.AddRange(new object[] {
-            "1rA",
-            "2nA"});
             this.comboBoxClase.Location = new System.Drawing.Point(534, 423);
             this.comboBoxClase.Name = "comboBoxClase";
             this.comboBoxClase.Size = new System.Drawing.Size(121, 24);
             this.comboBoxClase.TabIndex = 112;
+            this.comboBoxClase.ValueMember = "id_clase";
             // 
             // comboBoxCurso
             // 
@@ -378,7 +381,7 @@
             this.iconPictureBoxCursoMatriculación.IconColor = System.Drawing.Color.Red;
             this.iconPictureBoxCursoMatriculación.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBoxCursoMatriculación.IconSize = 14;
-            this.iconPictureBoxCursoMatriculación.Location = new System.Drawing.Point(228, 395);
+            this.iconPictureBoxCursoMatriculación.Location = new System.Drawing.Point(177, 396);
             this.iconPictureBoxCursoMatriculación.Name = "iconPictureBoxCursoMatriculación";
             this.iconPictureBoxCursoMatriculación.Size = new System.Drawing.Size(15, 14);
             this.iconPictureBoxCursoMatriculación.TabIndex = 93;
@@ -390,9 +393,9 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(42, 396);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 22);
+            this.label6.Size = new System.Drawing.Size(141, 22);
             this.label6.TabIndex = 92;
-            this.label6.Text = "Curso matriculación";
+            this.label6.Text = "Año cursando";
             // 
             // iconPictureBoxIncorporación
             // 
@@ -550,6 +553,10 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "Nombre";
             // 
+            // bindingSourceComboxCrearAlumno
+            // 
+            this.bindingSourceComboxCrearAlumno.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
             // ModiAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +567,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModiAddStudent";
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.ModiAddStudent_Load);
             this.panelCrearAlumnoPorfa.ResumeLayout(false);
             this.panelCrearAlumnoPorfa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxClase)).EndInit();
@@ -574,6 +582,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxPrimerApellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,5 +627,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerIncorporacion;
+        private System.Windows.Forms.BindingSource bindingSourceComboxCrearAlumno;
     }
 }
