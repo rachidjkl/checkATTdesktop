@@ -1,4 +1,5 @@
-﻿using System;
+﻿using checkATTdesktop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,11 +19,28 @@ namespace checkATTdesktop.ModiAdd
         }
 
         private void iconButtonAceptar_Click(object sender, EventArgs e)
-        {
-            todoRelleno();
+        {          
+            if (todoRelleno())
+            {
+                Profesor profeToAdd = new Profesor();
+                profeToAdd.nombre_profe = textBoxNombre.Text;
+                profeToAdd.apellido1_profe = textBoxPrimerApellido.Text;
+                profeToAdd.apellido2_profe = textBoxSegundoApellido.Text;
+                profeToAdd.email_profe = textBoxCorreo.Text;
+                profeToAdd.email_centro_profe = textBoxCorreoCentro.Text;
+                profeToAdd.direccion_profe = textBoxDireccion.Text;
+                profeToAdd.tel_profe = int.Parse(textBoxTelefono.Text);
+                profeToAdd.dni_profe = (textBoxDNI.Text);
+                profeToAdd.incorp_profe = dateTimePickerNacimiento.Value;
+                profeToAdd.nacimiento_profe = dateTimePickerNacimiento.Value;
+
+                ProfesoresOrm.Insert(profeToAdd);
+
+                MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void todoRelleno()
+        private bool todoRelleno()
         {
             bool relleno = true;
 
@@ -32,11 +50,8 @@ namespace checkATTdesktop.ModiAdd
             {
                 relleno = false;
                 MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                relleno = true;
-            }
+            }           
+            return relleno;
         }        
     }
 }

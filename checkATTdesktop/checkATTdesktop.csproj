@@ -308,6 +308,7 @@
     <Compile Include="Models\Profesor.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProfesoresOrm.cs" />
     <Compile Include="Models\UF.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>

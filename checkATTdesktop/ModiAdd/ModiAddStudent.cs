@@ -42,6 +42,7 @@ namespace checkATTdesktop.ModiAdd
 
 
                 AlumnosOrm.Insert(alumnoToAdd);
+                MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

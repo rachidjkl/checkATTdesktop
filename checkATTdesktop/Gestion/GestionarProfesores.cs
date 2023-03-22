@@ -1,4 +1,5 @@
-﻿using checkATTdesktop.ModiAdd;
+﻿using checkATTdesktop.Models;
+using checkATTdesktop.ModiAdd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,6 +70,9 @@ namespace checkATTdesktop.Gestion
 
         }
 
-        
+        private void GestionarProfesores_Load(object sender, EventArgs e)
+        {
+            bindingSourceDataGridProfesores.DataSource = ProfesoresOrm.Select();
+        }
     }
 }
