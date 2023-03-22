@@ -14,5 +14,13 @@ namespace checkATTdesktop.Models
                             .Where(c => c.id_clase == id_clase).ToList();
             return _alumno;
         }
+
+
+        public static void Insert(Alumno alumno) { 
+        Orm.bd.Alumno.Add(alumno);
+        Orm.bd.SaveChanges();
+        }
+
+
     }
 }
