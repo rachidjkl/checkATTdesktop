@@ -74,5 +74,34 @@ namespace checkATTdesktop.Gestion
         {
             bindingSourceDataGridProfesores.DataSource = ProfesoresOrm.Select();
         }
+
+        private void dataGridViewProfesor_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            String missatge = "";
+
+            if (dataGridViewProfesor.SelectedRows.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.OK)
+                {
+                    missatge = ProfesoresOrm.Delete((Profesor)dataGridViewProfesor.SelectedRows[0].DataBoundItem);
+
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+            }
+            {
+
+            }
+        }
     }
 }

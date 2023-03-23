@@ -36,9 +36,6 @@
             this.buttonModiProfesor = new System.Windows.Forms.Button();
             this.buttonCrearProfesor = new System.Windows.Forms.Button();
             this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
-            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
             this.dniprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +46,13 @@
             this.nacimientoprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incorpprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelCrearModificarProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearModificarProfesores
@@ -154,34 +154,7 @@
             this.dataGridViewProfesor.ReadOnly = true;
             this.dataGridViewProfesor.Size = new System.Drawing.Size(895, 361);
             this.dataGridViewProfesor.TabIndex = 21;
-            // 
-            // textBoxBuscarProfesor
-            // 
-            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
-            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
-            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 20);
-            this.textBoxBuscarProfesor.TabIndex = 20;
-            this.textBoxBuscarProfesor.Text = "Buscar...";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 19;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
-            // 
-            // bindingSourceDataGridProfesores
-            // 
-            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            this.dataGridViewProfesor.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewProfesor_UserDeletingRow);
             // 
             // dniprofeDataGridViewTextBoxColumn
             // 
@@ -253,6 +226,34 @@
             this.direccionprofeDataGridViewTextBoxColumn.Name = "direccionprofeDataGridViewTextBoxColumn";
             this.direccionprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bindingSourceDataGridProfesores
+            // 
+            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            // 
+            // textBoxBuscarProfesor
+            // 
+            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
+            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
+            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 20);
+            this.textBoxBuscarProfesor.TabIndex = 20;
+            this.textBoxBuscarProfesor.Text = "Buscar...";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 19;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
             // GestionarProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,8 +268,8 @@
             this.panelCrearModificarProfesores.ResumeLayout(false);
             this.panelCrearModificarProfesores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

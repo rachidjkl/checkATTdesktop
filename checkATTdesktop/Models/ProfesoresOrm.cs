@@ -21,6 +21,17 @@ namespace checkATTdesktop.Models
           
         }
 
+
+        public static String Delete(Profesor profesor)
+        {
+            String missatge = "";
+            Orm.bd.Profesor.Remove(profesor);
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
         public static List<Profesor> Select()
         {
             List<Profesor> _profesor = Orm.bd.Profesor.ToList();
