@@ -15,9 +15,21 @@ namespace checkATTdesktop.ModiAdd
     {
 
         private Form currentChildForm;
+
+        //variable global donde guardaremos el nickname del usuario que estamos modificando
+        //si estamos crando un usuario este campo estará vacio
+        private Alumno alumno = null;
+
+
         public ModiAddStudent()
         {
             InitializeComponent();            
+        }
+
+        public ModiAddStudent(Alumno alumno)
+        {
+            InitializeComponent();
+            this.alumno = alumno;
         }
 
 

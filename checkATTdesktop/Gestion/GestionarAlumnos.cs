@@ -45,10 +45,6 @@ namespace checkATTdesktop.Gestion
             textBoxBuscarAlumno.Text = "Buscar...";
         }
 
-        private void buttonCrearAlumno_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void buttonCrearAlumno_Click_1(object sender, EventArgs e)
         {

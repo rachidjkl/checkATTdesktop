@@ -8,10 +8,10 @@ namespace checkATTdesktop.Models
 {
     public static class AlumnosOrm
     {
-        public static List<Alumno> Select(String id_clase)
+        public static List<Alumno> Select(String dni_alumno)
         {
             List<Alumno> _alumno = Orm.bd.Alumno
-                            .Where(c => c.id_clase == id_clase).ToList();
+                            .Where(c => c.dni_alumno == dni_alumno).ToList();
             return _alumno;
         }
 
