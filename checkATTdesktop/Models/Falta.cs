@@ -14,8 +14,9 @@ namespace checkATTdesktop.Models
     
     public partial class Falta
     {
-        public System.DateTime id_falta { get; set; }
+        public int id_falta { get; set; }
         public Nullable<int> id_pasar_lista { get; set; }
+        public System.DateTime hora_falta { get; set; }
         public string motivo_falta { get; set; }
         public string documento_adj_falta { get; set; }
         public string comentario_falta { get; set; }

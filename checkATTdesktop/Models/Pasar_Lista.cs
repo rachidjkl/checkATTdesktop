@@ -30,10 +30,10 @@ namespace checkATTdesktop.Models
         public bool pasada { get; set; }
     
         public virtual Alumno Alumno { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Falta> Falta { get; set; }
         public virtual Horario Horario { get; set; }
         public virtual Profesor Profesor { get; set; }
         public virtual UF UF { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Falta> Falta { get; set; }
     }
 }
