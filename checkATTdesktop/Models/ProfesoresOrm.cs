@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +10,15 @@ namespace checkATTdesktop.Models
 {
     public static class ProfesoresOrm
     {
-        public static void Insert(Profesor profesor)
+        public static String Insert(Profesor profesor)
         {
+            String missatge = "";
             Orm.bd.Profesor.Add(profesor);
-            Orm.bd.SaveChanges();
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+          
         }
 
         public static List<Profesor> Select()

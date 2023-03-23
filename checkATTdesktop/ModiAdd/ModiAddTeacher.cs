@@ -19,7 +19,8 @@ namespace checkATTdesktop.ModiAdd
         }
 
         private void iconButtonAceptar_Click(object sender, EventArgs e)
-        {          
+        {
+            String missatge = "";
             if (todoRelleno())
             {
                 Profesor profeToAdd = new Profesor();
@@ -34,9 +35,16 @@ namespace checkATTdesktop.ModiAdd
                 profeToAdd.incorp_profe = dateTimePickerNacimiento.Value;
                 profeToAdd.nacimiento_profe = dateTimePickerNacimiento.Value;
 
-                ProfesoresOrm.Insert(profeToAdd);
+                missatge = ProfesoresOrm.Insert(profeToAdd);
 
-                MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);                  
+                }
             }
         }
 
@@ -52,6 +60,19 @@ namespace checkATTdesktop.ModiAdd
                 MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }           
             return relleno;
-        }        
+        }
+        
+
+        private void vaciarCampos()
+        {
+            textBoxCorreo.Text  =  "";
+            textBoxCorreoCentro.Text = "";
+            textBoxDireccion.Text = "";
+            textBoxDNI.Text = "";
+            textBoxNombre.Text = "";
+            textBoxPrimerApellido.Text = "";
+            textBoxSegundoApellido.Text = "";
+            textBoxTelefono.Text = "";
+        }
     }
 }

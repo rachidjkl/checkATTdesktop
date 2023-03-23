@@ -43,8 +43,12 @@ namespace checkATTdesktop.ModiAdd
 
                 AlumnosOrm.Insert(alumnoToAdd);
                 MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
         }
+
+       
 
         private  bool todoRelleno()
         {
@@ -58,6 +62,21 @@ namespace checkATTdesktop.ModiAdd
                 MessageBox.Show("Alguno de los campos estan vacios", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return relleno;
+        }
+
+        private void vaciarCampos()
+        {
+            textBoxCorreo.Text = "";
+            textBoxCorreoCentro.Text = "";
+            textBoxDireccion.Text = "";
+            textBoxDNI.Text = "";
+            textBoxNombre.Text = "";
+            textBoxPrimerApellido.Text = "";
+            textBoxSegundoApellido.Text = "";
+            textBoxTelefono.Text = "";
+            comboBoxClase.SelectedIndex = -1;
+            comboBoxCurso.SelectedIndex = -1;
+
         }
 
         private void panelCrearAlumnoPorfa_Paint(object sender, PaintEventArgs e)
