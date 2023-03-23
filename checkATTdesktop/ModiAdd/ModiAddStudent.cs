@@ -23,6 +23,7 @@ namespace checkATTdesktop.ModiAdd
 
         private void iconButtonAceptar_Click(object sender, EventArgs e)
         {
+            String missatge = "";
             if (todoRelleno())
             {
                 Alumno alumnoToAdd = new Alumno(); 
@@ -41,10 +42,16 @@ namespace checkATTdesktop.ModiAdd
                 alumnoToAdd.id_clase = comboBoxClase.SelectedValue.ToString();
 
 
-                AlumnosOrm.Insert(alumnoToAdd);
-                MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                missatge = AlumnosOrm.Insert(alumnoToAdd);
 
-
+                if (missatge != "")
+                {
+                    MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                }           
             }
         }
 

@@ -16,9 +16,13 @@ namespace checkATTdesktop.Models
         }
 
 
-        public static void Insert(Alumno alumno) { 
+        public static String Insert(Alumno alumno) {
+            String missatge = "";
             Orm.bd.Alumno.Add(alumno);
-            Orm.bd.SaveChanges();
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
         }
 
 
