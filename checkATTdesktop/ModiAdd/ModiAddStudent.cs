@@ -1,4 +1,5 @@
-﻿using checkATTdesktop.Models;
+﻿using checkATTdesktop.Gestion;
+using checkATTdesktop.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,21 @@ namespace checkATTdesktop.ModiAdd
     {
 
         private Form currentChildForm;
+
+        //variable global donde guardaremos el nickname del usuario que estamos modificando
+        //si estamos crando un usuario este campo estará vacio
+        private Alumno alumno = null;
+
+
         public ModiAddStudent()
         {
             InitializeComponent();            
+        }
+
+        public ModiAddStudent(Alumno alumno)
+        {
+            InitializeComponent();
+            this.alumno = alumno;
         }
 
 
@@ -26,7 +39,8 @@ namespace checkATTdesktop.ModiAdd
             String missatge = "";
             if (todoRelleno())
             {
-                Alumno alumnoToAdd = new Alumno(); 
+                Alumno alumnoToAdd = new Alumno();
+                alumnoToAdd.id_alumno = alumno.id_alumno;
                 alumnoToAdd.dni_alumno = textBoxDNI.Text;
                 alumnoToAdd.nombre_alumno = textBoxNombre.Text; 
                 alumnoToAdd.apellido1_alumno = textBoxPrimerApellido.Text;
@@ -38,11 +52,18 @@ namespace checkATTdesktop.ModiAdd
                 alumnoToAdd.nacimiento_alumno = dateTimePickerNacimiento.Value;
                 alumnoToAdd.horas_cursadas_totales_alumno = 0;
                 alumnoToAdd.incorp_alumno = dateTimePickerIncorporacion.Value;
-                alumnoToAdd.año_cursando_alumno = "22/23";
+                alumnoToAdd.año_cursando_alumno = comboBoxCurso.SelectedItem.ToString();
                 alumnoToAdd.id_clase = comboBoxClase.SelectedValue.ToString();
 
-
-                missatge = AlumnosOrm.Insert(alumnoToAdd);
+                if (alumno != null)
+                {
+                    missatge = AlumnosOrm.Update(alumnoToAdd);   
+                }
+                else
+                {
+                    missatge = AlumnosOrm.Insert(alumnoToAdd);
+                }
+               
 
                 if (missatge != "")
                 {
@@ -50,7 +71,17 @@ namespace checkATTdesktop.ModiAdd
                 }
                 else
                 {
-                    MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                    if (alumno == null)
+                    {
+                        MessageBox.Show("Alumno añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        vaciarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Alumno modificado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    
                 }           
             }
         }
@@ -94,6 +125,23 @@ namespace checkATTdesktop.ModiAdd
         private void ModiAddStudent_Load(object sender, EventArgs e)
         {
             bindingSourceComboxCrearAlumno.DataSource = ClaseOrm.Select();
+
+            if (alumno != null)
+            {
+                textBoxNombre.Text = alumno.nombre_alumno.ToString();
+                textBoxCorreo.Text = alumno.email_alumno.ToString();
+                textBoxCorreoCentro.Text = alumno.email_centro_alumno.ToString();
+                textBoxDireccion.Text = alumno.direccion_alumno.ToString();
+                textBoxDNI.Text = alumno.dni_alumno.ToString();
+                textBoxPrimerApellido.Text = alumno.apellido1_alumno.ToString();
+                textBoxSegundoApellido.Text = alumno.apellido2_alumno.ToString();
+                textBoxTelefono.Text = alumno.tel_alumno.ToString();
+                comboBoxClase.SelectedValue = alumno.id_clase.ToString();
+                dateTimePickerNacimiento.Value = alumno.nacimiento_alumno;
+                comboBoxCurso.SelectedItem = alumno.año_cursando_alumno.ToString();
+
+            }
+
         }
 
 

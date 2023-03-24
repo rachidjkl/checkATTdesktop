@@ -45,19 +45,17 @@ namespace checkATTdesktop.Gestion
             textBoxBuscarAlumno.Text = "Buscar...";
         }
 
-        private void buttonCrearAlumno_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void buttonCrearAlumno_Click_1(object sender, EventArgs e)
         {
             abrirFormularioHijo(new ModiAddStudent());
+            
         }
 
         private void buttonModiAlumno_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new ModiAddStudent());
+            abrirFormularioHijo(new ModiAddStudent((Alumno)dataGridViewAlumnos.CurrentRow.DataBoundItem));
+
         }
 
         private void abrirFormularioHijo(Form childForm)
@@ -93,7 +91,7 @@ namespace checkATTdesktop.Gestion
             cargarAlumnos();
         }
 
-        private void cargarAlumnos()
+        public void cargarAlumnos()
         {
             Clase _clase = (Clase)comboBoxSeleccionarClase.SelectedItem;
             if (_clase != null)
