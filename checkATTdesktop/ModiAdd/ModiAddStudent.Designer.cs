@@ -33,6 +33,7 @@
             this.dateTimePickerIncorporacion = new System.Windows.Forms.DateTimePicker();
             this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             this.comboBoxClase = new System.Windows.Forms.ComboBox();
+            this.bindingSourceComboxCrearAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxCurso = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
             this.iconPictureBoxClase = new FontAwesome.Sharp.IconPictureBox();
@@ -67,8 +68,8 @@
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.iconPictureBoxNombre = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bindingSourceComboxCrearAlumno = new System.Windows.Forms.BindingSource(this.components);
             this.panelCrearAlumnoPorfa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDNI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxTelefono)).BeginInit();
@@ -81,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxPrimerApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearAlumnoPorfa
@@ -172,14 +172,22 @@
             this.comboBoxClase.TabIndex = 112;
             this.comboBoxClase.ValueMember = "id_clase";
             // 
+            // bindingSourceComboxCrearAlumno
+            // 
+            this.bindingSourceComboxCrearAlumno.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
             // comboBoxCurso
             // 
             this.comboBoxCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCurso.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCurso.FormattingEnabled = true;
             this.comboBoxCurso.Items.AddRange(new object[] {
-            "DAM1",
-            "DAM2"});
+            "22/23",
+            "23/24",
+            "24/25",
+            "25/26",
+            "26/27",
+            "27/28"});
             this.comboBoxCurso.Location = new System.Drawing.Point(46, 423);
             this.comboBoxCurso.Name = "comboBoxCurso";
             this.comboBoxCurso.Size = new System.Drawing.Size(121, 24);
@@ -553,10 +561,6 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "Nombre";
             // 
-            // bindingSourceComboxCrearAlumno
-            // 
-            this.bindingSourceComboxCrearAlumno.DataSource = typeof(checkATTdesktop.Models.Clase);
-            // 
             // ModiAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +574,7 @@
             this.Load += new System.EventHandler(this.ModiAddStudent_Load);
             this.panelCrearAlumnoPorfa.ResumeLayout(false);
             this.panelCrearAlumnoPorfa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxClase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxTelefono)).EndInit();
@@ -582,7 +587,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxPrimerApellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboxCrearAlumno)).EndInit();
             this.ResumeLayout(false);
 
         }
