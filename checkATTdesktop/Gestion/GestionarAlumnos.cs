@@ -96,7 +96,11 @@ namespace checkATTdesktop.Gestion
         private void cargarAlumnos()
         {
             Clase _clase = (Clase)comboBoxSeleccionarClase.SelectedItem;
-            bindingSourceDataGridAlumnos.DataSource = _clase.Alumno.ToList();
+            if (_clase != null)
+            {
+                bindingSourceDataGridAlumnos.DataSource = _clase.Alumno.ToList();
+            }
+            
         }
 
         private void buttonEliminarAlumno_Click(object sender, EventArgs e)

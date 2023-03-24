@@ -1,4 +1,5 @@
-﻿using checkATTdesktop.ModiAdd;
+﻿using checkATTdesktop.Models;
+using checkATTdesktop.ModiAdd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,12 +23,51 @@ namespace checkATTdesktop.Gestion
         {
             ModiAddHorario addHorario = new ModiAddHorario();
             addHorario.ShowDialog();
+            
         }
 
         private void buttonModiHorario_Click(object sender, EventArgs e)
         {
             ModiAddHorario modiHorario = new ModiAddHorario();
             modiHorario.ShowDialog();
+            
+        }
+
+        private void GestionarHorarios_Load(object sender, EventArgs e)
+        {
+            comboBoxDiaSemana.SelectedIndex = 1;
+            bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
+            cargarHorarios();
+        }
+       
+        private void comboBoxSeleccionarClase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarHorarios();
+        }
+
+        private void comboBoxDiaSemana_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarHorarios();
+        }
+
+        private void cargarHorarios()
+        {
+            Clase _clase = (Clase)comboBoxSeleccionarClase.SelectedItem;
+            if (_clase != null)
+            {
+                bindingSourceDataGridHorario.DataSource = HorariosOrm.Select(_clase.id_clase, comboBoxDiaSemana.SelectedItem.ToString());
+                
+            }
+
+        }
+
+        private void dataGridViewHorarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                Horario horario = (Horario)dataGridViewHorarios.Rows[e.RowIndex].DataBoundItem;
+                e.Value = horario.Modulo.nombre_modulo;
+            }
         }
     }
 }

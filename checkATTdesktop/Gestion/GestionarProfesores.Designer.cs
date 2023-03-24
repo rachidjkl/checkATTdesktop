@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarProfesores = new System.Windows.Forms.Panel();
             this.buttonEliminarProfesor = new System.Windows.Forms.Button();
             this.buttonModiProfesor = new System.Windows.Forms.Button();
             this.buttonCrearProfesor = new System.Windows.Forms.Button();
             this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
+            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.dniprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,9 +49,6 @@
             this.nacimientoprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incorpprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelCrearModificarProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).BeginInit();
@@ -119,14 +119,14 @@
             this.dataGridViewProfesor.AllowUserToAddRows = false;
             this.dataGridViewProfesor.AutoGenerateColumns = false;
             this.dataGridViewProfesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProfesor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProfesor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProfesor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dniprofeDataGridViewTextBoxColumn,
@@ -140,91 +140,20 @@
             this.incorpprofeDataGridViewTextBoxColumn,
             this.direccionprofeDataGridViewTextBoxColumn});
             this.dataGridViewProfesor.DataSource = this.bindingSourceDataGridProfesores;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
             this.dataGridViewProfesor.Location = new System.Drawing.Point(12, 77);
             this.dataGridViewProfesor.Name = "dataGridViewProfesor";
             this.dataGridViewProfesor.ReadOnly = true;
             this.dataGridViewProfesor.Size = new System.Drawing.Size(895, 361);
             this.dataGridViewProfesor.TabIndex = 21;
-           
-            // 
-            // dniprofeDataGridViewTextBoxColumn
-            // 
-            this.dniprofeDataGridViewTextBoxColumn.DataPropertyName = "dni_profe";
-            this.dniprofeDataGridViewTextBoxColumn.HeaderText = "dni_profe";
-            this.dniprofeDataGridViewTextBoxColumn.Name = "dniprofeDataGridViewTextBoxColumn";
-            this.dniprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreprofeDataGridViewTextBoxColumn
-            // 
-            this.nombreprofeDataGridViewTextBoxColumn.DataPropertyName = "nombre_profe";
-            this.nombreprofeDataGridViewTextBoxColumn.HeaderText = "nombre_profe";
-            this.nombreprofeDataGridViewTextBoxColumn.Name = "nombreprofeDataGridViewTextBoxColumn";
-            this.nombreprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellido1profeDataGridViewTextBoxColumn
-            // 
-            this.apellido1profeDataGridViewTextBoxColumn.DataPropertyName = "apellido1_profe";
-            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "apellido1_profe";
-            this.apellido1profeDataGridViewTextBoxColumn.Name = "apellido1profeDataGridViewTextBoxColumn";
-            this.apellido1profeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellido2profeDataGridViewTextBoxColumn
-            // 
-            this.apellido2profeDataGridViewTextBoxColumn.DataPropertyName = "apellido2_profe";
-            this.apellido2profeDataGridViewTextBoxColumn.HeaderText = "apellido2_profe";
-            this.apellido2profeDataGridViewTextBoxColumn.Name = "apellido2profeDataGridViewTextBoxColumn";
-            this.apellido2profeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailprofeDataGridViewTextBoxColumn
-            // 
-            this.emailprofeDataGridViewTextBoxColumn.DataPropertyName = "email_profe";
-            this.emailprofeDataGridViewTextBoxColumn.HeaderText = "email_profe";
-            this.emailprofeDataGridViewTextBoxColumn.Name = "emailprofeDataGridViewTextBoxColumn";
-            this.emailprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailcentroprofeDataGridViewTextBoxColumn
-            // 
-            this.emailcentroprofeDataGridViewTextBoxColumn.DataPropertyName = "email_centro_profe";
-            this.emailcentroprofeDataGridViewTextBoxColumn.HeaderText = "email_centro_profe";
-            this.emailcentroprofeDataGridViewTextBoxColumn.Name = "emailcentroprofeDataGridViewTextBoxColumn";
-            this.emailcentroprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telprofeDataGridViewTextBoxColumn
-            // 
-            this.telprofeDataGridViewTextBoxColumn.DataPropertyName = "tel_profe";
-            this.telprofeDataGridViewTextBoxColumn.HeaderText = "tel_profe";
-            this.telprofeDataGridViewTextBoxColumn.Name = "telprofeDataGridViewTextBoxColumn";
-            this.telprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nacimientoprofeDataGridViewTextBoxColumn
-            // 
-            this.nacimientoprofeDataGridViewTextBoxColumn.DataPropertyName = "nacimiento_profe";
-            this.nacimientoprofeDataGridViewTextBoxColumn.HeaderText = "nacimiento_profe";
-            this.nacimientoprofeDataGridViewTextBoxColumn.Name = "nacimientoprofeDataGridViewTextBoxColumn";
-            this.nacimientoprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // incorpprofeDataGridViewTextBoxColumn
-            // 
-            this.incorpprofeDataGridViewTextBoxColumn.DataPropertyName = "incorp_profe";
-            this.incorpprofeDataGridViewTextBoxColumn.HeaderText = "incorp_profe";
-            this.incorpprofeDataGridViewTextBoxColumn.Name = "incorpprofeDataGridViewTextBoxColumn";
-            this.incorpprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionprofeDataGridViewTextBoxColumn
-            // 
-            this.direccionprofeDataGridViewTextBoxColumn.DataPropertyName = "direccion_profe";
-            this.direccionprofeDataGridViewTextBoxColumn.HeaderText = "direccion_profe";
-            this.direccionprofeDataGridViewTextBoxColumn.Name = "direccionprofeDataGridViewTextBoxColumn";
-            this.direccionprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bindingSourceDataGridProfesores
             // 
@@ -253,6 +182,76 @@
             this.iconPictureBox1.TabIndex = 19;
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
+            // dniprofeDataGridViewTextBoxColumn
+            // 
+            this.dniprofeDataGridViewTextBoxColumn.DataPropertyName = "dni_profe";
+            this.dniprofeDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dniprofeDataGridViewTextBoxColumn.Name = "dniprofeDataGridViewTextBoxColumn";
+            this.dniprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreprofeDataGridViewTextBoxColumn
+            // 
+            this.nombreprofeDataGridViewTextBoxColumn.DataPropertyName = "nombre_profe";
+            this.nombreprofeDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreprofeDataGridViewTextBoxColumn.Name = "nombreprofeDataGridViewTextBoxColumn";
+            this.nombreprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellido1profeDataGridViewTextBoxColumn
+            // 
+            this.apellido1profeDataGridViewTextBoxColumn.DataPropertyName = "apellido1_profe";
+            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellido1";
+            this.apellido1profeDataGridViewTextBoxColumn.Name = "apellido1profeDataGridViewTextBoxColumn";
+            this.apellido1profeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellido2profeDataGridViewTextBoxColumn
+            // 
+            this.apellido2profeDataGridViewTextBoxColumn.DataPropertyName = "apellido2_profe";
+            this.apellido2profeDataGridViewTextBoxColumn.HeaderText = "Apellido2";
+            this.apellido2profeDataGridViewTextBoxColumn.Name = "apellido2profeDataGridViewTextBoxColumn";
+            this.apellido2profeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailprofeDataGridViewTextBoxColumn
+            // 
+            this.emailprofeDataGridViewTextBoxColumn.DataPropertyName = "email_profe";
+            this.emailprofeDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailprofeDataGridViewTextBoxColumn.Name = "emailprofeDataGridViewTextBoxColumn";
+            this.emailprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailcentroprofeDataGridViewTextBoxColumn
+            // 
+            this.emailcentroprofeDataGridViewTextBoxColumn.DataPropertyName = "email_centro_profe";
+            this.emailcentroprofeDataGridViewTextBoxColumn.HeaderText = "EmailCep";
+            this.emailcentroprofeDataGridViewTextBoxColumn.Name = "emailcentroprofeDataGridViewTextBoxColumn";
+            this.emailcentroprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telprofeDataGridViewTextBoxColumn
+            // 
+            this.telprofeDataGridViewTextBoxColumn.DataPropertyName = "tel_profe";
+            this.telprofeDataGridViewTextBoxColumn.HeaderText = "Tel";
+            this.telprofeDataGridViewTextBoxColumn.Name = "telprofeDataGridViewTextBoxColumn";
+            this.telprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nacimientoprofeDataGridViewTextBoxColumn
+            // 
+            this.nacimientoprofeDataGridViewTextBoxColumn.DataPropertyName = "nacimiento_profe";
+            this.nacimientoprofeDataGridViewTextBoxColumn.HeaderText = "Nacimiento";
+            this.nacimientoprofeDataGridViewTextBoxColumn.Name = "nacimientoprofeDataGridViewTextBoxColumn";
+            this.nacimientoprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // incorpprofeDataGridViewTextBoxColumn
+            // 
+            this.incorpprofeDataGridViewTextBoxColumn.DataPropertyName = "incorp_profe";
+            this.incorpprofeDataGridViewTextBoxColumn.HeaderText = "Incorp";
+            this.incorpprofeDataGridViewTextBoxColumn.Name = "incorpprofeDataGridViewTextBoxColumn";
+            this.incorpprofeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionprofeDataGridViewTextBoxColumn
+            // 
+            this.direccionprofeDataGridViewTextBoxColumn.DataPropertyName = "direccion_profe";
+            this.direccionprofeDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionprofeDataGridViewTextBoxColumn.Name = "direccionprofeDataGridViewTextBoxColumn";
+            this.direccionprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // GestionarProfesores
             // 

@@ -280,6 +280,7 @@
     <Compile Include="Models\Horario.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HorariosOrm.cs" />
     <Compile Include="Models\Matricula.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
@@ -301,6 +302,7 @@
     <Compile Include="Models\Modulo.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModulosOrm.cs" />
     <Compile Include="Models\Orm.cs" />
     <Compile Include="Models\Pasar_Lista.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>

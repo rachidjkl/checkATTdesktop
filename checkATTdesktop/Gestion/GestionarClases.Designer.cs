@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonEliminarClase = new System.Windows.Forms.Button();
             this.buttonModiClase = new System.Windows.Forms.Button();
             this.buttonCrearClase = new System.Windows.Forms.Button();
             this.dataGridViewClase = new System.Windows.Forms.DataGridView();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxBuscarClase = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.bindingSourceDataGridClase = new System.Windows.Forms.BindingSource(this.components);
+            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminarClase
@@ -89,7 +92,7 @@
             // dataGridViewClase
             // 
             this.dataGridViewClase.AllowUserToAddRows = false;
-            this.dataGridViewClase.AllowUserToDeleteRows = false;
+            this.dataGridViewClase.AutoGenerateColumns = false;
             this.dataGridViewClase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
@@ -101,8 +104,9 @@
             this.dataGridViewClase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewClase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClase.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Correo,
-            this.Direction});
+            this.idclaseDataGridViewTextBoxColumn,
+            this.idtutorclaseDataGridViewTextBoxColumn});
+            this.dataGridViewClase.DataSource = this.bindingSourceDataGridClase;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,20 +121,7 @@
             this.dataGridViewClase.ReadOnly = true;
             this.dataGridViewClase.Size = new System.Drawing.Size(895, 363);
             this.dataGridViewClase.TabIndex = 27;
-            // 
-            // Correo
-            // 
-            this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Correo.HeaderText = "Nombre de la clase";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            // 
-            // Direction
-            // 
-            this.Direction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direction.HeaderText = "Tutor de la clase";
-            this.Direction.Name = "Direction";
-            this.Direction.ReadOnly = true;
+            this.dataGridViewClase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewClase_CellFormatting);
             // 
             // textBoxBuscarClase
             // 
@@ -155,6 +146,26 @@
             this.iconPictureBox1.TabIndex = 25;
             this.iconPictureBox1.TabStop = false;
             // 
+            // bindingSourceDataGridClase
+            // 
+            this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
+            // idclaseDataGridViewTextBoxColumn
+            // 
+            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
+            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Nombre clase";
+            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
+            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idtutorclaseDataGridViewTextBoxColumn
+            // 
+            this.idtutorclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idtutorclaseDataGridViewTextBoxColumn.DataPropertyName = "id_tutor_clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
+            this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GestionarClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,8 +181,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionarClases";
             this.Text = "GestionarClases";
+            this.Load += new System.EventHandler(this.GestionarClases_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +198,8 @@
         private System.Windows.Forms.DataGridView dataGridViewClase;
         private System.Windows.Forms.TextBox textBoxBuscarClase;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
+        private System.Windows.Forms.BindingSource bindingSourceDataGridClase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclaseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idtutorclaseDataGridViewTextBoxColumn;
     }
 }

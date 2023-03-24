@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModulo = new System.Windows.Forms.Panel();
@@ -35,12 +36,14 @@
             this.buttonModiModulo = new System.Windows.Forms.Button();
             this.buttonCrearModulo = new System.Windows.Forms.Button();
             this.dataGridViewModulos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridModulos = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxBuscarModulo = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.nombremoduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horastotalesmoduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCrearModulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +108,7 @@
             // dataGridViewModulos
             // 
             this.dataGridViewModulos.AllowUserToAddRows = false;
-            this.dataGridViewModulos.AllowUserToDeleteRows = false;
+            this.dataGridViewModulos.AutoGenerateColumns = false;
             this.dataGridViewModulos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
@@ -117,8 +120,9 @@
             this.dataGridViewModulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Direction});
+            this.nombremoduloDataGridViewTextBoxColumn,
+            this.horastotalesmoduloDataGridViewTextBoxColumn});
+            this.dataGridViewModulos.DataSource = this.bindingSourceDataGridModulos;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,19 +138,9 @@
             this.dataGridViewModulos.Size = new System.Drawing.Size(895, 354);
             this.dataGridViewModulos.TabIndex = 27;
             // 
-            // Nombre
+            // bindingSourceDataGridModulos
             // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.HeaderText = "Nombre del módulo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Direction
-            // 
-            this.Direction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direction.HeaderText = "Horas totales del módulo";
-            this.Direction.Name = "Direction";
-            this.Direction.ReadOnly = true;
+            this.bindingSourceDataGridModulos.DataSource = typeof(checkATTdesktop.Models.Modulo);
             // 
             // textBoxBuscarModulo
             // 
@@ -171,6 +165,22 @@
             this.iconPictureBox1.TabIndex = 25;
             this.iconPictureBox1.TabStop = false;
             // 
+            // nombremoduloDataGridViewTextBoxColumn
+            // 
+            this.nombremoduloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombremoduloDataGridViewTextBoxColumn.DataPropertyName = "nombre_modulo";
+            this.nombremoduloDataGridViewTextBoxColumn.HeaderText = "Nombre del modulo";
+            this.nombremoduloDataGridViewTextBoxColumn.Name = "nombremoduloDataGridViewTextBoxColumn";
+            this.nombremoduloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horastotalesmoduloDataGridViewTextBoxColumn
+            // 
+            this.horastotalesmoduloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horastotalesmoduloDataGridViewTextBoxColumn.DataPropertyName = "horas_totales_modulo";
+            this.horastotalesmoduloDataGridViewTextBoxColumn.HeaderText = "Horas totales del modulo";
+            this.horastotalesmoduloDataGridViewTextBoxColumn.Name = "horastotalesmoduloDataGridViewTextBoxColumn";
+            this.horastotalesmoduloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GestionarModulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,9 +191,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionarModulos";
             this.Text = "GestionarModulos";
+            this.Load += new System.EventHandler(this.GestionarModulos_Load);
             this.panelCrearModulo.ResumeLayout(false);
             this.panelCrearModulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewModulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridModulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -198,7 +210,8 @@
         private System.Windows.Forms.DataGridView dataGridViewModulos;
         private System.Windows.Forms.TextBox textBoxBuscarModulo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direction;
+        private System.Windows.Forms.BindingSource bindingSourceDataGridModulos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombremoduloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horastotalesmoduloDataGridViewTextBoxColumn;
     }
 }
