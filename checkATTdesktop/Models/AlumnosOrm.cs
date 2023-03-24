@@ -25,6 +25,16 @@ namespace checkATTdesktop.Models
             return missatge;
         }
 
+        public static String Delete(Alumno alumno)
+        {
+            String missatge = "";
+            Orm.bd.Alumno.Remove(alumno);
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
 
 
 

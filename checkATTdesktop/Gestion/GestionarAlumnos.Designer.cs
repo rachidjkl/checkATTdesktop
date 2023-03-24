@@ -29,19 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarAlumno = new System.Windows.Forms.Panel();
             this.buttonEliminarAlumno = new System.Windows.Forms.Button();
             this.buttonModiAlumno = new System.Windows.Forms.Button();
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.dataGridViewAlumnos = new System.Windows.Forms.DataGridView();
-            this.bindingSourceDataGridAlumnos = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
-            this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.dnialumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrealumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +47,12 @@
             this.incorpalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.añocursandoalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridAlumnos = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
+            this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelCrearModificarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridAlumnos)).BeginInit();
@@ -89,6 +89,7 @@
             this.buttonEliminarAlumno.TabIndex = 21;
             this.buttonEliminarAlumno.Text = "Eliminar";
             this.buttonEliminarAlumno.UseVisualStyleBackColor = true;
+            this.buttonEliminarAlumno.Click += new System.EventHandler(this.buttonEliminarAlumno_Click);
             // 
             // buttonModiAlumno
             // 
@@ -123,18 +124,17 @@
             // dataGridViewAlumnos
             // 
             this.dataGridViewAlumnos.AllowUserToAddRows = false;
-            this.dataGridViewAlumnos.AllowUserToDeleteRows = false;
             this.dataGridViewAlumnos.AutoGenerateColumns = false;
             this.dataGridViewAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dnialumnoDataGridViewTextBoxColumn,
@@ -149,76 +149,20 @@
             this.direccionalumnoDataGridViewTextBoxColumn,
             this.añocursandoalumnoDataGridViewTextBoxColumn});
             this.dataGridViewAlumnos.DataSource = this.bindingSourceDataGridAlumnos;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewAlumnos.EnableHeadersVisualStyles = false;
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
             this.dataGridViewAlumnos.ReadOnly = true;
             this.dataGridViewAlumnos.Size = new System.Drawing.Size(889, 341);
             this.dataGridViewAlumnos.TabIndex = 18;
-            // 
-            // bindingSourceDataGridAlumnos
-            // 
-            this.bindingSourceDataGridAlumnos.DataSource = typeof(checkATTdesktop.Models.Alumno);
-            // 
-            // textBoxBuscarAlumno
-            // 
-            this.textBoxBuscarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarAlumno.Location = new System.Drawing.Point(50, 108);
-            this.textBoxBuscarAlumno.Name = "textBoxBuscarAlumno";
-            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 20);
-            this.textBoxBuscarAlumno.TabIndex = 17;
-            this.textBoxBuscarAlumno.Text = "Buscar...";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 95);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 16;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
-            // 
-            // comboBoxSeleccionarClase
-            // 
-            this.comboBoxSeleccionarClase.DataSource = this.bindingSourceComboBoxClase;
-            this.comboBoxSeleccionarClase.DisplayMember = "id_clase";
-            this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSeleccionarClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxSeleccionarClase.FormattingEnabled = true;
-            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(17, 57);
-            this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
-            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxSeleccionarClase.TabIndex = 15;
-            this.comboBoxSeleccionarClase.ValueMember = "id_clase";
-            this.comboBoxSeleccionarClase.SelectedIndexChanged += new System.EventHandler(this.comboBoxSeleccionarClase_SelectedIndexChanged);
-            // 
-            // bindingSourceComboBoxClase
-            // 
-            this.bindingSourceComboBoxClase.DataSource = typeof(checkATTdesktop.Models.Clase);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 24);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Clase";
             // 
             // dnialumnoDataGridViewTextBoxColumn
             // 
@@ -296,6 +240,62 @@
             this.añocursandoalumnoDataGridViewTextBoxColumn.HeaderText = "Cursando";
             this.añocursandoalumnoDataGridViewTextBoxColumn.Name = "añocursandoalumnoDataGridViewTextBoxColumn";
             this.añocursandoalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceDataGridAlumnos
+            // 
+            this.bindingSourceDataGridAlumnos.DataSource = typeof(checkATTdesktop.Models.Alumno);
+            // 
+            // textBoxBuscarAlumno
+            // 
+            this.textBoxBuscarAlumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarAlumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarAlumno.Location = new System.Drawing.Point(50, 108);
+            this.textBoxBuscarAlumno.Name = "textBoxBuscarAlumno";
+            this.textBoxBuscarAlumno.Size = new System.Drawing.Size(300, 20);
+            this.textBoxBuscarAlumno.TabIndex = 17;
+            this.textBoxBuscarAlumno.Text = "Buscar...";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 95);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 16;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
+            // 
+            // comboBoxSeleccionarClase
+            // 
+            this.comboBoxSeleccionarClase.DataSource = this.bindingSourceComboBoxClase;
+            this.comboBoxSeleccionarClase.DisplayMember = "id_clase";
+            this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSeleccionarClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSeleccionarClase.FormattingEnabled = true;
+            this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(17, 57);
+            this.comboBoxSeleccionarClase.Name = "comboBoxSeleccionarClase";
+            this.comboBoxSeleccionarClase.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxSeleccionarClase.TabIndex = 15;
+            this.comboBoxSeleccionarClase.ValueMember = "id_clase";
+            this.comboBoxSeleccionarClase.SelectedIndexChanged += new System.EventHandler(this.comboBoxSeleccionarClase_SelectedIndexChanged);
+            // 
+            // bindingSourceComboBoxClase
+            // 
+            this.bindingSourceComboBoxClase.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Clase";
             // 
             // GestionarAlumnos
             // 

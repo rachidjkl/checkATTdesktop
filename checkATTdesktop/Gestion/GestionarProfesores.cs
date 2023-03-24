@@ -73,35 +73,38 @@ namespace checkATTdesktop.Gestion
         private void GestionarProfesores_Load(object sender, EventArgs e)
         {
             bindingSourceDataGridProfesores.DataSource = ProfesoresOrm.Select();
-        }
+        }        
 
-        private void dataGridViewProfesor_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        private void buttonEliminarProfesor_Click(object sender, EventArgs e)
         {
             String missatge = "";
+            Profesor profe = (Profesor)dataGridViewProfesor.CurrentRow.DataBoundItem;
 
-            if (dataGridViewProfesor.SelectedRows.Count > 0)
+            DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "Eliminar profesor", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.OK)
             {
-                DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                if (dialogResult == DialogResult.OK)
+                if (dataGridViewProfesor.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("No has seleccionado ningún profesor", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
                     missatge = ProfesoresOrm.Delete((Profesor)dataGridViewProfesor.SelectedRows[0].DataBoundItem);
 
                     if (missatge != "")
                     {
                         MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        e.Cancel = true;
+                    }
+                    else
+                    {
+                        bindingSourceDataGridProfesores.DataSource = ProfesoresOrm.Select();
                     }
                 }
-                else
-                {
-                    e.Cancel = true;
-                }
 
-            }
-            {
+            }            
 
-            }
+
         }
     }
 }

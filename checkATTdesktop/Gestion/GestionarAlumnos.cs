@@ -98,5 +98,35 @@ namespace checkATTdesktop.Gestion
             Clase _clase = (Clase)comboBoxSeleccionarClase.SelectedItem;
             bindingSourceDataGridAlumnos.DataSource = _clase.Alumno.ToList();
         }
+
+        private void buttonEliminarAlumno_Click(object sender, EventArgs e)
+        {
+            String missatge = "";
+            Alumno alumno = (Alumno)dataGridViewAlumnos.CurrentRow.DataBoundItem;
+
+            DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "Eliminar alumno", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.OK)
+            {
+                if (dataGridViewAlumnos.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("No has seleccionado ningún alumno", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    missatge = AlumnosOrm.Delete((Alumno)dataGridViewAlumnos.SelectedRows[0].DataBoundItem);
+
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        cargarAlumnos();
+                    }
+                }
+
+            }
+        }
     }
 }
