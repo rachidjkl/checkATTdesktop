@@ -40,7 +40,7 @@ namespace checkATTdesktop.ModiAdd
             if (todoRelleno())
             {
                 Alumno alumnoToAdd = new Alumno();
-                alumnoToAdd.id_alumno = alumno.id_alumno;
+                //alumnoToAdd.id_alumno = alumno.id_alumno;
                 alumnoToAdd.dni_alumno = textBoxDNI.Text;
                 alumnoToAdd.nombre_alumno = textBoxNombre.Text; 
                 alumnoToAdd.apellido1_alumno = textBoxPrimerApellido.Text;
