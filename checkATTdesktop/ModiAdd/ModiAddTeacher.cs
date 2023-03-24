@@ -13,10 +13,15 @@ namespace checkATTdesktop.ModiAdd
 {
     public partial class ModiAddTeacher : Form
     {
+        //variable global donde guardaremos el nickname del usuario que estamos modificando
+        //si estamos crando un usuario este campo estará vacio
+        private Profesor profesor = null;
+
         public ModiAddTeacher()
         {
             InitializeComponent();
         }
+
 
         private void iconButtonAceptar_Click(object sender, EventArgs e)
         {
@@ -35,7 +40,15 @@ namespace checkATTdesktop.ModiAdd
                 profeToAdd.incorp_profe = dateTimePickerNacimiento.Value;
                 profeToAdd.nacimiento_profe = dateTimePickerNacimiento.Value;
 
-                missatge = ProfesoresOrm.Insert(profeToAdd);
+                if (profesor != null)
+                {
+                    profeToAdd.id_profe = profesor.id_profe;
+                    missatge = ProfesoresOrm.Update(profeToAdd);
+                }
+                else
+                {
+                    missatge = ProfesoresOrm.Insert(profeToAdd);
+                }
 
                 if (missatge != "")
                 {
@@ -43,7 +56,16 @@ namespace checkATTdesktop.ModiAdd
                 }
                 else
                 {
-                    MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);                  
+                    if (profesor == null)
+                    {
+                        MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                        vaciarCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Profesor modificado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
                 }
             }
         }
@@ -73,6 +95,26 @@ namespace checkATTdesktop.ModiAdd
             textBoxPrimerApellido.Text = "";
             textBoxSegundoApellido.Text = "";
             textBoxTelefono.Text = "";
+        }
+
+        private void ModiAddTeacher_Load(object sender, EventArgs e)
+        {
+            
+            if (profesor != null)
+            {
+                textBoxNombre.Text = alumno.nombre_alumno.ToString();
+                textBoxCorreo.Text = alumno.email_alumno.ToString();
+                textBoxCorreoCentro.Text = alumno.email_centro_alumno.ToString();
+                textBoxDireccion.Text = alumno.direccion_alumno.ToString();
+                textBoxDNI.Text = alumno.dni_alumno.ToString();
+                textBoxPrimerApellido.Text = alumno.apellido1_alumno.ToString();
+                textBoxSegundoApellido.Text = alumno.apellido2_alumno.ToString();
+                textBoxTelefono.Text = alumno.tel_alumno.ToString();
+                comboBoxClase.SelectedValue = alumno.id_clase.ToString();
+                dateTimePickerNacimiento.Value = alumno.nacimiento_alumno;
+                comboBoxCurso.SelectedItem = alumno.año_cursando_alumno.ToString();
+
+            }
         }
     }
 }
