@@ -28,7 +28,7 @@ namespace checkATTdesktop.Gestion
 
         private void buttonModiHorario_Click(object sender, EventArgs e)
         {
-            ModiAddHorario modiHorario = new ModiAddHorario();
+            ModiAddHorario modiHorario = new ModiAddHorario((Horario)dataGridViewHorarios.CurrentRow.DataBoundItem);
             modiHorario.ShowDialog();
             
         }

@@ -50,7 +50,7 @@ namespace checkATTdesktop.Gestion
 
         private void buttonModiProfesor_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new ModiAddTeacher((Profesor)dataGridViewProfesor.CurrentRow.DataBoundItem)));
+            abrirFormularioHijo(new ModiAddTeacher((Profesor)dataGridViewProfesor.CurrentRow.DataBoundItem));
         }
 
         private void abrirFormularioHijo(Form childForm)

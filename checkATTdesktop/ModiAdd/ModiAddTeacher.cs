@@ -22,6 +22,12 @@ namespace checkATTdesktop.ModiAdd
             InitializeComponent();
         }
 
+        public ModiAddTeacher(Profesor profesor)
+        {
+            InitializeComponent();
+            this.profesor = profesor;   
+        }
+
 
         private void iconButtonAceptar_Click(object sender, EventArgs e)
         {
@@ -102,17 +108,17 @@ namespace checkATTdesktop.ModiAdd
             
             if (profesor != null)
             {
-                textBoxNombre.Text = alumno.nombre_alumno.ToString();
-                textBoxCorreo.Text = alumno.email_alumno.ToString();
-                textBoxCorreoCentro.Text = alumno.email_centro_alumno.ToString();
-                textBoxDireccion.Text = alumno.direccion_alumno.ToString();
-                textBoxDNI.Text = alumno.dni_alumno.ToString();
-                textBoxPrimerApellido.Text = alumno.apellido1_alumno.ToString();
-                textBoxSegundoApellido.Text = alumno.apellido2_alumno.ToString();
-                textBoxTelefono.Text = alumno.tel_alumno.ToString();
-                comboBoxClase.SelectedValue = alumno.id_clase.ToString();
-                dateTimePickerNacimiento.Value = alumno.nacimiento_alumno;
-                comboBoxCurso.SelectedItem = alumno.año_cursando_alumno.ToString();
+                textBoxNombre.Text = profesor.nombre_profe;
+                textBoxCorreo.Text = profesor.email_profe;
+                textBoxCorreoCentro.Text = profesor.email_centro_profe; 
+                textBoxDireccion.Text = profesor.direccion_profe;
+                textBoxDNI.Text = profesor.dni_profe;
+                textBoxPrimerApellido.Text = profesor.apellido1_profe;
+                textBoxSegundoApellido.Text = profesor.apellido2_profe;
+                textBoxTelefono.Text = profesor.tel_profe.ToString();
+                dateTimePickerNacimiento.Value = profesor.nacimiento_profe;
+                dateTimePickerIncorporacion.Value = profesor.incorp_profe;
+
 
             }
         }

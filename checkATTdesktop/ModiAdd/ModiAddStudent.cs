@@ -118,10 +118,6 @@ namespace checkATTdesktop.ModiAdd
 
         }
 
-        private void panelCrearAlumnoPorfa_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void ModiAddStudent_Load(object sender, EventArgs e)
         {
