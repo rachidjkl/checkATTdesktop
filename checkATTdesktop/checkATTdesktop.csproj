@@ -245,6 +245,12 @@
     <Compile Include="Gestion\GestionarHorarios.Designer.cs">
       <DependentUpon>GestionarHorarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion\GestionarMatriculacionUF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion\GestionarMatriculacionUF.Designer.cs">
+      <DependentUpon>GestionarMatriculacionUF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion\GestionarModulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion\GestionarHorarios.resx">
       <DependentUpon>GestionarHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion\GestionarMatriculacionUF.resx">
+      <DependentUpon>GestionarMatriculacionUF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion\GestionarModulos.resx">
       <DependentUpon>GestionarModulos.cs</DependentUpon>

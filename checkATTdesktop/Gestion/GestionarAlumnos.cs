@@ -130,5 +130,11 @@ namespace checkATTdesktop.Gestion
 
             }
         }
+
+        private void buttonMatricularAlumnosUF_Click(object sender, EventArgs e)
+        {
+            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF();
+            matricularUF.ShowDialog();
+        }
     }
 }

@@ -53,6 +53,7 @@
             this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
             this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonMatricularAlumnosUF = new System.Windows.Forms.Button();
             this.panelCrearModificarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridAlumnos)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // panelCrearModificarAlumno
             // 
+            this.panelCrearModificarAlumno.Controls.Add(this.buttonMatricularAlumnosUF);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonEliminarAlumno);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonModiAlumno);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonCrearAlumno);
@@ -297,6 +299,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Clase";
             // 
+            // buttonMatricularAlumnosUF
+            // 
+            this.buttonMatricularAlumnosUF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonMatricularAlumnosUF.FlatAppearance.BorderSize = 2;
+            this.buttonMatricularAlumnosUF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMatricularAlumnosUF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMatricularAlumnosUF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonMatricularAlumnosUF.Location = new System.Drawing.Point(12, 480);
+            this.buttonMatricularAlumnosUF.Name = "buttonMatricularAlumnosUF";
+            this.buttonMatricularAlumnosUF.Size = new System.Drawing.Size(153, 34);
+            this.buttonMatricularAlumnosUF.TabIndex = 22;
+            this.buttonMatricularAlumnosUF.Text = "Matricular en UF";
+            this.buttonMatricularAlumnosUF.UseVisualStyleBackColor = true;
+            this.buttonMatricularAlumnosUF.Click += new System.EventHandler(this.buttonMatricularAlumnosUF_Click);
+            // 
             // GestionarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +359,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn incorpalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn añocursandoalumnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonMatricularAlumnosUF;
     }
 }
