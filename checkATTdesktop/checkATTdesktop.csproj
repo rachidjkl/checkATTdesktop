@@ -313,6 +313,9 @@
     <Compile Include="Models\Pasar_Lista.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pasar_listas_grupo.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Profesor.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
