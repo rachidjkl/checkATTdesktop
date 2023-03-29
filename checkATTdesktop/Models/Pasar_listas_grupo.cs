@@ -14,11 +14,20 @@ namespace checkATTdesktop.Models
     
     public partial class Pasar_listas_grupo
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Pasar_listas_grupo()
+        {
+            this.Pasar_Lista = new HashSet<Pasar_Lista>();
+        }
+    
         public int id_lista_grupo { get; set; }
         public System.DateTime hora_inicio { get; set; }
         public System.DateTime hora_final { get; set; }
         public string modulo { get; set; }
         public string profe { get; set; }
         public int estado { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
     }
 }

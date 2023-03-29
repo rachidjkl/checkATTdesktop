@@ -323,6 +323,7 @@
     <Compile Include="Models\UF.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UFsOrm.cs" />
     <Compile Include="ModiAdd\ModiAddClase.cs">
       <SubType>Form</SubType>
     </Compile>
