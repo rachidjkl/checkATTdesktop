@@ -56,7 +56,7 @@ namespace checkATTdesktop.Gestion
             if (_clase != null)
             {
                 bindingSourceDataGridHorario.DataSource = HorariosOrm.Select(_clase.id_clase, comboBoxDiaSemana.SelectedItem.ToString());
-                
+               
             }
 
         }
@@ -68,6 +68,24 @@ namespace checkATTdesktop.Gestion
                 Horario horario = (Horario)dataGridViewHorarios.Rows[e.RowIndex].DataBoundItem;
                 e.Value = horario.Modulo.nombre_modulo;
             }
+            else if (e.ColumnIndex == 3) 
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    TimeSpan tiempo = (TimeSpan)e.Value;
+                    e.Value = tiempo.ToString("hh\\:mm"); 
+                    e.FormattingApplied = true;
+                }
+            }else if (e.ColumnIndex == 4)
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    TimeSpan tiempo = (TimeSpan)e.Value;
+                    e.Value = tiempo.ToString("hh\\:mm"); 
+                    e.FormattingApplied = true;
+                }
+            }
         }
+
     }
 }
