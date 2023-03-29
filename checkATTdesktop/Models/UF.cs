@@ -18,6 +18,7 @@ namespace checkATTdesktop.Models
         public UF()
         {
             this.Pasar_Lista = new HashSet<Pasar_Lista>();
+            this.Matricula = new HashSet<Matricula>();
         }
     
         public int id_uf { get; set; }
@@ -29,5 +30,7 @@ namespace checkATTdesktop.Models
         public virtual Modulo Modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Matricula> Matricula { get; set; }
     }
 }

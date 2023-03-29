@@ -32,6 +32,7 @@ namespace checkATTdesktop.Models
         public System.DateTime nacimiento_profe { get; set; }
         public System.DateTime incorp_profe { get; set; }
         public string direccion_profe { get; set; }
+        public string nombre_completo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Clase> Clase { get; set; }

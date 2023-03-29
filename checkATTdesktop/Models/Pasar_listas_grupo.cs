@@ -12,14 +12,13 @@ namespace checkATTdesktop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Matricula
+    public partial class Pasar_listas_grupo
     {
-        public int id_matricula { get; set; }
-        public Nullable<int> id_uf { get; set; }
-        public Nullable<int> id_alumno { get; set; }
-        public System.DateTime fecha_matricula { get; set; }
-    
-        public virtual Alumno Alumno { get; set; }
-        public virtual UF UF { get; set; }
+        public int id_lista_grupo { get; set; }
+        public System.DateTime hora_inicio { get; set; }
+        public System.DateTime hora_final { get; set; }
+        public string modulo { get; set; }
+        public string profe { get; set; }
+        public int estado { get; set; }
     }
 }

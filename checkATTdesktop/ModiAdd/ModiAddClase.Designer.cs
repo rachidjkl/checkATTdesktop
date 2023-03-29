@@ -71,7 +71,7 @@
             // comboBoxTutor
             // 
             this.comboBoxTutor.DataSource = this.bindingSourceComboBoxProfes;
-            this.comboBoxTutor.DisplayMember = "nombre_profe";
+            this.comboBoxTutor.DisplayMember = "nombre_completo";
             this.comboBoxTutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTutor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTutor.FormattingEnabled = true;
@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(308, 274);
+            this.ClientSize = new System.Drawing.Size(304, 270);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCrearModiAddClase);
             this.Controls.Add(this.iconPictureBox1);
