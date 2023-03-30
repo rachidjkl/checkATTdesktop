@@ -287,6 +287,9 @@
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HorariosOrm.cs" />
+    <Compile Include="Models\Justificar_faltas.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Matricula.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
@@ -324,6 +327,9 @@
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UFsOrm.cs" />
+    <Compile Include="Models\Usuarios_aplicacion.cs">
+      <DependentUpon>ModelAtt.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModiAdd\ModiAddClase.cs">
       <SubType>Form</SubType>
     </Compile>

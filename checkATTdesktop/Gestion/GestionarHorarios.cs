@@ -35,7 +35,7 @@ namespace checkATTdesktop.Gestion
 
         private void GestionarHorarios_Load(object sender, EventArgs e)
         {
-            comboBoxDiaSemana.SelectedIndex = 1;
+            comboBoxDiaSemana.SelectedIndex = 0;
             bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
             cargarHorarios();
         }
