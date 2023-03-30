@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarAlumno = new System.Windows.Forms.Panel();
+            this.buttonMatricularAlumnosUF = new System.Windows.Forms.Button();
             this.buttonEliminarAlumno = new System.Windows.Forms.Button();
             this.buttonModiAlumno = new System.Windows.Forms.Button();
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
             this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonMatricularAlumnosUF = new System.Windows.Forms.Button();
             this.panelCrearModificarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridAlumnos)).BeginInit();
@@ -77,6 +77,21 @@
             this.panelCrearModificarAlumno.Name = "panelCrearModificarAlumno";
             this.panelCrearModificarAlumno.Size = new System.Drawing.Size(948, 537);
             this.panelCrearModificarAlumno.TabIndex = 0;
+            // 
+            // buttonMatricularAlumnosUF
+            // 
+            this.buttonMatricularAlumnosUF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonMatricularAlumnosUF.FlatAppearance.BorderSize = 2;
+            this.buttonMatricularAlumnosUF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMatricularAlumnosUF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMatricularAlumnosUF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.buttonMatricularAlumnosUF.Location = new System.Drawing.Point(12, 480);
+            this.buttonMatricularAlumnosUF.Name = "buttonMatricularAlumnosUF";
+            this.buttonMatricularAlumnosUF.Size = new System.Drawing.Size(153, 34);
+            this.buttonMatricularAlumnosUF.TabIndex = 22;
+            this.buttonMatricularAlumnosUF.Text = "Matricular en UF";
+            this.buttonMatricularAlumnosUF.UseVisualStyleBackColor = true;
+            this.buttonMatricularAlumnosUF.Click += new System.EventHandler(this.buttonMatricularAlumnosUF_Click);
             // 
             // buttonEliminarAlumno
             // 
@@ -129,14 +144,14 @@
             this.dataGridViewAlumnos.AutoGenerateColumns = false;
             this.dataGridViewAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dnialumnoDataGridViewTextBoxColumn,
@@ -151,14 +166,14 @@
             this.direccionalumnoDataGridViewTextBoxColumn,
             this.añocursandoalumnoDataGridViewTextBoxColumn});
             this.dataGridViewAlumnos.DataSource = this.bindingSourceDataGridAlumnos;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAlumnos.EnableHeadersVisualStyles = false;
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
@@ -274,7 +289,7 @@
             // comboBoxSeleccionarClase
             // 
             this.comboBoxSeleccionarClase.DataSource = this.bindingSourceComboBoxClase;
-            this.comboBoxSeleccionarClase.DisplayMember = "id_clase";
+            this.comboBoxSeleccionarClase.DisplayMember = "nombre_clase";
             this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSeleccionarClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSeleccionarClase.FormattingEnabled = true;
@@ -298,21 +313,6 @@
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "Clase";
-            // 
-            // buttonMatricularAlumnosUF
-            // 
-            this.buttonMatricularAlumnosUF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonMatricularAlumnosUF.FlatAppearance.BorderSize = 2;
-            this.buttonMatricularAlumnosUF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMatricularAlumnosUF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMatricularAlumnosUF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.buttonMatricularAlumnosUF.Location = new System.Drawing.Point(12, 480);
-            this.buttonMatricularAlumnosUF.Name = "buttonMatricularAlumnosUF";
-            this.buttonMatricularAlumnosUF.Size = new System.Drawing.Size(153, 34);
-            this.buttonMatricularAlumnosUF.TabIndex = 22;
-            this.buttonMatricularAlumnosUF.Text = "Matricular en UF";
-            this.buttonMatricularAlumnosUF.UseVisualStyleBackColor = true;
-            this.buttonMatricularAlumnosUF.Click += new System.EventHandler(this.buttonMatricularAlumnosUF_Click);
             // 
             // GestionarAlumnos
             // 
