@@ -62,6 +62,7 @@
             // 
             // textBoxNombreClase
             // 
+            this.textBoxNombreClase.Enabled = false;
             this.textBoxNombreClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreClase.Location = new System.Drawing.Point(14, 77);
             this.textBoxNombreClase.Name = "textBoxNombreClase";

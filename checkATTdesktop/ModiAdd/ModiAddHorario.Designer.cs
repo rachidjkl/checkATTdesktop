@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,9 +39,13 @@
             this.comboBoxClase = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxModulo = new System.Windows.Forms.ComboBox();
+            this.moduloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonCrearModiAddHorario = new System.Windows.Forms.Button();
+            this.claseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,9 +110,7 @@
             "Martes",
             "Miercoles",
             "Jueves",
-            "Viernes",
-            "Sabado",
-            "Domingo"});
+            "Viernes"});
             this.comboBoxDiaSemana.Location = new System.Drawing.Point(52, 237);
             this.comboBoxDiaSemana.Name = "comboBoxDiaSemana";
             this.comboBoxDiaSemana.Size = new System.Drawing.Size(183, 24);
@@ -125,6 +128,8 @@
             // 
             // comboBoxClase
             // 
+            this.comboBoxClase.DataSource = this.claseBindingSource;
+            this.comboBoxClase.DisplayMember = "id_clase";
             this.comboBoxClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClase.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClase.FormattingEnabled = true;
@@ -132,6 +137,7 @@
             this.comboBoxClase.Name = "comboBoxClase";
             this.comboBoxClase.Size = new System.Drawing.Size(183, 24);
             this.comboBoxClase.TabIndex = 10;
+            this.comboBoxClase.ValueMember = "id_clase";
             // 
             // label5
             // 
@@ -145,6 +151,8 @@
             // 
             // comboBoxModulo
             // 
+            this.comboBoxModulo.DataSource = this.moduloBindingSource;
+            this.comboBoxModulo.DisplayMember = "nombre_modulo";
             this.comboBoxModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxModulo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModulo.FormattingEnabled = true;
@@ -152,6 +160,11 @@
             this.comboBoxModulo.Name = "comboBoxModulo";
             this.comboBoxModulo.Size = new System.Drawing.Size(183, 24);
             this.comboBoxModulo.TabIndex = 12;
+            this.comboBoxModulo.ValueMember = "id_modulo";
+            // 
+            // moduloBindingSource
+            // 
+            this.moduloBindingSource.DataSource = typeof(checkATTdesktop.Models.Modulo);
             // 
             // iconPictureBox1
             // 
@@ -182,6 +195,10 @@
             this.buttonCrearModiAddHorario.UseVisualStyleBackColor = false;
             this.buttonCrearModiAddHorario.Click += new System.EventHandler(this.buttonCrearModiAddHorario_Click);
             // 
+            // claseBindingSource
+            // 
+            this.claseBindingSource.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
             // ModiAddHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,7 +222,10 @@
             this.Name = "ModiAddHorario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.ModiAddHorario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +244,7 @@
         private System.Windows.Forms.ComboBox comboBoxModulo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Button buttonCrearModiAddHorario;
+        private System.Windows.Forms.BindingSource moduloBindingSource;
+        private System.Windows.Forms.BindingSource claseBindingSource;
     }
 }

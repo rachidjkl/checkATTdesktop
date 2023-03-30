@@ -15,7 +15,7 @@ namespace checkATTdesktop.ModiAdd
     public partial class ModiAddStudent : Form
     {
 
-        private Form currentChildForm;
+       
 
         //variable global donde guardaremos el nickname del usuario que estamos modificando
         //si estamos crando un usuario este campo estará vacio
@@ -40,7 +40,7 @@ namespace checkATTdesktop.ModiAdd
             if (todoRelleno())
             {
                 Alumno alumnoToAdd = new Alumno();
-                //alumnoToAdd.id_alumno = alumno.id_alumno;
+              
                 alumnoToAdd.dni_alumno = textBoxDNI.Text;
                 alumnoToAdd.nombre_alumno = textBoxNombre.Text; 
                 alumnoToAdd.apellido1_alumno = textBoxPrimerApellido.Text;
@@ -57,6 +57,7 @@ namespace checkATTdesktop.ModiAdd
 
                 if (alumno != null)
                 {
+                    alumnoToAdd.id_alumno = alumno.id_alumno;
                     missatge = AlumnosOrm.Update(alumnoToAdd);   
                 }
                 else
@@ -117,10 +118,6 @@ namespace checkATTdesktop.ModiAdd
 
         }
 
-        private void panelCrearAlumnoPorfa_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void ModiAddStudent_Load(object sender, EventArgs e)
         {

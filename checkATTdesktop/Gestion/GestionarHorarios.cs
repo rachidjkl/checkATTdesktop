@@ -28,14 +28,14 @@ namespace checkATTdesktop.Gestion
 
         private void buttonModiHorario_Click(object sender, EventArgs e)
         {
-            ModiAddHorario modiHorario = new ModiAddHorario();
+            ModiAddHorario modiHorario = new ModiAddHorario((Horario)dataGridViewHorarios.CurrentRow.DataBoundItem);
             modiHorario.ShowDialog();
             
         }
 
         private void GestionarHorarios_Load(object sender, EventArgs e)
         {
-            comboBoxDiaSemana.SelectedIndex = 1;
+            comboBoxDiaSemana.SelectedIndex = 0;
             bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
             cargarHorarios();
         }
@@ -56,7 +56,7 @@ namespace checkATTdesktop.Gestion
             if (_clase != null)
             {
                 bindingSourceDataGridHorario.DataSource = HorariosOrm.Select(_clase.id_clase, comboBoxDiaSemana.SelectedItem.ToString());
-                
+               
             }
 
         }
@@ -68,7 +68,53 @@ namespace checkATTdesktop.Gestion
                 Horario horario = (Horario)dataGridViewHorarios.Rows[e.RowIndex].DataBoundItem;
                 e.Value = horario.Modulo.nombre_modulo;
             }
+            else if (e.ColumnIndex == 3) 
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    TimeSpan tiempo = (TimeSpan)e.Value;
+                    e.Value = tiempo.ToString("hh\\:mm"); 
+                    e.FormattingApplied = true;
+                }
+            }else if (e.ColumnIndex == 4)
+            {
+                if (e.Value != null && e.Value != DBNull.Value)
+                {
+                    TimeSpan tiempo = (TimeSpan)e.Value;
+                    e.Value = tiempo.ToString("hh\\:mm"); 
+                    e.FormattingApplied = true;
+                }
+            }
         }
-        
+
+        private void buttonEliminarHorario_Click(object sender, EventArgs e)
+        {
+            String missatge = "";
+            Horario horario = (Horario)dataGridViewHorarios.CurrentRow.DataBoundItem;
+
+            DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "Eliminar horario", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.OK)
+            {
+                if (dataGridViewHorarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("No has seleccionado ningún horario", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    missatge = HorariosOrm.Delete((Horario)dataGridViewHorarios.SelectedRows[0].DataBoundItem);
+
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        cargarHorarios();
+                    }
+                }
+
+            }
+        }
     }
 }

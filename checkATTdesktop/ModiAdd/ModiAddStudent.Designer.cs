@@ -125,7 +125,6 @@
             this.panelCrearAlumnoPorfa.Name = "panelCrearAlumnoPorfa";
             this.panelCrearAlumnoPorfa.Size = new System.Drawing.Size(948, 537);
             this.panelCrearAlumnoPorfa.TabIndex = 0;
-            this.panelCrearAlumnoPorfa.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCrearAlumnoPorfa_Paint);
             // 
             // dateTimePickerIncorporacion
             // 

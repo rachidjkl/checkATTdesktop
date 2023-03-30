@@ -461,6 +461,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModiAddTeacher";
+            this.Load += new System.EventHandler(this.ModiAddTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxDNI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCorreoCentro)).EndInit();

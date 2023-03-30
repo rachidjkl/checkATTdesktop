@@ -140,6 +140,7 @@
             this.Name = "ModiAddUF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModiAddUF";
+            this.Load += new System.EventHandler(this.ModiAddUF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
