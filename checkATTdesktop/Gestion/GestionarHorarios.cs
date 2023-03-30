@@ -86,6 +86,35 @@ namespace checkATTdesktop.Gestion
                 }
             }
         }
-        
+
+        private void buttonEliminarHorario_Click(object sender, EventArgs e)
+        {
+            String missatge = "";
+            Horario horario = (Horario)dataGridViewHorarios.CurrentRow.DataBoundItem;
+
+            DialogResult dialogResult = MessageBox.Show("¿Estas seguro de borrar?", "Eliminar horario", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.OK)
+            {
+                if (dataGridViewHorarios.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("No has seleccionado ningún horario", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    missatge = HorariosOrm.Delete((Horario)dataGridViewHorarios.SelectedRows[0].DataBoundItem);
+
+                    if (missatge != "")
+                    {
+                        MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        cargarHorarios();
+                    }
+                }
+
+            }
+        }
     }
 }

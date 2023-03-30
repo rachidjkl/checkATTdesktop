@@ -62,6 +62,7 @@
             // 
             // textBoxNombreClase
             // 
+            this.textBoxNombreClase.Enabled = false;
             this.textBoxNombreClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreClase.Location = new System.Drawing.Point(14, 77);
             this.textBoxNombreClase.Name = "textBoxNombreClase";
@@ -120,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(304, 270);
+            this.ClientSize = new System.Drawing.Size(300, 266);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCrearModiAddClase);
             this.Controls.Add(this.iconPictureBox1);

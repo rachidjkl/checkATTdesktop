@@ -35,6 +35,13 @@
             this.buttonModiHorario = new System.Windows.Forms.Button();
             this.buttonCrearHorario = new System.Windows.Forms.Button();
             this.dataGridViewHorarios = new System.Windows.Forms.DataGridView();
+            this.idhorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idmoduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasemanahorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.claseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDataGridHorario = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxBuscarHorario = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -43,13 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxDiaSemana = new System.Windows.Forms.ComboBox();
-            this.idhorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmoduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horafinDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasemanahorarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.claseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -69,6 +69,7 @@
             this.buttonEliminarHorario.TabIndex = 36;
             this.buttonEliminarHorario.Text = "Eliminar";
             this.buttonEliminarHorario.UseVisualStyleBackColor = true;
+            this.buttonEliminarHorario.Click += new System.EventHandler(this.buttonEliminarHorario_Click);
             // 
             // buttonModiHorario
             // 
@@ -138,6 +139,62 @@
             this.dataGridViewHorarios.Size = new System.Drawing.Size(895, 299);
             this.dataGridViewHorarios.TabIndex = 33;
             this.dataGridViewHorarios.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewHorarios_CellFormatting);
+            // 
+            // idhorarioDataGridViewTextBoxColumn
+            // 
+            this.idhorarioDataGridViewTextBoxColumn.DataPropertyName = "id_horario";
+            this.idhorarioDataGridViewTextBoxColumn.HeaderText = "id_horario";
+            this.idhorarioDataGridViewTextBoxColumn.Name = "idhorarioDataGridViewTextBoxColumn";
+            this.idhorarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idhorarioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idclaseDataGridViewTextBoxColumn
+            // 
+            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
+            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Clase";
+            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
+            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idmoduloDataGridViewTextBoxColumn
+            // 
+            this.idmoduloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idmoduloDataGridViewTextBoxColumn.DataPropertyName = "id_modulo";
+            this.idmoduloDataGridViewTextBoxColumn.HeaderText = "Nombre modulo";
+            this.idmoduloDataGridViewTextBoxColumn.Name = "idmoduloDataGridViewTextBoxColumn";
+            this.idmoduloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horainicioDataGridViewTextBoxColumn
+            // 
+            this.horainicioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horainicioDataGridViewTextBoxColumn.DataPropertyName = "hora_inicio";
+            this.horainicioDataGridViewTextBoxColumn.HeaderText = "Inicio";
+            this.horainicioDataGridViewTextBoxColumn.Name = "horainicioDataGridViewTextBoxColumn";
+            this.horainicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horafinDataGridViewTextBoxColumn
+            // 
+            this.horafinDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horafinDataGridViewTextBoxColumn.DataPropertyName = "hora_fin";
+            this.horafinDataGridViewTextBoxColumn.HeaderText = "Final";
+            this.horafinDataGridViewTextBoxColumn.Name = "horafinDataGridViewTextBoxColumn";
+            this.horafinDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diasemanahorarioDataGridViewTextBoxColumn
+            // 
+            this.diasemanahorarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diasemanahorarioDataGridViewTextBoxColumn.DataPropertyName = "dia_semana_horario";
+            this.diasemanahorarioDataGridViewTextBoxColumn.HeaderText = "Dia semana";
+            this.diasemanahorarioDataGridViewTextBoxColumn.Name = "diasemanahorarioDataGridViewTextBoxColumn";
+            this.diasemanahorarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // claseDataGridViewTextBoxColumn
+            // 
+            this.claseDataGridViewTextBoxColumn.DataPropertyName = "Clase";
+            this.claseDataGridViewTextBoxColumn.HeaderText = "Clase";
+            this.claseDataGridViewTextBoxColumn.Name = "claseDataGridViewTextBoxColumn";
+            this.claseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.claseDataGridViewTextBoxColumn.Visible = false;
             // 
             // bindingSourceDataGridHorario
             // 
@@ -218,62 +275,6 @@
             this.comboBoxDiaSemana.Size = new System.Drawing.Size(203, 21);
             this.comboBoxDiaSemana.TabIndex = 40;
             this.comboBoxDiaSemana.SelectedIndexChanged += new System.EventHandler(this.comboBoxDiaSemana_SelectedIndexChanged);
-            // 
-            // idhorarioDataGridViewTextBoxColumn
-            // 
-            this.idhorarioDataGridViewTextBoxColumn.DataPropertyName = "id_horario";
-            this.idhorarioDataGridViewTextBoxColumn.HeaderText = "id_horario";
-            this.idhorarioDataGridViewTextBoxColumn.Name = "idhorarioDataGridViewTextBoxColumn";
-            this.idhorarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idhorarioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idclaseDataGridViewTextBoxColumn
-            // 
-            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
-            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Clase";
-            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
-            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idmoduloDataGridViewTextBoxColumn
-            // 
-            this.idmoduloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idmoduloDataGridViewTextBoxColumn.DataPropertyName = "id_modulo";
-            this.idmoduloDataGridViewTextBoxColumn.HeaderText = "Nombre modulo";
-            this.idmoduloDataGridViewTextBoxColumn.Name = "idmoduloDataGridViewTextBoxColumn";
-            this.idmoduloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horainicioDataGridViewTextBoxColumn
-            // 
-            this.horainicioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.horainicioDataGridViewTextBoxColumn.DataPropertyName = "hora_inicio";
-            this.horainicioDataGridViewTextBoxColumn.HeaderText = "Inicio";
-            this.horainicioDataGridViewTextBoxColumn.Name = "horainicioDataGridViewTextBoxColumn";
-            this.horainicioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horafinDataGridViewTextBoxColumn
-            // 
-            this.horafinDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.horafinDataGridViewTextBoxColumn.DataPropertyName = "hora_fin";
-            this.horafinDataGridViewTextBoxColumn.HeaderText = "Final";
-            this.horafinDataGridViewTextBoxColumn.Name = "horafinDataGridViewTextBoxColumn";
-            this.horafinDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // diasemanahorarioDataGridViewTextBoxColumn
-            // 
-            this.diasemanahorarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diasemanahorarioDataGridViewTextBoxColumn.DataPropertyName = "dia_semana_horario";
-            this.diasemanahorarioDataGridViewTextBoxColumn.HeaderText = "Dia semana";
-            this.diasemanahorarioDataGridViewTextBoxColumn.Name = "diasemanahorarioDataGridViewTextBoxColumn";
-            this.diasemanahorarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // claseDataGridViewTextBoxColumn
-            // 
-            this.claseDataGridViewTextBoxColumn.DataPropertyName = "Clase";
-            this.claseDataGridViewTextBoxColumn.HeaderText = "Clase";
-            this.claseDataGridViewTextBoxColumn.Name = "claseDataGridViewTextBoxColumn";
-            this.claseDataGridViewTextBoxColumn.ReadOnly = true;
-            this.claseDataGridViewTextBoxColumn.Visible = false;
             // 
             // GestionarHorarios
             // 

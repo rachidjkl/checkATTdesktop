@@ -43,5 +43,14 @@ namespace checkATTdesktop.Models
             return missatge;
         }
 
+        public static String Delete(Horario horario)
+        {
+            String missatge = "";
+            Orm.bd.Horario.Remove(horario);
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
     }
 }
