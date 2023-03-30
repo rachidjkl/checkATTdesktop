@@ -45,11 +45,8 @@
           </Key>
           <Property Name="id_falta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_pasar_lista" Type="int" />
+          <Property Name="id_justificar_falta" Type="int" />
           <Property Name="hora_falta" Type="datetime" Nullable="false" />
-          <Property Name="motivo_falta" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="documento_adj_falta" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="comentario_falta" Type="varchar" MaxLength="1000" />
-          <Property Name="estado_falta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -61,6 +58,16 @@
           <Property Name="hora_inicio" Type="time" Precision="7" Nullable="false" />
           <Property Name="hora_fin" Type="time" Precision="7" Nullable="false" />
           <Property Name="dia_semana_horario" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Justificar_faltas">
+          <Key>
+            <PropertyRef Name="id_justificar_falta" />
+          </Key>
+          <Property Name="id_justificar_falta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="motivo_falta" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="documento_adj_falta" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="comentario_falta" Type="varchar" MaxLength="1000" />
+          <Property Name="estado_falta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -132,6 +139,14 @@
           <Property Name="horas_totales_uf" Type="int" Nullable="false" />
           <Property Name="horas_cursadas_uf" Type="int" />
         </EntityType>
+        <EntityType Name="Usuarios_aplicacion">
+          <Key>
+            <PropertyRef Name="id_correo" />
+          </Key>
+          <Property Name="id_correo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="contra" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="tipo_usuario" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="FK__Alumno__id_clase__2F10007B">
           <End Role="Clase" Type="Self.Clase" Multiplicity="0..1" />
           <End Role="Alumno" Type="Self.Alumno" Multiplicity="*" />
@@ -180,7 +195,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Falta__id_pasar___4BAC3F29">
+        <Association Name="FK__Falta__id_justif__5CD6CB2B">
+          <End Role="Justificar_faltas" Type="Self.Justificar_faltas" Multiplicity="0..1" />
+          <End Role="Falta" Type="Self.Falta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Justificar_faltas">
+              <PropertyRef Name="id_justificar_falta" />
+            </Principal>
+            <Dependent Role="Falta">
+              <PropertyRef Name="id_justificar_falta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Falta__id_pasar___5BE2A6F2">
           <End Role="Pasar_Lista" Type="Self.Pasar_Lista" Multiplicity="0..1" />
           <End Role="Falta" Type="Self.Falta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -318,12 +345,14 @@
           <EntitySet Name="Clase_Modulo" EntityType="Self.Clase_Modulo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Falta" EntityType="Self.Falta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Horario" EntityType="Self.Horario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Justificar_faltas" EntityType="Self.Justificar_faltas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Modulo" EntityType="Self.Modulo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pasar_Lista" EntityType="Self.Pasar_Lista" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pasar_listas_grupo" EntityType="Self.Pasar_listas_grupo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Profesor" EntityType="Self.Profesor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UF" EntityType="Self.UF" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios_aplicacion" EntityType="Self.Usuarios_aplicacion" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Alumno__id_clase__2F10007B" Association="Self.FK__Alumno__id_clase__2F10007B">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Alumno" EntitySet="Alumno" />
@@ -340,7 +369,11 @@
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Clase_Modulo" EntitySet="Clase_Modulo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_pasar___4BAC3F29" Association="Self.FK__Falta__id_pasar___4BAC3F29">
+          <AssociationSet Name="FK__Falta__id_justif__5CD6CB2B" Association="Self.FK__Falta__id_justif__5CD6CB2B">
+            <End Role="Justificar_faltas" EntitySet="Justificar_faltas" />
+            <End Role="Falta" EntitySet="Falta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Falta__id_pasar___5BE2A6F2" Association="Self.FK__Falta__id_pasar___5BE2A6F2">
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
             <End Role="Falta" EntitySet="Falta" />
           </AssociationSet>
@@ -389,70 +422,31 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CheckAttModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Clase">
-          <Key>
-            <PropertyRef Name="id_clase" />
-          </Key>
-          <Property Name="id_clase" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_tutor_clase" Type="Int32" />
-          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Alumno__id_clase__2F10007B" FromRole="Clase" ToRole="Alumno" />
-          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK__Clase__id_tutor___29572725" FromRole="Clase" ToRole="Profesor" />
-          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_cl__3B75D760" FromRole="Clase" ToRole="Clase_Modulo" />
-          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_clas__37A5467C" FromRole="Clase" ToRole="Horario" />
-        </EntityType>
-        <EntityType Name="Modulo">
-          <Key>
-            <PropertyRef Name="id_modulo" />
-          </Key>
-          <Property Name="id_modulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="horas_totales_modulo" Type="Int32" Nullable="false" />
-          <Property Name="nombre_modulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="siglas_uf" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="UF" Relationship="Self.FK__UF__id_modulo_uf__31B762FC" FromRole="Modulo" ToRole="UF" />
-          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__3C69FB99" FromRole="Modulo" ToRole="Clase_Modulo" />
-          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_modu__38996AB5" FromRole="Modulo" ToRole="Horario" />
-        </EntityType>
-        <EntityType Name="UF">
-          <Key>
-            <PropertyRef Name="id_uf" />
-          </Key>
-          <Property Name="id_uf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_modulo_uf" Type="Int32" />
-          <Property Name="nombre_uf" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="horas_totales_uf" Type="Int32" Nullable="false" />
-          <Property Name="horas_cursadas_uf" Type="Int32" />
-          <NavigationProperty Name="Modulo" Relationship="Self.FK__UF__id_modulo_uf__31B762FC" FromRole="UF" ToRole="Modulo" />
-          <NavigationProperty Name="Matricula" Relationship="CheckAttModel.FK__Matricula__id_uf__534D60F1" FromRole="UF" ToRole="Matricula" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__44FF419A" FromRole="UF" ToRole="Pasar_Lista" />
-        </EntityType>
-        <Association Name="FK__UF__id_modulo_uf__31B762FC">
-          <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
-          <End Role="UF" Type="Self.UF" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Modulo">
-              <PropertyRef Name="id_modulo" />
-            </Principal>
-            <Dependent Role="UF">
-              <PropertyRef Name="id_modulo_uf" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="CheckAttEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Clase" EntityType="Self.Clase" />
-          <EntitySet Name="Modulo" EntityType="Self.Modulo" />
-          <EntitySet Name="UF" EntityType="Self.UF" />
-          <AssociationSet Name="FK__UF__id_modulo_uf__31B762FC" Association="Self.FK__UF__id_modulo_uf__31B762FC">
-            <End Role="Modulo" EntitySet="Modulo" />
-            <End Role="UF" EntitySet="UF" />
-          </AssociationSet>
-          <EntitySet Name="Falta" EntityType="CheckAttModel.Falta" />
           <EntitySet Name="Alumno" EntityType="CheckAttModel.Alumno" />
+          <EntitySet Name="Clase" EntityType="CheckAttModel.Clase" />
           <EntitySet Name="Clase_Modulo" EntityType="CheckAttModel.Clase_Modulo" />
+          <EntitySet Name="Falta" EntityType="CheckAttModel.Falta" />
           <EntitySet Name="Horario" EntityType="CheckAttModel.Horario" />
+          <EntitySet Name="Justificar_faltas" EntityType="CheckAttModel.Justificar_faltas" />
+          <EntitySet Name="Matricula" EntityType="CheckAttModel.Matricula" />
+          <EntitySet Name="Modulo" EntityType="CheckAttModel.Modulo" />
+          <EntitySet Name="Pasar_Lista" EntityType="CheckAttModel.Pasar_Lista" />
+          <EntitySet Name="Pasar_listas_grupo" EntityType="CheckAttModel.Pasar_listas_grupo" />
           <EntitySet Name="Profesor" EntityType="CheckAttModel.Profesor" />
+          <EntitySet Name="UF" EntityType="CheckAttModel.UF" />
+          <EntitySet Name="Usuarios_aplicacion" EntityType="CheckAttModel.Usuarios_aplicacion" />
           <AssociationSet Name="FK__Alumno__id_clase__2F10007B" Association="CheckAttModel.FK__Alumno__id_clase__2F10007B">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_al__5441852A" Association="CheckAttModel.FK__Matricula__id_al__5441852A">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Pasar_Lis__id_al__4316F928" Association="CheckAttModel.FK__Pasar_Lis__id_al__4316F928">
+            <End Role="Alumno" EntitySet="Alumno" />
+            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
           <AssociationSet Name="FK__Clase__id_tutor___29572725" Association="CheckAttModel.FK__Clase__id_tutor___29572725">
             <End Role="Profesor" EntitySet="Profesor" />
@@ -470,32 +464,29 @@
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Clase_Modulo" EntitySet="Clase_Modulo" />
           </AssociationSet>
+          <AssociationSet Name="FK__Falta__id_justif__5CD6CB2B" Association="CheckAttModel.FK__Falta__id_justif__5CD6CB2B">
+            <End Role="Justificar_faltas" EntitySet="Justificar_faltas" />
+            <End Role="Falta" EntitySet="Falta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Falta__id_pasar___5BE2A6F2" Association="CheckAttModel.FK__Falta__id_pasar___5BE2A6F2">
+            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
+            <End Role="Falta" EntitySet="Falta" />
+          </AssociationSet>
           <AssociationSet Name="FK__Horario__id_modu__38996AB5" Association="CheckAttModel.FK__Horario__id_modu__38996AB5">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
-          <EntitySet Name="Matricula" EntityType="CheckAttModel.Matricula" />
-          <AssociationSet Name="FK__Matricula__id_al__5441852A" Association="CheckAttModel.FK__Matricula__id_al__5441852A">
-            <End Role="Alumno" EntitySet="Alumno" />
-            <End Role="Matricula" EntitySet="Matricula" />
+          <AssociationSet Name="FK__Pasar_Lis__id_ho__440B1D61" Association="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
           <AssociationSet Name="FK__Matricula__id_uf__534D60F1" Association="CheckAttModel.FK__Matricula__id_uf__534D60F1">
             <End Role="UF" EntitySet="UF" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <EntitySet Name="Pasar_Lista" EntityType="CheckAttModel.Pasar_Lista" />
-          <EntitySet Name="Pasar_listas_grupo" EntityType="CheckAttModel.Pasar_listas_grupo" />
-          <AssociationSet Name="FK__Pasar_Lis__id_al__4316F928" Association="CheckAttModel.FK__Pasar_Lis__id_al__4316F928">
-            <End Role="Alumno" EntitySet="Alumno" />
-            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_pasar___4BAC3F29" Association="CheckAttModel.FK__Falta__id_pasar___4BAC3F29">
-            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
-            <End Role="Falta" EntitySet="Falta" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Pasar_Lis__id_ho__440B1D61" Association="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61">
-            <End Role="Horario" EntitySet="Horario" />
-            <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
+          <AssociationSet Name="FK__UF__id_modulo_uf__403A8C7D" Association="CheckAttModel.FK__UF__id_modulo_uf__403A8C7D">
+            <End Role="Modulo" EntitySet="Modulo" />
+            <End Role="UF" EntitySet="UF" />
           </AssociationSet>
           <AssociationSet Name="FK__Pasar_Lis__id_pr__45F365D3" Association="CheckAttModel.FK__Pasar_Lis__id_pr__45F365D3">
             <End Role="Profesor" EntitySet="Profesor" />
@@ -510,19 +501,6 @@
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Falta">
-          <Key>
-            <PropertyRef Name="id_falta" />
-          </Key>
-          <Property Name="id_falta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_pasar_lista" Type="Int32" />
-          <Property Name="hora_falta" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="motivo_falta" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="documento_adj_falta" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="comentario_falta" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <Property Name="estado_falta" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Falta__id_pasar___4BAC3F29" FromRole="Falta" ToRole="Pasar_Lista" />
-        </EntityType>
         <EntityType Name="Alumno">
           <Key>
             <PropertyRef Name="id_alumno" />
@@ -545,6 +523,17 @@
           <NavigationProperty Name="Matricula" Relationship="CheckAttModel.FK__Matricula__id_al__5441852A" FromRole="Alumno" ToRole="Matricula" />
           <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_al__4316F928" FromRole="Alumno" ToRole="Pasar_Lista" />
         </EntityType>
+        <EntityType Name="Clase">
+          <Key>
+            <PropertyRef Name="id_clase" />
+          </Key>
+          <Property Name="id_clase" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="id_tutor_clase" Type="Int32" />
+          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Alumno__id_clase__2F10007B" FromRole="Clase" ToRole="Alumno" />
+          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK__Clase__id_tutor___29572725" FromRole="Clase" ToRole="Profesor" />
+          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_cl__3B75D760" FromRole="Clase" ToRole="Clase_Modulo" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_clas__37A5467C" FromRole="Clase" ToRole="Horario" />
+        </EntityType>
         <EntityType Name="Clase_Modulo">
           <Key>
             <PropertyRef Name="id_clase_modulo" />
@@ -554,6 +543,17 @@
           <Property Name="id_modulo" Type="Int32" />
           <NavigationProperty Name="Clase" Relationship="CheckAttModel.FK__Clase_Mod__id_cl__3B75D760" FromRole="Clase_Modulo" ToRole="Clase" />
           <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__3C69FB99" FromRole="Clase_Modulo" ToRole="Modulo" />
+        </EntityType>
+        <EntityType Name="Falta">
+          <Key>
+            <PropertyRef Name="id_falta" />
+          </Key>
+          <Property Name="id_falta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_pasar_lista" Type="Int32" />
+          <Property Name="id_justificar_falta" Type="Int32" />
+          <Property Name="hora_falta" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Justificar_faltas" Relationship="CheckAttModel.FK__Falta__id_justif__5CD6CB2B" FromRole="Falta" ToRole="Justificar_faltas" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Falta__id_pasar___5BE2A6F2" FromRole="Falta" ToRole="Pasar_Lista" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -568,6 +568,72 @@
           <NavigationProperty Name="Clase" Relationship="CheckAttModel.FK__Horario__id_clas__37A5467C" FromRole="Horario" ToRole="Clase" />
           <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Horario__id_modu__38996AB5" FromRole="Horario" ToRole="Modulo" />
           <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61" FromRole="Horario" ToRole="Pasar_Lista" />
+        </EntityType>
+        <EntityType Name="Justificar_faltas">
+          <Key>
+            <PropertyRef Name="id_justificar_falta" />
+          </Key>
+          <Property Name="id_justificar_falta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="motivo_falta" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="documento_adj_falta" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="comentario_falta" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="estado_falta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_justif__5CD6CB2B" FromRole="Justificar_faltas" ToRole="Falta" />
+        </EntityType>
+        <EntityType Name="Matricula">
+          <Key>
+            <PropertyRef Name="id_matricula" />
+          </Key>
+          <Property Name="id_matricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_uf" Type="Int32" />
+          <Property Name="id_alumno" Type="Int32" />
+          <Property Name="fecha_matricula" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Matricula__id_al__5441852A" FromRole="Matricula" ToRole="Alumno" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Matricula__id_uf__534D60F1" FromRole="Matricula" ToRole="UF" />
+        </EntityType>
+        <EntityType Name="Modulo">
+          <Key>
+            <PropertyRef Name="id_modulo" />
+          </Key>
+          <Property Name="id_modulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="horas_totales_modulo" Type="Int32" Nullable="false" />
+          <Property Name="nombre_modulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="siglas_uf" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__3C69FB99" FromRole="Modulo" ToRole="Clase_Modulo" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_modu__38996AB5" FromRole="Modulo" ToRole="Horario" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__UF__id_modulo_uf__403A8C7D" FromRole="Modulo" ToRole="UF" />
+        </EntityType>
+        <EntityType Name="Pasar_Lista">
+          <Key>
+            <PropertyRef Name="id_pasar_lista" />
+          </Key>
+          <Property Name="id_pasar_lista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_alumno" Type="Int32" />
+          <Property Name="id_horario" Type="Int32" />
+          <Property Name="id_uf" Type="Int32" />
+          <Property Name="id_profe" Type="Int32" />
+          <Property Name="id_datetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="asistencia" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="pasada" Type="Boolean" Nullable="false" />
+          <Property Name="id_lista_grupo" Type="Int32" />
+          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Pasar_Lis__id_al__4316F928" FromRole="Pasar_Lista" ToRole="Alumno" />
+          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_pasar___5BE2A6F2" FromRole="Pasar_Lista" ToRole="Falta" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61" FromRole="Pasar_Lista" ToRole="Horario" />
+          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK__Pasar_Lis__id_pr__45F365D3" FromRole="Pasar_Lista" ToRole="Profesor" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__44FF419A" FromRole="Pasar_Lista" ToRole="UF" />
+          <NavigationProperty Name="Pasar_listas_grupo" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_Lista" ToRole="Pasar_listas_grupo" />
+        </EntityType>
+        <EntityType Name="Pasar_listas_grupo">
+          <Key>
+            <PropertyRef Name="id_lista_grupo" />
+          </Key>
+          <Property Name="id_lista_grupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hora_inicio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="hora_final" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="profe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_listas_grupo" ToRole="Pasar_Lista" />
         </EntityType>
         <EntityType Name="Profesor">
           <Key>
@@ -588,6 +654,27 @@
           <NavigationProperty Name="Clase" Relationship="CheckAttModel.FK__Clase__id_tutor___29572725" FromRole="Profesor" ToRole="Clase" />
           <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_pr__45F365D3" FromRole="Profesor" ToRole="Pasar_Lista" />
         </EntityType>
+        <EntityType Name="UF">
+          <Key>
+            <PropertyRef Name="id_uf" />
+          </Key>
+          <Property Name="id_uf" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_modulo_uf" Type="Int32" />
+          <Property Name="nombre_uf" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="horas_totales_uf" Type="Int32" Nullable="false" />
+          <Property Name="horas_cursadas_uf" Type="Int32" />
+          <NavigationProperty Name="Matricula" Relationship="CheckAttModel.FK__Matricula__id_uf__534D60F1" FromRole="UF" ToRole="Matricula" />
+          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__UF__id_modulo_uf__403A8C7D" FromRole="UF" ToRole="Modulo" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__44FF419A" FromRole="UF" ToRole="Pasar_Lista" />
+        </EntityType>
+        <EntityType Name="Usuarios_aplicacion">
+          <Key>
+            <PropertyRef Name="id_correo" />
+          </Key>
+          <Property Name="id_correo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="contra" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_usuario" Type="Int32" Nullable="false" />
+        </EntityType>
         <Association Name="FK__Alumno__id_clase__2F10007B">
           <End Type="CheckAttModel.Clase" Role="Clase" Multiplicity="0..1" />
           <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="*" />
@@ -597,6 +684,30 @@
             </Principal>
             <Dependent Role="Alumno">
               <PropertyRef Name="id_clase" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_al__5441852A">
+          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_alumno" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="id_alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Pasar_Lis__id_al__4316F928">
+          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alumno">
+              <PropertyRef Name="id_alumno" />
+            </Principal>
+            <Dependent Role="Pasar_Lista">
+              <PropertyRef Name="id_alumno" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -648,6 +759,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Falta__id_justif__5CD6CB2B">
+          <End Type="CheckAttModel.Justificar_faltas" Role="Justificar_faltas" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Falta" Role="Falta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Justificar_faltas">
+              <PropertyRef Name="id_justificar_falta" />
+            </Principal>
+            <Dependent Role="Falta">
+              <PropertyRef Name="id_justificar_falta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Falta__id_pasar___5BE2A6F2">
+          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Falta" Role="Falta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pasar_Lista">
+              <PropertyRef Name="id_pasar_lista" />
+            </Principal>
+            <Dependent Role="Falta">
+              <PropertyRef Name="id_pasar_lista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Horario__id_modu__38996AB5">
           <End Type="CheckAttModel.Modulo" Role="Modulo" Multiplicity="0..1" />
           <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="*" />
@@ -660,26 +795,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Matricula">
-          <Key>
-            <PropertyRef Name="id_matricula" />
-          </Key>
-          <Property Name="id_matricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_uf" Type="Int32" />
-          <Property Name="id_alumno" Type="Int32" />
-          <Property Name="fecha_matricula" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Matricula__id_al__5441852A" FromRole="Matricula" ToRole="Alumno" />
-          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Matricula__id_uf__534D60F1" FromRole="Matricula" ToRole="UF" />
-        </EntityType>
-        <Association Name="FK__Matricula__id_al__5441852A">
-          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="0..1" />
-          <End Type="CheckAttModel.Matricula" Role="Matricula" Multiplicity="*" />
+        <Association Name="FK__Pasar_Lis__id_ho__440B1D61">
+          <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Alumno">
-              <PropertyRef Name="id_alumno" />
+            <Principal Role="Horario">
+              <PropertyRef Name="id_horario" />
             </Principal>
-            <Dependent Role="Matricula">
-              <PropertyRef Name="id_alumno" />
+            <Dependent Role="Pasar_Lista">
+              <PropertyRef Name="id_horario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -695,71 +819,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Pasar_Lista">
-          <Key>
-            <PropertyRef Name="id_pasar_lista" />
-          </Key>
-          <Property Name="id_pasar_lista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_alumno" Type="Int32" />
-          <Property Name="id_horario" Type="Int32" />
-          <Property Name="id_uf" Type="Int32" />
-          <Property Name="id_profe" Type="Int32" />
-          <Property Name="id_datetime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="asistencia" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="pasada" Type="Boolean" Nullable="false" />
-          <Property Name="id_lista_grupo" Type="Int32" />
-          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Pasar_Lis__id_al__4316F928" FromRole="Pasar_Lista" ToRole="Alumno" />
-          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_pasar___4BAC3F29" FromRole="Pasar_Lista" ToRole="Falta" />
-          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61" FromRole="Pasar_Lista" ToRole="Horario" />
-          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK__Pasar_Lis__id_pr__45F365D3" FromRole="Pasar_Lista" ToRole="Profesor" />
-          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__44FF419A" FromRole="Pasar_Lista" ToRole="UF" />
-          <NavigationProperty Name="Pasar_listas_grupo" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_Lista" ToRole="Pasar_listas_grupo" />
-        </EntityType>
-        <EntityType Name="Pasar_listas_grupo">
-          <Key>
-            <PropertyRef Name="id_lista_grupo" />
-          </Key>
-          <Property Name="id_lista_grupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="hora_inicio" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="hora_final" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="modulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="profe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="estado" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_listas_grupo" ToRole="Pasar_Lista" />
-        </EntityType>
-        <Association Name="FK__Pasar_Lis__id_al__4316F928">
-          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="0..1" />
-          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
+        <Association Name="FK__UF__id_modulo_uf__403A8C7D">
+          <End Type="CheckAttModel.Modulo" Role="Modulo" Multiplicity="0..1" />
+          <End Type="CheckAttModel.UF" Role="UF" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Alumno">
-              <PropertyRef Name="id_alumno" />
+            <Principal Role="Modulo">
+              <PropertyRef Name="id_modulo" />
             </Principal>
-            <Dependent Role="Pasar_Lista">
-              <PropertyRef Name="id_alumno" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Falta__id_pasar___4BAC3F29">
-          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="0..1" />
-          <End Type="CheckAttModel.Falta" Role="Falta" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pasar_Lista">
-              <PropertyRef Name="id_pasar_lista" />
-            </Principal>
-            <Dependent Role="Falta">
-              <PropertyRef Name="id_pasar_lista" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Pasar_Lis__id_ho__440B1D61">
-          <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="0..1" />
-          <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Horario">
-              <PropertyRef Name="id_horario" />
-            </Principal>
-            <Dependent Role="Pasar_Lista">
-              <PropertyRef Name="id_horario" />
+            <Dependent Role="UF">
+              <PropertyRef Name="id_modulo_uf" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -799,54 +867,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CheckAttModelStoreContainer" CdmEntityContainer="CheckAttEntities">
-          <EntitySetMapping Name="Clase">
-            <EntityTypeMapping TypeName="CheckAttModel.Clase">
-              <MappingFragment StoreEntitySet="Clase">
-                <ScalarProperty Name="id_clase" ColumnName="id_clase" />
-                <ScalarProperty Name="id_tutor_clase" ColumnName="id_tutor_clase" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Modulo">
-            <EntityTypeMapping TypeName="CheckAttModel.Modulo">
-              <MappingFragment StoreEntitySet="Modulo">
-                <ScalarProperty Name="id_modulo" ColumnName="id_modulo" />
-                <ScalarProperty Name="horas_totales_modulo" ColumnName="horas_totales_modulo" />
-                <ScalarProperty Name="nombre_modulo" ColumnName="nombre_modulo" />
-                <ScalarProperty Name="siglas_uf" ColumnName="siglas_uf" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UF">
-            <EntityTypeMapping TypeName="CheckAttModel.UF">
-              <MappingFragment StoreEntitySet="UF">
-                <ScalarProperty Name="id_uf" ColumnName="id_uf" />
-                <ScalarProperty Name="id_modulo_uf" ColumnName="id_modulo_uf" />
-                <ScalarProperty Name="nombre_uf" ColumnName="nombre_uf" />
-                <ScalarProperty Name="horas_totales_uf" ColumnName="horas_totales_uf" />
-                <ScalarProperty Name="horas_cursadas_uf" ColumnName="horas_cursadas_uf" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Falta">
-            <EntityTypeMapping TypeName="CheckAttModel.Falta">
-              <MappingFragment StoreEntitySet="Falta">
-                <ScalarProperty Name="estado_falta" ColumnName="estado_falta" />
-                <ScalarProperty Name="comentario_falta" ColumnName="comentario_falta" />
-                <ScalarProperty Name="documento_adj_falta" ColumnName="documento_adj_falta" />
-                <ScalarProperty Name="motivo_falta" ColumnName="motivo_falta" />
-                <ScalarProperty Name="hora_falta" ColumnName="hora_falta" />
-                <ScalarProperty Name="id_pasar_lista" ColumnName="id_pasar_lista" />
-                <ScalarProperty Name="id_falta" ColumnName="id_falta" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Alumno">
             <EntityTypeMapping TypeName="CheckAttModel.Alumno">
               <MappingFragment StoreEntitySet="Alumno">
@@ -867,12 +893,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Clase">
+            <EntityTypeMapping TypeName="CheckAttModel.Clase">
+              <MappingFragment StoreEntitySet="Clase">
+                <ScalarProperty Name="id_tutor_clase" ColumnName="id_tutor_clase" />
+                <ScalarProperty Name="id_clase" ColumnName="id_clase" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Clase_Modulo">
             <EntityTypeMapping TypeName="CheckAttModel.Clase_Modulo">
               <MappingFragment StoreEntitySet="Clase_Modulo">
                 <ScalarProperty Name="id_modulo" ColumnName="id_modulo" />
                 <ScalarProperty Name="id_clase1" ColumnName="id_clase1" />
                 <ScalarProperty Name="id_clase_modulo" ColumnName="id_clase_modulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Falta">
+            <EntityTypeMapping TypeName="CheckAttModel.Falta">
+              <MappingFragment StoreEntitySet="Falta">
+                <ScalarProperty Name="hora_falta" ColumnName="hora_falta" />
+                <ScalarProperty Name="id_justificar_falta" ColumnName="id_justificar_falta" />
+                <ScalarProperty Name="id_pasar_lista" ColumnName="id_pasar_lista" />
+                <ScalarProperty Name="id_falta" ColumnName="id_falta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -888,21 +932,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Profesor">
-            <EntityTypeMapping TypeName="CheckAttModel.Profesor">
-              <MappingFragment StoreEntitySet="Profesor">
-                <ScalarProperty Name="nombre_completo" ColumnName="nombre_completo" />
-                <ScalarProperty Name="direccion_profe" ColumnName="direccion_profe" />
-                <ScalarProperty Name="incorp_profe" ColumnName="incorp_profe" />
-                <ScalarProperty Name="nacimiento_profe" ColumnName="nacimiento_profe" />
-                <ScalarProperty Name="tel_profe" ColumnName="tel_profe" />
-                <ScalarProperty Name="email_centro_profe" ColumnName="email_centro_profe" />
-                <ScalarProperty Name="email_profe" ColumnName="email_profe" />
-                <ScalarProperty Name="apellido2_profe" ColumnName="apellido2_profe" />
-                <ScalarProperty Name="apellido1_profe" ColumnName="apellido1_profe" />
-                <ScalarProperty Name="nombre_profe" ColumnName="nombre_profe" />
-                <ScalarProperty Name="dni_profe" ColumnName="dni_profe" />
-                <ScalarProperty Name="id_profe" ColumnName="id_profe" />
+          <EntitySetMapping Name="Justificar_faltas">
+            <EntityTypeMapping TypeName="CheckAttModel.Justificar_faltas">
+              <MappingFragment StoreEntitySet="Justificar_faltas">
+                <ScalarProperty Name="estado_falta" ColumnName="estado_falta" />
+                <ScalarProperty Name="comentario_falta" ColumnName="comentario_falta" />
+                <ScalarProperty Name="documento_adj_falta" ColumnName="documento_adj_falta" />
+                <ScalarProperty Name="motivo_falta" ColumnName="motivo_falta" />
+                <ScalarProperty Name="id_justificar_falta" ColumnName="id_justificar_falta" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -913,6 +950,16 @@
                 <ScalarProperty Name="id_alumno" ColumnName="id_alumno" />
                 <ScalarProperty Name="id_uf" ColumnName="id_uf" />
                 <ScalarProperty Name="id_matricula" ColumnName="id_matricula" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modulo">
+            <EntityTypeMapping TypeName="CheckAttModel.Modulo">
+              <MappingFragment StoreEntitySet="Modulo">
+                <ScalarProperty Name="siglas_uf" ColumnName="siglas_uf" />
+                <ScalarProperty Name="nombre_modulo" ColumnName="nombre_modulo" />
+                <ScalarProperty Name="horas_totales_modulo" ColumnName="horas_totales_modulo" />
+                <ScalarProperty Name="id_modulo" ColumnName="id_modulo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -940,6 +987,44 @@
                 <ScalarProperty Name="hora_final" ColumnName="hora_final" />
                 <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
                 <ScalarProperty Name="id_lista_grupo" ColumnName="id_lista_grupo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profesor">
+            <EntityTypeMapping TypeName="CheckAttModel.Profesor">
+              <MappingFragment StoreEntitySet="Profesor">
+                <ScalarProperty Name="nombre_completo" ColumnName="nombre_completo" />
+                <ScalarProperty Name="direccion_profe" ColumnName="direccion_profe" />
+                <ScalarProperty Name="incorp_profe" ColumnName="incorp_profe" />
+                <ScalarProperty Name="nacimiento_profe" ColumnName="nacimiento_profe" />
+                <ScalarProperty Name="tel_profe" ColumnName="tel_profe" />
+                <ScalarProperty Name="email_centro_profe" ColumnName="email_centro_profe" />
+                <ScalarProperty Name="email_profe" ColumnName="email_profe" />
+                <ScalarProperty Name="apellido2_profe" ColumnName="apellido2_profe" />
+                <ScalarProperty Name="apellido1_profe" ColumnName="apellido1_profe" />
+                <ScalarProperty Name="nombre_profe" ColumnName="nombre_profe" />
+                <ScalarProperty Name="dni_profe" ColumnName="dni_profe" />
+                <ScalarProperty Name="id_profe" ColumnName="id_profe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UF">
+            <EntityTypeMapping TypeName="CheckAttModel.UF">
+              <MappingFragment StoreEntitySet="UF">
+                <ScalarProperty Name="horas_cursadas_uf" ColumnName="horas_cursadas_uf" />
+                <ScalarProperty Name="horas_totales_uf" ColumnName="horas_totales_uf" />
+                <ScalarProperty Name="nombre_uf" ColumnName="nombre_uf" />
+                <ScalarProperty Name="id_modulo_uf" ColumnName="id_modulo_uf" />
+                <ScalarProperty Name="id_uf" ColumnName="id_uf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios_aplicacion">
+            <EntityTypeMapping TypeName="CheckAttModel.Usuarios_aplicacion">
+              <MappingFragment StoreEntitySet="Usuarios_aplicacion">
+                <ScalarProperty Name="tipo_usuario" ColumnName="tipo_usuario" />
+                <ScalarProperty Name="contra" ColumnName="contra" />
+                <ScalarProperty Name="id_correo" ColumnName="id_correo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

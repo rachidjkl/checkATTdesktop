@@ -25,16 +25,18 @@ namespace checkATTdesktop.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Clase> Clase { get; set; }
-        public virtual DbSet<Modulo> Modulo { get; set; }
-        public virtual DbSet<UF> UF { get; set; }
-        public virtual DbSet<Falta> Falta { get; set; }
         public virtual DbSet<Alumno> Alumno { get; set; }
+        public virtual DbSet<Clase> Clase { get; set; }
         public virtual DbSet<Clase_Modulo> Clase_Modulo { get; set; }
+        public virtual DbSet<Falta> Falta { get; set; }
         public virtual DbSet<Horario> Horario { get; set; }
-        public virtual DbSet<Profesor> Profesor { get; set; }
+        public virtual DbSet<Justificar_faltas> Justificar_faltas { get; set; }
         public virtual DbSet<Matricula> Matricula { get; set; }
+        public virtual DbSet<Modulo> Modulo { get; set; }
         public virtual DbSet<Pasar_Lista> Pasar_Lista { get; set; }
         public virtual DbSet<Pasar_listas_grupo> Pasar_listas_grupo { get; set; }
+        public virtual DbSet<Profesor> Profesor { get; set; }
+        public virtual DbSet<UF> UF { get; set; }
+        public virtual DbSet<Usuarios_aplicacion> Usuarios_aplicacion { get; set; }
     }
 }

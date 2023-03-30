@@ -12,14 +12,10 @@ namespace checkATTdesktop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Falta
+    public partial class Usuarios_aplicacion
     {
-        public int id_falta { get; set; }
-        public Nullable<int> id_pasar_lista { get; set; }
-        public Nullable<int> id_justificar_falta { get; set; }
-        public System.DateTime hora_falta { get; set; }
-    
-        public virtual Justificar_faltas Justificar_faltas { get; set; }
-        public virtual Pasar_Lista Pasar_Lista { get; set; }
+        public string id_correo { get; set; }
+        public string contra { get; set; }
+        public int tipo_usuario { get; set; }
     }
 }

@@ -12,26 +12,21 @@ namespace checkATTdesktop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Modulo
+    public partial class Justificar_faltas
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Modulo()
+        public Justificar_faltas()
         {
-            this.Clase_Modulo = new HashSet<Clase_Modulo>();
-            this.Horario = new HashSet<Horario>();
-            this.UF = new HashSet<UF>();
+            this.Falta = new HashSet<Falta>();
         }
     
-        public int id_modulo { get; set; }
-        public int horas_totales_modulo { get; set; }
-        public string nombre_modulo { get; set; }
-        public string siglas_uf { get; set; }
+        public int id_justificar_falta { get; set; }
+        public string motivo_falta { get; set; }
+        public string documento_adj_falta { get; set; }
+        public string comentario_falta { get; set; }
+        public int estado_falta { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clase_Modulo> Clase_Modulo { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Horario> Horario { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UF> UF { get; set; }
+        public virtual ICollection<Falta> Falta { get; set; }
     }
 }
