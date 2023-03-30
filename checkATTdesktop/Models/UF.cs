@@ -25,7 +25,6 @@ namespace checkATTdesktop.Models
         public Nullable<int> id_modulo_uf { get; set; }
         public string nombre_uf { get; set; }
         public int horas_totales_uf { get; set; }
-        public Nullable<int> horas_cursadas_uf { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Matricula> Matricula { get; set; }

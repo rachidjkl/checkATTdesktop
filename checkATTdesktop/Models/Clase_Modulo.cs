@@ -15,7 +15,7 @@ namespace checkATTdesktop.Models
     public partial class Clase_Modulo
     {
         public int id_clase_modulo { get; set; }
-        public string id_clase1 { get; set; }
+        public Nullable<int> id_clase1 { get; set; }
         public Nullable<int> id_modulo { get; set; }
     
         public virtual Clase Clase { get; set; }

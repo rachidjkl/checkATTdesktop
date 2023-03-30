@@ -21,7 +21,7 @@ namespace checkATTdesktop.Models
         }
     
         public int id_horario { get; set; }
-        public string id_clase { get; set; }
+        public Nullable<int> id_clase { get; set; }
         public Nullable<int> id_modulo { get; set; }
         public System.TimeSpan hora_inicio { get; set; }
         public System.TimeSpan hora_fin { get; set; }

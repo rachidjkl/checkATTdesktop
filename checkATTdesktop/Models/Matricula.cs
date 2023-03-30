@@ -18,6 +18,7 @@ namespace checkATTdesktop.Models
         public Nullable<int> id_uf { get; set; }
         public Nullable<int> id_alumno { get; set; }
         public System.DateTime fecha_matricula { get; set; }
+        public Nullable<int> horas_cursadas_uf { get; set; }
     
         public virtual Alumno Alumno { get; set; }
         public virtual UF UF { get; set; }

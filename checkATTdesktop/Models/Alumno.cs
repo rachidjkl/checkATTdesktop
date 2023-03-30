@@ -22,7 +22,7 @@ namespace checkATTdesktop.Models
         }
     
         public int id_alumno { get; set; }
-        public string id_clase { get; set; }
+        public Nullable<int> id_clase { get; set; }
         public string dni_alumno { get; set; }
         public string nombre_alumno { get; set; }
         public string apellido1_alumno { get; set; }

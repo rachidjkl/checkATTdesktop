@@ -43,16 +43,17 @@ namespace checkATTdesktop.ModiAdd
             {
                 String missatge = "";
                 Clase classtoAdd = new Clase();
-                classtoAdd.id_clase = textBoxNombreClase.Text; 
+                classtoAdd.nombre_clase = textBoxNombreClase.Text;
                 classtoAdd.id_tutor_clase = (int)comboBoxTutor.SelectedValue;
 
                 if (clase != null)
-                {
+                {                                
                     classtoAdd.id_clase = clase.id_clase; //Cuando editamos cogemos el valor del id, para pasarselo al update
                     missatge = ClaseOrm.Update(classtoAdd);
                 }
                 else
                 {
+
                     missatge = ClaseOrm.Insert(classtoAdd);
                 }
 
@@ -83,7 +84,7 @@ namespace checkATTdesktop.ModiAdd
             bindingSourceComboBoxProfes.DataSource = ProfesoresOrm.Select();
             if (clase != null)
             {
-                textBoxNombreClase.Text = clase.id_clase;
+                textBoxNombreClase.Text = clase.nombre_clase;
                 comboBoxTutor.SelectedValue = clase.id_tutor_clase;
                 buttonCrearModiAddClase.Text = "Modificar";
             }

@@ -124,7 +124,7 @@ namespace checkATTdesktop.ModiAdd
 
         private void ModiAddStudent_Load(object sender, EventArgs e)
         {
-            bindingSourceComboxCrearAlumno.DataSource = ClaseOrm.Select();
+            bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
 
             if (alumno != null)
             {
