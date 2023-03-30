@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBoxNombre = new FontAwesome.Sharp.IconPictureBox();
             this.textBoxNombreModulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewUFModulo = new System.Windows.Forms.DataGridView();
-            this.nombreufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horastotalesufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uFBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonEditarUF = new System.Windows.Forms.Button();
             this.buttonCrearUF = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,11 +54,16 @@
             this.comboBoxClases = new System.Windows.Forms.ComboBox();
             this.label89 = new System.Windows.Forms.Label();
             this.buttonEliminarUf = new System.Windows.Forms.Button();
+            this.nombreufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horastotalesufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uFBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceClases = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUFModulo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uFBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxAñadir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxBorrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uFBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceClases)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -109,53 +111,33 @@
             // 
             this.dataGridViewUFModulo.AllowUserToAddRows = false;
             this.dataGridViewUFModulo.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUFModulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUFModulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUFModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUFModulo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreufDataGridViewTextBoxColumn,
             this.horastotalesufDataGridViewTextBoxColumn});
             this.dataGridViewUFModulo.DataSource = this.uFBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUFModulo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUFModulo.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewUFModulo.Location = new System.Drawing.Point(40, 119);
             this.dataGridViewUFModulo.Name = "dataGridViewUFModulo";
             this.dataGridViewUFModulo.ReadOnly = true;
             this.dataGridViewUFModulo.Size = new System.Drawing.Size(481, 260);
             this.dataGridViewUFModulo.TabIndex = 82;
             this.dataGridViewUFModulo.SelectionChanged += new System.EventHandler(this.dataGridViewUFModulo_SelectionChanged);
-            // 
-            // nombreufDataGridViewTextBoxColumn
-            // 
-            this.nombreufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreufDataGridViewTextBoxColumn.DataPropertyName = "nombre_uf";
-            this.nombreufDataGridViewTextBoxColumn.HeaderText = "nombre_uf";
-            this.nombreufDataGridViewTextBoxColumn.Name = "nombreufDataGridViewTextBoxColumn";
-            this.nombreufDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horastotalesufDataGridViewTextBoxColumn
-            // 
-            this.horastotalesufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.horastotalesufDataGridViewTextBoxColumn.DataPropertyName = "horas_totales_uf";
-            this.horastotalesufDataGridViewTextBoxColumn.HeaderText = "horas_totales_uf";
-            this.horastotalesufDataGridViewTextBoxColumn.Name = "horastotalesufDataGridViewTextBoxColumn";
-            this.horastotalesufDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // uFBindingSource
-            // 
-            this.uFBindingSource.DataSource = typeof(checkATTdesktop.Models.UF);
             // 
             // buttonEditarUF
             // 
@@ -325,7 +307,8 @@
             // 
             // comboBoxClases
             // 
-            this.comboBoxClases.DisplayMember = "nombre_modulo";
+            this.comboBoxClases.DataSource = this.bindingSourceClases;
+            this.comboBoxClases.DisplayMember = "nombre_clase";
             this.comboBoxClases.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClases.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClases.FormattingEnabled = true;
@@ -333,7 +316,7 @@
             this.comboBoxClases.Name = "comboBoxClases";
             this.comboBoxClases.Size = new System.Drawing.Size(183, 24);
             this.comboBoxClases.TabIndex = 99;
-            this.comboBoxClases.ValueMember = "id_modulo";
+            this.comboBoxClases.ValueMember = "id_clase";
             // 
             // label89
             // 
@@ -358,6 +341,30 @@
             this.buttonEliminarUf.Text = "Eliminar Uf";
             this.buttonEliminarUf.UseVisualStyleBackColor = true;
             this.buttonEliminarUf.Click += new System.EventHandler(this.buttonEliminarUf_Click);
+            // 
+            // nombreufDataGridViewTextBoxColumn
+            // 
+            this.nombreufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreufDataGridViewTextBoxColumn.DataPropertyName = "nombre_uf";
+            this.nombreufDataGridViewTextBoxColumn.HeaderText = "nombre_uf";
+            this.nombreufDataGridViewTextBoxColumn.Name = "nombreufDataGridViewTextBoxColumn";
+            this.nombreufDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horastotalesufDataGridViewTextBoxColumn
+            // 
+            this.horastotalesufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horastotalesufDataGridViewTextBoxColumn.DataPropertyName = "horas_totales_uf";
+            this.horastotalesufDataGridViewTextBoxColumn.HeaderText = "horas_totales_uf";
+            this.horastotalesufDataGridViewTextBoxColumn.Name = "horastotalesufDataGridViewTextBoxColumn";
+            this.horastotalesufDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uFBindingSource
+            // 
+            this.uFBindingSource.DataSource = typeof(checkATTdesktop.Models.UF);
+            // 
+            // bindingSourceClases
+            // 
+            this.bindingSourceClases.DataSource = typeof(checkATTdesktop.Models.Clase);
             // 
             // ModiAddModulos
             // 
@@ -393,9 +400,10 @@
             this.Load += new System.EventHandler(this.ModiAddModulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUFModulo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uFBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxAñadir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxBorrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uFBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceClases)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,5 +437,6 @@
         private System.Windows.Forms.Button buttonEliminarUf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horastotalesufDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceClases;
     }
 }

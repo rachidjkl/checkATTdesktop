@@ -8,7 +8,7 @@ namespace checkATTdesktop.Models
 {
     public static class HorariosOrm
     {
-        public static List<Horario> Select(String id_clase, String diaSemana)
+        public static List<Horario> Select(int id_clase, String diaSemana)
         {
             List<Horario> _horario = Orm.bd.Horario
                             .Where(c => c.id_clase == id_clase)

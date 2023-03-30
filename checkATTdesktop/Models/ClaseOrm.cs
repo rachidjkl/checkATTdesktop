@@ -40,7 +40,7 @@ namespace checkATTdesktop.Models
             String missatge = "";
             Clase _clase = Orm.bd.Clase.Where(a => a.id_clase == clase.id_clase).First();
 
-            _clase.id_clase = clase.id_clase;
+            _clase.nombre_clase = clase.nombre_clase;
             _clase.id_tutor_clase = clase.id_tutor_clase;
 
             missatge = Orm.MySaveChanges();

@@ -53,7 +53,7 @@ namespace checkATTdesktop.ModiAdd
                 alumnoToAdd.horas_cursadas_totales_alumno = 0;
                 alumnoToAdd.incorp_alumno = dateTimePickerIncorporacion.Value;
                 alumnoToAdd.año_cursando_alumno = comboBoxCurso.SelectedItem.ToString();
-                alumnoToAdd.id_clase = comboBoxClase.SelectedValue.ToString();
+                alumnoToAdd.id_clase = (int)comboBoxClase.SelectedValue;
 
                 if (alumno != null)
                 {
@@ -121,7 +121,7 @@ namespace checkATTdesktop.ModiAdd
 
         private void ModiAddStudent_Load(object sender, EventArgs e)
         {
-            bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
+            bindingSourceClasesCombo.DataSource = ClaseOrm.Select();
 
             if (alumno != null)
             {

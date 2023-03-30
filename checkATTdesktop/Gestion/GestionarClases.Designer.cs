@@ -35,11 +35,11 @@
             this.buttonModiClase = new System.Windows.Forms.Button();
             this.buttonCrearClase = new System.Windows.Forms.Button();
             this.dataGridViewClase = new System.Windows.Forms.DataGridView();
-            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDataGridClase = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxBuscarClase = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -124,22 +124,6 @@
             this.dataGridViewClase.TabIndex = 27;
             this.dataGridViewClase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewClase_CellFormatting);
             // 
-            // idclaseDataGridViewTextBoxColumn
-            // 
-            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
-            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Nombre clase";
-            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
-            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idtutorclaseDataGridViewTextBoxColumn
-            // 
-            this.idtutorclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idtutorclaseDataGridViewTextBoxColumn.DataPropertyName = "id_tutor_clase";
-            this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
-            this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
-            this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // bindingSourceDataGridClase
             // 
             this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
@@ -166,6 +150,22 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 25;
             this.iconPictureBox1.TabStop = false;
+            // 
+            // idclaseDataGridViewTextBoxColumn
+            // 
+            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "nombre_clase";
+            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Nombre clase";
+            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
+            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idtutorclaseDataGridViewTextBoxColumn
+            // 
+            this.idtutorclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idtutorclaseDataGridViewTextBoxColumn.DataPropertyName = "id_tutor_clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
+            this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // GestionarClases
             // 

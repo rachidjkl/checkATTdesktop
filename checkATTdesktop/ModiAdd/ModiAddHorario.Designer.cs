@@ -37,15 +37,15 @@
             this.comboBoxDiaSemana = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxClase = new System.Windows.Forms.ComboBox();
+            this.claseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxModulo = new System.Windows.Forms.ComboBox();
             this.moduloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonCrearModiAddHorario = new System.Windows.Forms.Button();
-            this.claseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -139,6 +139,10 @@
             this.comboBoxClase.TabIndex = 10;
             this.comboBoxClase.ValueMember = "id_clase";
             // 
+            // claseBindingSource
+            // 
+            this.claseBindingSource.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -195,10 +199,6 @@
             this.buttonCrearModiAddHorario.UseVisualStyleBackColor = false;
             this.buttonCrearModiAddHorario.Click += new System.EventHandler(this.buttonCrearModiAddHorario_Click);
             // 
-            // claseBindingSource
-            // 
-            this.claseBindingSource.DataSource = typeof(checkATTdesktop.Models.Clase);
-            // 
             // ModiAddHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,9 +223,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.ModiAddHorario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moduloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.claseBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

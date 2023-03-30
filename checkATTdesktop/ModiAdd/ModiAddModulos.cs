@@ -61,6 +61,7 @@ namespace checkATTdesktop.ModiAdd
 
         private void ModiAddModulos_Load(object sender, EventArgs e)
         {
+            bindingSourceClases.DataSource = ClaseOrm.Select();
             if (ufCreate != null)
             {
                 uFs.Add(ufCreate);

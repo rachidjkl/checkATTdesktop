@@ -44,7 +44,7 @@ namespace checkATTdesktop.ModiAdd
                 Horario horarioToAdd = new Horario();
                 horarioToAdd.hora_inicio = dateTimePickerHoraInicio.Value.TimeOfDay;
                 horarioToAdd.hora_fin = dateTimePickerHoraFin.Value.TimeOfDay;
-                horarioToAdd.id_clase = comboBoxClase.SelectedValue.ToString();
+                horarioToAdd.id_clase = (int)comboBoxClase.SelectedValue;
                 horarioToAdd.id_modulo = (int)comboBoxModulo.SelectedValue;
                 horarioToAdd.dia_semana_horario = comboBoxDiaSemana.SelectedItem.ToString();
 
