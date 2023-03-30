@@ -147,7 +147,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(442, 51);
+            this.label3.Location = new System.Drawing.Point(568, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 23);
             this.label3.TabIndex = 85;
@@ -157,7 +157,7 @@
             // 
             this.labelHorasTotalesModulos.AutoSize = true;
             this.labelHorasTotalesModulos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHorasTotalesModulos.Location = new System.Drawing.Point(582, 54);
+            this.labelHorasTotalesModulos.Location = new System.Drawing.Point(708, 69);
             this.labelHorasTotalesModulos.Name = "labelHorasTotalesModulos";
             this.labelHorasTotalesModulos.Size = new System.Drawing.Size(37, 21);
             this.labelHorasTotalesModulos.TabIndex = 86;

@@ -60,7 +60,7 @@ namespace checkATTdesktop.Gestion
             }
 
         }
-
+       
         private void dataGridViewHorarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 2)
@@ -86,6 +86,6 @@ namespace checkATTdesktop.Gestion
                 }
             }
         }
-
+        
     }
 }

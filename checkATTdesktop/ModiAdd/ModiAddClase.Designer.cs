@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNombreClase = new System.Windows.Forms.TextBox();
             this.comboBoxTutor = new System.Windows.Forms.ComboBox();
+            this.bindingSourceComboBoxProfes = new System.Windows.Forms.BindingSource(this.components);
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonCrearModiAddClase = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxProfes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,26 +70,20 @@
             // 
             // comboBoxTutor
             // 
+            this.comboBoxTutor.DataSource = this.bindingSourceComboBoxProfes;
+            this.comboBoxTutor.DisplayMember = "nombre_completo";
             this.comboBoxTutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTutor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTutor.FormattingEnabled = true;
-            this.comboBoxTutor.Items.AddRange(new object[] {
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si",
-            "si"});
             this.comboBoxTutor.Location = new System.Drawing.Point(14, 154);
             this.comboBoxTutor.Name = "comboBoxTutor";
             this.comboBoxTutor.Size = new System.Drawing.Size(285, 25);
             this.comboBoxTutor.TabIndex = 3;
+            this.comboBoxTutor.ValueMember = "id_profe";
+            // 
+            // bindingSourceComboBoxProfes
+            // 
+            this.bindingSourceComboBoxProfes.DataSource = typeof(checkATTdesktop.Models.Profesor);
             // 
             // iconPictureBox1
             // 
@@ -123,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(316, 282);
+            this.ClientSize = new System.Drawing.Size(304, 270);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCrearModiAddClase);
             this.Controls.Add(this.iconPictureBox1);
@@ -138,6 +135,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModiAddClase";
+            this.Load += new System.EventHandler(this.ModiAddClase_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxProfes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -152,5 +151,6 @@
         private System.Windows.Forms.ComboBox comboBoxTutor;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Button buttonCrearModiAddClase;
+        private System.Windows.Forms.BindingSource bindingSourceComboBoxProfes;
     }
 }

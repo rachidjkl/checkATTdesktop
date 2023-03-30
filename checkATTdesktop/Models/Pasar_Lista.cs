@@ -28,12 +28,14 @@ namespace checkATTdesktop.Models
         public System.DateTime id_datetime { get; set; }
         public string asistencia { get; set; }
         public bool pasada { get; set; }
+        public Nullable<int> id_lista_grupo { get; set; }
     
         public virtual Alumno Alumno { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Falta> Falta { get; set; }
         public virtual Horario Horario { get; set; }
         public virtual Profesor Profesor { get; set; }
         public virtual UF UF { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Falta> Falta { get; set; }
+        public virtual Pasar_listas_grupo Pasar_listas_grupo { get; set; }
     }
 }

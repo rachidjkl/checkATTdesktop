@@ -16,12 +16,10 @@ namespace checkATTdesktop.Models
     {
         public int id_falta { get; set; }
         public Nullable<int> id_pasar_lista { get; set; }
+        public Nullable<int> id_justificar_falta { get; set; }
         public System.DateTime hora_falta { get; set; }
-        public string motivo_falta { get; set; }
-        public string documento_adj_falta { get; set; }
-        public string comentario_falta { get; set; }
-        public int estado_falta { get; set; }
     
+        public virtual Justificar_faltas Justificar_faltas { get; set; }
         public virtual Pasar_Lista Pasar_Lista { get; set; }
     }
 }

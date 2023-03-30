@@ -35,14 +35,14 @@
             this.buttonModiClase = new System.Windows.Forms.Button();
             this.buttonCrearClase = new System.Windows.Forms.Button();
             this.dataGridViewClase = new System.Windows.Forms.DataGridView();
-            this.textBoxBuscarClase = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.bindingSourceDataGridClase = new System.Windows.Forms.BindingSource(this.components);
             this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridClase = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarClase = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEliminarClase
@@ -58,6 +58,7 @@
             this.buttonEliminarClase.TabIndex = 30;
             this.buttonEliminarClase.Text = "Eliminar";
             this.buttonEliminarClase.UseVisualStyleBackColor = true;
+            this.buttonEliminarClase.Click += new System.EventHandler(this.buttonEliminarClase_Click);
             // 
             // buttonModiClase
             // 
@@ -123,6 +124,26 @@
             this.dataGridViewClase.TabIndex = 27;
             this.dataGridViewClase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewClase_CellFormatting);
             // 
+            // idclaseDataGridViewTextBoxColumn
+            // 
+            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
+            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Nombre clase";
+            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
+            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idtutorclaseDataGridViewTextBoxColumn
+            // 
+            this.idtutorclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idtutorclaseDataGridViewTextBoxColumn.DataPropertyName = "id_tutor_clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
+            this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
+            this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceDataGridClase
+            // 
+            this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
             // textBoxBuscarClase
             // 
             this.textBoxBuscarClase.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -146,26 +167,6 @@
             this.iconPictureBox1.TabIndex = 25;
             this.iconPictureBox1.TabStop = false;
             // 
-            // bindingSourceDataGridClase
-            // 
-            this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
-            // 
-            // idclaseDataGridViewTextBoxColumn
-            // 
-            this.idclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idclaseDataGridViewTextBoxColumn.DataPropertyName = "id_clase";
-            this.idclaseDataGridViewTextBoxColumn.HeaderText = "Nombre clase";
-            this.idclaseDataGridViewTextBoxColumn.Name = "idclaseDataGridViewTextBoxColumn";
-            this.idclaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idtutorclaseDataGridViewTextBoxColumn
-            // 
-            this.idtutorclaseDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idtutorclaseDataGridViewTextBoxColumn.DataPropertyName = "id_tutor_clase";
-            this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
-            this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
-            this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // GestionarClases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,8 +184,8 @@
             this.Text = "GestionarClases";
             this.Load += new System.EventHandler(this.GestionarClases_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

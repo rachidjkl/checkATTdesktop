@@ -14,5 +14,39 @@ namespace checkATTdesktop.Models
             
             return _clase;
         }
+
+
+        public static String Insert(Clase clase)
+        {
+            String missatge = "";
+            Orm.bd.Clase.Add(clase);
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
+        public static String Delete(Clase clase)
+        {
+            String missatge = "";
+            Orm.bd.Clase.Remove(clase);
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
+        public static String Update(Clase clase)
+        {
+            String missatge = "";
+            Clase _clase = Orm.bd.Clase.Where(a => a.id_clase == clase.id_clase).First();
+
+            _clase.id_clase = clase.id_clase;
+            _clase.id_tutor_clase = clase.id_tutor_clase;
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
+
     }
 }

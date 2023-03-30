@@ -5,30 +5,35 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="81c709d6d9ba4aae9015c63d0ad66226" Name="Diagram1" ZoomLevel="98">
-        <EntityTypeShape EntityType="CheckAttModel.Alumno" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Clase" Width="1.5" PointX="1.5" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Clase_Modulo" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Horario" Width="1.5" PointX="6" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Matricula" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Modulo" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Pasar_Lista" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.Profesor" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CheckAttModel.UF" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
-        <AssociationConnector Association="CheckAttModel.FK__Alumno__id_clase__208CD6FA" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_al__2645B050" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_al__3493CFA7" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Clase__id_tutor___1AD3FDA4" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_cl__2CF2ADDF" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Horario__id_clas__29221CFB" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_mo__2DE6D218" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Horario__id_modu__2A164134" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_ho__3587F3E0" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_mo__25518C17" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__UF__id_modulo_uf__31B762FC" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_pr__37703C52" ManuallyRouted="false" />
-        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_uf__367C1819" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="CheckAttModel.Falta" Width="1.5" PointX="10.5" PointY="11.125" />
-        <AssociationConnector Association="CheckAttModel.FK__Falta__id_pasar___4BAC3F29" />
+        <EntityTypeShape EntityType="CheckAttModel.Alumno" Width="1.5" PointX="5.875" PointY="12.375" />
+        <EntityTypeShape EntityType="CheckAttModel.Clase" Width="1.5" PointX="0.625" PointY="1.875" />
+        <EntityTypeShape EntityType="CheckAttModel.Clase_Modulo" Width="1.5" PointX="2.875" PointY="5.125" />
+        <EntityTypeShape EntityType="CheckAttModel.Falta" Width="1.5" PointX="10.375" PointY="6.875" />
+        <EntityTypeShape EntityType="CheckAttModel.Horario" Width="1.5" PointX="5.875" PointY="4.75" />
+        <EntityTypeShape EntityType="CheckAttModel.Justificar_faltas" Width="1.5" PointX="8.125" PointY="2.875" />
+        <EntityTypeShape EntityType="CheckAttModel.Matricula" Width="1.5" PointX="5.125" PointY="8.75" />
+        <EntityTypeShape EntityType="CheckAttModel.Modulo" Width="1.5" PointX="0.625" PointY="6" />
+        <EntityTypeShape EntityType="CheckAttModel.Pasar_Lista" Width="1.5" PointX="8.125" PointY="6" />
+        <EntityTypeShape EntityType="CheckAttModel.Pasar_listas_grupo" Width="1.5" PointX="5.875" PointY="1.25" />
+        <EntityTypeShape EntityType="CheckAttModel.Profesor" Width="1.5" PointX="1.375" PointY="12.625" />
+        <EntityTypeShape EntityType="CheckAttModel.UF" Width="1.5" PointX="2.875" PointY="8.625" />
+        <EntityTypeShape EntityType="CheckAttModel.Usuarios_aplicacion" Width="1.5" PointX="2.625" PointY="1.625" />
+        <AssociationConnector Association="CheckAttModel.FK__Alumno__id_clase__2F10007B" />
+        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_al__5441852A" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_al__4316F928" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase__id_tutor___29572725" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_cl__3B75D760" />
+        <AssociationConnector Association="CheckAttModel.FK__Horario__id_clas__37A5467C" />
+        <AssociationConnector Association="CheckAttModel.FK__Clase_Mod__id_mo__3C69FB99" />
+        <AssociationConnector Association="CheckAttModel.FK__Falta__id_justif__5CD6CB2B" />
+        <AssociationConnector Association="CheckAttModel.FK__Falta__id_pasar___5BE2A6F2" />
+        <AssociationConnector Association="CheckAttModel.FK__Horario__id_modu__38996AB5" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_ho__440B1D61" />
+        <AssociationConnector Association="CheckAttModel.FK__Matricula__id_uf__534D60F1" />
+        <AssociationConnector Association="CheckAttModel.FK__UF__id_modulo_uf__403A8C7D" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_pr__45F365D3" />
+        <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_uf__44FF419A" />
+        <AssociationConnector Association="CheckAttModel.fk_id_lista_grupo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

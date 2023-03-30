@@ -229,6 +229,7 @@
             this.textBoxDNI.BackColor = System.Drawing.Color.White;
             this.textBoxDNI.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDNI.Location = new System.Drawing.Point(534, 351);
+            this.textBoxDNI.MaxLength = 9;
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(256, 21);
             this.textBoxDNI.TabIndex = 107;
@@ -262,6 +263,7 @@
             this.textBoxTelefono.BackColor = System.Drawing.Color.White;
             this.textBoxTelefono.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.Location = new System.Drawing.Point(534, 276);
+            this.textBoxTelefono.MaxLength = 9;
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(256, 21);
             this.textBoxTelefono.TabIndex = 104;

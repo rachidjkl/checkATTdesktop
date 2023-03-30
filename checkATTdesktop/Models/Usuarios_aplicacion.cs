@@ -12,14 +12,10 @@ namespace checkATTdesktop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Matricula
+    public partial class Usuarios_aplicacion
     {
-        public int id_matricula { get; set; }
-        public Nullable<int> id_uf { get; set; }
-        public Nullable<int> id_alumno { get; set; }
-        public System.DateTime fecha_matricula { get; set; }
-    
-        public virtual Alumno Alumno { get; set; }
-        public virtual UF UF { get; set; }
+        public string id_correo { get; set; }
+        public string contra { get; set; }
+        public int tipo_usuario { get; set; }
     }
 }
