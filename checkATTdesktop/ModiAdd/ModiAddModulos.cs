@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace checkATTdesktop.ModiAdd
@@ -29,6 +30,7 @@ namespace checkATTdesktop.ModiAdd
             uf.nombre_uf = textBoxNumeroUF.Text + "-" + textBox1NombreUF.Text;
             uf.horas_totales_uf = int.Parse(textBoxHorasTotales.Text);
             loadDataGrid();
+            CalcularTotalHoras();
 
         }
 
@@ -47,8 +49,9 @@ namespace checkATTdesktop.ModiAdd
                 ufToAdd.horas_totales_uf = int.Parse(textBoxHorasTotales.Text);
                 uFs.Add(ufToAdd);
                 loadDataGrid();
-
+                CalcularTotalHoras();
             }
+
         }
 
         private void buttonCrearModulo_Click(object sender, EventArgs e)
@@ -77,10 +80,7 @@ namespace checkATTdesktop.ModiAdd
 
         }
 
-        private void iconPictureBoxBorrar_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void loadDataGrid()
         {
@@ -92,19 +92,53 @@ namespace checkATTdesktop.ModiAdd
         {
             UF uf = (UF)dataGridViewUFModulo.CurrentRow.DataBoundItem;
             uFs.Remove(uf); // Eliminar el objeto de la lista vinculada al DataGridView.
-            loadDataGrid(); // Actualizar el DataGridView.
+            loadDataGrid(); // Actualizar el DataGridView.ç
+            CalcularTotalHoras();
         }
+        private void CalcularTotalHoras()
+        {
+            int total = 0;  
+            foreach (UF uf in uFs)
+            {
+                total += uf.horas_totales_uf;
+            }
 
+            labelHorasTotalesModulos.Text = total.ToString();   
+
+        }
 
 
         private void dataGridViewUFModulo_SelectionChanged(object sender, EventArgs e)
         {
-            UF uf = (UF)dataGridViewUFModulo.CurrentRow.DataBoundItem;
-            string[] partes = uf.nombre_uf.Split('-');
+            if (dataGridViewUFModulo.SelectedRows.Count > 0)
+            {
+                UF uf = (UF)dataGridViewUFModulo.CurrentRow.DataBoundItem;
+                string[] partes = uf.nombre_uf.Split('-');
 
-            textBox1NombreUF.Text = partes[1];
-            textBoxNumeroUF.Text = partes[0];
-            textBoxHorasTotales.Text = uf.horas_totales_uf.ToString();
+                textBox1NombreUF.Text = partes[1];
+                textBoxNumeroUF.Text = partes[0];
+                textBoxHorasTotales.Text = uf.horas_totales_uf.ToString();
+            }
         }
+
+
+        private void iconPictureBoxAñadir_Click(object sender, EventArgs e)
+        {
+            if (comboBoxClases.SelectedItem != null)
+            {
+                bindingSourceListBoxClase.Add(comboBoxClases.SelectedItem);
+            }
+        }
+
+        private void iconPictureBoxBorrar_Click(object sender, EventArgs e)
+        {
+            if (listBoxClases.SelectedItem != null)
+            {
+                bindingSourceListBoxClase.Remove(listBoxClases.SelectedItem);
+            }
+        }
+
+
+
     }
 }
