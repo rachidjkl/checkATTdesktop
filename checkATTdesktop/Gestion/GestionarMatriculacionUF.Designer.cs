@@ -36,16 +36,15 @@
             this.comboBoxModulos = new System.Windows.Forms.ComboBox();
             this.bindingSourceComboBoxModulos = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bindingSourceDataGridUF = new System.Windows.Forms.BindingSource(this.components);
+            this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             this.idufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idmoduloufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horastotalesufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horascursadasufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pasarListaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceDataGridUF = new System.Windows.Forms.BindingSource(this.components);
-            this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -112,7 +111,6 @@
             this.idmoduloufDataGridViewTextBoxColumn,
             this.nombreufDataGridViewTextBoxColumn,
             this.horastotalesufDataGridViewTextBoxColumn,
-            this.horascursadasufDataGridViewTextBoxColumn,
             this.moduloDataGridViewTextBoxColumn,
             this.pasarListaDataGridViewTextBoxColumn,
             this.matriculaDataGridViewTextBoxColumn});
@@ -131,70 +129,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(476, 295);
             this.dataGridView1.TabIndex = 17;
-            // 
-            // idufDataGridViewTextBoxColumn
-            // 
-            this.idufDataGridViewTextBoxColumn.DataPropertyName = "id_uf";
-            this.idufDataGridViewTextBoxColumn.HeaderText = "id_uf";
-            this.idufDataGridViewTextBoxColumn.Name = "idufDataGridViewTextBoxColumn";
-            this.idufDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idufDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idmoduloufDataGridViewTextBoxColumn
-            // 
-            this.idmoduloufDataGridViewTextBoxColumn.DataPropertyName = "id_modulo_uf";
-            this.idmoduloufDataGridViewTextBoxColumn.HeaderText = "id_modulo_uf";
-            this.idmoduloufDataGridViewTextBoxColumn.Name = "idmoduloufDataGridViewTextBoxColumn";
-            this.idmoduloufDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idmoduloufDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nombreufDataGridViewTextBoxColumn
-            // 
-            this.nombreufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreufDataGridViewTextBoxColumn.DataPropertyName = "nombre_uf";
-            this.nombreufDataGridViewTextBoxColumn.HeaderText = "nombre_uf";
-            this.nombreufDataGridViewTextBoxColumn.Name = "nombreufDataGridViewTextBoxColumn";
-            this.nombreufDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horastotalesufDataGridViewTextBoxColumn
-            // 
-            this.horastotalesufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.horastotalesufDataGridViewTextBoxColumn.DataPropertyName = "horas_totales_uf";
-            this.horastotalesufDataGridViewTextBoxColumn.HeaderText = "horas_totales_uf";
-            this.horastotalesufDataGridViewTextBoxColumn.Name = "horastotalesufDataGridViewTextBoxColumn";
-            this.horastotalesufDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horascursadasufDataGridViewTextBoxColumn
-            // 
-            this.horascursadasufDataGridViewTextBoxColumn.DataPropertyName = "horas_cursadas_uf";
-            this.horascursadasufDataGridViewTextBoxColumn.HeaderText = "horas_cursadas_uf";
-            this.horascursadasufDataGridViewTextBoxColumn.Name = "horascursadasufDataGridViewTextBoxColumn";
-            this.horascursadasufDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horascursadasufDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // moduloDataGridViewTextBoxColumn
-            // 
-            this.moduloDataGridViewTextBoxColumn.DataPropertyName = "Modulo";
-            this.moduloDataGridViewTextBoxColumn.HeaderText = "Modulo";
-            this.moduloDataGridViewTextBoxColumn.Name = "moduloDataGridViewTextBoxColumn";
-            this.moduloDataGridViewTextBoxColumn.ReadOnly = true;
-            this.moduloDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pasarListaDataGridViewTextBoxColumn
-            // 
-            this.pasarListaDataGridViewTextBoxColumn.DataPropertyName = "Pasar_Lista";
-            this.pasarListaDataGridViewTextBoxColumn.HeaderText = "Pasar_Lista";
-            this.pasarListaDataGridViewTextBoxColumn.Name = "pasarListaDataGridViewTextBoxColumn";
-            this.pasarListaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pasarListaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // matriculaDataGridViewTextBoxColumn
-            // 
-            this.matriculaDataGridViewTextBoxColumn.DataPropertyName = "Matricula";
-            this.matriculaDataGridViewTextBoxColumn.HeaderText = "Matricula";
-            this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
-            this.matriculaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.matriculaDataGridViewTextBoxColumn.Visible = false;
             // 
             // bindingSourceDataGridUF
             // 
@@ -219,6 +153,62 @@
             this.iconButtonAceptar.Text = "Matricular";
             this.iconButtonAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButtonAceptar.UseVisualStyleBackColor = false;
+            // 
+            // idufDataGridViewTextBoxColumn
+            // 
+            this.idufDataGridViewTextBoxColumn.DataPropertyName = "id_uf";
+            this.idufDataGridViewTextBoxColumn.HeaderText = "id_uf";
+            this.idufDataGridViewTextBoxColumn.Name = "idufDataGridViewTextBoxColumn";
+            this.idufDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idufDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idmoduloufDataGridViewTextBoxColumn
+            // 
+            this.idmoduloufDataGridViewTextBoxColumn.DataPropertyName = "id_modulo_uf";
+            this.idmoduloufDataGridViewTextBoxColumn.HeaderText = "id_modulo_uf";
+            this.idmoduloufDataGridViewTextBoxColumn.Name = "idmoduloufDataGridViewTextBoxColumn";
+            this.idmoduloufDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idmoduloufDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreufDataGridViewTextBoxColumn
+            // 
+            this.nombreufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreufDataGridViewTextBoxColumn.DataPropertyName = "nombre_uf";
+            this.nombreufDataGridViewTextBoxColumn.HeaderText = "Nombre de la UF";
+            this.nombreufDataGridViewTextBoxColumn.Name = "nombreufDataGridViewTextBoxColumn";
+            this.nombreufDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horastotalesufDataGridViewTextBoxColumn
+            // 
+            this.horastotalesufDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.horastotalesufDataGridViewTextBoxColumn.DataPropertyName = "horas_totales_uf";
+            this.horastotalesufDataGridViewTextBoxColumn.HeaderText = "Horas totales de la UF";
+            this.horastotalesufDataGridViewTextBoxColumn.Name = "horastotalesufDataGridViewTextBoxColumn";
+            this.horastotalesufDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // moduloDataGridViewTextBoxColumn
+            // 
+            this.moduloDataGridViewTextBoxColumn.DataPropertyName = "Modulo";
+            this.moduloDataGridViewTextBoxColumn.HeaderText = "Modulo";
+            this.moduloDataGridViewTextBoxColumn.Name = "moduloDataGridViewTextBoxColumn";
+            this.moduloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.moduloDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pasarListaDataGridViewTextBoxColumn
+            // 
+            this.pasarListaDataGridViewTextBoxColumn.DataPropertyName = "Pasar_Lista";
+            this.pasarListaDataGridViewTextBoxColumn.HeaderText = "Pasar_Lista";
+            this.pasarListaDataGridViewTextBoxColumn.Name = "pasarListaDataGridViewTextBoxColumn";
+            this.pasarListaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pasarListaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // matriculaDataGridViewTextBoxColumn
+            // 
+            this.matriculaDataGridViewTextBoxColumn.DataPropertyName = "Matricula";
+            this.matriculaDataGridViewTextBoxColumn.HeaderText = "Matricula";
+            this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
+            this.matriculaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.matriculaDataGridViewTextBoxColumn.Visible = false;
             // 
             // GestionarMatriculacionUF
             // 
@@ -255,11 +245,11 @@
         private FontAwesome.Sharp.IconButton iconButtonAceptar;
         private System.Windows.Forms.BindingSource bindingSourceComboBoxModulos;
         private System.Windows.Forms.BindingSource bindingSourceDataGridUF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horascursadasufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmoduloufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horastotalesufDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horascursadasufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moduloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pasarListaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn matriculaDataGridViewTextBoxColumn;

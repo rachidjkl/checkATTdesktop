@@ -36,13 +36,12 @@
             this.buttonModiProfesor = new System.Windows.Forms.Button();
             this.buttonCrearProfesor = new System.Windows.Forms.Button();
             this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
-            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
             this.dniprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido2profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailcentroprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +50,8 @@
             this.direccionprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCrearModificarProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearModificarProfesores
@@ -132,7 +131,6 @@
             this.dniprofeDataGridViewTextBoxColumn,
             this.nombreprofeDataGridViewTextBoxColumn,
             this.apellido1profeDataGridViewTextBoxColumn,
-            this.apellido2profeDataGridViewTextBoxColumn,
             this.emailprofeDataGridViewTextBoxColumn,
             this.emailcentroprofeDataGridViewTextBoxColumn,
             this.telprofeDataGridViewTextBoxColumn,
@@ -154,10 +152,7 @@
             this.dataGridViewProfesor.ReadOnly = true;
             this.dataGridViewProfesor.Size = new System.Drawing.Size(895, 361);
             this.dataGridViewProfesor.TabIndex = 21;
-            // 
-            // bindingSourceDataGridProfesores
-            // 
-            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            this.dataGridViewProfesor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewProfesor_CellFormatting);
             // 
             // textBoxBuscarProfesor
             // 
@@ -183,6 +178,10 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
+            // bindingSourceDataGridProfesores
+            // 
+            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            // 
             // dniprofeDataGridViewTextBoxColumn
             // 
             this.dniprofeDataGridViewTextBoxColumn.DataPropertyName = "dni_profe";
@@ -200,16 +199,9 @@
             // apellido1profeDataGridViewTextBoxColumn
             // 
             this.apellido1profeDataGridViewTextBoxColumn.DataPropertyName = "apellido1_profe";
-            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellido1";
+            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellidos";
             this.apellido1profeDataGridViewTextBoxColumn.Name = "apellido1profeDataGridViewTextBoxColumn";
             this.apellido1profeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellido2profeDataGridViewTextBoxColumn
-            // 
-            this.apellido2profeDataGridViewTextBoxColumn.DataPropertyName = "apellido2_profe";
-            this.apellido2profeDataGridViewTextBoxColumn.HeaderText = "Apellido2";
-            this.apellido2profeDataGridViewTextBoxColumn.Name = "apellido2profeDataGridViewTextBoxColumn";
-            this.apellido2profeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailprofeDataGridViewTextBoxColumn
             // 
@@ -267,8 +259,8 @@
             this.panelCrearModificarProfesores.ResumeLayout(false);
             this.panelCrearModificarProfesores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,7 +278,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dniprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido1profeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2profeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailcentroprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telprofeDataGridViewTextBoxColumn;

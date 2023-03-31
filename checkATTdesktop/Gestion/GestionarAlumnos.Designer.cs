@@ -37,10 +37,15 @@
             this.buttonModiAlumno = new System.Windows.Forms.Button();
             this.buttonCrearAlumno = new System.Windows.Forms.Button();
             this.dataGridViewAlumnos = new System.Windows.Forms.DataGridView();
+            this.bindingSourceDataGridAlumnos = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
+            this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.dnialumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrealumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido2alumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailcentroalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,12 +53,6 @@
             this.incorpalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.añocursandoalumnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceDataGridAlumnos = new System.Windows.Forms.BindingSource(this.components);
-            this.textBoxBuscarAlumno = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.comboBoxSeleccionarClase = new System.Windows.Forms.ComboBox();
-            this.bindingSourceComboBoxClase = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panelCrearModificarAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridAlumnos)).BeginInit();
@@ -157,7 +156,6 @@
             this.dnialumnoDataGridViewTextBoxColumn,
             this.nombrealumnoDataGridViewTextBoxColumn,
             this.apellido1alumnoDataGridViewTextBoxColumn,
-            this.apellido2alumnoDataGridViewTextBoxColumn,
             this.emailalumnoDataGridViewTextBoxColumn,
             this.emailcentroalumnoDataGridViewTextBoxColumn,
             this.telalumnoDataGridViewTextBoxColumn,
@@ -180,83 +178,7 @@
             this.dataGridViewAlumnos.ReadOnly = true;
             this.dataGridViewAlumnos.Size = new System.Drawing.Size(889, 341);
             this.dataGridViewAlumnos.TabIndex = 18;
-            // 
-            // dnialumnoDataGridViewTextBoxColumn
-            // 
-            this.dnialumnoDataGridViewTextBoxColumn.DataPropertyName = "dni_alumno";
-            this.dnialumnoDataGridViewTextBoxColumn.HeaderText = "DNI";
-            this.dnialumnoDataGridViewTextBoxColumn.Name = "dnialumnoDataGridViewTextBoxColumn";
-            this.dnialumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombrealumnoDataGridViewTextBoxColumn
-            // 
-            this.nombrealumnoDataGridViewTextBoxColumn.DataPropertyName = "nombre_alumno";
-            this.nombrealumnoDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombrealumnoDataGridViewTextBoxColumn.Name = "nombrealumnoDataGridViewTextBoxColumn";
-            this.nombrealumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellido1alumnoDataGridViewTextBoxColumn
-            // 
-            this.apellido1alumnoDataGridViewTextBoxColumn.DataPropertyName = "apellido1_alumno";
-            this.apellido1alumnoDataGridViewTextBoxColumn.HeaderText = "Apellido1";
-            this.apellido1alumnoDataGridViewTextBoxColumn.Name = "apellido1alumnoDataGridViewTextBoxColumn";
-            this.apellido1alumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellido2alumnoDataGridViewTextBoxColumn
-            // 
-            this.apellido2alumnoDataGridViewTextBoxColumn.DataPropertyName = "apellido2_alumno";
-            this.apellido2alumnoDataGridViewTextBoxColumn.HeaderText = "Apellido2";
-            this.apellido2alumnoDataGridViewTextBoxColumn.Name = "apellido2alumnoDataGridViewTextBoxColumn";
-            this.apellido2alumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailalumnoDataGridViewTextBoxColumn
-            // 
-            this.emailalumnoDataGridViewTextBoxColumn.DataPropertyName = "email_alumno";
-            this.emailalumnoDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailalumnoDataGridViewTextBoxColumn.Name = "emailalumnoDataGridViewTextBoxColumn";
-            this.emailalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailcentroalumnoDataGridViewTextBoxColumn
-            // 
-            this.emailcentroalumnoDataGridViewTextBoxColumn.DataPropertyName = "email_centro_alumno";
-            this.emailcentroalumnoDataGridViewTextBoxColumn.HeaderText = "EmailCep";
-            this.emailcentroalumnoDataGridViewTextBoxColumn.Name = "emailcentroalumnoDataGridViewTextBoxColumn";
-            this.emailcentroalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telalumnoDataGridViewTextBoxColumn
-            // 
-            this.telalumnoDataGridViewTextBoxColumn.DataPropertyName = "tel_alumno";
-            this.telalumnoDataGridViewTextBoxColumn.HeaderText = "Tel";
-            this.telalumnoDataGridViewTextBoxColumn.Name = "telalumnoDataGridViewTextBoxColumn";
-            this.telalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nacimientoalumnoDataGridViewTextBoxColumn
-            // 
-            this.nacimientoalumnoDataGridViewTextBoxColumn.DataPropertyName = "nacimiento_alumno";
-            this.nacimientoalumnoDataGridViewTextBoxColumn.HeaderText = "Nacimiento";
-            this.nacimientoalumnoDataGridViewTextBoxColumn.Name = "nacimientoalumnoDataGridViewTextBoxColumn";
-            this.nacimientoalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // incorpalumnoDataGridViewTextBoxColumn
-            // 
-            this.incorpalumnoDataGridViewTextBoxColumn.DataPropertyName = "incorp_alumno";
-            this.incorpalumnoDataGridViewTextBoxColumn.HeaderText = "Incorp";
-            this.incorpalumnoDataGridViewTextBoxColumn.Name = "incorpalumnoDataGridViewTextBoxColumn";
-            this.incorpalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // direccionalumnoDataGridViewTextBoxColumn
-            // 
-            this.direccionalumnoDataGridViewTextBoxColumn.DataPropertyName = "direccion_alumno";
-            this.direccionalumnoDataGridViewTextBoxColumn.HeaderText = "Dirección";
-            this.direccionalumnoDataGridViewTextBoxColumn.Name = "direccionalumnoDataGridViewTextBoxColumn";
-            this.direccionalumnoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // añocursandoalumnoDataGridViewTextBoxColumn
-            // 
-            this.añocursandoalumnoDataGridViewTextBoxColumn.DataPropertyName = "año_cursando_alumno";
-            this.añocursandoalumnoDataGridViewTextBoxColumn.HeaderText = "Cursando";
-            this.añocursandoalumnoDataGridViewTextBoxColumn.Name = "añocursandoalumnoDataGridViewTextBoxColumn";
-            this.añocursandoalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewAlumnos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAlumnos_CellFormatting);
             // 
             // bindingSourceDataGridAlumnos
             // 
@@ -314,6 +236,86 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Clase";
             // 
+            // dnialumnoDataGridViewTextBoxColumn
+            // 
+            this.dnialumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dnialumnoDataGridViewTextBoxColumn.DataPropertyName = "dni_alumno";
+            this.dnialumnoDataGridViewTextBoxColumn.HeaderText = "DNI";
+            this.dnialumnoDataGridViewTextBoxColumn.Name = "dnialumnoDataGridViewTextBoxColumn";
+            this.dnialumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombrealumnoDataGridViewTextBoxColumn
+            // 
+            this.nombrealumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombrealumnoDataGridViewTextBoxColumn.DataPropertyName = "nombre_alumno";
+            this.nombrealumnoDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombrealumnoDataGridViewTextBoxColumn.Name = "nombrealumnoDataGridViewTextBoxColumn";
+            this.nombrealumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellido1alumnoDataGridViewTextBoxColumn
+            // 
+            this.apellido1alumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.apellido1alumnoDataGridViewTextBoxColumn.DataPropertyName = "apellido1_alumno";
+            this.apellido1alumnoDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellido1alumnoDataGridViewTextBoxColumn.Name = "apellido1alumnoDataGridViewTextBoxColumn";
+            this.apellido1alumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailalumnoDataGridViewTextBoxColumn
+            // 
+            this.emailalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailalumnoDataGridViewTextBoxColumn.DataPropertyName = "email_alumno";
+            this.emailalumnoDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailalumnoDataGridViewTextBoxColumn.Name = "emailalumnoDataGridViewTextBoxColumn";
+            this.emailalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailcentroalumnoDataGridViewTextBoxColumn
+            // 
+            this.emailcentroalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailcentroalumnoDataGridViewTextBoxColumn.DataPropertyName = "email_centro_alumno";
+            this.emailcentroalumnoDataGridViewTextBoxColumn.HeaderText = "EmailCep";
+            this.emailcentroalumnoDataGridViewTextBoxColumn.Name = "emailcentroalumnoDataGridViewTextBoxColumn";
+            this.emailcentroalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telalumnoDataGridViewTextBoxColumn
+            // 
+            this.telalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telalumnoDataGridViewTextBoxColumn.DataPropertyName = "tel_alumno";
+            this.telalumnoDataGridViewTextBoxColumn.HeaderText = "Tel";
+            this.telalumnoDataGridViewTextBoxColumn.Name = "telalumnoDataGridViewTextBoxColumn";
+            this.telalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nacimientoalumnoDataGridViewTextBoxColumn
+            // 
+            this.nacimientoalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nacimientoalumnoDataGridViewTextBoxColumn.DataPropertyName = "nacimiento_alumno";
+            this.nacimientoalumnoDataGridViewTextBoxColumn.HeaderText = "Nacimiento";
+            this.nacimientoalumnoDataGridViewTextBoxColumn.Name = "nacimientoalumnoDataGridViewTextBoxColumn";
+            this.nacimientoalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // incorpalumnoDataGridViewTextBoxColumn
+            // 
+            this.incorpalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.incorpalumnoDataGridViewTextBoxColumn.DataPropertyName = "incorp_alumno";
+            this.incorpalumnoDataGridViewTextBoxColumn.HeaderText = "Incorp";
+            this.incorpalumnoDataGridViewTextBoxColumn.Name = "incorpalumnoDataGridViewTextBoxColumn";
+            this.incorpalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionalumnoDataGridViewTextBoxColumn
+            // 
+            this.direccionalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.direccionalumnoDataGridViewTextBoxColumn.DataPropertyName = "direccion_alumno";
+            this.direccionalumnoDataGridViewTextBoxColumn.HeaderText = "Dirección";
+            this.direccionalumnoDataGridViewTextBoxColumn.Name = "direccionalumnoDataGridViewTextBoxColumn";
+            this.direccionalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añocursandoalumnoDataGridViewTextBoxColumn
+            // 
+            this.añocursandoalumnoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.añocursandoalumnoDataGridViewTextBoxColumn.DataPropertyName = "año_cursando_alumno";
+            this.añocursandoalumnoDataGridViewTextBoxColumn.HeaderText = "Cursando";
+            this.añocursandoalumnoDataGridViewTextBoxColumn.Name = "añocursandoalumnoDataGridViewTextBoxColumn";
+            this.añocursandoalumnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GestionarAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,10 +350,10 @@
         private System.Windows.Forms.Button buttonEliminarAlumno;
         private System.Windows.Forms.BindingSource bindingSourceComboBoxClase;
         private System.Windows.Forms.BindingSource bindingSourceDataGridAlumnos;
+        private System.Windows.Forms.Button buttonMatricularAlumnosUF;
         private System.Windows.Forms.DataGridViewTextBoxColumn dnialumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrealumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido1alumnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2alumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailcentroalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telalumnoDataGridViewTextBoxColumn;
@@ -359,6 +361,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn incorpalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn añocursandoalumnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonMatricularAlumnosUF;
     }
 }

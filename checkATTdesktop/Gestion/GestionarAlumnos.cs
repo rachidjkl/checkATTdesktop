@@ -136,5 +136,14 @@ namespace checkATTdesktop.Gestion
             GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF();
             matricularUF.ShowDialog();
         }
+
+        private void dataGridViewAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                Alumno alumno = (Alumno)dataGridViewAlumnos.Rows[e.RowIndex].DataBoundItem;
+                e.Value = alumno.apellido1_alumno + " " + alumno.apellido2_alumno;
+            }
+        }
     }
 }
