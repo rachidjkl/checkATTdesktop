@@ -276,6 +276,7 @@
     <Compile Include="Models\Clase.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClaseModuloOrm.cs" />
     <Compile Include="Models\ClaseOrm.cs" />
     <Compile Include="Models\Clase_Modulo.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>

@@ -56,9 +56,32 @@ namespace checkATTdesktop.ModiAdd
 
         private void buttonCrearModulo_Click(object sender, EventArgs e)
         {
+            String missatge = "";
+
             if (textBoxNombreModulo.Text == "")
             {
                 MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                //añadir modulo
+                Modulo modulo = new Modulo();
+                modulo.nombre_modulo = textBoxNombreModulo.Text;
+                modulo.horas_totales_modulo = int.Parse(labelHorasTotalesModulos.Text);
+                modulo.siglas_uf = textBoxSiglasModulo.Text;
+                missatge = ModulosOrm.Insert(modulo);
+                //añadir uf
+                foreach (UF uf in uFs)
+                {
+                    modulo = ModulosOrm.SelectUltimoModulo();
+                    uf.id_modulo_uf = modulo.id_modulo;
+                    missatge = UFsOrm.Insert(uf);
+                }
+
+                //añadir clase modulo for each
+                Clase_Modulo clase_Modulo = new Clase_Modulo();
+                clase_Modulo.id_modulo = modulo.id_modulo;
+                missatge = ClaseModuloOrm.Insert(clase_Modulo);
             }
         }
 
@@ -75,10 +98,7 @@ namespace checkATTdesktop.ModiAdd
             
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
 
-        }
 
         
 
