@@ -37,6 +37,6 @@ namespace checkATTdesktop.Models
         public virtual DbSet<Pasar_listas_grupo> Pasar_listas_grupo { get; set; }
         public virtual DbSet<Profesor> Profesor { get; set; }
         public virtual DbSet<UF> UF { get; set; }
-        public virtual DbSet<Usuarios_aplicacion> Usuarios_aplicacion { get; set; }
+        public virtual DbSet<Usuarios_CEP> Usuarios_CEP { get; set; }
     }
 }
