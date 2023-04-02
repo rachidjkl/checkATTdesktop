@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iconPictureBoxCerrarForm = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxModulos = new System.Windows.Forms.ComboBox();
-            this.bindingSourceComboBoxModulos = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idmoduloufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,10 +44,12 @@
             this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDataGridUF = new System.Windows.Forms.BindingSource(this.components);
             this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
+            this.checkBoxSelectAllUF = new System.Windows.Forms.CheckBox();
+            this.bindingSourceComboBoxModulos = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCerrarForm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridUF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).BeginInit();
             this.SuspendLayout();
             // 
             // iconPictureBoxCerrarForm
@@ -88,23 +89,19 @@
             this.comboBoxModulos.ValueMember = "id_modulo";
             this.comboBoxModulos.SelectedIndexChanged += new System.EventHandler(this.comboBoxModulos_SelectedIndexChanged);
             // 
-            // bindingSourceComboBoxModulos
-            // 
-            this.bindingSourceComboBoxModulos.DataSource = typeof(checkATTdesktop.Models.Modulo);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idufDataGridViewTextBoxColumn,
@@ -115,14 +112,14 @@
             this.pasarListaDataGridViewTextBoxColumn,
             this.matriculaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.bindingSourceDataGridUF;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(21, 80);
             this.dataGridView1.Name = "dataGridView1";
@@ -212,6 +209,22 @@
             this.iconButtonAceptar.UseVisualStyleBackColor = false;
             this.iconButtonAceptar.Click += new System.EventHandler(this.iconButtonAceptar_Click);
             // 
+            // checkBoxSelectAllUF
+            // 
+            this.checkBoxSelectAllUF.AutoSize = true;
+            this.checkBoxSelectAllUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSelectAllUF.Location = new System.Drawing.Point(362, 54);
+            this.checkBoxSelectAllUF.Name = "checkBoxSelectAllUF";
+            this.checkBoxSelectAllUF.Size = new System.Drawing.Size(135, 20);
+            this.checkBoxSelectAllUF.TabIndex = 115;
+            this.checkBoxSelectAllUF.Text = "Seleccionar todas";
+            this.checkBoxSelectAllUF.UseVisualStyleBackColor = true;
+            this.checkBoxSelectAllUF.CheckedChanged += new System.EventHandler(this.checkBoxSelectAllUF_CheckedChanged);
+            // 
+            // bindingSourceComboBoxModulos
+            // 
+            this.bindingSourceComboBoxModulos.DataSource = typeof(checkATTdesktop.Models.Modulo);
+            // 
             // GestionarMatriculacionUF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +232,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(518, 436);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBoxSelectAllUF);
             this.Controls.Add(this.iconButtonAceptar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxModulos);
@@ -230,9 +244,9 @@
             this.Text = "GestionarMatriculacionUF";
             this.Load += new System.EventHandler(this.GestionarMatriculacionUF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCerrarForm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridUF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +259,6 @@
         private System.Windows.Forms.ComboBox comboBoxModulos;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton iconButtonAceptar;
-        private System.Windows.Forms.BindingSource bindingSourceComboBoxModulos;
         private System.Windows.Forms.BindingSource bindingSourceDataGridUF;
         private System.Windows.Forms.DataGridViewTextBoxColumn horascursadasufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idufDataGridViewTextBoxColumn;
@@ -255,5 +268,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn moduloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pasarListaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn matriculaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBoxSelectAllUF;
+        private System.Windows.Forms.BindingSource bindingSourceComboBoxModulos;
     }
 }

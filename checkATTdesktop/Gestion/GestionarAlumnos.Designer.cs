@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarAlumno = new System.Windows.Forms.Panel();
+            this.checkBoxSelectAllStudents = new System.Windows.Forms.CheckBox();
             this.buttonMatricularAlumnosUF = new System.Windows.Forms.Button();
             this.buttonEliminarAlumno = new System.Windows.Forms.Button();
             this.buttonModiAlumno = new System.Windows.Forms.Button();
@@ -61,6 +62,7 @@
             // 
             // panelCrearModificarAlumno
             // 
+            this.panelCrearModificarAlumno.Controls.Add(this.checkBoxSelectAllStudents);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonMatricularAlumnosUF);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonEliminarAlumno);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonModiAlumno);
@@ -75,6 +77,18 @@
             this.panelCrearModificarAlumno.Name = "panelCrearModificarAlumno";
             this.panelCrearModificarAlumno.Size = new System.Drawing.Size(948, 537);
             this.panelCrearModificarAlumno.TabIndex = 0;
+            // 
+            // checkBoxSelectAllStudents
+            // 
+            this.checkBoxSelectAllStudents.AutoSize = true;
+            this.checkBoxSelectAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSelectAllStudents.Location = new System.Drawing.Point(766, 110);
+            this.checkBoxSelectAllStudents.Name = "checkBoxSelectAllStudents";
+            this.checkBoxSelectAllStudents.Size = new System.Drawing.Size(135, 20);
+            this.checkBoxSelectAllStudents.TabIndex = 23;
+            this.checkBoxSelectAllStudents.Text = "Seleccionar todos";
+            this.checkBoxSelectAllStudents.UseVisualStyleBackColor = true;
+            this.checkBoxSelectAllStudents.CheckedChanged += new System.EventHandler(this.checkBoxSelectAllStudents_CheckedChanged);
             // 
             // buttonMatricularAlumnosUF
             // 
@@ -142,14 +156,14 @@
             this.dataGridViewAlumnos.AutoGenerateColumns = false;
             this.dataGridViewAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAlumnos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dnialumnoDataGridViewTextBoxColumn,
@@ -162,14 +176,14 @@
             this.direccionalumnoDataGridViewTextBoxColumn,
             this.añocursandoalumnoDataGridViewTextBoxColumn});
             this.dataGridViewAlumnos.DataSource = this.bindingSourceDataGridAlumnos;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAlumnos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewAlumnos.EnableHeadersVisualStyles = false;
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
@@ -352,5 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn incorpalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn añocursandoalumnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBoxSelectAllStudents;
     }
 }

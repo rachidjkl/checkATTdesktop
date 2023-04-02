@@ -15,6 +15,7 @@ namespace checkATTdesktop.Gestion
     public partial class GestionarMatriculacionUF : Form
     {
         public List<Alumno> alumnosSeleccionados { get; set; }
+
         public GestionarMatriculacionUF()
         {
             InitializeComponent();
@@ -23,14 +24,7 @@ namespace checkATTdesktop.Gestion
         public GestionarMatriculacionUF(List<Alumno> alumnosSeleccionados)
         {
             InitializeComponent();
-            this.alumnosSeleccionados = alumnosSeleccionados;
-
-            //foreach (Alumno alumno in alumnosSeleccionados)
-            //{
-            //    // agrega el ID del alumno al ListBox
-            //    listBox1.Items.Add(alumno.IdAlumno);
-                
-            //}            
+            this.alumnosSeleccionados = alumnosSeleccionados;    
         }
 
         private void iconPictureBoxCerrarForm_Click(object sender, EventArgs e)
@@ -40,7 +34,7 @@ namespace checkATTdesktop.Gestion
 
         private void GestionarMatriculacionUF_Load(object sender, EventArgs e)
         {
-            bindingSourceComboBoxModulos.DataSource = ModulosOrm.Select();
+            bindingSourceComboBoxModulos.DataSource = ModulosOrm.SelectAll();
             cargarUFs();
         }
 
@@ -64,26 +58,61 @@ namespace checkATTdesktop.Gestion
         private void iconButtonAceptar_Click(object sender, EventArgs e)
         {
             String missatge = "";
-            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-            UF uf = (UF)dataGridView1.CurrentRow.DataBoundItem;
+            List<UF> ufSeleccionadas = new List<UF>();
 
-            foreach (Alumno alumno in alumnosSeleccionados)
-            {               
-                Matricula matriculacion = new Matricula();
-                matriculacion.id_uf = uf.id_uf;
-                matriculacion.id_alumno = alumno.id_alumno;
-                matriculacion.fecha_matricula = DateTime.Now;
-                matriculacion.horas_cursadas_uf = 0;
-                missatge = MatriculaOrm.Insert(matriculacion);
-                
-                if (missatge != "")
-                {
-                    MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            ufSeleccionadas = seleccionarUF(ufSeleccionadas);
+
+            foreach (UF uf in ufSeleccionadas)
+            {
+                foreach (Alumno alumno in alumnosSeleccionados)
+                {               
+                    Matricula matriculacion = new Matricula();
+                    matriculacion.id_uf = uf.id_uf;
+                    matriculacion.id_alumno = alumno.id_alumno;
+                    matriculacion.fecha_matricula = DateTime.Now;
+                    matriculacion.horas_cursadas_uf = 0;
+                    missatge += MatriculaOrm.Insert(matriculacion);
+
                 }
-                else
+            }
+            if (missatge != "")
+            {
+                MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Matriculacion correcta", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.Close();
+        }
+
+        private List<UF> seleccionarUF(List<UF>ufSeleccionadas)
+        {
+            DataGridViewSelectedRowCollection rows = dataGridView1.SelectedRows;
+            
+            foreach (DataGridViewRow row in rows)
+            {
+                UF _uf = (UF)row.DataBoundItem;
+
+                ufSeleccionadas.Add(_uf);
+            }
+            return ufSeleccionadas;
+        }
+
+        private void checkBoxSelectAllUF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSelectAllUF.Checked)
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    MessageBox.Show("Matriculacion correcta", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //this.Close();
+                    row.Selected = true;
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.Selected = false;
                 }
             }
         }

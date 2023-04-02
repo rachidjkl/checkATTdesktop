@@ -97,8 +97,7 @@ namespace checkATTdesktop.Gestion
             if (_clase != null)
             {
                 bindingSourceDataGridAlumnos.DataSource = _clase.Alumno.ToList();
-            }
-            
+            }           
         }
 
         private void buttonEliminarAlumno_Click(object sender, EventArgs e)
@@ -136,12 +135,7 @@ namespace checkATTdesktop.Gestion
             DataGridViewSelectedRowCollection rows = dataGridViewAlumnos.SelectedRows;
             List<Alumno> alumnosSeleccionados = new List<Alumno>();
 
-            foreach (DataGridViewRow row in rows)
-            {
-                Alumno alumno = (Alumno)row.DataBoundItem;
-
-                alumnosSeleccionados.Add(alumno);
-            }
+            alumnosSeleccionados = seleccionarAlumnos(alumnosSeleccionados);
 
             GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF(alumnosSeleccionados);
             matricularUF.ShowDialog();
@@ -155,6 +149,37 @@ namespace checkATTdesktop.Gestion
                 Alumno alumno = (Alumno)dataGridViewAlumnos.Rows[e.RowIndex].DataBoundItem;
                 e.Value = alumno.apellido1_alumno + " " + alumno.apellido2_alumno;
             }
+        }
+
+        private void checkBoxSelectAllStudents_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSelectAllStudents.Checked)
+            {
+                foreach (DataGridViewRow row in dataGridViewAlumnos.Rows)
+                {                   
+                    row.Selected = true;
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridViewAlumnos.Rows)
+                {
+                    row.Selected = false;
+                }
+            }
+        }
+
+        private List<Alumno> seleccionarAlumnos(List<Alumno> alumnosSeleccionados)
+        {
+            DataGridViewSelectedRowCollection rows = dataGridViewAlumnos.SelectedRows;
+
+            foreach (DataGridViewRow row in rows)
+            {
+                Alumno _uf = (Alumno)row.DataBoundItem;
+
+                alumnosSeleccionados.Add(_uf);
+            }
+            return alumnosSeleccionados;
         }
     }
 }
