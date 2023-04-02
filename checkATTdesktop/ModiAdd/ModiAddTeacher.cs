@@ -42,7 +42,7 @@ namespace checkATTdesktop.ModiAdd
                     profe.id_profe = profesor.id_profe;
                     userProfe.id_usuario_cep = profesor.id_user_profe_cep;
                     missatge = UsersCepORM.Update(userProfe);
-                    missatge = ProfesoresOrm.Update(profe);
+                    missatge += ProfesoresOrm.Update(profe);
                     showMessage(missatge);
                 }
                 else
