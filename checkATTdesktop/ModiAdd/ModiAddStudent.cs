@@ -47,7 +47,7 @@ namespace checkATTdesktop.ModiAdd
                 alumnoToAdd.apellido2_alumno = textBoxSegundoApellido.Text;
                 alumnoToAdd.direccion_alumno = textBoxDireccion.Text;
                 alumnoToAdd.email_alumno = textBoxCorreo.Text;
-                alumnoToAdd.email_centro_alumno= textBoxCorreoCentro.Text;
+                //alumnoToAdd.email_centro_alumno= textBoxCorreoCentro.Text;
                 alumnoToAdd.tel_alumno = int.Parse(textBoxTelefono.Text);
                 alumnoToAdd.nacimiento_alumno = dateTimePickerNacimiento.Value;
                 alumnoToAdd.horas_cursadas_totales_alumno = 0;
@@ -127,7 +127,7 @@ namespace checkATTdesktop.ModiAdd
             {
                 textBoxNombre.Text = alumno.nombre_alumno.ToString();
                 textBoxCorreo.Text = alumno.email_alumno.ToString();
-                textBoxCorreoCentro.Text = alumno.email_centro_alumno.ToString();
+                //textBoxCorreoCentro.Text = alumno.email_centro_alumno.ToString();
                 textBoxDireccion.Text = alumno.direccion_alumno.ToString();
                 textBoxDNI.Text = alumno.dni_alumno.ToString();
                 textBoxPrimerApellido.Text = alumno.apellido1_alumno.ToString();

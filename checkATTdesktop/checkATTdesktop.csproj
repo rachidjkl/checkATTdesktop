@@ -432,6 +432,7 @@
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UFsOrm.cs" />
+    <Compile Include="Models\UsersCepORM.cs" />
     <Compile Include="Models\Usuarios_CEP.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>

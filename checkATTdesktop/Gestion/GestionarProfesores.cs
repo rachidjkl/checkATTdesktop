@@ -106,5 +106,14 @@ namespace checkATTdesktop.Gestion
 
 
         }
+
+        private void dataGridViewProfesor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                Profesor profe = (Profesor)dataGridViewProfesor.Rows[e.RowIndex].DataBoundItem;
+                e.Value = profe.Usuarios_CEP.correo_cep;
+            }
+        }
     }
 }

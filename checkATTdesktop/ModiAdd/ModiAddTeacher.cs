@@ -34,44 +34,76 @@ namespace checkATTdesktop.ModiAdd
             String missatge = "";
             if (todoRelleno())
             {
-                Profesor profeToAdd = new Profesor();
-                profeToAdd.nombre_profe = textBoxNombre.Text;
-                profeToAdd.apellido1_profe = textBoxPrimerApellido.Text;
-                profeToAdd.apellido2_profe = textBoxSegundoApellido.Text;
-                profeToAdd.email_profe = textBoxCorreo.Text;
-                profeToAdd.email_centro_profe = textBoxCorreoCentro.Text;
-                profeToAdd.direccion_profe = textBoxDireccion.Text;
-                profeToAdd.tel_profe = int.Parse(textBoxTelefono.Text);
-                profeToAdd.dni_profe = (textBoxDNI.Text);
-                profeToAdd.incorp_profe = dateTimePickerNacimiento.Value;
-                profeToAdd.nacimiento_profe = dateTimePickerNacimiento.Value;
+                Usuarios_CEP userProfe = rellenarUsuarioCep();
+                Profesor profe = rellenarProfesor();
 
                 if (profesor != null)
                 {
-                    profeToAdd.id_profe = profesor.id_profe;
-                    missatge = ProfesoresOrm.Update(profeToAdd);
+                    profe.id_profe = profesor.id_profe;
+                    userProfe.id_usuario_cep = profesor.id_user_profe_cep;
+                    missatge = UsersCepORM.Update(userProfe);
+                    missatge = ProfesoresOrm.Update(profe);
+                    showMessage(missatge);
                 }
                 else
                 {
-                    missatge = ProfesoresOrm.Insert(profeToAdd);
+                    missatge = UsersCepORM.Insert(userProfe);
+
+                    if (missatge == "")
+                    {
+                        profe.id_user_profe_cep = UsersCepORM.SelectUserCepId(textBoxCorreoCentro.Text);
+                        missatge = ProfesoresOrm.Insert(profe);
+                    }
+                    showMessage(missatge);
                 }
 
-                if (missatge != "")
+
+            }
+        }
+
+        public Profesor rellenarProfesor()
+        {
+            Profesor profeToAdd = new Profesor();
+            profeToAdd.nombre_profe = textBoxNombre.Text;
+            profeToAdd.apellido1_profe = textBoxPrimerApellido.Text;
+            profeToAdd.apellido2_profe = textBoxSegundoApellido.Text;
+            profeToAdd.email_profe = textBoxCorreo.Text;
+            profeToAdd.direccion_profe = textBoxDireccion.Text;
+            profeToAdd.tel_profe = int.Parse(textBoxTelefono.Text);
+            profeToAdd.dni_profe = (textBoxDNI.Text);
+            profeToAdd.incorp_profe = dateTimePickerNacimiento.Value;
+            profeToAdd.nacimiento_profe = dateTimePickerNacimiento.Value;
+
+            return profeToAdd;
+        }
+
+        public Usuarios_CEP rellenarUsuarioCep()
+        {
+            Usuarios_CEP usuarioCep = new Usuarios_CEP();
+            usuarioCep.correo_cep = textBoxCorreoCentro.Text;
+            usuarioCep.contra = textBoxDNI.Text;
+            usuarioCep.tipo_usuario = 1;
+          
+            return usuarioCep;
+        }
+
+        public void showMessage(String missatge)
+        {
+            if (missatge != "")
+            {
+                MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (profesor == null)
                 {
-                    MessageBox.Show(missatge, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                    vaciarCampos();
                 }
                 else
                 {
-                    if (profesor == null)
-                    {
-                        MessageBox.Show("Profesor añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                        vaciarCampos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Profesor modificado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
+                    MessageBox.Show("Profesor modificado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
         }
@@ -110,7 +142,7 @@ namespace checkATTdesktop.ModiAdd
             {
                 textBoxNombre.Text = profesor.nombre_profe;
                 textBoxCorreo.Text = profesor.email_profe;
-                textBoxCorreoCentro.Text = profesor.email_centro_profe; 
+                textBoxCorreoCentro.Text = UsersCepORM.SelectUserCepEmail(profesor.id_user_profe_cep); 
                 textBoxDireccion.Text = profesor.direccion_profe;
                 textBoxDNI.Text = profesor.dni_profe;
                 textBoxPrimerApellido.Text = profesor.apellido1_profe;
