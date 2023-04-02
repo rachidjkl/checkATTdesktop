@@ -36,8 +36,6 @@
             this.comboBoxModulos = new System.Windows.Forms.ComboBox();
             this.bindingSourceComboBoxModulos = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSourceDataGridUF = new System.Windows.Forms.BindingSource(this.components);
-            this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             this.idufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idmoduloufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.moduloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pasarListaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matriculaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridUF = new System.Windows.Forms.BindingSource(this.components);
+            this.iconButtonAceptar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxCerrarForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComboBoxModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,10 +68,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 21);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "Modulos";
             // 
@@ -99,7 +99,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -127,32 +127,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(21, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(476, 295);
             this.dataGridView1.TabIndex = 17;
-            // 
-            // bindingSourceDataGridUF
-            // 
-            this.bindingSourceDataGridUF.DataSource = typeof(checkATTdesktop.Models.UF);
-            // 
-            // iconButtonAceptar
-            // 
-            this.iconButtonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.iconButtonAceptar.FlatAppearance.BorderSize = 0;
-            this.iconButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAceptar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonAceptar.ForeColor = System.Drawing.Color.White;
-            this.iconButtonAceptar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.iconButtonAceptar.IconColor = System.Drawing.Color.White;
-            this.iconButtonAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonAceptar.IconSize = 30;
-            this.iconButtonAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonAceptar.Location = new System.Drawing.Point(394, 388);
-            this.iconButtonAceptar.Name = "iconButtonAceptar";
-            this.iconButtonAceptar.Size = new System.Drawing.Size(103, 36);
-            this.iconButtonAceptar.TabIndex = 114;
-            this.iconButtonAceptar.Text = "Matricular";
-            this.iconButtonAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonAceptar.UseVisualStyleBackColor = false;
             // 
             // idufDataGridViewTextBoxColumn
             // 
@@ -209,6 +186,31 @@
             this.matriculaDataGridViewTextBoxColumn.Name = "matriculaDataGridViewTextBoxColumn";
             this.matriculaDataGridViewTextBoxColumn.ReadOnly = true;
             this.matriculaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceDataGridUF
+            // 
+            this.bindingSourceDataGridUF.DataSource = typeof(checkATTdesktop.Models.UF);
+            // 
+            // iconButtonAceptar
+            // 
+            this.iconButtonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
+            this.iconButtonAceptar.FlatAppearance.BorderSize = 0;
+            this.iconButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAceptar.ForeColor = System.Drawing.Color.White;
+            this.iconButtonAceptar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.iconButtonAceptar.IconColor = System.Drawing.Color.White;
+            this.iconButtonAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonAceptar.IconSize = 30;
+            this.iconButtonAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButtonAceptar.Location = new System.Drawing.Point(394, 388);
+            this.iconButtonAceptar.Name = "iconButtonAceptar";
+            this.iconButtonAceptar.Size = new System.Drawing.Size(103, 36);
+            this.iconButtonAceptar.TabIndex = 114;
+            this.iconButtonAceptar.Text = "Matricular";
+            this.iconButtonAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonAceptar.UseVisualStyleBackColor = false;
+            this.iconButtonAceptar.Click += new System.EventHandler(this.iconButtonAceptar_Click);
             // 
             // GestionarMatriculacionUF
             // 

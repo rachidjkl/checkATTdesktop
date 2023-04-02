@@ -133,8 +133,19 @@ namespace checkATTdesktop.Gestion
 
         private void buttonMatricularAlumnosUF_Click(object sender, EventArgs e)
         {
-            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF();
+            DataGridViewSelectedRowCollection rows = dataGridViewAlumnos.SelectedRows;
+            List<Alumno> alumnosSeleccionados = new List<Alumno>();
+
+            foreach (DataGridViewRow row in rows)
+            {
+                Alumno alumno = (Alumno)row.DataBoundItem;
+
+                alumnosSeleccionados.Add(alumno);
+            }
+
+            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF(alumnosSeleccionados);
             matricularUF.ShowDialog();
+            
         }
 
         private void dataGridViewAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

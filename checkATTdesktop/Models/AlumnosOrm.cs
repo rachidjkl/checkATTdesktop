@@ -43,7 +43,7 @@ namespace checkATTdesktop.Models
             _alumnoToEdit.apellido2_alumno = alumno.apellido2_alumno;
             _alumnoToEdit.direccion_alumno = alumno.direccion_alumno;
             _alumnoToEdit.email_alumno = alumno.email_alumno;
-            _alumnoToEdit.email_centro_alumno = alumno.email_centro_alumno;
+            //_alumnoToEdit.email_centro_alumno = alumno.email_centro_alumno;
             _alumnoToEdit.tel_alumno = alumno.tel_alumno;
             _alumnoToEdit.nacimiento_alumno = alumno.nacimiento_alumno;
             _alumnoToEdit.horas_cursadas_totales_alumno = alumno.horas_cursadas_totales_alumno;

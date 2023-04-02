@@ -39,7 +39,7 @@ namespace checkATTdesktop.ModiAdd
                 profeToAdd.apellido1_profe = textBoxPrimerApellido.Text;
                 profeToAdd.apellido2_profe = textBoxSegundoApellido.Text;
                 profeToAdd.email_profe = textBoxCorreo.Text;
-                profeToAdd.email_centro_profe = textBoxCorreoCentro.Text;
+               // profeToAdd.email_centro_profe = textBoxCorreoCentro.Text;
                 profeToAdd.direccion_profe = textBoxDireccion.Text;
                 profeToAdd.tel_profe = int.Parse(textBoxTelefono.Text);
                 profeToAdd.dni_profe = (textBoxDNI.Text);
@@ -110,7 +110,7 @@ namespace checkATTdesktop.ModiAdd
             {
                 textBoxNombre.Text = profesor.nombre_profe;
                 textBoxCorreo.Text = profesor.email_profe;
-                textBoxCorreoCentro.Text = profesor.email_centro_profe; 
+                //textBoxCorreoCentro.Text = profesor.email_centro_profe; 
                 textBoxDireccion.Text = profesor.direccion_profe;
                 textBoxDNI.Text = profesor.dni_profe;
                 textBoxPrimerApellido.Text = profesor.apellido1_profe;
