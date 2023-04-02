@@ -15,11 +15,12 @@ namespace checkATTdesktop.Models
             return _modulo;
         }
 
-        public static Modulo SelectUltimoModulo()
+        public static int SelectModuloId(string nombreModulo, int horasTotales)
         {
-            Modulo ultimoModulo = Orm.bd.Modulo.OrderByDescending(m => m.id_modulo).FirstOrDefault();
-            return ultimoModulo;
+            Modulo modulo = Orm.bd.Modulo.FirstOrDefault(u => u.nombre_modulo == nombreModulo && u.horas_totales_modulo == horasTotales);
+            return modulo.id_modulo;
         }
+
 
         public static String Insert(Modulo modulo)
         {

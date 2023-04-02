@@ -49,7 +49,7 @@ namespace checkATTdesktop.ModiAdd
                 {
                     missatge = UsersCepORM.Insert(userProfe);
 
-                    if (missatge == "")
+                    if (missatge == "" || missatge == "Registre duplicat")
                     {
                         profe.id_user_profe_cep = UsersCepORM.SelectUserCepId(textBoxCorreoCentro.Text);
                         missatge = ProfesoresOrm.Insert(profe);
