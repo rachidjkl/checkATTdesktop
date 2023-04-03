@@ -32,5 +32,18 @@ namespace checkATTdesktop.Models
             return missatge;
 
         }
+
+        public static String Update(Modulo modulo)
+        {
+            String missatge = "";
+            Modulo _moduloToEdit = Orm.bd.Modulo.Where(a => a.id_modulo == modulo.id_modulo).First();
+            _moduloToEdit.nombre_modulo = modulo.nombre_modulo;
+            _moduloToEdit.horas_totales_modulo = modulo.horas_totales_modulo;
+            _moduloToEdit.siglas_uf = modulo.siglas_uf; 
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+        }
     }
 }

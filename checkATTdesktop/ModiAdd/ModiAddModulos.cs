@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -15,11 +16,19 @@ namespace checkATTdesktop.ModiAdd
     public partial class ModiAddModulos : Form
     {
         public static List<UF> uFs = new List<UF>();    
-        public static UF ufCreate = null;
+        public Modulo modulo = null;
+        public static List<Clase_Modulo> clase_Modulos = new List<Clase_Modulo>();
+        public static List<Clase> clases = new List<Clase>();   
 
         public ModiAddModulos()
         {
             InitializeComponent();
+        }
+
+        public ModiAddModulos(Modulo modulo)
+        {
+            InitializeComponent();
+            this.modulo = modulo;
         }
 
 
@@ -65,19 +74,36 @@ namespace checkATTdesktop.ModiAdd
             else
             {
                 //añadir modulo
-                Modulo modulo = new Modulo();
-                modulo.nombre_modulo = textBoxNombreModulo.Text;
-                modulo.horas_totales_modulo = int.Parse(labelHorasTotalesModulos.Text);
-                modulo.siglas_uf = textBoxSiglasModulo.Text;
-                missatge += ModulosOrm.Insert(modulo);
+                Modulo newModulo = new Modulo();
+                newModulo.nombre_modulo = textBoxNombreModulo.Text;
+                newModulo.horas_totales_modulo = int.Parse(labelHorasTotalesModulos.Text);
+                newModulo.siglas_uf = textBoxSiglasModulo.Text;
+                if (modulo != null)
+                {
+                    newModulo.id_modulo = modulo.id_modulo; 
+                    ModulosOrm.Update(newModulo);
+                }
+                else
+                {
+                    missatge += ModulosOrm.Insert(newModulo);
+                }
+               
 
                 //añadir uf
-                int idModulo = ModulosOrm.SelectModuloId(modulo.nombre_modulo, modulo.horas_totales_modulo);
+                int idModulo = ModulosOrm.SelectModuloId(newModulo.nombre_modulo, newModulo.horas_totales_modulo);
                 foreach (UF uf in uFs)
                 {
                     uf.id_modulo_uf = idModulo;
-                    missatge += UFsOrm.Insert(uf);
+                    if (modulo != null)
+                    {
+                        missatge += UFsOrm.Update(uf);
+                    }
+                    else
+                    {
+                        missatge += UFsOrm.Insert(uf);
+                    }
                 }
+                        
 
                 //añadir_clase modulo
                 Clase_Modulo clase_Modulo = new Clase_Modulo();
@@ -85,7 +111,36 @@ namespace checkATTdesktop.ModiAdd
                 {
                     clase_Modulo.id_clase1 = clase.id_clase;
                     clase_Modulo.id_modulo = idModulo;
-                    missatge += ClaseModuloOrm.Insert(clase_Modulo);
+
+                    if (modulo != null)
+                    {
+                        Clase_Modulo claseModuloToCheck = ClaseModuloOrm.SelectClaseModulo(clase_Modulo.id_modulo.GetValueOrDefault(), clase_Modulo.id_clase1.GetValueOrDefault());
+                        if (claseModuloToCheck == null)
+                        {
+                            missatge += ClaseModuloOrm.Insert(clase_Modulo);
+                        }
+                        else
+                        {
+                            clase_Modulo.id_clase_modulo = claseModuloToCheck.id_clase_modulo;
+                            missatge += ClaseModuloOrm.Update(clase_Modulo);
+                        }
+                        
+                       
+                    }
+                    else
+                    {
+                        missatge += ClaseModuloOrm.Insert(clase_Modulo);
+                    }
+                        
+                }
+
+                foreach(Clase clase in clases)
+                {
+                    if (!bindingSourceListBoxClase.Contains(clase))
+                    {
+                        missatge += ClaseModuloOrm.Delete(clase.id_clase, modulo.id_modulo);
+                    }
+                   
                 }
 
                 showMessage(missatge);
@@ -96,14 +151,25 @@ namespace checkATTdesktop.ModiAdd
         private void ModiAddModulos_Load(object sender, EventArgs e)
         {
             bindingSourceClases.DataSource = ClaseOrm.Select();
-            if (ufCreate != null)
+            if (modulo != null)
             {
-                uFs.Add(ufCreate);
-                dataGridViewUFModulo.DataSource = null;
-                dataGridViewUFModulo.DataSource = uFs;
-                ufCreate = null;
+                uFs = UFsOrm.Select(modulo.id_modulo);
+                loadDataGrid();
+
+                clase_Modulos = ClaseModuloOrm.Select(modulo.id_modulo);
+                foreach (Clase_Modulo claseModulo in clase_Modulos)
+                {
+                    Clase claseToAdd = ClaseOrm.SelectOneClase(claseModulo.id_clase1.GetValueOrDefault());
+                    bindingSourceListBoxClase.Add(claseToAdd);
+                    clases.Add(claseToAdd);
+                }
+
+                textBoxNombreModulo.Text = modulo.nombre_modulo;
+                textBoxSiglasModulo.Text = modulo.siglas_uf;
+                labelHorasTotalesModulos.Text = modulo.horas_totales_modulo.ToString();
             }
-            
+
+
         }
 
 
@@ -170,7 +236,7 @@ namespace checkATTdesktop.ModiAdd
             }
             else
             {
-                if (ufCreate == null)
+                if (modulo == null)
                 {
                     MessageBox.Show("Modulo y ufs añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                     // vaciarCampos();

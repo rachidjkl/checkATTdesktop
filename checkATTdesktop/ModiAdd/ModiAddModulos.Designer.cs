@@ -75,10 +75,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 17);
+            this.label1.Size = new System.Drawing.Size(126, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del módulo";
             // 
@@ -106,10 +106,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(38, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 17);
+            this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 81;
             this.label2.Text = "UF del módulo";
             // 
@@ -119,7 +119,7 @@
             this.dataGridViewUFModulo.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -132,7 +132,7 @@
             this.dataGridViewUFModulo.DataSource = this.uFBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -171,7 +171,7 @@
             // 
             this.buttonEditarUF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonEditarUF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEditarUF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditarUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditarUF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonEditarUF.Location = new System.Drawing.Point(678, 347);
             this.buttonEditarUF.Name = "buttonEditarUF";
@@ -185,7 +185,7 @@
             // 
             this.buttonCrearUF.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearUF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearUF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearUF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearUF.Location = new System.Drawing.Point(574, 347);
             this.buttonCrearUF.Name = "buttonCrearUF";
@@ -198,30 +198,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(593, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 23);
+            this.label3.Size = new System.Drawing.Size(248, 24);
             this.label3.TabIndex = 85;
             this.label3.Text = "Horas totales del modulo:";
             // 
             // labelHorasTotalesModulos
             // 
             this.labelHorasTotalesModulos.AutoSize = true;
-            this.labelHorasTotalesModulos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHorasTotalesModulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHorasTotalesModulos.Location = new System.Drawing.Point(844, 41);
             this.labelHorasTotalesModulos.Name = "labelHorasTotalesModulos";
-            this.labelHorasTotalesModulos.Size = new System.Drawing.Size(19, 21);
+            this.labelHorasTotalesModulos.Size = new System.Drawing.Size(18, 20);
             this.labelHorasTotalesModulos.TabIndex = 86;
             this.labelHorasTotalesModulos.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(39, 397);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 17);
+            this.label4.Size = new System.Drawing.Size(143, 16);
             this.label4.TabIndex = 87;
             this.label4.Text = "Clases Seleccionadas";
             // 
@@ -229,12 +229,11 @@
             // 
             this.listBoxClases.DataSource = this.bindingSourceListBoxClase;
             this.listBoxClases.DisplayMember = "nombre_clase";
-            this.listBoxClases.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxClases.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxClases.FormattingEnabled = true;
-            this.listBoxClases.ItemHeight = 16;
             this.listBoxClases.Location = new System.Drawing.Point(42, 423);
             this.listBoxClases.Name = "listBoxClases";
-            this.listBoxClases.Size = new System.Drawing.Size(261, 68);
+            this.listBoxClases.Size = new System.Drawing.Size(261, 56);
             this.listBoxClases.TabIndex = 88;
             this.listBoxClases.ValueMember = "id_clase";
             // 
@@ -250,7 +249,7 @@
             // 
             this.iconPictureBoxAñadir.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBoxAñadir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            this.iconPictureBoxAñadir.IconChar = FontAwesome.Sharp.IconChar.CirclePlus;
+            this.iconPictureBoxAñadir.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.iconPictureBoxAñadir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.iconPictureBoxAñadir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBoxAñadir.Location = new System.Drawing.Point(574, 431);
@@ -280,7 +279,7 @@
             this.buttonCrearModulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearModulo.FlatAppearance.BorderSize = 0;
             this.buttonCrearModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearModulo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearModulo.ForeColor = System.Drawing.Color.White;
             this.buttonCrearModulo.Location = new System.Drawing.Point(760, 473);
             this.buttonCrearModulo.Name = "buttonCrearModulo";
@@ -292,55 +291,55 @@
             // 
             // textBoxHorasTotales
             // 
-            this.textBoxHorasTotales.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHorasTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHorasTotales.Location = new System.Drawing.Point(574, 302);
             this.textBoxHorasTotales.Name = "textBoxHorasTotales";
-            this.textBoxHorasTotales.Size = new System.Drawing.Size(289, 21);
+            this.textBoxHorasTotales.Size = new System.Drawing.Size(289, 20);
             this.textBoxHorasTotales.TabIndex = 97;
             // 
             // textBoxNumeroUF
             // 
-            this.textBoxNumeroUF.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumeroUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumeroUF.Location = new System.Drawing.Point(574, 225);
             this.textBoxNumeroUF.Name = "textBoxNumeroUF";
-            this.textBoxNumeroUF.Size = new System.Drawing.Size(289, 21);
+            this.textBoxNumeroUF.Size = new System.Drawing.Size(289, 20);
             this.textBoxNumeroUF.TabIndex = 96;
             // 
             // textBox1NombreUF
             // 
-            this.textBox1NombreUF.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1NombreUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1NombreUF.Location = new System.Drawing.Point(574, 147);
             this.textBox1NombreUF.Name = "textBox1NombreUF";
-            this.textBox1NombreUF.Size = new System.Drawing.Size(289, 21);
+            this.textBox1NombreUF.Size = new System.Drawing.Size(289, 20);
             this.textBox1NombreUF.TabIndex = 95;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(570, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 21);
+            this.label5.Size = new System.Drawing.Size(104, 20);
             this.label5.TabIndex = 94;
             this.label5.Text = "Horas totales";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(570, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 21);
+            this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 93;
             this.label6.Text = "Numero UF";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(570, 123);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 21);
+            this.label7.Size = new System.Drawing.Size(129, 20);
             this.label7.TabIndex = 92;
             this.label7.Text = "Nombre de la UF";
             // 
@@ -349,21 +348,21 @@
             this.comboBoxClases.DataSource = this.bindingSourceClases;
             this.comboBoxClases.DisplayMember = "nombre_clase";
             this.comboBoxClases.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxClases.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxClases.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClases.FormattingEnabled = true;
             this.comboBoxClases.Location = new System.Drawing.Point(378, 431);
             this.comboBoxClases.Name = "comboBoxClases";
-            this.comboBoxClases.Size = new System.Drawing.Size(183, 24);
+            this.comboBoxClases.Size = new System.Drawing.Size(183, 21);
             this.comboBoxClases.TabIndex = 99;
             this.comboBoxClases.ValueMember = "id_clase";
             // 
             // label89
             // 
             this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.Location = new System.Drawing.Point(378, 397);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(53, 21);
+            this.label89.Size = new System.Drawing.Size(49, 20);
             this.label89.TabIndex = 98;
             this.label89.Text = "Clase";
             // 
@@ -371,7 +370,7 @@
             // 
             this.buttonEliminarUf.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonEliminarUf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarUf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarUf.ForeColor = System.Drawing.Color.Red;
             this.buttonEliminarUf.Location = new System.Drawing.Point(780, 347);
             this.buttonEliminarUf.Name = "buttonEliminarUf";
@@ -392,10 +391,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(368, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 17);
+            this.label8.Size = new System.Drawing.Size(93, 16);
             this.label8.TabIndex = 102;
             this.label8.Text = "Siglas modulo";
             // 

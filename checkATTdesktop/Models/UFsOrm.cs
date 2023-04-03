@@ -29,5 +29,12 @@ namespace checkATTdesktop.Models
 
             return missatge;
         }
+
+        public static List<UF> Select(int idModuloUf)
+        {
+            List<UF> _ufs = Orm.bd.UF.Where(a => a.id_modulo_uf == idModuloUf).ToList();
+
+            return _ufs;
+        }
     }
 }

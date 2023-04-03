@@ -472,12 +472,6 @@
     <Compile Include="ModiAdd\ModiAddTeacher.Designer.cs">
       <DependentUpon>ModiAddTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiAdd\ModiAddUF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModiAdd\ModiAddUF.Designer.cs">
-      <DependentUpon>ModiAddUF.cs</DependentUpon>
-    </Compile>
     <Compile Include="oneMoment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,9 +534,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModiAdd\ModiAddTeacher.resx">
       <DependentUpon>ModiAddTeacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModiAdd\ModiAddUF.resx">
-      <DependentUpon>ModiAddUF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oneMoment.resx">
       <DependentUpon>oneMoment.cs</DependentUpon>
