@@ -36,22 +36,21 @@
             this.buttonModiProfesor = new System.Windows.Forms.Button();
             this.buttonCrearProfesor = new System.Windows.Forms.Button();
             this.dataGridViewProfesor = new System.Windows.Forms.DataGridView();
-            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
             this.dniprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailcentroprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nacimientoprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incorpprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelCrearModificarProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCrearModificarProfesores
@@ -73,7 +72,7 @@
             this.buttonEliminarProfesor.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonEliminarProfesor.FlatAppearance.BorderSize = 2;
             this.buttonEliminarProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarProfesor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarProfesor.ForeColor = System.Drawing.Color.Red;
             this.buttonEliminarProfesor.Location = new System.Drawing.Point(595, 469);
             this.buttonEliminarProfesor.Name = "buttonEliminarProfesor";
@@ -88,7 +87,7 @@
             this.buttonModiProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiProfesor.FlatAppearance.BorderSize = 2;
             this.buttonModiProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiProfesor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModiProfesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiProfesor.Location = new System.Drawing.Point(739, 469);
             this.buttonModiProfesor.Name = "buttonModiProfesor";
@@ -103,7 +102,7 @@
             this.buttonCrearProfesor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearProfesor.FlatAppearance.BorderSize = 2;
             this.buttonCrearProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearProfesor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearProfesor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearProfesor.Location = new System.Drawing.Point(769, 27);
             this.buttonCrearProfesor.Name = "buttonCrearProfesor";
@@ -120,7 +119,7 @@
             this.dataGridViewProfesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -132,7 +131,6 @@
             this.nombreprofeDataGridViewTextBoxColumn,
             this.apellido1profeDataGridViewTextBoxColumn,
             this.emailprofeDataGridViewTextBoxColumn,
-            this.emailcentroprofeDataGridViewTextBoxColumn,
             this.telprofeDataGridViewTextBoxColumn,
             this.nacimientoprofeDataGridViewTextBoxColumn,
             this.incorpprofeDataGridViewTextBoxColumn,
@@ -140,10 +138,10 @@
             this.dataGridViewProfesor.DataSource = this.bindingSourceDataGridProfesores;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
@@ -153,34 +151,6 @@
             this.dataGridViewProfesor.Size = new System.Drawing.Size(895, 361);
             this.dataGridViewProfesor.TabIndex = 21;
             this.dataGridViewProfesor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewProfesor_CellFormatting);
-            // 
-            // textBoxBuscarProfesor
-            // 
-            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
-            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
-            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 20);
-            this.textBoxBuscarProfesor.TabIndex = 20;
-            this.textBoxBuscarProfesor.Text = "Buscar...";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 19;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
-            // 
-            // bindingSourceDataGridProfesores
-            // 
-            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
             // 
             // dniprofeDataGridViewTextBoxColumn
             // 
@@ -210,13 +180,6 @@
             this.emailprofeDataGridViewTextBoxColumn.Name = "emailprofeDataGridViewTextBoxColumn";
             this.emailprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // emailcentroprofeDataGridViewTextBoxColumn
-            // 
-            this.emailcentroprofeDataGridViewTextBoxColumn.DataPropertyName = "email_centro_profe";
-            this.emailcentroprofeDataGridViewTextBoxColumn.HeaderText = "EmailCep";
-            this.emailcentroprofeDataGridViewTextBoxColumn.Name = "emailcentroprofeDataGridViewTextBoxColumn";
-            this.emailcentroprofeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // telprofeDataGridViewTextBoxColumn
             // 
             this.telprofeDataGridViewTextBoxColumn.DataPropertyName = "tel_profe";
@@ -245,6 +208,34 @@
             this.direccionprofeDataGridViewTextBoxColumn.Name = "direccionprofeDataGridViewTextBoxColumn";
             this.direccionprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bindingSourceDataGridProfesores
+            // 
+            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            // 
+            // textBoxBuscarProfesor
+            // 
+            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
+            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
+            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarProfesor.TabIndex = 20;
+            this.textBoxBuscarProfesor.Text = "Buscar...";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 19;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
             // GestionarProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,8 +250,8 @@
             this.panelCrearModificarProfesores.ResumeLayout(false);
             this.panelCrearModificarProfesores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridProfesores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
