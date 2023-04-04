@@ -81,7 +81,7 @@ namespace checkATTdesktop.ModiAdd
 
         private void ModiAddHorario_Load(object sender, EventArgs e)
         {
-            moduloBindingSource.DataSource = ModulosOrm.Select();
+            moduloBindingSource.DataSource = ModulosOrm.SelectAll();
             claseBindingSource.DataSource = ClaseOrm.Select();
 
             if (horario != null)

@@ -12,32 +12,23 @@ namespace checkATTdesktop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Profesor
+    public partial class Usuarios_CEP
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Profesor()
+        public Usuarios_CEP()
         {
-            this.Clase = new HashSet<Clase>();
-            this.Pasar_Lista = new HashSet<Pasar_Lista>();
+            this.Alumno = new HashSet<Alumno>();
+            this.Profesor = new HashSet<Profesor>();
         }
     
-        public int id_profe { get; set; }
-        public string dni_profe { get; set; }
-        public string nombre_profe { get; set; }
-        public string apellido1_profe { get; set; }
-        public string apellido2_profe { get; set; }
-        public string email_profe { get; set; }
-        public int id_user_profe_cep { get; set; }
-        public int tel_profe { get; set; }
-        public System.DateTime nacimiento_profe { get; set; }
-        public System.DateTime incorp_profe { get; set; }
-        public string direccion_profe { get; set; }
-        public string nombre_completo { get; set; }
+        public int id_usuario_cep { get; set; }
+        public string correo_cep { get; set; }
+        public string contra { get; set; }
+        public int tipo_usuario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Clase> Clase { get; set; }
+        public virtual ICollection<Alumno> Alumno { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
-        public virtual Usuarios_CEP Usuarios_CEP { get; set; }
+        public virtual ICollection<Profesor> Profesor { get; set; }
     }
 }

@@ -35,11 +35,11 @@
             this.buttonModiClase = new System.Windows.Forms.Button();
             this.buttonCrearClase = new System.Windows.Forms.Button();
             this.dataGridViewClase = new System.Windows.Forms.DataGridView();
+            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceDataGridClase = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxBuscarClase = new System.Windows.Forms.TextBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.idclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtutorclaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDataGridClase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -50,7 +50,7 @@
             this.buttonEliminarClase.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.buttonEliminarClase.FlatAppearance.BorderSize = 2;
             this.buttonEliminarClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminarClase.ForeColor = System.Drawing.Color.Red;
             this.buttonEliminarClase.Location = new System.Drawing.Point(595, 469);
             this.buttonEliminarClase.Name = "buttonEliminarClase";
@@ -65,7 +65,7 @@
             this.buttonModiClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiClase.FlatAppearance.BorderSize = 2;
             this.buttonModiClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModiClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModiClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModiClase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonModiClase.Location = new System.Drawing.Point(739, 469);
             this.buttonModiClase.Name = "buttonModiClase";
@@ -80,7 +80,7 @@
             this.buttonCrearClase.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearClase.FlatAppearance.BorderSize = 2;
             this.buttonCrearClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCrearClase.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCrearClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCrearClase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.buttonCrearClase.Location = new System.Drawing.Point(769, 27);
             this.buttonCrearClase.Name = "buttonCrearClase";
@@ -97,7 +97,7 @@
             this.dataGridViewClase.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -112,8 +112,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewClase.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewClase.EnableHeadersVisualStyles = false;
@@ -123,33 +123,6 @@
             this.dataGridViewClase.Size = new System.Drawing.Size(895, 363);
             this.dataGridViewClase.TabIndex = 27;
             this.dataGridViewClase.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewClase_CellFormatting);
-            // 
-            // bindingSourceDataGridClase
-            // 
-            this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
-            // 
-            // textBoxBuscarClase
-            // 
-            this.textBoxBuscarClase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarClase.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarClase.Location = new System.Drawing.Point(50, 41);
-            this.textBoxBuscarClase.Name = "textBoxBuscarClase";
-            this.textBoxBuscarClase.Size = new System.Drawing.Size(300, 20);
-            this.textBoxBuscarClase.TabIndex = 26;
-            this.textBoxBuscarClase.Text = "Buscar...";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 25;
-            this.iconPictureBox1.TabStop = false;
             // 
             // idclaseDataGridViewTextBoxColumn
             // 
@@ -166,6 +139,33 @@
             this.idtutorclaseDataGridViewTextBoxColumn.HeaderText = "Tutor clase";
             this.idtutorclaseDataGridViewTextBoxColumn.Name = "idtutorclaseDataGridViewTextBoxColumn";
             this.idtutorclaseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceDataGridClase
+            // 
+            this.bindingSourceDataGridClase.DataSource = typeof(checkATTdesktop.Models.Clase);
+            // 
+            // textBoxBuscarClase
+            // 
+            this.textBoxBuscarClase.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarClase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarClase.Location = new System.Drawing.Point(50, 41);
+            this.textBoxBuscarClase.Name = "textBoxBuscarClase";
+            this.textBoxBuscarClase.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarClase.TabIndex = 26;
+            this.textBoxBuscarClase.Text = "Buscar...";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 25;
+            this.iconPictureBox1.TabStop = false;
             // 
             // GestionarClases
             // 

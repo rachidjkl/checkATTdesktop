@@ -28,7 +28,7 @@ namespace checkATTdesktop.Models
         public string apellido1_alumno { get; set; }
         public string apellido2_alumno { get; set; }
         public string email_alumno { get; set; }
-        public string email_centro_alumno { get; set; }
+        public int id_user_alumno_cep { get; set; }
         public int tel_alumno { get; set; }
         public System.DateTime nacimiento_alumno { get; set; }
         public System.DateTime incorp_alumno { get; set; }
@@ -41,5 +41,6 @@ namespace checkATTdesktop.Models
         public virtual ICollection<Matricula> Matricula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
+        public virtual Usuarios_CEP Usuarios_CEP { get; set; }
     }
 }
