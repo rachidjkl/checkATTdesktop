@@ -15,16 +15,18 @@ namespace checkATTdesktop.Gestion
     public partial class GestionarMatriculacionUF : Form
     {
         public List<Alumno> alumnosSeleccionados { get; set; }
+        int id_clase;
 
         public GestionarMatriculacionUF()
         {
             InitializeComponent();
         }
 
-        public GestionarMatriculacionUF(List<Alumno> alumnosSeleccionados)
+        public GestionarMatriculacionUF(List<Alumno> alumnosSeleccionados, int id_clase)
         {
             InitializeComponent();
             this.alumnosSeleccionados = alumnosSeleccionados;    
+            this.id_clase = id_clase;
         }
 
         private void iconPictureBoxCerrarForm_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace checkATTdesktop.Gestion
 
         private void GestionarMatriculacionUF_Load(object sender, EventArgs e)
         {
-            bindingSourceComboBoxModulos.DataSource = ModulosOrm.SelectAll();
+            bindingSourceComboBoxModulos.DataSource = ModulosOrm.SelectPers(id_clase);
             cargarUFs();
         }
 

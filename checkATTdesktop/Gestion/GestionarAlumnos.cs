@@ -137,7 +137,7 @@ namespace checkATTdesktop.Gestion
 
             alumnosSeleccionados = seleccionarAlumnos(alumnosSeleccionados);
 
-            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF(alumnosSeleccionados);
+            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF(alumnosSeleccionados, (int)comboBoxSeleccionarClase.SelectedValue);
             matricularUF.ShowDialog();
             
         }
