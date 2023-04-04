@@ -16,6 +16,14 @@ namespace checkATTdesktop.Models
         }
 
 
+        public static Clase SelectOneClase(int idClase)
+        {
+            Clase _clase = Orm.bd.Clase.Where(a => a.id_clase == idClase).First();
+
+            return _clase;
+        }
+
+
         public static String Insert(Clase clase)
         {
             String missatge = "";

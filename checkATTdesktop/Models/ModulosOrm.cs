@@ -26,6 +26,46 @@ namespace checkATTdesktop.Models
                                 select modulo;
 
             return resultadoJoin.ToList();
+
+            
+        public static int? SelectModuloId(string nombreModulo, int horasTotales)
+        {
+            try
+            {
+                Modulo modulo = Orm.bd.Modulo.FirstOrDefault(u => u.nombre_modulo == nombreModulo && u.horas_totales_modulo == horasTotales);
+                return modulo.id_modulo;
+            }
+            catch (NullReferenceException ex)
+            {
+               
+                return null;
+            }
+        }
+
+
+
+        public static String Insert(Modulo modulo)
+        {
+            String missatge = "";
+            Orm.bd.Modulo.Add(modulo);
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
+
+        }
+
+        public static String Update(Modulo modulo)
+        {
+            String missatge = "";
+            Modulo _moduloToEdit = Orm.bd.Modulo.Where(a => a.id_modulo == modulo.id_modulo).First();
+            _moduloToEdit.nombre_modulo = modulo.nombre_modulo;
+            _moduloToEdit.horas_totales_modulo = modulo.horas_totales_modulo;
+            _moduloToEdit.siglas_uf = modulo.siglas_uf; 
+
+            missatge = Orm.MySaveChanges();
+
+            return missatge;
         }
     }
 }

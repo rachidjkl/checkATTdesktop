@@ -226,7 +226,7 @@
             // comboBoxSeleccionarClase
             // 
             this.comboBoxSeleccionarClase.DataSource = this.bindingSourceComboBoxClase;
-            this.comboBoxSeleccionarClase.DisplayMember = "id_clase";
+            this.comboBoxSeleccionarClase.DisplayMember = "nombre_clase";
             this.comboBoxSeleccionarClase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSeleccionarClase.FormattingEnabled = true;
             this.comboBoxSeleccionarClase.Location = new System.Drawing.Point(12, 56);

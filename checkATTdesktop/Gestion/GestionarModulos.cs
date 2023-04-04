@@ -28,7 +28,7 @@ namespace checkATTdesktop.Gestion
 
         private void buttonModiModulo_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new ModiAddModulos());
+            abrirFormularioHijo(new ModiAddModulos((Modulo)dataGridViewModulos.CurrentRow.DataBoundItem));
         }
 
         private void abrirFormularioHijo(Form childForm)

@@ -538,6 +538,11 @@
             <End Role="Pasar_listas_grupo" EntitySet="Pasar_listas_grupo" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
+          <EntitySet Name="Usuarios_CEP" EntityType="CheckAttModel.Usuarios_CEP" />
+          <AssociationSet Name="FK_Usuarios__CEP_id_user_alumno" Association="CheckAttModel.FK_Usuarios__CEP_id_user_alumno">
+            <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
+            <End Role="Alumno" EntitySet="Alumno" />
+          </AssociationSet>
           <AssociationSet Name="FK_Usuarios__CEP_id_user_profe" Association="CheckAttModel.FK_Usuarios__CEP_id_user_profe">
             <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
             <End Role="Profesor" EntitySet="Profesor" />
@@ -924,6 +929,29 @@
             </Principal>
             <Dependent Role="Pasar_Lista">
               <PropertyRef Name="id_lista_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Usuarios_CEP">
+          <Key>
+            <PropertyRef Name="id_usuario_cep" />
+          </Key>
+          <Property Name="id_usuario_cep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="correo_cep" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="contra" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_alumno" FromRole="Usuarios_CEP" ToRole="Alumno" />
+          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_profe" FromRole="Usuarios_CEP" ToRole="Profesor" />
+        </EntityType>
+        <Association Name="FK_Usuarios__CEP_id_user_alumno">
+          <End Type="CheckAttModel.Usuarios_CEP" Role="Usuarios_CEP" Multiplicity="1" />
+          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios_CEP">
+              <PropertyRef Name="id_usuario_cep" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_user_alumno_cep" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

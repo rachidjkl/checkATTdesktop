@@ -48,7 +48,6 @@ namespace checkATTdesktop.Models
             _profesorToEdit.apellido2_profe = profesor.apellido2_profe;
             _profesorToEdit.direccion_profe = profesor.direccion_profe;
             _profesorToEdit.email_profe = profesor.email_profe;
-            //_profesorToEdit.email_centro_profe = profesor.email_centro_profe;
             _profesorToEdit.tel_profe = profesor.tel_profe;
             _profesorToEdit.nacimiento_profe = profesor.nacimiento_profe;
             _profesorToEdit.incorp_profe = profesor.incorp_profe;

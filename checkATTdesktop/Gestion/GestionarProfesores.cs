@@ -109,10 +109,10 @@ namespace checkATTdesktop.Gestion
 
         private void dataGridViewProfesor_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 5)
             {
                 Profesor profe = (Profesor)dataGridViewProfesor.Rows[e.RowIndex].DataBoundItem;
-                e.Value = profe.apellido1_profe + " " + profe.apellido2_profe;
+                e.Value = profe.Usuarios_CEP.correo_cep;
             }
         }
     }

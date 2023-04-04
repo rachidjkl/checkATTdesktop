@@ -35,6 +35,8 @@
         <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_pr__6383C8BA" />
         <AssociationConnector Association="CheckAttModel.FK__Pasar_Lis__id_uf__6477ECF3" />
         <AssociationConnector Association="CheckAttModel.fk_id_lista_grupo" />
+        <EntityTypeShape EntityType="CheckAttModel.Usuarios_CEP" Width="1.5" PointX="0.75" PointY="9.25" />
+        <AssociationConnector Association="CheckAttModel.FK_Usuarios__CEP_id_user_alumno" />
         <AssociationConnector Association="CheckAttModel.FK_Usuarios__CEP_id_user_profe" />
       </Diagram>
     </edmx:Diagrams>

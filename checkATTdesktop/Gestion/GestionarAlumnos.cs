@@ -181,5 +181,14 @@ namespace checkATTdesktop.Gestion
             }
             return alumnosSeleccionados;
         }
+
+        private void dataGridViewAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                Alumno alumno = (Alumno)dataGridViewAlumnos.Rows[e.RowIndex].DataBoundItem;
+                e.Value = alumno.Usuarios_CEP.correo_cep;
+            }
+        }
     }
 }
