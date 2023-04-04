@@ -57,18 +57,11 @@ namespace checkATTdesktop.Models
         public static String Delete(int idClase, int idModulo)
         {
             String missatge = "";
-            try
-            {
-                Orm.bd.Clase_Modulo.Remove(Orm.bd.Clase_Modulo.Where(a => a.id_modulo == idModulo && a.id_clase1 == idClase).First());
-                missatge = Orm.MySaveChanges();
-            }
-            catch (InvalidOperationException ex)
-            {
-                
-            }
+            Orm.bd.Clase_Modulo.Remove(Orm.bd.Clase_Modulo.Where(a => a.id_modulo == idModulo && a.id_clase1 == idClase).First());
+
+            missatge = Orm.MySaveChanges();
 
             return missatge;
         }
-
     }
 }

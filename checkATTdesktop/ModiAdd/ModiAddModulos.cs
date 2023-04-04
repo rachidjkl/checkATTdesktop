@@ -15,9 +15,8 @@ namespace checkATTdesktop.ModiAdd
 {
     public partial class ModiAddModulos : Form
     {
+        public static List<UF> uFs = new List<UF>();    
         public Modulo modulo = null;
-        public static List<UF> uFs = new List<UF>();
-        public static List<UF> uFsAux = new List<UF>();
         public static List<Clase_Modulo> clase_Modulos = new List<Clase_Modulo>();
         public static List<Clase> clases = new List<Clase>();   
 
@@ -41,7 +40,6 @@ namespace checkATTdesktop.ModiAdd
             uf.horas_totales_uf = int.Parse(textBoxHorasTotales.Text);
             loadDataGrid();
             CalcularTotalHoras();
-            dataGridViewUFModulo.ClearSelection();
 
         }
 
@@ -61,7 +59,6 @@ namespace checkATTdesktop.ModiAdd
                 uFs.Add(ufToAdd);
                 loadDataGrid();
                 CalcularTotalHoras();
-                dataGridViewUFModulo.ClearSelection();
             }
 
         }
@@ -93,40 +90,20 @@ namespace checkATTdesktop.ModiAdd
                
 
                 //añadir uf
-                int? idModulo = ModulosOrm.SelectModuloId(modulo.nombre_modulo, modulo.horas_totales_modulo);
+                int idModulo = ModulosOrm.SelectModuloId(newModulo.nombre_modulo, newModulo.horas_totales_modulo);
                 foreach (UF uf in uFs)
                 {
-
                     uf.id_modulo_uf = idModulo;
-                    
                     if (modulo != null)
                     {
-                        UF ufToCkeck = UFsOrm.SelectUf(modulo.id_modulo, uf.nombre_uf);
-                        if (ufToCkeck == null)
-                        {
-                            missatge += UFsOrm.Insert(uf);
-                        }
-                        else
-                        {
-                            missatge += UFsOrm.Update(uf);
-                        }
+                        missatge += UFsOrm.Update(uf);
                     }
                     else
                     {
                         missatge += UFsOrm.Insert(uf);
                     }
-
                 }
-                foreach (UF uf in uFsAux)
-                {
-                    if (!uFs.Contains(uf))
-                    {
-                        missatge += UFsOrm.Delete(modulo.id_modulo, uf.nombre_uf);
-                    }
-                }
-
-               
-
+                        
 
                 //añadir_clase modulo
                 Clase_Modulo clase_Modulo = new Clase_Modulo();
@@ -137,7 +114,7 @@ namespace checkATTdesktop.ModiAdd
 
                     if (modulo != null)
                     {
-                        Clase_Modulo claseModuloToCheck = ClaseModuloOrm.SelectClaseModulo(modulo.id_modulo, clase_Modulo.id_clase1.GetValueOrDefault());
+                        Clase_Modulo claseModuloToCheck = ClaseModuloOrm.SelectClaseModulo(clase_Modulo.id_modulo.GetValueOrDefault(), clase_Modulo.id_clase1.GetValueOrDefault());
                         if (claseModuloToCheck == null)
                         {
                             missatge += ClaseModuloOrm.Insert(clase_Modulo);
@@ -177,7 +154,6 @@ namespace checkATTdesktop.ModiAdd
             if (modulo != null)
             {
                 uFs = UFsOrm.Select(modulo.id_modulo);
-                uFsAux = new List<UF>(uFs);
                 loadDataGrid();
 
                 clase_Modulos = ClaseModuloOrm.Select(modulo.id_modulo);
@@ -209,7 +185,6 @@ namespace checkATTdesktop.ModiAdd
             uFs.Remove(uf); // Eliminar el objeto de la lista vinculada al DataGridView.
             loadDataGrid(); // Actualizar el DataGridView.ç
             CalcularTotalHoras();
-            dataGridViewUFModulo.ClearSelection();
         }
         private void CalcularTotalHoras()
         {
@@ -242,11 +217,7 @@ namespace checkATTdesktop.ModiAdd
         {
             if (comboBoxClases.SelectedItem != null)
             {
-                if (!bindingSourceListBoxClase.Contains(comboBoxClases.SelectedItem))
-                {
-                    bindingSourceListBoxClase.Add(comboBoxClases.SelectedItem);
-                }
-                
+                bindingSourceListBoxClase.Add(comboBoxClases.SelectedItem);
             }
         }
 

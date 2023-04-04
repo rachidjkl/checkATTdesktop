@@ -63,12 +63,6 @@ namespace checkATTdesktop.Gestion
        
         private void dataGridViewHorarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
-            if (e.ColumnIndex == 1)
-            {
-                Horario horario = (Horario)dataGridViewHorarios.Rows[e.RowIndex].DataBoundItem;
-                e.Value = horario.Clase.nombre_clase;
-            }
             if (e.ColumnIndex == 2)
             {
                 Horario horario = (Horario)dataGridViewHorarios.Rows[e.RowIndex].DataBoundItem;
