@@ -50,7 +50,7 @@ namespace checkATTdesktop.Gestion
 
         private void GestionarModulos_Load(object sender, EventArgs e)
         {
-            bindingSourceDataGridModulos.DataSource = ModulosOrm.Select();
+            bindingSourceDataGridModulos.DataSource = ModulosOrm.SelectAll();
         }
     }
 }

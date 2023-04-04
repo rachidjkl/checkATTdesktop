@@ -57,6 +57,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBoxClases = new System.Windows.Forms.ComboBox();
+            this.bindingSourceClases = new System.Windows.Forms.BindingSource(this.components);
             this.label89 = new System.Windows.Forms.Label();
             this.buttonEliminarUf = new System.Windows.Forms.Button();
             this.textBoxSiglasModulo = new System.Windows.Forms.TextBox();
@@ -416,6 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(948, 537);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.label8);

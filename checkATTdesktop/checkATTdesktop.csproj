@@ -385,6 +385,7 @@
     <Compile Include="Models\Clase_Modulo.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Clase_moduloOrm.cs" />
     <Compile Include="Models\Falta.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
@@ -398,6 +399,7 @@
     <Compile Include="Models\Matricula.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MatriculaOrm.cs" />
     <Compile Include="Models\ModelAtt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

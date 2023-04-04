@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCrearModificarAlumno = new System.Windows.Forms.Panel();
+            this.checkBoxSelectAllStudents = new System.Windows.Forms.CheckBox();
             this.buttonMatricularAlumnosUF = new System.Windows.Forms.Button();
             this.buttonEliminarAlumno = new System.Windows.Forms.Button();
             this.buttonModiAlumno = new System.Windows.Forms.Button();
@@ -63,6 +64,7 @@
             // 
             // panelCrearModificarAlumno
             // 
+            this.panelCrearModificarAlumno.Controls.Add(this.checkBoxSelectAllStudents);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonMatricularAlumnosUF);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonEliminarAlumno);
             this.panelCrearModificarAlumno.Controls.Add(this.buttonModiAlumno);
@@ -77,6 +79,18 @@
             this.panelCrearModificarAlumno.Name = "panelCrearModificarAlumno";
             this.panelCrearModificarAlumno.Size = new System.Drawing.Size(948, 537);
             this.panelCrearModificarAlumno.TabIndex = 0;
+            // 
+            // checkBoxSelectAllStudents
+            // 
+            this.checkBoxSelectAllStudents.AutoSize = true;
+            this.checkBoxSelectAllStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSelectAllStudents.Location = new System.Drawing.Point(766, 110);
+            this.checkBoxSelectAllStudents.Name = "checkBoxSelectAllStudents";
+            this.checkBoxSelectAllStudents.Size = new System.Drawing.Size(135, 20);
+            this.checkBoxSelectAllStudents.TabIndex = 23;
+            this.checkBoxSelectAllStudents.Text = "Seleccionar todos";
+            this.checkBoxSelectAllStudents.UseVisualStyleBackColor = true;
+            this.checkBoxSelectAllStudents.CheckedChanged += new System.EventHandler(this.checkBoxSelectAllStudents_CheckedChanged);
             // 
             // buttonMatricularAlumnosUF
             // 
@@ -157,7 +171,6 @@
             this.dnialumnoDataGridViewTextBoxColumn,
             this.nombrealumnoDataGridViewTextBoxColumn,
             this.apellido1alumnoDataGridViewTextBoxColumn,
-            this.apellido2alumnoDataGridViewTextBoxColumn,
             this.emailalumnoDataGridViewTextBoxColumn,
             this.id_user_alumno_cep,
             this.telalumnoDataGridViewTextBoxColumn,
@@ -178,6 +191,7 @@
             this.dataGridViewAlumnos.Location = new System.Drawing.Point(12, 133);
             this.dataGridViewAlumnos.Name = "dataGridViewAlumnos";
             this.dataGridViewAlumnos.ReadOnly = true;
+            this.dataGridViewAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAlumnos.Size = new System.Drawing.Size(889, 341);
             this.dataGridViewAlumnos.TabIndex = 18;
             this.dataGridViewAlumnos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewAlumnos_CellFormatting);
@@ -365,7 +379,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dnialumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrealumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido1alumnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2alumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailalumnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_user_alumno_cep;
         private System.Windows.Forms.DataGridViewTextBoxColumn telalumnoDataGridViewTextBoxColumn;

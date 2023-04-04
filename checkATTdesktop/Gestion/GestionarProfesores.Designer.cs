@@ -42,13 +42,15 @@
             this.dniprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido2profeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_user_profe_cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nacimientoprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.incorpprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionprofeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceDataGridProfesores = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscarProfesor = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelCrearModificarProfesores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProfesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -132,7 +134,6 @@
             this.dniprofeDataGridViewTextBoxColumn,
             this.nombreprofeDataGridViewTextBoxColumn,
             this.apellido1profeDataGridViewTextBoxColumn,
-            this.apellido2profeDataGridViewTextBoxColumn,
             this.emailprofeDataGridViewTextBoxColumn,
             this.id_user_profe_cep,
             this.telprofeDataGridViewTextBoxColumn,
@@ -144,8 +145,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
@@ -204,7 +205,7 @@
             // 
             this.apellido1profeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.apellido1profeDataGridViewTextBoxColumn.DataPropertyName = "apellido1_profe";
-            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellido1";
+            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellidos";
             this.apellido1profeDataGridViewTextBoxColumn.Name = "apellido1profeDataGridViewTextBoxColumn";
             this.apellido1profeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -264,6 +265,34 @@
             this.direccionprofeDataGridViewTextBoxColumn.Name = "direccionprofeDataGridViewTextBoxColumn";
             this.direccionprofeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bindingSourceDataGridProfesores
+            // 
+            this.bindingSourceDataGridProfesores.DataSource = typeof(checkATTdesktop.Models.Profesor);
+            // 
+            // textBoxBuscarProfesor
+            // 
+            this.textBoxBuscarProfesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxBuscarProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarProfesor.Location = new System.Drawing.Point(50, 41);
+            this.textBoxBuscarProfesor.Name = "textBoxBuscarProfesor";
+            this.textBoxBuscarProfesor.Size = new System.Drawing.Size(300, 19);
+            this.textBoxBuscarProfesor.TabIndex = 20;
+            this.textBoxBuscarProfesor.Text = "Buscar...";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 29);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.TabIndex = 19;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
             // GestionarProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,7 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dniprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido1profeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido2profeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailprofeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_user_profe_cep;
         private System.Windows.Forms.DataGridViewTextBoxColumn telprofeDataGridViewTextBoxColumn;
