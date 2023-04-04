@@ -75,11 +75,6 @@ namespace checkATTdesktop.Gestion
 
         }
 
-        private void iconPictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void GestionarAlumnos_Load(object sender, EventArgs e)
         {
             bindingSourceComboBoxClase.DataSource = ClaseOrm.Select();
@@ -133,9 +128,16 @@ namespace checkATTdesktop.Gestion
 
         private void buttonMatricularAlumnosUF_Click(object sender, EventArgs e)
         {
-            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF();
+            DataGridViewSelectedRowCollection rows = dataGridViewAlumnos.SelectedRows;
+            List<Alumno> alumnosSeleccionados = new List<Alumno>();
+
+            alumnosSeleccionados = seleccionarAlumnos(alumnosSeleccionados);
+
+            GestionarMatriculacionUF matricularUF = new GestionarMatriculacionUF(alumnosSeleccionados, (int)comboBoxSeleccionarClase.SelectedValue);
             matricularUF.ShowDialog();
         }
+
+
 
         private void dataGridViewAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -144,6 +146,45 @@ namespace checkATTdesktop.Gestion
                 Alumno alumno = (Alumno)dataGridViewAlumnos.Rows[e.RowIndex].DataBoundItem;
                 e.Value = alumno.Usuarios_CEP.correo_cep;
             }
+
+            if (e.ColumnIndex == 2)
+            {
+                Alumno alumno = (Alumno)dataGridViewAlumnos.Rows[e.RowIndex].DataBoundItem;
+                e.Value = alumno.apellido1_alumno + " " + alumno.apellido2_alumno;
+            }
         }
+
+        private List<Alumno> seleccionarAlumnos(List<Alumno> alumnosSeleccionados)
+        {
+            DataGridViewSelectedRowCollection rows = dataGridViewAlumnos.SelectedRows;
+
+            foreach (DataGridViewRow row in rows)
+            {
+                Alumno _uf = (Alumno)row.DataBoundItem;
+
+                alumnosSeleccionados.Add(_uf);
+            }
+            return alumnosSeleccionados;
+        }
+
+        private void checkBoxSelectAllStudents_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSelectAllStudents.Checked)
+            {
+                foreach (DataGridViewRow row in dataGridViewAlumnos.Rows)
+                {
+                    row.Selected = true;
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridViewAlumnos.Rows)
+                {
+                    row.Selected = false;
+                }
+            }
+        }
+
+
     }
 }
