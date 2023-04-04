@@ -100,6 +100,8 @@ namespace checkATTdesktop.ModiAdd
 
             dateTimePickerHoraInicio.Value = def;
             dateTimePickerHoraFin.Value = def;
+            comboBoxClase.SelectedIndex = -1;
+            comboBoxModulo.SelectedIndex = -1;
 
         }
     }

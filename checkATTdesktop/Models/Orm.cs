@@ -57,33 +57,47 @@ namespace checkATTdesktop.Models
                 missatge = Orm.MissatgeError(sqlException);
                 RejectChanges();
             }
+            catch (InvalidOperationException ex)
+            {
+                
+            }
+
             return missatge;
         }
 
-        
+
+
         public static void RejectChanges()
         {
-            foreach (DbEntityEntry item in bd.ChangeTracker.Entries())
+            try
             {
-                switch (item.State)
+                foreach (DbEntityEntry item in bd.ChangeTracker.Entries())
                 {
-                    case System.Data.Entity.EntityState.Detached:
-                        break;
-                    case System.Data.Entity.EntityState.Unchanged:
-                        break;
-                    case System.Data.Entity.EntityState.Added:
-                        item.State = System.Data.Entity.EntityState.Detached;
-                        break;
-                    case System.Data.Entity.EntityState.Deleted:
-                        item.Reload();
-                        break;
-                    case System.Data.Entity.EntityState.Modified:
-                        item.State = System.Data.Entity.EntityState.Unchanged;
-                        break;
-                    default:
-                        break;
+                    switch (item.State)
+                    {
+                        case System.Data.Entity.EntityState.Detached:
+                            break;
+                        case System.Data.Entity.EntityState.Unchanged:
+                            break;
+                        case System.Data.Entity.EntityState.Added:
+                            item.State = System.Data.Entity.EntityState.Detached;
+                            break;
+                        case System.Data.Entity.EntityState.Deleted:
+                            item.Reload();
+                            break;
+                        case System.Data.Entity.EntityState.Modified:
+                            item.State = System.Data.Entity.EntityState.Unchanged;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
-        }      
+            catch (InvalidOperationException ex)
+            { 
+            }
+            
+                    
+            }      
     }
 }
