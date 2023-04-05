@@ -38,19 +38,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 22);
+            this.label1.Size = new System.Drawing.Size(433, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Introduce un correo para restablecer la contraseña";
             // 
             // textBoxCorreoRestablecerContraseña
             // 
-            this.textBoxCorreoRestablecerContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCorreoRestablecerContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreoRestablecerContraseña.Location = new System.Drawing.Point(25, 64);
             this.textBoxCorreoRestablecerContraseña.Name = "textBoxCorreoRestablecerContraseña";
-            this.textBoxCorreoRestablecerContraseña.Size = new System.Drawing.Size(549, 27);
+            this.textBoxCorreoRestablecerContraseña.Size = new System.Drawing.Size(549, 26);
             this.textBoxCorreoRestablecerContraseña.TabIndex = 1;
             // 
             // iconButtonAceptarRestablecerContraseña
@@ -58,7 +58,7 @@
             this.iconButtonAceptarRestablecerContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(103)))), ((int)(((byte)(229)))));
             this.iconButtonAceptarRestablecerContraseña.FlatAppearance.BorderSize = 0;
             this.iconButtonAceptarRestablecerContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonAceptarRestablecerContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonAceptarRestablecerContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButtonAceptarRestablecerContraseña.ForeColor = System.Drawing.Color.White;
             this.iconButtonAceptarRestablecerContraseña.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.iconButtonAceptarRestablecerContraseña.IconColor = System.Drawing.Color.White;
@@ -76,7 +76,7 @@
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.iconPictureBox1.ForeColor = System.Drawing.Color.Red;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
@@ -93,6 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(590, 185);
             this.ControlBox = false;
             this.Controls.Add(this.iconPictureBox1);

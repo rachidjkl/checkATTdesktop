@@ -25,7 +25,10 @@ namespace checkATTdesktop.ModiAdd
         public ModiAddHorario(Horario horario)
         {
             InitializeComponent();
-            this.horario = horario;     
+            this.horario = horario;
+            buttonCrearModiAddHorario.Text = "Modificar";
+
+
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)

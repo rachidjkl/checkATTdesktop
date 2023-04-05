@@ -114,6 +114,12 @@ namespace checkATTdesktop.Gestion
                 Profesor profe = (Profesor)dataGridViewProfesor.Rows[e.RowIndex].DataBoundItem;
                 e.Value = profe.Usuarios_CEP.correo_cep;
             }
+
+            if (e.ColumnIndex == 2)
+            {
+                Profesor _profe = (Profesor)dataGridViewProfesor.Rows[e.RowIndex].DataBoundItem;
+                e.Value = _profe.apellido1_profe + " " + _profe.apellido2_profe;
+            }
         }
     }
 }

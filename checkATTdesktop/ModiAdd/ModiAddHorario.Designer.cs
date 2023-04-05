@@ -177,7 +177,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.iconPictureBox1.IconColor = System.Drawing.Color.Red;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(532, 12);
+            this.iconPictureBox1.Location = new System.Drawing.Point(519, 12);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 13;
@@ -204,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(586, 311);
+            this.ClientSize = new System.Drawing.Size(590, 282);
             this.ControlBox = false;
             this.Controls.Add(this.buttonCrearModiAddHorario);
             this.Controls.Add(this.iconPictureBox1);

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
 using checkATTdesktop.Gestion;
+using checkATTdesktop.LoginFolder;
 using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
 
@@ -22,13 +23,14 @@ namespace checkATTdesktop.Main
         private Panel leftBorderBtn;
         private Form currentChildForm;
         
-        public PantallaPrincipal()
+        public PantallaPrincipal(String username)
         {
             InitializeComponent();
             timer1.Interval = 1000;   
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 50);
             panelConTodoMenusIzquierda.Controls.Add(leftBorderBtn);
+            labelNombreUsuario.Text = username;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

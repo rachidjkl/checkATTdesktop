@@ -144,8 +144,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewProfesor.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProfesor.EnableHeadersVisualStyles = false;
@@ -204,7 +204,7 @@
             // 
             this.apellido1profeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.apellido1profeDataGridViewTextBoxColumn.DataPropertyName = "apellido1_profe";
-            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellido1";
+            this.apellido1profeDataGridViewTextBoxColumn.HeaderText = "Apellidos";
             this.apellido1profeDataGridViewTextBoxColumn.Name = "apellido1profeDataGridViewTextBoxColumn";
             this.apellido1profeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -215,6 +215,7 @@
             this.apellido2profeDataGridViewTextBoxColumn.HeaderText = "Apellido2";
             this.apellido2profeDataGridViewTextBoxColumn.Name = "apellido2profeDataGridViewTextBoxColumn";
             this.apellido2profeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellido2profeDataGridViewTextBoxColumn.Visible = false;
             // 
             // emailprofeDataGridViewTextBoxColumn
             // 

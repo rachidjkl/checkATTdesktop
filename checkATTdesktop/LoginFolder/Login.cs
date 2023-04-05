@@ -1,4 +1,5 @@
 ﻿using checkATTdesktop.Main;
+using checkATTdesktop.Models;
 using checkATTdesktop.ModiAdd;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace checkATTdesktop.LoginFolder
 {
     public partial class Login : Form
     {
+        UserLogin userLogin = new UserLogin();
         public Login()
         {
             InitializeComponent();
@@ -21,14 +23,47 @@ namespace checkATTdesktop.LoginFolder
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            WelcomeForm mainMenu = new WelcomeForm();
-            mainMenu.Show();
-           
-            this.Hide();
-            
-            
+            bool acces = true;
 
+            acces = comprobacionLogin(textBoxUser.Text, textBoxContra.Text, acces);
+
+            if (acces)
+            {
+                MessageBox.Show("Login correcto", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                userLogin.Username = textBoxUser.Text;
+                userLogin.Password = textBoxContra.Text;   
+
+                WelcomeForm mainMenu = new WelcomeForm(userLogin);
+                mainMenu.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Login incorrecto", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                          
         }
+
+        private bool comprobacionLogin(String username, String password, bool acces)
+        {
+
+            if (username == "Administrador" || password == "admin12345")
+            {
+                acces = true;
+            }
+            else if (username == "Recepción" || password == "recepcio12345")
+            {
+                acces = true;
+            }
+            else 
+            {
+                acces = false;
+            }
+
+            return acces;
+        }
+
+
 
         private void textBoxUser_Click(object sender, EventArgs e)
         {

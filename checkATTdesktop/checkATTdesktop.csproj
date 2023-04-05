@@ -373,6 +373,7 @@
     <Compile Include="LoginFolder\ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginFolder\UserLogin.cs" />
     <Compile Include="Models\Alumno.cs">
       <DependentUpon>ModelAtt.tt</DependentUpon>
     </Compile>

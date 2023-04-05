@@ -19,7 +19,7 @@ namespace checkATTdesktop.ModiAdd
         public static List<UF> uFs = new List<UF>();
         public static List<UF> uFsAux = new List<UF>();
         public static List<Clase_Modulo> clase_Modulos = new List<Clase_Modulo>();
-        public static List<Clase> clases = new List<Clase>();   
+        public static List<Clase> clases = new List<Clase>();
 
         public ModiAddModulos()
         {
@@ -30,9 +30,8 @@ namespace checkATTdesktop.ModiAdd
         {
             InitializeComponent();
             this.modulo = modulo;
+            buttonCrearModulo.Text = "Modificar";
         }
-
-
 
         private void buttonEditarUF_Click(object sender, EventArgs e)
         {
@@ -42,13 +41,11 @@ namespace checkATTdesktop.ModiAdd
             loadDataGrid();
             CalcularTotalHoras();
             dataGridViewUFModulo.ClearSelection();
-
         }
 
         private void buttonCrearUF_Click(object sender, EventArgs e)
         {
             String missatge = "";
-
             if (textBox1NombreUF.Text == "" || textBoxHorasTotales.Text == "" || textBoxNumeroUF.Text == "")
             {
                 MessageBox.Show("Alguno de los campos estan vacíos", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -63,12 +60,12 @@ namespace checkATTdesktop.ModiAdd
                 CalcularTotalHoras();
                 dataGridViewUFModulo.ClearSelection();
             }
-
         }
 
         private void buttonCrearModulo_Click(object sender, EventArgs e)
         {
             String missatge = "";
+            int? idModulo = null;
 
             if (textBoxNombreModulo.Text == "")
             {
@@ -83,22 +80,23 @@ namespace checkATTdesktop.ModiAdd
                 newModulo.siglas_uf = textBoxSiglasModulo.Text;
                 if (modulo != null)
                 {
-                    newModulo.id_modulo = modulo.id_modulo; 
+                    newModulo.id_modulo = modulo.id_modulo;
                     ModulosOrm.Update(newModulo);
+                    idModulo = ModulosOrm.SelectModuloId(modulo.nombre_modulo, modulo.horas_totales_modulo);
                 }
                 else
                 {
                     missatge += ModulosOrm.Insert(newModulo);
+                    idModulo = ModulosOrm.SelectModuloId(newModulo.nombre_modulo, newModulo.horas_totales_modulo);
                 }
-               
+
 
                 //añadir uf
-                int? idModulo = ModulosOrm.SelectModuloId(modulo.nombre_modulo, modulo.horas_totales_modulo);
                 foreach (UF uf in uFs)
                 {
 
                     uf.id_modulo_uf = idModulo;
-                    
+
                     if (modulo != null)
                     {
                         UF ufToCkeck = UFsOrm.SelectUf(modulo.id_modulo, uf.nombre_uf);
@@ -125,12 +123,12 @@ namespace checkATTdesktop.ModiAdd
                     }
                 }
 
-               
+
 
 
                 //añadir_clase modulo
                 Clase_Modulo clase_Modulo = new Clase_Modulo();
-                foreach (Clase clase in bindingSourceClases)
+                foreach (Clase clase in bindingSourceListBoxClase)
                 {
                     clase_Modulo.id_clase1 = clase.id_clase;
                     clase_Modulo.id_modulo = idModulo;
@@ -147,23 +145,23 @@ namespace checkATTdesktop.ModiAdd
                             clase_Modulo.id_clase_modulo = claseModuloToCheck.id_clase_modulo;
                             missatge += ClaseModuloOrm.Update(clase_Modulo);
                         }
-                        
-                       
+
+
                     }
                     else
                     {
                         missatge += ClaseModuloOrm.Insert(clase_Modulo);
                     }
-                        
+
                 }
 
-                foreach(Clase clase in clases)
+                foreach (Clase clase in clases)
                 {
                     if (!bindingSourceListBoxClase.Contains(clase))
                     {
                         missatge += ClaseModuloOrm.Delete(clase.id_clase, modulo.id_modulo);
                     }
-                   
+
                 }
 
                 showMessage(missatge);
@@ -192,15 +190,13 @@ namespace checkATTdesktop.ModiAdd
                 textBoxSiglasModulo.Text = modulo.siglas_uf;
                 labelHorasTotalesModulos.Text = modulo.horas_totales_modulo.ToString();
             }
-
-
         }
 
 
         private void loadDataGrid()
         {
             dataGridViewUFModulo.DataSource = null;
-            dataGridViewUFModulo.DataSource = uFs;            
+            dataGridViewUFModulo.DataSource = uFs;
         }
 
         private void buttonEliminarUf_Click(object sender, EventArgs e)
@@ -213,13 +209,13 @@ namespace checkATTdesktop.ModiAdd
         }
         private void CalcularTotalHoras()
         {
-            int total = 0;  
+            int total = 0;
             foreach (UF uf in uFs)
             {
                 total += uf.horas_totales_uf;
             }
 
-            labelHorasTotalesModulos.Text = total.ToString();   
+            labelHorasTotalesModulos.Text = total.ToString();
 
         }
 
@@ -246,7 +242,7 @@ namespace checkATTdesktop.ModiAdd
                 {
                     bindingSourceListBoxClase.Add(comboBoxClases.SelectedItem);
                 }
-                
+
             }
         }
 
@@ -267,14 +263,17 @@ namespace checkATTdesktop.ModiAdd
             {
                 if (modulo == null)
                 {
-                    MessageBox.Show("Modulo y ufs añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
-                    // vaciarCampos();
+                    MessageBox.Show("Modulo y ufs añadido correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("Modulo y ufs modificados correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
                 }
+                uFs.Clear();
+                uFsAux.Clear();
+                clase_Modulos.Clear();
+                clases.Clear();
+                this.Close();
             }
         }
 

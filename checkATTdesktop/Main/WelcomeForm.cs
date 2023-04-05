@@ -14,9 +14,10 @@ namespace checkATTdesktop.Main
 {
     public partial class WelcomeForm : Form
     {
-        public WelcomeForm()
+        public WelcomeForm(UserLogin userLogin)
         {
             InitializeComponent();
+            labelNombreUsuario.Text = userLogin.Username;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace checkATTdesktop.Main
             {
                 FadeOut.Stop();
 
-                PantallaPrincipal main = new PantallaPrincipal();
+                PantallaPrincipal main = new PantallaPrincipal(labelNombreUsuario.Text);
                 main.Show();
 
                 this.Hide();
