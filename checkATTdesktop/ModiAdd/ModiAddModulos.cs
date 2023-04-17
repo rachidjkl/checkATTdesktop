@@ -171,6 +171,10 @@ namespace checkATTdesktop.ModiAdd
 
         private void ModiAddModulos_Load(object sender, EventArgs e)
         {
+            uFs.Clear();
+            uFsAux.Clear();
+            clase_Modulos.Clear();
+            clases.Clear();
             bindingSourceClases.DataSource = ClaseOrm.Select();
             if (modulo != null)
             {

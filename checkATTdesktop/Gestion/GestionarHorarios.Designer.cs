@@ -267,7 +267,7 @@
             this.comboBoxDiaSemana.Items.AddRange(new object[] {
             "Lunes",
             "Martes",
-            "Miércoles",
+            "Miercoles",
             "Jueves",
             "Viernes"});
             this.comboBoxDiaSemana.Location = new System.Drawing.Point(247, 56);
