@@ -10,6 +10,11 @@ namespace checkATTdesktop.Models
 {
     public static class ProfesoresOrm
     {
+        public static List<Profesor> Select()
+        {
+            List<Profesor> _profesor = Orm.bd.Profesor.ToList();
+            return _profesor;
+        }
         public static String Insert(Profesor profesor)
         {
             String missatge = "";
@@ -20,8 +25,6 @@ namespace checkATTdesktop.Models
             return missatge;
           
         }
-
-
         public static String Delete(Profesor profesor)
         {
             String missatge = "";
@@ -30,14 +33,7 @@ namespace checkATTdesktop.Models
             missatge = Orm.MySaveChanges();
 
             return missatge;
-        }
-
-        public static List<Profesor> Select()
-        {
-            List<Profesor> _profesor = Orm.bd.Profesor.ToList();
-            return _profesor;
-        }
-
+        }        
         public static String Update(Profesor profesor)
         {
             String missatge = "";

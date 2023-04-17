@@ -37,8 +37,10 @@
             this.timerFadeIn = new System.Windows.Forms.Timer(this.components);
             this.FadeOut = new System.Windows.Forms.Timer(this.components);
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSuperiorMainScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperiorMainScreen
@@ -142,12 +144,23 @@
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.Value = 68;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::checkATTdesktop.Properties.Resources.image;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(417, 422);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(983, 518);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.circularProgressBar1);
             this.Controls.Add(this.labelNombreUsuario);
             this.Controls.Add(this.label2);
@@ -161,6 +174,7 @@
             this.panelSuperiorMainScreen.ResumeLayout(false);
             this.panelSuperiorMainScreen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +189,7 @@
         private System.Windows.Forms.Timer FadeOut;
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

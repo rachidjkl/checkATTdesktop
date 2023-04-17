@@ -29,8 +29,6 @@ namespace checkATTdesktop.Models
             }
         }
 
-
-
         public static String Insert(Modulo modulo)
         {
             String missatge = "";
