@@ -25,8 +25,11 @@ namespace checkATTdesktop.Models
         public System.DateTime hora_final { get; set; }
         public string modulo { get; set; }
         public string profe { get; set; }
+        public Nullable<int> id_horario { get; set; }
+        public Nullable<System.DateTime> fecha { get; set; }
         public int estado { get; set; }
     
+        public virtual Horario Horario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
     }

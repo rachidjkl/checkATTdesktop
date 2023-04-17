@@ -18,6 +18,7 @@ namespace checkATTdesktop.Models
         public Horario()
         {
             this.Pasar_Lista = new HashSet<Pasar_Lista>();
+            this.Pasar_listas_grupo = new HashSet<Pasar_listas_grupo>();
         }
     
         public int id_horario { get; set; }
@@ -31,5 +32,7 @@ namespace checkATTdesktop.Models
         public virtual Modulo Modulo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pasar_Lista> Pasar_Lista { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pasar_listas_grupo> Pasar_listas_grupo { get; set; }
     }
 }

@@ -112,6 +112,8 @@
           <Property Name="hora_final" Type="datetime" Nullable="false" />
           <Property Name="modulo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="profe" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="id_horario" Type="int" />
+          <Property Name="fecha" Type="date" />
           <Property Name="estado" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Profesor">
@@ -185,7 +187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Clase_Mod__id_mo__5AEE82B9">
+        <Association Name="FK__Clase_Mod__id_mo__46E78A0C">
           <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
           <End Role="Clase_Modulo" Type="Self.Clase_Modulo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,7 +199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Falta__id_justif__5BE2A6F2">
+        <Association Name="FK__Falta__id_justif__47DBAE45">
           <End Role="Justificar_faltas" Type="Self.Justificar_faltas" Multiplicity="0..1" />
           <End Role="Falta" Type="Self.Falta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -209,7 +211,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Falta__id_pasar___5CD6CB2B">
+        <Association Name="FK__Falta__id_pasar___48CFD27E">
           <End Role="Pasar_Lista" Type="Self.Pasar_Lista" Multiplicity="0..1" />
           <End Role="Falta" Type="Self.Falta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -233,7 +235,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Horario__id_modu__5EBF139D">
+        <Association Name="FK__Horario__id_modu__4AB81AF0">
           <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
           <End Role="Horario" Type="Self.Horario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -257,7 +259,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__id_uf__60A75C0F">
+        <Association Name="FK__Matricula__id_uf__4CA06362">
           <End Role="UF" Type="Self.UF" Multiplicity="0..1" />
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -281,7 +283,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pasar_Lis__id_ho__628FA481">
+        <Association Name="FK__Pasar_Lis__id_ho__4E88ABD4">
           <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
           <End Role="Pasar_Lista" Type="Self.Pasar_Lista" Multiplicity="*" />
           <ReferentialConstraint>
@@ -305,7 +307,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pasar_Lis__id_uf__6477ECF3">
+        <Association Name="FK__Pasar_Lis__id_uf__5070F446">
           <End Role="UF" Type="Self.UF" Multiplicity="0..1" />
           <End Role="Pasar_Lista" Type="Self.Pasar_Lista" Multiplicity="*" />
           <ReferentialConstraint>
@@ -317,7 +319,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UF__id_modulo_uf__6754599E">
+        <Association Name="FK__UF__id_modulo_uf__534D60F1">
           <End Role="Modulo" Type="Self.Modulo" Multiplicity="0..1" />
           <End Role="UF" Type="Self.UF" Multiplicity="*" />
           <ReferentialConstraint>
@@ -338,6 +340,18 @@
             </Principal>
             <Dependent Role="Pasar_Lista">
               <PropertyRef Name="id_lista_grupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pasar_listas_grupo_Horario">
+          <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
+          <End Role="Pasar_listas_grupo" Type="Self.Pasar_listas_grupo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="id_horario" />
+            </Principal>
+            <Dependent Role="Pasar_listas_grupo">
+              <PropertyRef Name="id_horario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -391,15 +405,15 @@
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Clase_Modulo" EntitySet="Clase_Modulo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Clase_Mod__id_mo__5AEE82B9" Association="Self.FK__Clase_Mod__id_mo__5AEE82B9">
+          <AssociationSet Name="FK__Clase_Mod__id_mo__46E78A0C" Association="Self.FK__Clase_Mod__id_mo__46E78A0C">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Clase_Modulo" EntitySet="Clase_Modulo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_justif__5BE2A6F2" Association="Self.FK__Falta__id_justif__5BE2A6F2">
+          <AssociationSet Name="FK__Falta__id_justif__47DBAE45" Association="Self.FK__Falta__id_justif__47DBAE45">
             <End Role="Justificar_faltas" EntitySet="Justificar_faltas" />
             <End Role="Falta" EntitySet="Falta" />
           </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_pasar___5CD6CB2B" Association="Self.FK__Falta__id_pasar___5CD6CB2B">
+          <AssociationSet Name="FK__Falta__id_pasar___48CFD27E" Association="Self.FK__Falta__id_pasar___48CFD27E">
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
             <End Role="Falta" EntitySet="Falta" />
           </AssociationSet>
@@ -407,7 +421,7 @@
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Horario__id_modu__5EBF139D" Association="Self.FK__Horario__id_modu__5EBF139D">
+          <AssociationSet Name="FK__Horario__id_modu__4AB81AF0" Association="Self.FK__Horario__id_modu__4AB81AF0">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
@@ -415,7 +429,7 @@
             <End Role="Alumno" EntitySet="Alumno" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__id_uf__60A75C0F" Association="Self.FK__Matricula__id_uf__60A75C0F">
+          <AssociationSet Name="FK__Matricula__id_uf__4CA06362" Association="Self.FK__Matricula__id_uf__4CA06362">
             <End Role="UF" EntitySet="UF" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
@@ -423,7 +437,7 @@
             <End Role="Alumno" EntitySet="Alumno" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pasar_Lis__id_ho__628FA481" Association="Self.FK__Pasar_Lis__id_ho__628FA481">
+          <AssociationSet Name="FK__Pasar_Lis__id_ho__4E88ABD4" Association="Self.FK__Pasar_Lis__id_ho__4E88ABD4">
             <End Role="Horario" EntitySet="Horario" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
@@ -431,17 +445,21 @@
             <End Role="Profesor" EntitySet="Profesor" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pasar_Lis__id_uf__6477ECF3" Association="Self.FK__Pasar_Lis__id_uf__6477ECF3">
+          <AssociationSet Name="FK__Pasar_Lis__id_uf__5070F446" Association="Self.FK__Pasar_Lis__id_uf__5070F446">
             <End Role="UF" EntitySet="UF" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
-          <AssociationSet Name="FK__UF__id_modulo_uf__6754599E" Association="Self.FK__UF__id_modulo_uf__6754599E">
+          <AssociationSet Name="FK__UF__id_modulo_uf__534D60F1" Association="Self.FK__UF__id_modulo_uf__534D60F1">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="UF" EntitySet="UF" />
           </AssociationSet>
           <AssociationSet Name="fk_id_lista_grupo" Association="Self.fk_id_lista_grupo">
             <End Role="Pasar_listas_grupo" EntitySet="Pasar_listas_grupo" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pasar_listas_grupo_Horario" Association="Self.FK_Pasar_listas_grupo_Horario">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Pasar_listas_grupo" EntitySet="Pasar_listas_grupo" />
           </AssociationSet>
           <AssociationSet Name="FK_Usuarios_ CEP_id_user_alumno" Association="Self.FK_Usuarios_ CEP_id_user_alumno">
             <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
@@ -469,6 +487,7 @@
           <EntitySet Name="Pasar_listas_grupo" EntityType="CheckAttModel.Pasar_listas_grupo" />
           <EntitySet Name="Profesor" EntityType="CheckAttModel.Profesor" />
           <EntitySet Name="UF" EntityType="CheckAttModel.UF" />
+          <EntitySet Name="Usuarios_CEP" EntityType="CheckAttModel.Usuarios_CEP" />
           <AssociationSet Name="FK__Alumno__id_clase__2F10007B" Association="CheckAttModel.FK__Alumno__id_clase__2F10007B">
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Alumno" EntitySet="Alumno" />
@@ -480,6 +499,10 @@
           <AssociationSet Name="FK__Pasar_Lis__id_al__619B8048" Association="CheckAttModel.FK__Pasar_Lis__id_al__619B8048">
             <End Role="Alumno" EntitySet="Alumno" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Usuarios__CEP_id_user_alumno" Association="CheckAttModel.FK_Usuarios__CEP_id_user_alumno">
+            <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
+            <End Role="Alumno" EntitySet="Alumno" />
           </AssociationSet>
           <AssociationSet Name="FK__Clase__id_tutor___59063A47" Association="CheckAttModel.FK__Clase__id_tutor___59063A47">
             <End Role="Profesor" EntitySet="Profesor" />
@@ -493,31 +516,35 @@
             <End Role="Clase" EntitySet="Clase" />
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Clase_Mod__id_mo__5AEE82B9" Association="CheckAttModel.FK__Clase_Mod__id_mo__5AEE82B9">
+          <AssociationSet Name="FK__Clase_Mod__id_mo__46E78A0C" Association="CheckAttModel.FK__Clase_Mod__id_mo__46E78A0C">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Clase_Modulo" EntitySet="Clase_Modulo" />
           </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_justif__5BE2A6F2" Association="CheckAttModel.FK__Falta__id_justif__5BE2A6F2">
+          <AssociationSet Name="FK__Falta__id_justif__47DBAE45" Association="CheckAttModel.FK__Falta__id_justif__47DBAE45">
             <End Role="Justificar_faltas" EntitySet="Justificar_faltas" />
             <End Role="Falta" EntitySet="Falta" />
           </AssociationSet>
-          <AssociationSet Name="FK__Falta__id_pasar___5CD6CB2B" Association="CheckAttModel.FK__Falta__id_pasar___5CD6CB2B">
+          <AssociationSet Name="FK__Falta__id_pasar___48CFD27E" Association="CheckAttModel.FK__Falta__id_pasar___48CFD27E">
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
             <End Role="Falta" EntitySet="Falta" />
           </AssociationSet>
-          <AssociationSet Name="FK__Horario__id_modu__5EBF139D" Association="CheckAttModel.FK__Horario__id_modu__5EBF139D">
+          <AssociationSet Name="FK__Horario__id_modu__4AB81AF0" Association="CheckAttModel.FK__Horario__id_modu__4AB81AF0">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="Horario" EntitySet="Horario" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pasar_Lis__id_ho__628FA481" Association="CheckAttModel.FK__Pasar_Lis__id_ho__628FA481">
+          <AssociationSet Name="FK__Pasar_Lis__id_ho__4E88ABD4" Association="CheckAttModel.FK__Pasar_Lis__id_ho__4E88ABD4">
             <End Role="Horario" EntitySet="Horario" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__id_uf__60A75C0F" Association="CheckAttModel.FK__Matricula__id_uf__60A75C0F">
+          <AssociationSet Name="FK_Pasar_listas_grupo_Horario" Association="CheckAttModel.FK_Pasar_listas_grupo_Horario">
+            <End Role="Horario" EntitySet="Horario" />
+            <End Role="Pasar_listas_grupo" EntitySet="Pasar_listas_grupo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__id_uf__4CA06362" Association="CheckAttModel.FK__Matricula__id_uf__4CA06362">
             <End Role="UF" EntitySet="UF" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__UF__id_modulo_uf__6754599E" Association="CheckAttModel.FK__UF__id_modulo_uf__6754599E">
+          <AssociationSet Name="FK__UF__id_modulo_uf__534D60F1" Association="CheckAttModel.FK__UF__id_modulo_uf__534D60F1">
             <End Role="Modulo" EntitySet="Modulo" />
             <End Role="UF" EntitySet="UF" />
           </AssociationSet>
@@ -525,18 +552,13 @@
             <End Role="Profesor" EntitySet="Profesor" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pasar_Lis__id_uf__6477ECF3" Association="CheckAttModel.FK__Pasar_Lis__id_uf__6477ECF3">
+          <AssociationSet Name="FK__Pasar_Lis__id_uf__5070F446" Association="CheckAttModel.FK__Pasar_Lis__id_uf__5070F446">
             <End Role="UF" EntitySet="UF" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
           </AssociationSet>
           <AssociationSet Name="fk_id_lista_grupo" Association="CheckAttModel.fk_id_lista_grupo">
             <End Role="Pasar_listas_grupo" EntitySet="Pasar_listas_grupo" />
             <End Role="Pasar_Lista" EntitySet="Pasar_Lista" />
-          </AssociationSet>
-          <EntitySet Name="Usuarios_CEP" EntityType="CheckAttModel.Usuarios_CEP" />
-          <AssociationSet Name="FK_Usuarios__CEP_id_user_alumno" Association="CheckAttModel.FK_Usuarios__CEP_id_user_alumno">
-            <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
-            <End Role="Alumno" EntitySet="Alumno" />
           </AssociationSet>
           <AssociationSet Name="FK_Usuarios__CEP_id_user_profe" Association="CheckAttModel.FK_Usuarios__CEP_id_user_profe">
             <End Role="Usuarios_CEP" EntitySet="Usuarios_CEP" />
@@ -586,7 +608,7 @@
           <Property Name="id_clase1" Type="Int32" />
           <Property Name="id_modulo" Type="Int32" />
           <NavigationProperty Name="Clase" Relationship="CheckAttModel.FK__Clase_Mod__id_cl__3B75D760" FromRole="Clase_Modulo" ToRole="Clase" />
-          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__5AEE82B9" FromRole="Clase_Modulo" ToRole="Modulo" />
+          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__46E78A0C" FromRole="Clase_Modulo" ToRole="Modulo" />
         </EntityType>
         <EntityType Name="Falta">
           <Key>
@@ -596,8 +618,8 @@
           <Property Name="id_pasar_lista" Type="Int32" />
           <Property Name="id_justificar_falta" Type="Int32" />
           <Property Name="hora_falta" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Justificar_faltas" Relationship="CheckAttModel.FK__Falta__id_justif__5BE2A6F2" FromRole="Falta" ToRole="Justificar_faltas" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Falta__id_pasar___5CD6CB2B" FromRole="Falta" ToRole="Pasar_Lista" />
+          <NavigationProperty Name="Justificar_faltas" Relationship="CheckAttModel.FK__Falta__id_justif__47DBAE45" FromRole="Falta" ToRole="Justificar_faltas" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Falta__id_pasar___48CFD27E" FromRole="Falta" ToRole="Pasar_Lista" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -610,8 +632,9 @@
           <Property Name="hora_fin" Type="Time" Nullable="false" Precision="7" />
           <Property Name="dia_semana_horario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Clase" Relationship="CheckAttModel.FK__Horario__id_clas__37A5467C" FromRole="Horario" ToRole="Clase" />
-          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Horario__id_modu__5EBF139D" FromRole="Horario" ToRole="Modulo" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__628FA481" FromRole="Horario" ToRole="Pasar_Lista" />
+          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__Horario__id_modu__4AB81AF0" FromRole="Horario" ToRole="Modulo" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__4E88ABD4" FromRole="Horario" ToRole="Pasar_Lista" />
+          <NavigationProperty Name="Pasar_listas_grupo" Relationship="CheckAttModel.FK_Pasar_listas_grupo_Horario" FromRole="Horario" ToRole="Pasar_listas_grupo" />
         </EntityType>
         <EntityType Name="Justificar_faltas">
           <Key>
@@ -622,7 +645,7 @@
           <Property Name="documento_adj_falta" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="comentario_falta" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="estado_falta" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_justif__5BE2A6F2" FromRole="Justificar_faltas" ToRole="Falta" />
+          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_justif__47DBAE45" FromRole="Justificar_faltas" ToRole="Falta" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -634,7 +657,7 @@
           <Property Name="fecha_matricula" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="horas_cursadas_uf" Type="Int32" />
           <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Matricula__id_al__5FB337D6" FromRole="Matricula" ToRole="Alumno" />
-          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Matricula__id_uf__60A75C0F" FromRole="Matricula" ToRole="UF" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Matricula__id_uf__4CA06362" FromRole="Matricula" ToRole="UF" />
         </EntityType>
         <EntityType Name="Modulo">
           <Key>
@@ -644,9 +667,9 @@
           <Property Name="horas_totales_modulo" Type="Int32" Nullable="false" />
           <Property Name="nombre_modulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="siglas_uf" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__5AEE82B9" FromRole="Modulo" ToRole="Clase_Modulo" />
-          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_modu__5EBF139D" FromRole="Modulo" ToRole="Horario" />
-          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__UF__id_modulo_uf__6754599E" FromRole="Modulo" ToRole="UF" />
+          <NavigationProperty Name="Clase_Modulo" Relationship="CheckAttModel.FK__Clase_Mod__id_mo__46E78A0C" FromRole="Modulo" ToRole="Clase_Modulo" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Horario__id_modu__4AB81AF0" FromRole="Modulo" ToRole="Horario" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__UF__id_modulo_uf__534D60F1" FromRole="Modulo" ToRole="UF" />
         </EntityType>
         <EntityType Name="Pasar_Lista">
           <Key>
@@ -662,10 +685,10 @@
           <Property Name="pasada" Type="Boolean" Nullable="false" />
           <Property Name="id_lista_grupo" Type="Int32" />
           <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK__Pasar_Lis__id_al__619B8048" FromRole="Pasar_Lista" ToRole="Alumno" />
-          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_pasar___5CD6CB2B" FromRole="Pasar_Lista" ToRole="Falta" />
-          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__628FA481" FromRole="Pasar_Lista" ToRole="Horario" />
+          <NavigationProperty Name="Falta" Relationship="CheckAttModel.FK__Falta__id_pasar___48CFD27E" FromRole="Pasar_Lista" ToRole="Falta" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK__Pasar_Lis__id_ho__4E88ABD4" FromRole="Pasar_Lista" ToRole="Horario" />
           <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK__Pasar_Lis__id_pr__6383C8BA" FromRole="Pasar_Lista" ToRole="Profesor" />
-          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__6477ECF3" FromRole="Pasar_Lista" ToRole="UF" />
+          <NavigationProperty Name="UF" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__5070F446" FromRole="Pasar_Lista" ToRole="UF" />
           <NavigationProperty Name="Pasar_listas_grupo" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_Lista" ToRole="Pasar_listas_grupo" />
         </EntityType>
         <EntityType Name="Pasar_listas_grupo">
@@ -677,7 +700,10 @@
           <Property Name="hora_final" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="modulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="profe" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="id_horario" Type="Int32" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
           <Property Name="estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Horario" Relationship="CheckAttModel.FK_Pasar_listas_grupo_Horario" FromRole="Pasar_listas_grupo" ToRole="Horario" />
           <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.fk_id_lista_grupo" FromRole="Pasar_listas_grupo" ToRole="Pasar_Lista" />
         </EntityType>
         <EntityType Name="Profesor">
@@ -708,9 +734,20 @@
           <Property Name="id_modulo_uf" Type="Int32" />
           <Property Name="nombre_uf" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="horas_totales_uf" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Matricula" Relationship="CheckAttModel.FK__Matricula__id_uf__60A75C0F" FromRole="UF" ToRole="Matricula" />
-          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__UF__id_modulo_uf__6754599E" FromRole="UF" ToRole="Modulo" />
-          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__6477ECF3" FromRole="UF" ToRole="Pasar_Lista" />
+          <NavigationProperty Name="Matricula" Relationship="CheckAttModel.FK__Matricula__id_uf__4CA06362" FromRole="UF" ToRole="Matricula" />
+          <NavigationProperty Name="Modulo" Relationship="CheckAttModel.FK__UF__id_modulo_uf__534D60F1" FromRole="UF" ToRole="Modulo" />
+          <NavigationProperty Name="Pasar_Lista" Relationship="CheckAttModel.FK__Pasar_Lis__id_uf__5070F446" FromRole="UF" ToRole="Pasar_Lista" />
+        </EntityType>
+        <EntityType Name="Usuarios_CEP">
+          <Key>
+            <PropertyRef Name="id_usuario_cep" />
+          </Key>
+          <Property Name="id_usuario_cep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="correo_cep" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="contra" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tipo_usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_alumno" FromRole="Usuarios_CEP" ToRole="Alumno" />
+          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_profe" FromRole="Usuarios_CEP" ToRole="Profesor" />
         </EntityType>
         <Association Name="FK__Alumno__id_clase__2F10007B">
           <End Type="CheckAttModel.Clase" Role="Clase" Multiplicity="0..1" />
@@ -745,6 +782,18 @@
             </Principal>
             <Dependent Role="Pasar_Lista">
               <PropertyRef Name="id_alumno" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios__CEP_id_user_alumno">
+          <End Type="CheckAttModel.Usuarios_CEP" Role="Usuarios_CEP" Multiplicity="1" />
+          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios_CEP">
+              <PropertyRef Name="id_usuario_cep" />
+            </Principal>
+            <Dependent Role="Alumno">
+              <PropertyRef Name="id_user_alumno_cep" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -784,7 +833,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Clase_Mod__id_mo__5AEE82B9">
+        <Association Name="FK__Clase_Mod__id_mo__46E78A0C">
           <End Type="CheckAttModel.Modulo" Role="Modulo" Multiplicity="0..1" />
           <End Type="CheckAttModel.Clase_Modulo" Role="Clase_Modulo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -796,7 +845,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Falta__id_justif__5BE2A6F2">
+        <Association Name="FK__Falta__id_justif__47DBAE45">
           <End Type="CheckAttModel.Justificar_faltas" Role="Justificar_faltas" Multiplicity="0..1" />
           <End Type="CheckAttModel.Falta" Role="Falta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -808,7 +857,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Falta__id_pasar___5CD6CB2B">
+        <Association Name="FK__Falta__id_pasar___48CFD27E">
           <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="0..1" />
           <End Type="CheckAttModel.Falta" Role="Falta" Multiplicity="*" />
           <ReferentialConstraint>
@@ -820,7 +869,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Horario__id_modu__5EBF139D">
+        <Association Name="FK__Horario__id_modu__4AB81AF0">
           <End Type="CheckAttModel.Modulo" Role="Modulo" Multiplicity="0..1" />
           <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="*" />
           <ReferentialConstraint>
@@ -832,7 +881,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pasar_Lis__id_ho__628FA481">
+        <Association Name="FK__Pasar_Lis__id_ho__4E88ABD4">
           <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="0..1" />
           <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
           <ReferentialConstraint>
@@ -844,7 +893,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__id_uf__60A75C0F">
+        <Association Name="FK_Pasar_listas_grupo_Horario">
+          <End Type="CheckAttModel.Horario" Role="Horario" Multiplicity="0..1" />
+          <End Type="CheckAttModel.Pasar_listas_grupo" Role="Pasar_listas_grupo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Horario">
+              <PropertyRef Name="id_horario" />
+            </Principal>
+            <Dependent Role="Pasar_listas_grupo">
+              <PropertyRef Name="id_horario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__id_uf__4CA06362">
           <End Type="CheckAttModel.UF" Role="UF" Multiplicity="0..1" />
           <End Type="CheckAttModel.Matricula" Role="Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -856,7 +917,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UF__id_modulo_uf__6754599E">
+        <Association Name="FK__UF__id_modulo_uf__534D60F1">
           <End Type="CheckAttModel.Modulo" Role="Modulo" Multiplicity="0..1" />
           <End Type="CheckAttModel.UF" Role="UF" Multiplicity="*" />
           <ReferentialConstraint>
@@ -880,7 +941,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pasar_Lis__id_uf__6477ECF3">
+        <Association Name="FK__Pasar_Lis__id_uf__5070F446">
           <End Type="CheckAttModel.UF" Role="UF" Multiplicity="0..1" />
           <End Type="CheckAttModel.Pasar_Lista" Role="Pasar_Lista" Multiplicity="*" />
           <ReferentialConstraint>
@@ -901,29 +962,6 @@
             </Principal>
             <Dependent Role="Pasar_Lista">
               <PropertyRef Name="id_lista_grupo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="Usuarios_CEP">
-          <Key>
-            <PropertyRef Name="id_usuario_cep" />
-          </Key>
-          <Property Name="id_usuario_cep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="correo_cep" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="contra" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="tipo_usuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Alumno" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_alumno" FromRole="Usuarios_CEP" ToRole="Alumno" />
-          <NavigationProperty Name="Profesor" Relationship="CheckAttModel.FK_Usuarios__CEP_id_user_profe" FromRole="Usuarios_CEP" ToRole="Profesor" />
-        </EntityType>
-        <Association Name="FK_Usuarios__CEP_id_user_alumno">
-          <End Type="CheckAttModel.Usuarios_CEP" Role="Usuarios_CEP" Multiplicity="1" />
-          <End Type="CheckAttModel.Alumno" Role="Alumno" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuarios_CEP">
-              <PropertyRef Name="id_usuario_cep" />
-            </Principal>
-            <Dependent Role="Alumno">
-              <PropertyRef Name="id_user_alumno_cep" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1056,6 +1094,8 @@
             <EntityTypeMapping TypeName="CheckAttModel.Pasar_listas_grupo">
               <MappingFragment StoreEntitySet="Pasar_listas_grupo">
                 <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="id_horario" ColumnName="id_horario" />
                 <ScalarProperty Name="profe" ColumnName="profe" />
                 <ScalarProperty Name="modulo" ColumnName="modulo" />
                 <ScalarProperty Name="hora_final" ColumnName="hora_final" />
